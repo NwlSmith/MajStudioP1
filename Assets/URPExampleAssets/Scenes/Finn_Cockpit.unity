@@ -10290,12 +10290,8 @@ MonoBehaviour:
   assetGuid: 
   m_IsSelectable: 1
   m_SelectedFaces: 
-  m_SelectedEdges:
-  - a: 5
-    b: 7
-  - a: 13
-    b: 15
-  m_SelectedVertices: 05000000070000000d0000000f000000
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &1359982081
 MeshRenderer:
   m_ObjectHideFlags: 0
