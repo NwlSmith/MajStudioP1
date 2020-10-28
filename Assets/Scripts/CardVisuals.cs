@@ -27,7 +27,6 @@ public class CardVisuals : MonoBehaviour
     {
         PlaySpeakingSound();
         //animator.SetTrigger("Talk"); // MAYBE REPLACE WITH SOMETHING ELSE LOL
-        
     }
 
     private void PlaySpeakingSound()

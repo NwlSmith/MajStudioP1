@@ -21,15 +21,6 @@ public class DeckManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            FindObjectOfType<CardManager>().InfoText();
-        }
-        // REMOVE THIS
-    }
-
     /*
      * Adds the card to a completely random point in the list.
      * newCard: the new card

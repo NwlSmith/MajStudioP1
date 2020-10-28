@@ -1,154 +1,286 @@
-﻿using UnityEngine;
-using System.Collections;
-using SpeechLib;
-using System.Xml;
+﻿// https://github.com/unitycoder/UnityRuntimeTextToSpeech
+
+using UnityEngine;
 using System.IO;
+using ESpeakWrapper;
+using System.Threading;
+using System.Collections.Generic;
+using System;
 
-
-
-
-public class TTSManager : MonoBehaviour {
-
-	private SpVoice voice;
-
-    public static TTSManager instance = null;
-
-    private void Awake()
+namespace UnityLibrary
+{
+    // run before regular scripts
+    [DefaultExecutionOrder(-100)]
+    public class TTSManager : MonoBehaviour
     {
-        // Ensure that there is only one instance of the TTSUnityWin.
-        if (instance == null)
+        public string voiceID = "Tweaky";
+
+        // singleton isntance
+        public static TTSManager instance = null;
+
+        public delegate void TTSCallback(string message, AudioClip audio);
+
+        public enum IncomingMessageType {
+            Say,
+            SetRate,
+            SetVolume,
+            SetPitch,
+            SetRange,
+            SetWordGap,
+            SetCapitals,
+            SetIntonation,
+            SetVoice,
+        }
+        public class IncomingMessage {
+            public IncomingMessageType type;
+            public int param1;
+            public string message;
+            public TTSCallback callback;
+        }
+        
+
+        // queue for tts strings
+        Mutex message_mutex = new Mutex();
+        Queue<IncomingMessage> messages = new Queue<IncomingMessage>();
+        bool isClosing = false;
+        bool isRunning = false;
+
+
+        enum OutgoingMessageType {
+            VoiceLineFinished,
+        }
+
+        class OutgoingMessage {
+            public OutgoingMessageType type;
+            public string message;
+            public float[] data;
+            public TTSCallback callback;
+        }
+
+        Mutex outgoing_message_mutex = new Mutex();
+        Queue<OutgoingMessage> outgoing_messages = new Queue<OutgoingMessage>();
+
+        void Awake()
+        {
             instance = this;
-        else if (instance != this)
-            Destroy(gameObject);
-    }
 
+            // initialize with espeak voices folder
+            string datafolder = Path.Combine(Application.streamingAssetsPath, "espeak-ng-data/");
+            datafolder = datafolder.Replace("\\", "/");
+            Client.Initialize(datafolder);
 
+            // select voice
+            var setvoice = Client.SetVoiceByName(voiceID);
+            if (setvoice == false) Debug.Log("Failed settings voice: " + voiceID);
 
-    /// CODE FOR LOAD XML OR OTHER TEXT FILES IN THE SISTEM FROM THE FOLDER RESOURCE
+            // start thread for processing received TTS strings
+            Thread thread = new Thread(new ThreadStart(SpeakerThread));
+            thread.Start();
+        }
 
-    string loadXMLStandalone (string fileName) {
-		
-		string path  = Path.Combine("Resources", fileName);
-		path = Path.Combine (Application.dataPath, path);
-		Debug.Log ("Path:  " + path);
-		StreamReader streamReader = new StreamReader (path);
-		string streamString = streamReader.ReadToEnd();
-		Debug.Log ("STREAM XML STRING: " + streamString);
-		return streamString;
-	}
-///
+        void SpeakerThread()
+        {
+            bool waiting_for_line = false;
+            string message_waited_for = "";
+            TTSCallback callback_waited_for = null;
+            SetIsRunning(true);
+            while (IsClosing() == false) {
+                if(waiting_for_line) {
+                    if(Client.VoiceFinished()) {
+                        byte[] new_voice = Client.PopVoice();
+                        float[] voice_float = new float[new_voice.Length/2];
 
+                        for(int i = 0; i < voice_float.Length; i++) {
+                            //if(BitConverter.IsLittleEndian) 
+                            voice_float[i] = (float)BitConverter.ToInt16(new_voice, i*2)/(float)short.MaxValue;
+                        }
+                        OutgoingMessage om = new OutgoingMessage();
+                        om.type = OutgoingMessageType.VoiceLineFinished;
+                        om.data = voice_float;
+                        om.message = message_waited_for;
+                        om.callback = callback_waited_for;
 
+                        outgoing_message_mutex.WaitOne();
+                        outgoing_messages.Enqueue(om);
+                        outgoing_message_mutex.ReleaseMutex();
+                        waiting_for_line = false;
+                        message_waited_for = "";
+                        callback_waited_for = null;
+                    }
+                } else if (HasMessage()) {
+                    try
+                    {
+                        IncomingMessage msg = PopMessage();
+                        switch(msg.type) { 
+                            case IncomingMessageType.Say:
+                                Client.Speak(msg.message);
+                                //Client.SpeakSSML(msg);
 
+                                message_waited_for = msg.message;
+                                callback_waited_for = msg.callback;
+                                waiting_for_line = true;
+                                break;
+                            case IncomingMessageType.SetPitch:
+                                Client.SetPitch(msg.param1);
+                                break;
+                            case IncomingMessageType.SetRange:
+                                Client.SetRange(msg.param1);
+                                break;
+                            case IncomingMessageType.SetRate:
+                                Client.SetRate(msg.param1);
+                                break;
+                            case IncomingMessageType.SetVolume:
+                                Client.SetVolume(msg.param1);
+                                break;
+                            case IncomingMessageType.SetWordGap:
+                                Client.SetWordgap(msg.param1);
+                                break;
+                            case IncomingMessageType.SetCapitals:
+                                Client.SetCapitals(msg.param1);
+                                break;
+                            case IncomingMessageType.SetIntonation:
+                                Client.SetIntonation(msg.param1);
+                                break;
+                            case IncomingMessageType.SetVoice:
+                                Client.SetVoiceByName(msg.message);
+                                break;
 
-	//Resources.Load('builtIn.xml') as Texture;
+                        }
+                    }
+                    catch (System.Exception e)
+                    {
+                        Debug.LogException(e);
+                    }
+                }
 
-/// PRINT ON SCREEN SAPI VOICES INSTALLED IN THE OS
-	void OnGUI() {
-	
-		SpObjectTokenCategory tokenCat = new SpObjectTokenCategory();
-		tokenCat.SetId(SpeechLib.SpeechStringConstants.SpeechCategoryVoices, false);
-		ISpeechObjectTokens tokens = tokenCat.EnumerateTokens(null, null);
-		
-		int n = 0;
-		foreach (SpObjectToken item in tokens)
-		{
-				GUILayout.Label( "Voice"+ n +" ---> "+ item.GetDescription(0));
-			    n ++;
-		}
-		GUILayout.Label( "There are "+ n +" SAPI voices installed in your OS | Press SPACE for start TEST");
-	
-		//Set a voice (if not using XML)
-	//	voice.Voice = (tokens.Item (3)); // Comment this line if you use XML parser for choice voices, force a voice over the def one.
+                Thread.Sleep(8);
+            }
+            isRunning = false;
+        }
 
-	}
+        // adds string to TTS queue
+        public void Say(string msg, TTSCallback callback)
+        {
+            if (IsClosing() == true || IsRunning() == false) return;
+            if (string.IsNullOrEmpty(msg)) return;
 
+            IncomingMessage im = new IncomingMessage();
+            im.type = IncomingMessageType.Say;
+            im.message = msg;
+            im.callback = callback;
+            QueueMessage(im);
+        }
 
+        // adds string to TTS queue
+        public void Say(string msg)
+        {
+            if (IsClosing() == true || IsRunning() == false) return;
+            if (string.IsNullOrEmpty(msg)) return;
 
-	string BuiltAsset = "";
+            IncomingMessage im = new IncomingMessage();
+            im.type = IncomingMessageType.Say;
+            im.message = msg;
+            im.callback = TTSCallbackF;
+            QueueMessage(im);
+        }
 
-	void Start(){
-    //print (loadXMLStandalone ("fottiti.xml"));	
+        void TTSCallbackF(string message, AudioClip audio)
+        {
+            AudioSource source = GetComponent<AudioSource>();
+            if (source == null)
+            {
+                source = gameObject.AddComponent<AudioSource>();
+            }
 
-		voice = new SpVoice();
-		//TextAsset txt = (TextAsset)Resources.Load("readme", typeof(TextAsset));
-	//	TextAsset txt = (TextAsset)Resources.Load("builtIn.xml", typeof(XmlText));
-	//	TextAsset textXML = (TextAsset)Resources.Load("builtIn", typeof(TextAsset));
-	//	BuiltAsset = textXML.text;
-		//TextAsset textAsset = (TextAsset) Resources.Load("builtIn.xml");  
+            source.clip = audio;
+            source.Play();
+        }
 
-	}
-	
-	// Update is called once per frame
-	void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			/***************************************************
-			 * Userful resources for Country codes and SAPI XML fomat
-			 * https://msdn.microsoft.com/en-us/library/ms723602(v=vs.85).aspx
-			 * https://msdn.microsoft.com/en-us/library/ms717077(v=vs.85).aspx
-			 * https://msdn.microsoft.com/en-us/library/windows/desktop/dd318693(v=vs.85).aspx
-			 * https://msdn.microsoft.com/en-us/library/jj127898.aspx
-			/**************************************************/
-		
-			voice.Volume = 100; // Volume (no xml)
-			voice.Rate = 0 ;  //   Rate (no xml)
+        public void QueueMessage(IncomingMessage im) {
+            message_mutex.WaitOne();
+            messages.Enqueue(im);
+            message_mutex.ReleaseMutex();
+        }
 
+        private bool HasMessage()
+        {
+            bool ret = false;
+            message_mutex.WaitOne();
+            if(messages.Count > 0) {
+                ret = true;
+            }
+            message_mutex.ReleaseMutex();
+            return ret;
+        }
 
-            /*
-			voice.Speak("<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'>"
-			            +"English One, two, three"
-			            +"<p xml:lang='it-IT'> Italiano uno, due, tre</p>"
-			            +"<p xml:lang='ja-JP'>日本語　一二三、終わります。 </p>"
-			            + "</speak>",
-			            SpeechVoiceSpeakFlags.SVSFlagsAsync|SpeechVoiceSpeakFlags.SVSFIsXML);
+        private IncomingMessage PopMessage() {
+            IncomingMessage im = null;
+            message_mutex.WaitOne();
+            if(messages.Count > 0) {
+                im = messages.Dequeue();
+            }
+            message_mutex.ReleaseMutex();
+            return im;
+        }
 
+        public void SetIsClosing(bool val) {
+            message_mutex.WaitOne();
+            isClosing = val;
+            message_mutex.ReleaseMutex();
+        }
 
-			voice.Speak("NOW XML SAPI TEST", SpeechVoiceSpeakFlags.SVSFlagsAsync);
-			
-			voice.Speak("Spelling: Chiaroscurist, <spell>Chiaroscurist.</spell>Normal Volume,<volume level='50'>Low volume</volume>", SpeechVoiceSpeakFlags.SVSFlagsAsync|SpeechVoiceSpeakFlags.SVSFIsXML);
-			voice.Speak("<lang langid='410'>Frase in italiano</lang>", SpeechVoiceSpeakFlags.SVSFlagsAsync|SpeechVoiceSpeakFlags.SVSFIsXML);
+        public void SetIsRunning(bool val) { 
+            message_mutex.WaitOne();
+            isRunning = val;
+            message_mutex.ReleaseMutex();
+        }
 
-            */
-			voice.Speak("ESTERNAL FILE READING TEST", SpeechVoiceSpeakFlags.SVSFlagsAsync);
+        public bool IsClosing() {
+            bool val = false;
+            message_mutex.WaitOne();
+            val = isClosing;
+            message_mutex.ReleaseMutex();
+            return val;
+        }
 
-		    voice.Speak(loadXMLStandalone ("builtIn.xml"), SpeechVoiceSpeakFlags.SVSFlagsAsync); 
-		    voice.Speak(loadXMLStandalone ("built.txt"), SpeechVoiceSpeakFlags.SVSFlagsAsync); 
-		    voice.Speak(loadXMLStandalone ("readme.txt"), SpeechVoiceSpeakFlags.SVSFlagsAsync); 
-		//	voice.Speak(BuiltAsset, SpeechVoiceSpeakFlags.SVSFlagsAsync); 
-			voice.Speak(loadXMLStandalone ("external.xml"), SpeechVoiceSpeakFlags.SVSFlagsAsync);//must in the resource folder after build
-		
-			voice.Speak("End of the test, enjoy this code", SpeechVoiceSpeakFlags.SVSFlagsAsync);
+        public bool IsRunning() {
+            bool val = false;
+            message_mutex.WaitOne();
+            val = isRunning;
+            message_mutex.ReleaseMutex();
+            return val;
+        }
 
-		
-		}
-		if (Input.GetKeyDown(KeyCode.P))
-		{
-			voice.Pause();
-			
-		}
-		if (Input.GetKeyDown(KeyCode.R))
-		{
-			voice.Resume();
-		}
-		
-		//TEST PER ANDROID
-		/*	if (Input.GetTouch)
-		{
+        public void Update()
+        {
+            OutgoingMessage om = null;
+            outgoing_message_mutex.WaitOne();
+            if(outgoing_messages.Count > 0) {
+                om = outgoing_messages.Dequeue();
+            }
+            outgoing_message_mutex.ReleaseMutex();
+            if(om != null) {
+                AudioClip ac = AudioClip.Create("voice", om.data.Length, 1, Client.sampleRate, false);
+                ac.SetData(om.data,0);
+                om.callback(om.message,ac);
+            }
+        }
 
-			voice.Resume();
-		}*/
-		
-		
-	}
+        private void OnDestroy()
+        {
+            Client.Stop();
+            SetIsClosing(true);
 
+            int wait_counter = 2000;
+            // NOTE this will hang unity, until speech has stopped (otherwise crash)
+            while (IsRunning()) { 
+                Thread.Sleep(1); 
+                if(wait_counter-- < 0) {
+                    Debug.LogError("Sound system dindn't shut down in time.");
+                    break;
+                }
+            };
+        }
 
-    public void Speak(string message)
-    {
-        Debug.Log("Voice.speak " + message + " = " + voice.Speak(message).ToString());
-    }
-
-}
-
-
+    } // class
+} // namespace

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityLibrary;
 
 
 /*
@@ -56,28 +57,15 @@ public class CardManager : MonoBehaviour
      */
     public void Activate()
     {
-        //StartCoroutine(ActivateEnum());
-        cardVisuals.SpeakVisuals();
-        //Invoke("InfoText", 1f);
-        //InfoText();
-        //TTSManager.instance.Speak(cardInfo.infoText);
+        StartCoroutine(ActivateEnum());
     }
 
     private IEnumerator ActivateEnum()
     {
         cardVisuals.SpeakVisuals();
-        //TTSManager.instance.Speak(cardInfo.infoText);
         yield return new WaitForSeconds(1f);
         // Maybe change voice?
-        InfoText();
-        //TTSManager.instance.Speak(cardInfo.infoText);
-    }
-
-    public void InfoText()
-    {
-        Debug.Log("Called Infotext");
-        TTSManager.instance.Speak(cardInfo.infoText);
-
+        TTSManager.instance.Say(cardInfo.infoText);
     }
 
     /*
