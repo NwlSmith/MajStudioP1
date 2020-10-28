@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: TestCard2
+  m_EditorClassIdentifier: 
+  infoText: Hello dude, evry 1 here is hoarney
+  alien: 0
+  decision1Text: good. more hoarney juise plez
+  d1BiodiversityModifier: -10
+  d1HorninessModifier: 100
+  d1AtmosphereTempModifier: 69
+  d1DomSubModifier: 420
+  d1RoommateResponse: oh no not moar hornyu juise
+  d1Cards:
+  - {fileID: 11400000, guid: c19f92593bf360e458cd700bc0527cd9, type: 2}
+  decision2Text: no. this is bad. cut off hoarney juise now!!
+  d2BiodiversityModifier: 10
+  d2HorninessModifier: -100
+  d2AtmosphereTempModifier: 2
+  d2DomSubModifier: 20
+  d2RoommateResponse: u made a good choose
+  d2Cards:
+  - {fileID: 11400000}
