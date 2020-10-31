@@ -7,6 +7,8 @@ public class PlayerCameraControl : MonoBehaviour
 
     Camera cam;
 
+    public GameObject chair;
+
     [Header("Camera Nums")]
     public Vector2 mouseAxis;
     public float mouseSensitivity;
@@ -36,5 +38,7 @@ public class PlayerCameraControl : MonoBehaviour
         camX = Mathf.Clamp(camX, -90, 90);
 
         cam.transform.localRotation = Quaternion.Euler(camX, 0, 0);
+
+        chair.transform.rotation = Quaternion.Lerp(chair.transform.rotation, transform.rotation, 0.2f);
     }
 }
