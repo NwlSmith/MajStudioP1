@@ -73,7 +73,8 @@ public class CardManager : MonoBehaviour
      */
     public void Chose1()
     {
-
+        DeckManager.instance.AddCardsRandom(cardInfo.d1Cards);
+        StatManager.instance.ModBiodiversity(cardInfo.d1BiodiversityModifier);
     }
 
     /*
