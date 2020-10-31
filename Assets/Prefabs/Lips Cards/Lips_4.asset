@@ -10,21 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
-  m_Name: SSSSS_2
+  m_Name: Lips_4
   m_EditorClassIdentifier: 
-  infoText: '"I have a plan to transform all rocks into type igneous."'
-  alien: 2
-  decision1Text: '"I couldn''t see anything bad happening there."'
+  infoText: '"I was sitting on the beach, the beach chair I was on like folded inwards
+    or something stupid and now i''m stuck in it. Can you send someone to come get
+    me out?"'
+  alien: 5
+  decision1Text: '"Send Bloof Gloof to help."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 0
-  d1RoommateResponse: '"That seemed like one of his more harmless requests... maybe?"'
+  d1RoommateResponse: '"Why do you always fall into the Bloof Gloof trap..."'
   d1Cards: []
-  decision2Text: '"How about instead you teleport all rock matter to like, siberia."'
+  decision2Text: '"Teleport Zem Lips back to the ER on Glorf 31''s capitlal."'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
-  d2RoommateResponse: '"You just completely messed up the earth!!!"'
+  d2RoommateResponse: '"I forgot that you could just teleport things. Definitely
+    the smarter choice."'
   d2Cards: []

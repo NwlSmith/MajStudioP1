@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: SSSSS_1
   m_EditorClassIdentifier: 
-  infoText: 
-  alien: 0
-  decision1Text: 
+  infoText: '"It''s time for mosquitoes to go."'
+  alien: 2
+  decision1Text: '"Sure, why not?"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 0
-  d1RoommateResponse: 
+  d1RoommateResponse: '"Dude, you just wiped out an entire species. Fuck."'
   d1Cards: []
-  decision2Text: 
+  decision2Text: '"Aw, but they''re sort of cute..."'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
-  d2RoommateResponse: 
+  d2RoommateResponse: '"Yeah, right? They sort of remind me of one of my aunts."'
   d2Cards: []

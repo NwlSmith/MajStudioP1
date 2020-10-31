@@ -10,21 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
-  m_Name: SSSSS_2
+  m_Name: Lips_3
   m_EditorClassIdentifier: 
-  infoText: '"I have a plan to transform all rocks into type igneous."'
-  alien: 2
-  decision1Text: '"I couldn''t see anything bad happening there."'
+  infoText: '"I stayed out in the sun too long, I got burnt really bad. Can I turn
+    the sun off until I''m feeling a little better?"'
+  alien: 5
+  decision1Text: '"Yeah, one second."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 0
-  d1RoommateResponse: '"That seemed like one of his more harmless requests... maybe?"'
+  d1RoommateResponse: '"Something feels really off right now... I can''t put my finger
+    on it."'
   d1Cards: []
-  decision2Text: '"How about instead you teleport all rock matter to like, siberia."'
+  decision2Text: '"How about instead I send you over some aloe vera?"'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
-  d2RoommateResponse: '"You just completely messed up the earth!!!"'
+  d2RoommateResponse: '"Did you just kill Zem Lips??? Dude!"'
   d2Cards: []

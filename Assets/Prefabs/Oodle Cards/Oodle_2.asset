@@ -10,21 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
-  m_Name: SSSSS_2
+  m_Name: Oodle_2
   m_EditorClassIdentifier: 
-  infoText: '"I have a plan to transform all rocks into type igneous."'
-  alien: 2
-  decision1Text: '"I couldn''t see anything bad happening there."'
+  infoText: '"A small request... I would like to separate the earth from its sheep
+    species, they are so soft, loving, sweet... I will make a new home for them on
+    Glorf 31 with me alone as their shepherd."'
+  alien: 0
+  decision1Text: '"Go ahead, Mire. Whatever you need."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 0
-  d1RoommateResponse: '"That seemed like one of his more harmless requests... maybe?"'
+  d1RoommateResponse: '"Hopefully this''ll cure Mire Oodle''s crippling lonilness."'
   d1Cards: []
-  decision2Text: '"How about instead you teleport all rock matter to like, siberia."'
+  decision2Text: '"I think you need to see a therapist."'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
-  d2RoommateResponse: '"You just completely messed up the earth!!!"'
+  d2RoommateResponse: '"Baaa humbug."'
   d2Cards: []

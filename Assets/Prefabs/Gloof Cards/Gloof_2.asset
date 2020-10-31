@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
-  m_Name: SSSSS_2
+  m_Name: Gloof_2
   m_EditorClassIdentifier: 
-  infoText: '"I have a plan to transform all rocks into type igneous."'
-  alien: 2
-  decision1Text: '"I couldn''t see anything bad happening there."'
+  infoText: '"Mandatory clown noses for all crustaceons, yes?"'
+  alien: 4
+  decision1Text: '"Sure, why not?"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 0
-  d1RoommateResponse: '"That seemed like one of his more harmless requests... maybe?"'
+  d1RoommateResponse: '"Haha! All those crabs look so silly now!"'
   d1Cards: []
-  decision2Text: '"How about instead you teleport all rock matter to like, siberia."'
+  decision2Text: '"Not today, Bloof Gloof. Not today."'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
-  d2RoommateResponse: '"You just completely messed up the earth!!!"'
+  d2RoommateResponse: '"Not today, Bloof Gloof. Boo hoo."'
   d2Cards: []

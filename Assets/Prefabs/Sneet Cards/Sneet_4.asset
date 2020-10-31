@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
-  m_Name: SSSSS_4
+  m_Name: Sneet_4
   m_EditorClassIdentifier: 
-  infoText: '"I want to change every human''s name to Alex."'
-  alien: 2
-  decision1Text: '"Yeah sure, it''ll be easier to keep track of them that way...
-    or something."'
+  infoText: '"We have a plan to release vast amounts of raw cash into all world economies,
+    from amounts of honey in beehives to light resources on the bottom of the ocean
+    floor, to the canadian dollar. This will cause inflation on an unprecedented
+    scale and be extremely beneficial to Glorf 31 interplanetary investment prospects."'
+  alien: 3
+  decision1Text: '"If it''s necessary for the economy... whatever that is... then
+    yes of course."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 0
-  d1RoommateResponse: '"Yeah sure, it''ll be easier to keep track of them that way...
-    or something."'
+  d1RoommateResponse: '"Give the bees a break!"'
   d1Cards: []
-  decision2Text: '"I don''t like the name Alex. Next."'
+  decision2Text: '"Haha! Give the bees a break bro!"'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
