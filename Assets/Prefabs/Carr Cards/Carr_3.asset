@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: Carr_3
+  m_EditorClassIdentifier: 
+  infoText: '"I have an idea for an art installation to bring to earth. It is to
+    invert the colors of every object with visually metallic property, ie. roadsigns,
+    buildings, volcanic activity. This is important for my and the entirety of Glorf
+    31''s artistic expression and species signature upon the universe."'
+  alien: 0
+  decision1Text: '"Our species signature is paramount (also that sounds hilarious)."'
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: 0
+  d1AtmosphereTempModifier: 0
+  d1DomSubModifier: 0
+  d1RoommateResponse: '"I wonder if we''ll see all metal with inverted colors also...
+    is Goya gonna change like the properties or something or the way organisms percieve
+    things?"'
+  d1Cards: []
+  decision2Text: '"Maybe that''s a little too fucky... can you figure out some other
+    thing to suit your weird urge?"'
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: 0
+  d2AtmosphereTempModifier: 0
+  d2DomSubModifier: 0
+  d2RoommateResponse: '"Goya''s always got something up those many sleeves..."'
+  d2Cards: []
