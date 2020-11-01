@@ -22,6 +22,7 @@ MonoBehaviour:
   d1RoommateResponse: oh no not moar hornyu juise
   d1Cards:
   - {fileID: 11400000, guid: c19f92593bf360e458cd700bc0527cd9, type: 2}
+  - {fileID: 11400000, guid: 03463d72fc3344849afb9bfc4773ebdf, type: 2}
   decision2Text: no. this is bad. cut off hoarney juise now!!
   d2BiodiversityModifier: 10
   d2HorninessModifier: -100
