@@ -30,6 +30,8 @@ using UnityLibrary;
  */
 public class CardManager : MonoBehaviour
 {
+    public static CardManager instance = null;
+
 
     //[SerializeField] private CardVisuals cardVisuals { get; set; }
     [SerializeField] private CardVisuals cardVisuals;
@@ -40,6 +42,24 @@ public class CardManager : MonoBehaviour
     public Text tempMainText;
     public Text tempD1Text;
     public Text tempD2Text;
+
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(gameObject);
+    }
+
+    public void NewCard(Card newCard)
+    {
+        cardInfo = newCard;
+
+        // update text
+        // update decisions
+        // update model via switch statement
+        cardVisuals.NewCard(newCard.alien);
+    }
 
     private void Update()
     {
@@ -73,8 +93,17 @@ public class CardManager : MonoBehaviour
      */
     public void Chose1()
     {
-        DeckManager.instance.AddCardsRandom(cardInfo.d1Cards);
+        // Play leave animation 
+
         StatManager.instance.ModBiodiversity(cardInfo.d1BiodiversityModifier);
+        StatManager.instance.ModHorniness(cardInfo.d1HorninessModifier);
+        StatManager.instance.ModAtmosphereTemp(cardInfo.d1AtmosphereTempModifier);
+        StatManager.instance.ModDomSub(cardInfo.d1DomSubModifier);
+
+        RoommateManager.instance.AddResponse(cardInfo.d1RoommateResponse);
+
+        DeckManager.instance.AddCardsRandom(cardInfo.d1Cards);
+        DeckManager.instance.NextCard();
     }
 
     /*
@@ -82,6 +111,16 @@ public class CardManager : MonoBehaviour
      */
     public void Chose2()
     {
+        // Play leave animation 
 
+        StatManager.instance.ModBiodiversity(cardInfo.d2BiodiversityModifier);
+        StatManager.instance.ModHorniness(cardInfo.d2HorninessModifier);
+        StatManager.instance.ModAtmosphereTemp(cardInfo.d2AtmosphereTempModifier);
+        StatManager.instance.ModDomSub(cardInfo.d2DomSubModifier);
+
+        RoommateManager.instance.AddResponse(cardInfo.d2RoommateResponse);
+
+        DeckManager.instance.AddCardsRandom(cardInfo.d2Cards);
+        DeckManager.instance.NextCard();
     }
 }

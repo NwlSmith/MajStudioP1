@@ -13,6 +13,7 @@ using UnityEngine;
  */
 public class CardVisuals : MonoBehaviour
 {
+    // fields for each model 
     private Animator animator;
     private AudioSource audioSource;
     [SerializeField] private AudioClip[] characterSounds;
@@ -21,6 +22,45 @@ public class CardVisuals : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+    }
+
+    public void NewCard(AlienEnum alien)
+    {
+        switch (alien)
+        {
+            case AlienEnum.Scientist:
+                // set model
+                // set sounds
+                break;
+            case AlienEnum.Undercover:
+                // set model
+                // set sounds
+                break;
+            case AlienEnum.Assimilation:
+                // set model
+                // set sounds
+                break;
+            case AlienEnum.Corporate:
+                // set model
+                // set sounds
+                break;
+            case AlienEnum.Clown:
+                // set model
+                // set sounds
+                break;
+            case AlienEnum.Vacation:
+                // set model
+                // set sounds
+                break;
+            case AlienEnum.Artist:
+                // set model
+                // set sounds
+                break;
+            case AlienEnum.Lonely:
+                // set model
+                // set sounds
+                break;
+        }
     }
 
     public void SpeakVisuals()
