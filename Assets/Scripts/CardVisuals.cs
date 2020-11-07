@@ -32,10 +32,6 @@ public class CardVisuals : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-    }
-
-    private void Start()
-    {
         characterModels = new List<GameObject>();
         characterModels.Insert(0, scientistModel);
         characterModels.Insert(0, undercoverModel);

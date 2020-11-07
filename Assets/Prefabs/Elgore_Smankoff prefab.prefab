@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4914736289219793802
 Transform:
   m_ObjectHideFlags: 0
@@ -82,10 +82,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5247000134389187611, guid: 6319d55b964bc401791c17a95bbd9dfd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 626eebb91b57002479dd7fae1673b258, type: 2}
+    - target: {fileID: -5122838353100777017, guid: 6319d55b964bc401791c17a95bbd9dfd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 626eebb91b57002479dd7fae1673b258, type: 2}
+    - target: {fileID: -1362131490974801122, guid: 6319d55b964bc401791c17a95bbd9dfd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 626eebb91b57002479dd7fae1673b258, type: 2}
     - target: {fileID: 919132149155446097, guid: 6319d55b964bc401791c17a95bbd9dfd, type: 3}
       propertyPath: m_Name
       value: Elglore_Smankoff
       objectReference: {fileID: 0}
+    - target: {fileID: 2055976124918151191, guid: 6319d55b964bc401791c17a95bbd9dfd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 626eebb91b57002479dd7fae1673b258, type: 2}
+    - target: {fileID: 7318365842641221132, guid: 6319d55b964bc401791c17a95bbd9dfd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 626eebb91b57002479dd7fae1673b258, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6319d55b964bc401791c17a95bbd9dfd, type: 3}
 --- !u!4 &5788906172255642582 stripped
