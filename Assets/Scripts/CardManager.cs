@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityLibrary;
 
 
@@ -39,9 +38,9 @@ public class CardManager : MonoBehaviour
     //[SerializeField] private Card cardInfo { get; set; }
     [SerializeField] private Card cardInfo;
 
-    public Text tempMainText;
-    public Text tempD1Text;
-    public Text tempD2Text;
+    public TMPro.TextMeshPro MainText;
+    public TMPro.TextMeshPro D1Text;
+    public TMPro.TextMeshPro D2Text;
 
     void Awake()
     {
@@ -55,21 +54,15 @@ public class CardManager : MonoBehaviour
     {
         cardInfo = newCard;
 
+        MainText.text = cardInfo.infoText;
+        D1Text.text = cardInfo.decision1Text;
+        D2Text.text = cardInfo.decision2Text;
+        Activate();
+
         // update text
         // update decisions
         // update model via switch statement
         cardVisuals.NewCard(newCard.alien);
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            tempMainText.text = cardInfo.infoText;
-            tempD1Text.text = cardInfo.decision1Text;
-            tempD2Text.text = cardInfo.decision2Text;
-            Activate();
-        }
     }
 
     /*
