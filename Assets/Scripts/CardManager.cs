@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityLibrary;
 
 
 /*
@@ -78,9 +77,7 @@ public class CardManager : MonoBehaviour
         cardVisuals.SpeakVisuals();
         yield return new WaitForSeconds(1f);
         // Maybe change voice?
-#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
-        TTSManager.instance.Say(cardInfo.infoText);
-#endif
+        UnityWebGLSpeechSynthesis.TTSManager.instance.Say(cardInfo.infoText, 1); // FIX THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     }
 
     /*
@@ -99,6 +96,11 @@ public class CardManager : MonoBehaviour
 
         DeckManager.instance.AddCardsRandom(cardInfo.d1Cards);
         DeckManager.instance.NextCard();
+
+        if (cardInfo.imageAssociatedWithChoice1 && cardInfo.image != null)
+        {
+            TVManager.instance.NewImage(cardInfo.image);
+        }
     }
 
     /*
@@ -117,5 +119,10 @@ public class CardManager : MonoBehaviour
 
         DeckManager.instance.AddCardsRandom(cardInfo.d2Cards);
         DeckManager.instance.NextCard();
+
+        if (!cardInfo.imageAssociatedWithChoice1 && cardInfo.image != null)
+        {
+            TVManager.instance.NewImage(cardInfo.image);
+        }
     }
 }

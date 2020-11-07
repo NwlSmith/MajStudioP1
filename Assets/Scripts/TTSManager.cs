@@ -2,294 +2,130 @@
 
 using UnityEngine;
 using System.IO;
-using ESpeakWrapper;
-using System.Threading;
 using System.Collections.Generic;
 using System;
+using System.Collections;
 
-namespace UnityLibrary
+namespace UnityWebGLSpeechSynthesis
 {
-#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
 
     // run before regular scripts
     [DefaultExecutionOrder(-100)]
     public class TTSManager : MonoBehaviour
     {
-        public string voiceID = "Tweaky";
 
         // singleton isntance
         public static TTSManager instance = null;
 
-        public delegate void TTSCallback(string message, AudioClip audio);
 
-        public enum IncomingMessageType {
-            Say,
-            SetRate,
-            SetVolume,
-            SetPitch,
-            SetRange,
-            SetWordGap,
-            SetCapitals,
-            SetIntonation,
-            SetVoice,
-        }
-        public class IncomingMessage {
-            public IncomingMessageType type;
-            public int param1;
-            public string message;
-            public TTSCallback callback;
-        }
-        
+        private ISpeechSynthesisPlugin _mSpeechSynthesisPlugin = null;
+        private SpeechSynthesisUtterance _mSpeechSynthesisUtterance = null;
 
-        // queue for tts strings
-        Mutex message_mutex = new Mutex();
-        Queue<IncomingMessage> messages = new Queue<IncomingMessage>();
-        bool isClosing = false;
-        bool isRunning = false;
-
-
-        enum OutgoingMessageType {
-            VoiceLineFinished,
-        }
-
-        class OutgoingMessage {
-            public OutgoingMessageType type;
-            public string message;
-            public float[] data;
-            public TTSCallback callback;
-        }
-
-        Mutex outgoing_message_mutex = new Mutex();
-        Queue<OutgoingMessage> outgoing_messages = new Queue<OutgoingMessage>();
+        private VoiceResult _mVoiceResult = null;
+        private List<Voice> voiceOptions = null;
 
         void Awake()
         {
-            instance = this;
-            if (Application.platform != RuntimePlatform.OSXEditor && Application.platform != RuntimePlatform.OSXPlayer)
-            {
-                // initialize with espeak voices folder
-                string datafolder = Path.Combine(Application.streamingAssetsPath, "espeak-ng-data/");
-                datafolder = datafolder.Replace("\\", "/");
-                Client.Initialize(datafolder);
-
-                // select voice
-                var setvoice = Client.SetVoiceByName(voiceID);
-                if (setvoice == false) Debug.Log("Failed settings voice: " + voiceID);
-
-                // start thread for processing received TTS strings
-                Thread thread = new Thread(new ThreadStart(SpeakerThread));
-                thread.Start();
-            }
+            if (instance == null)
+                instance = this;
+            else if (instance != this)
+                Destroy(gameObject);
         }
 
-        void SpeakerThread()
+        // Use this for initialization
+        IEnumerator Start()
         {
-            bool waiting_for_line = false;
-            string message_waited_for = "";
-            TTSCallback callback_waited_for = null;
-            SetIsRunning(true);
-            while (IsClosing() == false) {
-                if(waiting_for_line) {
-                    if(Client.VoiceFinished()) {
-                        byte[] new_voice = Client.PopVoice();
-                        float[] voice_float = new float[new_voice.Length/2];
+            Debug.Log("start!");
 
-                        for(int i = 0; i < voice_float.Length; i++) {
-                            //if(BitConverter.IsLittleEndian) 
-                            voice_float[i] = (float)BitConverter.ToInt16(new_voice, i*2)/(float)short.MaxValue;
-                        }
-                        OutgoingMessage om = new OutgoingMessage();
-                        om.type = OutgoingMessageType.VoiceLineFinished;
-                        om.data = voice_float;
-                        om.message = message_waited_for;
-                        om.callback = callback_waited_for;
+#if UNITY_WEBGL && !UNITY_EDITOR
+            Debug.Log("In webgl!");
+            // get singleton instance
+            _mSpeechSynthesisPlugin = WebGLSpeechSynthesisPlugin.GetInstance();
+#endif
+#if UNITY_EDITOR
+            Debug.Log("In Editor!");
+            // get the singleton instance
+            _mSpeechSynthesisPlugin = ProxySpeechSynthesisPlugin.GetInstance();
 
-                        outgoing_message_mutex.WaitOne();
-                        outgoing_messages.Enqueue(om);
-                        outgoing_message_mutex.ReleaseMutex();
-                        waiting_for_line = false;
-                        message_waited_for = "";
-                        callback_waited_for = null;
-                    }
-                } else if (HasMessage()) {
-                    try
+            int port = 5000;
+            _mSpeechSynthesisPlugin.ManagementSetProxyPort(port);
+
+            _mSpeechSynthesisPlugin.ManagementOpenBrowserTab();
+
+            _mSpeechSynthesisPlugin.ManagementCloseBrowserTab();
+
+            _mSpeechSynthesisPlugin.ManagementCloseProxy();
+#endif
+            if (null == _mSpeechSynthesisPlugin)
+            {
+                Debug.LogError("WebGL Speech Synthesis Plugin is not set!");
+                yield break;
+            }
+
+            // wait for proxy to become available
+            while (!_mSpeechSynthesisPlugin.IsAvailable())
+            {
+                yield return null;
+            }
+
+            // Create an instance of SpeechSynthesisUtterance
+            _mSpeechSynthesisPlugin.CreateSpeechSynthesisUtterance((utterance) =>
+            {
+                //Debug.LogFormat("Utterance created: {0}", utterance._mReference);
+                _mSpeechSynthesisUtterance = utterance;
+            });
+
+            _mSpeechSynthesisPlugin.GetVoices((voiceResult) =>
+            {
+                _mVoiceResult = voiceResult;
+            });
+
+            voiceOptions = new List<Voice>();
+
+            if (null != _mVoiceResult && null != _mVoiceResult.voices)
+            {
+                for (int i = 0; i < _mVoiceResult.voices.Length; ++i)
+                {
+                    Voice voice = _mVoiceResult.voices[i];
+                    if (null == voice)
                     {
-                        IncomingMessage msg = PopMessage();
-                        switch(msg.type) { 
-                            case IncomingMessageType.Say:
-                                Client.Speak(msg.message);
-                                //Client.SpeakSSML(msg);
-
-                                message_waited_for = msg.message;
-                                callback_waited_for = msg.callback;
-                                waiting_for_line = true;
-                                break;
-                            case IncomingMessageType.SetPitch:
-                                Client.SetPitch(msg.param1);
-                                break;
-                            case IncomingMessageType.SetRange:
-                                Client.SetRange(msg.param1);
-                                break;
-                            case IncomingMessageType.SetRate:
-                                Client.SetRate(msg.param1);
-                                break;
-                            case IncomingMessageType.SetVolume:
-                                Client.SetVolume(msg.param1);
-                                break;
-                            case IncomingMessageType.SetWordGap:
-                                Client.SetWordgap(msg.param1);
-                                break;
-                            case IncomingMessageType.SetCapitals:
-                                Client.SetCapitals(msg.param1);
-                                break;
-                            case IncomingMessageType.SetIntonation:
-                                Client.SetIntonation(msg.param1);
-                                break;
-                            case IncomingMessageType.SetVoice:
-                                Client.SetVoiceByName(msg.message);
-                                break;
-
-                        }
+                        continue;
                     }
-                    catch (System.Exception e)
-                    {
-                        Debug.LogException(e);
-                    }
+
+                    voiceOptions.Add(voice);
                 }
-
-                Thread.Sleep(8);
             }
-            isRunning = false;
         }
 
-        // adds string to TTS queue
-        public void Say(string msg, TTSCallback callback)
+        public void Say(string text, int voiceNum)
         {
-            if (Application.platform != RuntimePlatform.OSXEditor && Application.platform != RuntimePlatform.OSXPlayer)
+            StartCoroutine(SayEnum(text, voiceNum));
+        }
+
+        public IEnumerator SayEnum(string text, int voiceNum)
+        {
+            // Cancel if already speaking
+            _mSpeechSynthesisPlugin.Cancel();
+
+            if (_mSpeechSynthesisUtterance == null)
             {
-                if(IsClosing() == true || IsRunning() == false) return;
-                if (string.IsNullOrEmpty(msg)) return;
-
-                IncomingMessage im = new IncomingMessage();
-                im.type = IncomingMessageType.Say;
-                im.message = msg;
-                im.callback = callback;
-                QueueMessage(im);
-            }
-            
-        }
-
-        // adds string to TTS queue
-        public void Say(string msg)
-        {
-            if (IsClosing() == true || IsRunning() == false) return;
-            if (string.IsNullOrEmpty(msg)) return;
-
-            IncomingMessage im = new IncomingMessage();
-            im.type = IncomingMessageType.Say;
-            im.message = msg;
-            im.callback = TTSCallbackF;
-            QueueMessage(im);
-        }
-
-        void TTSCallbackF(string message, AudioClip audio)
-        {
-            AudioSource source = GetComponent<AudioSource>();
-            if (source == null)
-            {
-                source = gameObject.AddComponent<AudioSource>();
+                Debug.Log("Utterance not made yet");
+                yield break;
             }
 
-            source.clip = audio;
-            source.Play();
-        }
+            if (voiceOptions != null && voiceOptions.Count > voiceNum && voiceOptions[voiceNum] != null)
+                _mSpeechSynthesisPlugin.SetVoice(_mSpeechSynthesisUtterance, voiceOptions[voiceNum]);
 
-        public void QueueMessage(IncomingMessage im) {
-            message_mutex.WaitOne();
-            messages.Enqueue(im);
-            message_mutex.ReleaseMutex();
-        }
+            yield return null;
 
-        private bool HasMessage()
-        {
-            bool ret = false;
-            message_mutex.WaitOne();
-            if(messages.Count > 0) {
-                ret = true;
-            }
-            message_mutex.ReleaseMutex();
-            return ret;
-        }
+            // Set the text that will be spoken
+            _mSpeechSynthesisPlugin.SetText(_mSpeechSynthesisUtterance, text);
 
-        private IncomingMessage PopMessage() {
-            IncomingMessage im = null;
-            message_mutex.WaitOne();
-            if(messages.Count > 0) {
-                im = messages.Dequeue();
-            }
-            message_mutex.ReleaseMutex();
-            return im;
-        }
+            yield return null;
 
-        public void SetIsClosing(bool val) {
-            message_mutex.WaitOne();
-            isClosing = val;
-            message_mutex.ReleaseMutex();
-        }
-
-        public void SetIsRunning(bool val) { 
-            message_mutex.WaitOne();
-            isRunning = val;
-            message_mutex.ReleaseMutex();
-        }
-
-        public bool IsClosing() {
-            bool val = false;
-            message_mutex.WaitOne();
-            val = isClosing;
-            message_mutex.ReleaseMutex();
-            return val;
-        }
-
-        public bool IsRunning() {
-            bool val = false;
-            message_mutex.WaitOne();
-            val = isRunning;
-            message_mutex.ReleaseMutex();
-            return val;
-        }
-
-        public void Update()
-        {
-            OutgoingMessage om = null;
-            outgoing_message_mutex.WaitOne();
-            if(outgoing_messages.Count > 0) {
-                om = outgoing_messages.Dequeue();
-            }
-            outgoing_message_mutex.ReleaseMutex();
-            if(om != null) {
-                AudioClip ac = AudioClip.Create("voice", om.data.Length, 1, Client.sampleRate, false);
-                ac.SetData(om.data,0);
-                om.callback(om.message,ac);
-            }
-        }
-
-        private void OnDestroy()
-        {
-            Client.Stop();
-            SetIsClosing(true);
-
-            int wait_counter = 2000;
-            // NOTE this will hang unity, until speech has stopped (otherwise crash)
-            while (IsRunning()) { 
-                Thread.Sleep(1); 
-                if(wait_counter-- < 0) {
-                    Debug.LogError("Sound system dindn't shut down in time.");
-                    break;
-                }
-            };
+            // Use the plugin to speak the utterance
+            _mSpeechSynthesisPlugin.Speak(_mSpeechSynthesisUtterance);
         }
 
     } // class
-    #endif
 } // namespace

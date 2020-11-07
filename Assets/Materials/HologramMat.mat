@@ -10,7 +10,7 @@ Material:
   m_Name: HologramMat
   m_Shader: {fileID: -6465566751694194690, guid: d5e7b84823b1d5b4a84a43be7d749bd9, type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
