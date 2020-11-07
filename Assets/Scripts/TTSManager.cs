@@ -9,6 +9,8 @@ using System;
 
 namespace UnityLibrary
 {
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
+
     // run before regular scripts
     [DefaultExecutionOrder(-100)]
     public class TTSManager : MonoBehaviour
@@ -289,4 +291,5 @@ namespace UnityLibrary
         }
 
     } // class
+    #endif
 } // namespace
