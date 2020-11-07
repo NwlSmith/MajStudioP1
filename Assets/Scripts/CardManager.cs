@@ -78,7 +78,9 @@ public class CardManager : MonoBehaviour
         cardVisuals.SpeakVisuals();
         yield return new WaitForSeconds(1f);
         // Maybe change voice?
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
         TTSManager.instance.Say(cardInfo.infoText);
+#endif
     }
 
     /*
