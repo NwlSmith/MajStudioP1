@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: Lips_6
+  m_EditorClassIdentifier: 
+  infoText: '"Do you know any good deep sea travel spots? LIke marina''s trench?"'
+  alien: 0
+  decision1Text: '"Yeah go there, to the trench."'
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: 1
+  d1AtmosphereTempModifier: 0
+  d1DomSubModifier: 0
+  d1RoommateResponse: '"TO THE TRENCH!"'
+  d1Cards: []
+  decision2Text: '"I heard Atlantis is a thing."'
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: 1
+  d2AtmosphereTempModifier: 0
+  d2DomSubModifier: 0
+  d2RoommateResponse: '"I hope Zem Lips gets to meet David Bowie down there."'
+  d2Cards: []

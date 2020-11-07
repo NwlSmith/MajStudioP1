@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: SSSSS_5
+  m_EditorClassIdentifier: 
+  infoText: '"All creatures now only have left feet."'
+  alien: 0
+  decision1Text: '"I am prepared to see them fall on one another."'
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: -1
+  d1AtmosphereTempModifier: 0
+  d1DomSubModifier: -1
+  d1RoommateResponse: '"Maybe now they''ll stop worrying about existentialism."'
+  d1Cards: []
+  decision2Text: '"No, instead they all gain another foot."'
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: -2
+  d2AtmosphereTempModifier: 0
+  d2DomSubModifier: -2
+  d2RoommateResponse: '"That''s sort of as messed up as them all having left feet,
+    sometimes I feel like you''re ruthless."'
+  d2Cards: []

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: SSSSS_1
+  m_EditorClassIdentifier: 
+  infoText: '"It''s time for mosquitoes to go."'
+  alien: 2
+  decision1Text: '"Sure, why not?"'
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: 0
+  d1AtmosphereTempModifier: 1
+  d1DomSubModifier: -1
+  d1RoommateResponse: '"Dude, you just wiped out an entire species. Fuck."'
+  d1Cards: []
+  decision2Text: '"Aw, but they''re sort of cute..."'
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: 0
+  d2AtmosphereTempModifier: 1
+  d2DomSubModifier: 1
+  d2RoommateResponse: '"Yeah, right? They sort of remind me of one of my aunts."'
+  d2Cards: []

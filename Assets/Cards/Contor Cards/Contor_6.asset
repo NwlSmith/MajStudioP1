@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: Contor_6
+  m_EditorClassIdentifier: 
+  infoText: '"An earth human asked my for my hand in marriage. Is it time to tie
+    the knot? What if i get tied down?"'
+  alien: 0
+  decision1Text: '"Listen to your hearts."'
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: -1
+  d1AtmosphereTempModifier: 0
+  d1DomSubModifier: -1
+  d1RoommateResponse: '"What about listening to your brains?"'
+  d1Cards: []
+  decision2Text: '"This is a chance to partake in their customs on such an initimate
+    level! Seize it!"'
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: 0
+  d2AtmosphereTempModifier: 0
+  d2DomSubModifier: 1
+  d2RoommateResponse: '"We''ve got one married in! Hurrah for Glorf!"'
+  d2Cards: []

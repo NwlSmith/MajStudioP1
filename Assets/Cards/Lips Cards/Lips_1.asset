@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: Lips_1
+  m_EditorClassIdentifier: 
+  infoText: '"So because I''m cold blooded I tend to get exhausted in colder tempreatuers...
+    would you be able to crank the heat up a little bit for me? It would make earth
+    a better vacay spot suited to my needs."'
+  alien: 5
+  decision1Text: '"Oh totally, yeah I hope this helps."'
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: 0
+  d1AtmosphereTempModifier: -2
+  d1DomSubModifier: -2
+  d1RoommateResponse: '"Haha bro I hope the earthlings can handle extra winter."'
+  d1Cards: []
+  decision2Text: '"The needs of many outweigh the needs of one."'
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: -1
+  d2AtmosphereTempModifier: 0
+  d2DomSubModifier: 0
+  d2RoommateResponse: '"Aw dude, but Zem Lips needs that heat! Haha i''m just messing
+    with you I don''t care."'
+  d2Cards: []

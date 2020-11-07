@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: Sneet_5
+  m_EditorClassIdentifier: 
+  infoText: '"I would like to steal Ronald Reagan''s frozen body from the celebrity
+    body compendium of the United States of America."'
+  alien: 0
+  decision1Text: '"Pin him up on a cross on the Glorf battleground for me."'
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: 3
+  d1AtmosphereTempModifier: -1
+  d1DomSubModifier: -2
+  d1RoommateResponse: '"I bet the evangelicals will love this one."'
+  d1Cards: []
+  decision2Text: '"See if you can find a social equivalent in the ant species or
+    something..."'
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: -2
+  d2AtmosphereTempModifier: 2
+  d2DomSubModifier: 2
+  d2RoommateResponse: '"Trickle down fecal matter!"'
+  d2Cards: []
