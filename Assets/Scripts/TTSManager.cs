@@ -63,19 +63,21 @@ namespace UnityLibrary
         void Awake()
         {
             instance = this;
+            if (Application.platform != RuntimePlatform.OSXEditor && Application.platform != RuntimePlatform.OSXPlayer)
+            {
+                // initialize with espeak voices folder
+                string datafolder = Path.Combine(Application.streamingAssetsPath, "espeak-ng-data/");
+                datafolder = datafolder.Replace("\\", "/");
+                Client.Initialize(datafolder);
 
-            // initialize with espeak voices folder
-            string datafolder = Path.Combine(Application.streamingAssetsPath, "espeak-ng-data/");
-            datafolder = datafolder.Replace("\\", "/");
-            Client.Initialize(datafolder);
+                // select voice
+                var setvoice = Client.SetVoiceByName(voiceID);
+                if (setvoice == false) Debug.Log("Failed settings voice: " + voiceID);
 
-            // select voice
-            var setvoice = Client.SetVoiceByName(voiceID);
-            if (setvoice == false) Debug.Log("Failed settings voice: " + voiceID);
-
-            // start thread for processing received TTS strings
-            Thread thread = new Thread(new ThreadStart(SpeakerThread));
-            thread.Start();
+                // start thread for processing received TTS strings
+                Thread thread = new Thread(new ThreadStart(SpeakerThread));
+                thread.Start();
+            }
         }
 
         void SpeakerThread()
@@ -161,14 +163,18 @@ namespace UnityLibrary
         // adds string to TTS queue
         public void Say(string msg, TTSCallback callback)
         {
-            if (IsClosing() == true || IsRunning() == false) return;
-            if (string.IsNullOrEmpty(msg)) return;
+            if (Application.platform != RuntimePlatform.OSXEditor && Application.platform != RuntimePlatform.OSXPlayer)
+            {
+                if(IsClosing() == true || IsRunning() == false) return;
+                if (string.IsNullOrEmpty(msg)) return;
 
-            IncomingMessage im = new IncomingMessage();
-            im.type = IncomingMessageType.Say;
-            im.message = msg;
-            im.callback = callback;
-            QueueMessage(im);
+                IncomingMessage im = new IncomingMessage();
+                im.type = IncomingMessageType.Say;
+                im.message = msg;
+                im.callback = callback;
+                QueueMessage(im);
+            }
+            
         }
 
         // adds string to TTS queue
