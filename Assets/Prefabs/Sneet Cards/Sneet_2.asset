@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: Sneet_2
+  m_EditorClassIdentifier: 
+  infoText: '"I believe it is time to increase the supplies of oil within earth."'
+  alien: 3
+  decision1Text: '"More is always better!"'
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: 0
+  d1AtmosphereTempModifier: 0
+  d1DomSubModifier: 0
+  d1RoommateResponse: '"What even is oil? I''d never heard of it until you started
+    working this job."'
+  d1Cards: []
+  decision2Text: '"Seems dangerous. Can you increase like amount of wind or something
+    isntead?"'
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: 0
+  d2AtmosphereTempModifier: 0
+  d2DomSubModifier: 0
+  d2RoommateResponse: '"Oh, like Venus! I''m sure the earthlings will love that!"'
+  d2Cards: []

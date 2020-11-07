@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/Lips Cards.meta
+guid: 30bb31d44efa44039a17a579bacd79d7
+folderAsset: yes
+DefaultImporter:
+=======
 guid: 3f7501e2fdc66a940b7875e72082df65
 NativeFormatImporter:
+>>>>>>> d449b1dc3fc508fe222f3a4f6e66cd20df8e3568:Assets/Materials/Table.mat.meta
   externalObjects: {}
   mainObjectFileID: 0
   userData: 

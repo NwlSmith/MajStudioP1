@@ -27,6 +27,7 @@ public class Card : ScriptableObject
     public int d1DomSubModifier = 0;
 
     // The response of your roommate
+    [TextArea(10, 100)]
     public string d1RoommateResponse;
 
     // Cards to be shuffled into deck for choosing d1
@@ -43,6 +44,7 @@ public class Card : ScriptableObject
     public int d2DomSubModifier = 0;
 
     // The response of your roommate
+    [TextArea(10, 100)]
     public string d2RoommateResponse;
 
     // Cards to be shuffled into deck for choosing d2

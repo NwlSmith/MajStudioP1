@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: Smankoff_3
+  m_EditorClassIdentifier: 
+  infoText: '"The department of Glorf 31 science affairs asked for a generalized
+    sample of the eye cones residing in every underwater species. In order to do
+    this, I believe we could raise the temperature of the ocean to kill a good amount
+    of them and easily harvest such organs. Do we have your go ahead?"'
+  alien: 0
+  decision1Text: '"Okay, as long as you don''t kill ALL of them..."'
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: 0
+  d1AtmosphereTempModifier: 0
+  d1DomSubModifier: 0
+  d1RoommateResponse: '"I guess that earth''s gonna embark upon some major bloodbath
+    vibes... due to Glorf 31. We''re sort of messy."'
+  d1Cards: []
+  decision2Text: '"You''ll kill the planet! No way!"'
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: 0
+  d2AtmosphereTempModifier: 0
+  d2DomSubModifier: 0
+  d2RoommateResponse: '"Aw that''s too bad, I was looking forward to the color implants
+    that Glarbarf inc was gonna release with the new tech from that..."'
+  d2Cards: []

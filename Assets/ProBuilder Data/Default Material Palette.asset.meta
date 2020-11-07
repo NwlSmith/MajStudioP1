@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/Oodle Cards.meta
+guid: 468ca2a1a910e4bc791138568448680e
+folderAsset: yes
+DefaultImporter:
+=======
 guid: 6d11ad240e96c9145b25141a25afa4b2
 NativeFormatImporter:
+>>>>>>> d449b1dc3fc508fe222f3a4f6e66cd20df8e3568:Assets/ProBuilder Data/Default Material Palette.asset.meta
   externalObjects: {}
   mainObjectFileID: 0
   userData: 

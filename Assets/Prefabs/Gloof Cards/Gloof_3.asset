@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: Gloof_3
+  m_EditorClassIdentifier: 
+  infoText: '"I would like to move the earth five centimeters to the left!"'
+  alien: 4
+  decision1Text: '"Hmm... okay here''s a rope. Get at it."'
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: 0
+  d1AtmosphereTempModifier: 0
+  d1DomSubModifier: 0
+  d1RoommateResponse: '"I wonder how he''s gonna manage that with just a rope...
+    He''ll figure it out some way."'
+  d1Cards: []
+  decision2Text: '"I feel like I have to say no to this one... like I literally cannot
+    say yes to this or something so bad will happen..."'
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: 0
+  d2AtmosphereTempModifier: 0
+  d2DomSubModifier: 0
+  d2RoommateResponse: '"That''s too bad, I was looking forward to what Bloof Gloof
+    would''ve done..."'
+  d2Cards: []

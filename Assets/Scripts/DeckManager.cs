@@ -7,11 +7,21 @@ public class DeckManager : MonoBehaviour
 
     public static DeckManager instance = null;
 
+    // The current card.
     [SerializeField]
     private Card curCard;
 
+    // The current queue of cards.
     [SerializeField]
     private List<Card> cardList;
+
+    // A list of miscelanious cards, not connected to any particular storyline.
+    [SerializeField]
+    private List<Card> miscCardList;
+
+    // The cards the player should start with.
+    [SerializeField]
+    private List<Card> startingCardList;
 
     private void Awake()
     {
@@ -19,6 +29,12 @@ public class DeckManager : MonoBehaviour
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
+    }
+
+    private void Start()
+    {
+        AddCardsRandom(startingCardList.ToArray());
+        NextCard();
     }
 
     /*
@@ -108,10 +124,15 @@ public class DeckManager : MonoBehaviour
      */
     public void NextCard()
     {
-        if (cardList.Count > 0)
+        if (cardList.Count <= 0)
         {
-            curCard = cardList[0];
-            cardList.RemoveAt(0);
+            AddCardsRandom(miscCardList.ToArray());
+            AddCardsRandom(startingCardList.ToArray());
         }
+
+        curCard = cardList[0];
+        cardList.RemoveAt(0);
+
+        CardManager.instance.NewCard(curCard);
     }
 }

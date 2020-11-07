@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityLibrary;
 
 
@@ -30,6 +29,8 @@ using UnityLibrary;
  */
 public class CardManager : MonoBehaviour
 {
+    public static CardManager instance = null;
+
 
     //[SerializeField] private CardVisuals cardVisuals { get; set; }
     [SerializeField] private CardVisuals cardVisuals;
@@ -37,19 +38,31 @@ public class CardManager : MonoBehaviour
     //[SerializeField] private Card cardInfo { get; set; }
     [SerializeField] private Card cardInfo;
 
-    public Text tempMainText;
-    public Text tempD1Text;
-    public Text tempD2Text;
+    public TMPro.TextMeshPro MainText;
+    public TMPro.TextMeshPro D1Text;
+    public TMPro.TextMeshPro D2Text;
 
-    private void Update()
+    void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            tempMainText.text = cardInfo.infoText;
-            tempD1Text.text = cardInfo.decision1Text;
-            tempD2Text.text = cardInfo.decision2Text;
-            Activate();
-        }
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(gameObject);
+    }
+
+    public void NewCard(Card newCard)
+    {
+        cardInfo = newCard;
+
+        MainText.text = cardInfo.infoText;
+        D1Text.text = cardInfo.decision1Text;
+        D2Text.text = cardInfo.decision2Text;
+        Activate();
+
+        // update text
+        // update decisions
+        // update model via switch statement
+        cardVisuals.NewCard(newCard.alien);
     }
 
     /*
@@ -73,7 +86,17 @@ public class CardManager : MonoBehaviour
      */
     public void Chose1()
     {
+        // Play leave animation 
 
+        StatManager.instance.ModBiodiversity(cardInfo.d1BiodiversityModifier);
+        StatManager.instance.ModHorniness(cardInfo.d1HorninessModifier);
+        StatManager.instance.ModAtmosphereTemp(cardInfo.d1AtmosphereTempModifier);
+        StatManager.instance.ModDomSub(cardInfo.d1DomSubModifier);
+
+        RoommateManager.instance.AddResponse(cardInfo.d1RoommateResponse);
+
+        DeckManager.instance.AddCardsRandom(cardInfo.d1Cards);
+        DeckManager.instance.NextCard();
     }
 
     /*
@@ -81,6 +104,16 @@ public class CardManager : MonoBehaviour
      */
     public void Chose2()
     {
+        // Play leave animation 
 
+        StatManager.instance.ModBiodiversity(cardInfo.d2BiodiversityModifier);
+        StatManager.instance.ModHorniness(cardInfo.d2HorninessModifier);
+        StatManager.instance.ModAtmosphereTemp(cardInfo.d2AtmosphereTempModifier);
+        StatManager.instance.ModDomSub(cardInfo.d2DomSubModifier);
+
+        RoommateManager.instance.AddResponse(cardInfo.d2RoommateResponse);
+
+        DeckManager.instance.AddCardsRandom(cardInfo.d2Cards);
+        DeckManager.instance.NextCard();
     }
 }
