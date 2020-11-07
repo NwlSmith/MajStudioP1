@@ -10,8 +10,6 @@ public class DeckManager : MonoBehaviour
     // The current card.
     [SerializeField]
     private Card curCard;
-    [SerializeField]
-    private CardManager curCardManager;
 
     // The current queue of cards.
     [SerializeField]
@@ -129,11 +127,12 @@ public class DeckManager : MonoBehaviour
         if (cardList.Count <= 0)
         {
             AddCardsRandom(miscCardList.ToArray());
+            AddCardsRandom(startingCardList.ToArray());
         }
 
         curCard = cardList[0];
         cardList.RemoveAt(0);
 
-        curCardManager.NewCard(curCard);
+        CardManager.instance.NewCard(curCard);
     }
 }

@@ -8,6 +8,8 @@ public class ButtonPress : MonoBehaviour
     public bool wait;
     public bool reset;
 
+    public bool button1 = false;
+
     Vector3 ogPos;
 
     public float pressDis;
@@ -57,5 +59,10 @@ public class ButtonPress : MonoBehaviour
     public void Pressed()
     {
         pressed = true;
+
+        if (button1)
+            CardManager.instance.Chose1();
+        else
+            CardManager.instance.Chose2();
     }
 }
