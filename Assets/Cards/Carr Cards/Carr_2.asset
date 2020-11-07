@@ -18,9 +18,9 @@ MonoBehaviour:
   alien: 0
   decision1Text: '"Go ahead. Reference my name in the museum display, please."'
   d1BiodiversityModifier: 0
-  d1HorninessModifier: 0
+  d1HorninessModifier: -2
   d1AtmosphereTempModifier: 0
-  d1DomSubModifier: 0
+  d1DomSubModifier: 2
   d1RoommateResponse: '"It looks like you sort of pissed off the earthlings a bit
     there."'
   d1Cards: []
@@ -28,7 +28,7 @@ MonoBehaviour:
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
-  d2DomSubModifier: 0
+  d2DomSubModifier: 1
   d2RoommateResponse: '"The camera: a useful earthling invention. Bro we would''ve
     never come up with such a toy, with our eye cones being so different."'
   d2Cards: []

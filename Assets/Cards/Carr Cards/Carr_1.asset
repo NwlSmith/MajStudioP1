@@ -17,7 +17,7 @@ MonoBehaviour:
   alien: 0
   decision1Text: '"We''re all donkeys in the womb."'
   d1BiodiversityModifier: 0
-  d1HorninessModifier: 0
+  d1HorninessModifier: 1
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 0
   d1RoommateResponse: '"I think you need to include a little bit more common greater
@@ -26,8 +26,8 @@ MonoBehaviour:
   decision2Text: '"I think you need to include a little bit more common greater good
     egalitarianism energy or something."'
   d2BiodiversityModifier: 0
-  d2HorninessModifier: 0
-  d2AtmosphereTempModifier: 0
+  d2HorninessModifier: -1
+  d2AtmosphereTempModifier: 1
   d2DomSubModifier: 0
   d2RoommateResponse: '"Are donkeys not viabley connected to the greater good???
     They''re just horse babies, dude!"'

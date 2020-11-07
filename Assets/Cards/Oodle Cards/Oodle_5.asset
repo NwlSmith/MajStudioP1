@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Oodle_5
   m_EditorClassIdentifier: 
-  infoText: 
+  infoText: '"What''s your zodiac sign?"'
   alien: 0
-  decision1Text: 
+  decision1Text: '"Uh... Jupiter?"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 0
-  d1RoommateResponse: 
+  d1RoommateResponse: '"Mine''s Uranus."'
   d1Cards: []
-  decision2Text: 
+  decision2Text: '"The same as yours."'
   d2BiodiversityModifier: 0
-  d2HorninessModifier: 0
+  d2HorninessModifier: -1
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
-  d2RoommateResponse: 
+  d2RoommateResponse: '"I have the same sign also!"'
   d2Cards: []

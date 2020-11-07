@@ -25,7 +25,7 @@ MonoBehaviour:
   d1Cards: []
   decision2Text: '"Oh Mire Oodle... I... I wouldn''t."'
   d2BiodiversityModifier: 0
-  d2HorninessModifier: 0
+  d2HorninessModifier: -1
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
   d2RoommateResponse: '"Why''d you yuck Mire Oodle''s yum, dude?"'

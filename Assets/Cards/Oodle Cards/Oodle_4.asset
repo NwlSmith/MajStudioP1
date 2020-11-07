@@ -18,13 +18,13 @@ MonoBehaviour:
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 0
-  d1DomSubModifier: 0
+  d1DomSubModifier: -1
   d1RoommateResponse: '"Eh you probably the right move. Bloof Gloof can be a freak."'
   d1Cards: []
   decision2Text: '"Send Bloof Gloof over to do... something?"'
   d2BiodiversityModifier: 0
-  d2HorninessModifier: 0
-  d2AtmosphereTempModifier: 0
-  d2DomSubModifier: 0
+  d2HorninessModifier: -3
+  d2AtmosphereTempModifier: -3
+  d2DomSubModifier: -3
   d2RoommateResponse: '"HAHA HOLY SHIT!!! WHAT DID YOU JUST DO DUDE???"'
   d2Cards: []

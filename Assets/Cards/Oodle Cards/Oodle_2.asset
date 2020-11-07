@@ -19,13 +19,13 @@ MonoBehaviour:
   decision1Text: '"Go ahead, Mire. Whatever you need."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
-  d1AtmosphereTempModifier: 0
-  d1DomSubModifier: 0
+  d1AtmosphereTempModifier: -1
+  d1DomSubModifier: 1
   d1RoommateResponse: '"Hopefully this''ll cure Mire Oodle''s crippling lonilness."'
   d1Cards: []
   decision2Text: '"I think you need to see a therapist."'
   d2BiodiversityModifier: 0
-  d2HorninessModifier: 0
+  d2HorninessModifier: -1
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
   d2RoommateResponse: '"Baaa humbug."'

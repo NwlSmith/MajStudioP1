@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Carr_5
   m_EditorClassIdentifier: 
-  infoText: 
+  infoText: '"I need paint."'
   alien: 0
-  decision1Text: 
+  decision1Text: '"Get pigment from the Grand Canyon."'
   d1BiodiversityModifier: 0
-  d1HorninessModifier: 0
-  d1AtmosphereTempModifier: 0
+  d1HorninessModifier: 1
+  d1AtmosphereTempModifier: 1
   d1DomSubModifier: 0
-  d1RoommateResponse: 
+  d1RoommateResponse: '"Rock tones, major mood."'
   d1Cards: []
-  decision2Text: 
+  decision2Text: '"I think the sea urchins have some."'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
-  d2DomSubModifier: 0
-  d2RoommateResponse: 
+  d2DomSubModifier: 1
+  d2RoommateResponse: '"That paint won''t be vegan, dude."'
   d2Cards: []

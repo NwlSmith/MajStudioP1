@@ -12,19 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Oodle_6
   m_EditorClassIdentifier: 
-  infoText: 
+  infoText: '"I threw a party but none of the other aliens showed up...."'
   alien: 0
-  decision1Text: 
+  decision1Text: '"I''ll teleport them all to you right now."'
   d1BiodiversityModifier: 0
-  d1HorninessModifier: 0
+  d1HorninessModifier: 1
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 0
-  d1RoommateResponse: 
+  d1RoommateResponse: '"Wow I''m glad you did not just teleport me to that party.
+    I would be so pissed."'
   d1Cards: []
-  decision2Text: 
+  decision2Text: '"I bet they were busy. How about you go ask some earthlings to
+    party with you instead?"'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
-  d2DomSubModifier: 0
-  d2RoommateResponse: 
+  d2DomSubModifier: -1
+  d2RoommateResponse: '"Look at those pigs dance with Mire Oodle!"'
   d2Cards: []

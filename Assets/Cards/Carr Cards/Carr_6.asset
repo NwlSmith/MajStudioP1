@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Carr_6
   m_EditorClassIdentifier: 
-  infoText: 
+  infoText: '"I hate brutalism so much."'
   alien: 0
-  decision1Text: 
+  decision1Text: '"Let''s tear it all down."'
   d1BiodiversityModifier: 0
-  d1HorninessModifier: 0
-  d1AtmosphereTempModifier: 0
+  d1HorninessModifier: -1
+  d1AtmosphereTempModifier: 1
   d1DomSubModifier: 0
-  d1RoommateResponse: 
+  d1RoommateResponse: '"TEAR IT DOWN!"'
   d1Cards: []
-  decision2Text: 
+  decision2Text: '"I''m sure brutalism hates you too."'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
-  d2DomSubModifier: 0
-  d2RoommateResponse: 
+  d2DomSubModifier: 1
+  d2RoommateResponse: '"Who doesn''t brutalism hate?"'
   d2Cards: []

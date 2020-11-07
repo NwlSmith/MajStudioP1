@@ -19,9 +19,9 @@ MonoBehaviour:
   decision1Text: '"I have no idea how you''d even do that but I''m excited to see
     you try."'
   d1BiodiversityModifier: 0
-  d1HorninessModifier: 0
-  d1AtmosphereTempModifier: 0
-  d1DomSubModifier: 0
+  d1HorninessModifier: 1
+  d1AtmosphereTempModifier: -1
+  d1DomSubModifier: 2
   d1RoommateResponse: '"This music smells like quaft."'
   d1Cards: []
   decision2Text: '"I think instead we''re just going to bring Beethoven back from
@@ -29,6 +29,6 @@ MonoBehaviour:
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
-  d2DomSubModifier: 0
+  d2DomSubModifier: 1
   d2RoommateResponse: '"Beethoven, that dude rocks on."'
   d2Cards: []

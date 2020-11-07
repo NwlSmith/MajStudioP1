@@ -19,9 +19,9 @@ MonoBehaviour:
   alien: 0
   decision1Text: '"Our species signature is paramount (also that sounds hilarious)."'
   d1BiodiversityModifier: 0
-  d1HorninessModifier: 0
-  d1AtmosphereTempModifier: 0
-  d1DomSubModifier: 0
+  d1HorninessModifier: -2
+  d1AtmosphereTempModifier: -2
+  d1DomSubModifier: 3
   d1RoommateResponse: '"I wonder if we''ll see all metal with inverted colors also...
     is Goya gonna change like the properties or something or the way organisms percieve
     things?"'
@@ -31,6 +31,6 @@ MonoBehaviour:
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
-  d2DomSubModifier: 0
+  d2DomSubModifier: -1
   d2RoommateResponse: '"Goya''s always got something up those many sleeves..."'
   d2Cards: []
