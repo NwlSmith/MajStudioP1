@@ -3,6 +3,7 @@ using UnityLibrary;
 
 public class TestSpeech : MonoBehaviour
 {
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
     public string sayAtStart = "Welcome!";
 
     // Start is called before the first frame update
@@ -32,4 +33,5 @@ public class TestSpeech : MonoBehaviour
         source.clip = audio;
         source.Play();
     }
+#endif
 }
