@@ -34,7 +34,7 @@ public class DeckManager : MonoBehaviour
     private void Start()
     {
         AddCardsRandom(startingCardList.ToArray());
-        NextCard();
+        Invoke("NextCard", 1f); //  CHANGE THIS!!!!!!!!!!!!!!!!!!!!!!!!!
     }
 
     /*

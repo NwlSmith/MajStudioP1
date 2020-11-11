@@ -110,6 +110,7 @@ public class CardVisuals : MonoBehaviour
     private void PlaySpeakingSound()
     {
         audioSource.clip = characterSounds[Random.Range(0, characterSounds.Length)];
+        audioSource.pitch = Random.Range(0.8f, 1.2f);
         audioSource.Play();
     }
 }

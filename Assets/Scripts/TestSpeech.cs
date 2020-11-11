@@ -1,16 +1,15 @@
-﻿using UnityEngine;
-using UnityLibrary;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class TestSpeech : MonoBehaviour
 {
-#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
     public string sayAtStart = "Welcome!";
 
     // Start is called before the first frame update
     void Start()
     {
         // TEST speech
-        TTSManager.instance.Say(sayAtStart, TTSCallback);
 
     }
 
@@ -20,18 +19,8 @@ public class TestSpeech : MonoBehaviour
         // test pressing any keys to say that character
         if (Input.anyKeyDown)
         {
-            TTSManager.instance.Say(Input.inputString);
+            UnityWebGLSpeechSynthesis.SpeechSynthesisUtterance utterence = new UnityWebGLSpeechSynthesis.SpeechSynthesisUtterance();
+            UnityWebGLSpeechSynthesis.WebGLSpeechSynthesisPlugin.GetInstance().Speak(utterence);
         }
     }
-
-    void TTSCallback(string message, AudioClip audio) {
-        AudioSource source = GetComponent<AudioSource>();
-        if(source == null) {
-            source = gameObject.AddComponent<AudioSource>();
-        }
-
-        source.clip = audio;
-        source.Play();
-    }
-#endif
 }

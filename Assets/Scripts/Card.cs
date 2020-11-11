@@ -16,6 +16,12 @@ public class Card : ScriptableObject
     //public string model = "Placeholder";
     public AlienEnum alien;
 
+    [Header("Image")]
+    // Image that will be sent to the TV on a certain choice
+    public Sprite image;
+    // If true, pressing button 1 will send this image to the TV
+    public bool imageAssociatedWithChoice1 = true;
+
     [Header("Decision 1")]
     // Text on the first decision's button
     [TextArea(10, 100)]
