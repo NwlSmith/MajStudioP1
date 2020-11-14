@@ -1,4 +1,4 @@
-﻿// https://github.com/unitycoder/UnityRuntimeTextToSpeech
+﻿// https://github.com/tgraupmann/UnityWebGLSpeechSynthesis
 
 using UnityEngine;
 using System.IO;
