@@ -13,6 +13,8 @@ public class RoommateManager : MonoBehaviour
     [SerializeField]
     private AudioClip[] speakSounds;
 
+    public TMPro.TextMeshPro charDialogue;
+
     private AudioSource audioSource;
 
 
@@ -44,13 +46,13 @@ public class RoommateManager : MonoBehaviour
             // response
             case 1:
                 // if chose 1
-                if (choice1 && !card.d1RoommateResponseSpoken)
+                if (choice1 && !card.d1RoommateResponse.Equals("") && !card.d1RoommateResponseSpoken)
                 {
                     words = card.d1RoommateResponse;
                     card.d1RoommateResponseSpoken = true;
                 }
                 // if chose 2
-                else if (!choice1 && !card.d2RoommateResponseSpoken)
+                else if (!choice1 && !card.d2RoommateResponse.Equals("") && !card.d2RoommateResponseSpoken)
                 {
                     words = card.d2RoommateResponse;
                     card.d2RoommateResponseSpoken = true;
@@ -102,6 +104,7 @@ public class RoommateManager : MonoBehaviour
         {
             audioSource.Play();
         }
+        charDialogue.text = response;
         // delay
         yield return new WaitForSeconds(1f);
         // start translating, if there is a response
