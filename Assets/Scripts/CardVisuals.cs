@@ -28,6 +28,10 @@ public class CardVisuals : MonoBehaviour
     [SerializeField] private GameObject artistModel = null;
     [SerializeField] private GameObject lonelyModel = null;
 
+    private GameObject curModel = null;
+
+    private bool stopAnim = false;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -60,53 +64,55 @@ public class CardVisuals : MonoBehaviour
         {
             case AlienEnum.Scientist:
                 // set model
-                scientistModel.SetActive(true);
+                curModel = scientistModel;
                 // set sounds
                 audioSource.clip = characterSounds[0]; // NEEDS VOICE
                 break;
             case AlienEnum.Undercover:
                 // set model
-                undercoverModel.SetActive(true);
+                curModel = undercoverModel;
                 // set sounds
                 audioSource.clip = characterSounds[3];
                 break;
             case AlienEnum.Assimilation:
                 // set model
-                assimilationModel.SetActive(true);
+                curModel = assimilationModel;
                 // set sounds
                 audioSource.clip = characterSounds[4];
                 break;
             case AlienEnum.Corporate:
                 // set model
-                corporateModel.SetActive(true);
+                curModel = corporateModel;
                 // set sounds
                 audioSource.clip = characterSounds[0]; // NEEDS VOICE
                 break;
             case AlienEnum.Clown:
                 // set model
-                clownModel.SetActive(true);
+                curModel = clownModel;
                 // set sounds
                 audioSource.clip = characterSounds[2];
                 break;
             case AlienEnum.Vacation:
                 // set model
-                vacationModel.SetActive(true);
+                curModel = vacationModel;
                 // set sounds
                 audioSource.clip = characterSounds[1];
                 break;
             case AlienEnum.Artist:
                 // set model
-                artistModel.SetActive(true);
+                curModel = artistModel;
                 // set sounds
                 audioSource.clip = characterSounds[0]; // NEEDS VOICE
                 break;
             case AlienEnum.Lonely:
                 // set model
-                lonelyModel.SetActive(true);
+                curModel = lonelyModel;
                 // set sounds
                 audioSource.clip = characterSounds[0];
                 break;
         }
+
+        curModel.SetActive(true);
     }
 
     public void SpeakVisuals()
@@ -120,5 +126,138 @@ public class CardVisuals : MonoBehaviour
         audioSource.clip = characterSounds[Random.Range(0, characterSounds.Length)];
         audioSource.pitch = Random.Range(0.8f, 1.2f);
         audioSource.Play();
+    }
+
+    /*
+     * Starts the audio and visual elements of the card.
+     */
+    public void Activate()
+    {
+        StartCoroutine(ActivateEnum());
+    }
+
+    private IEnumerator ActivateEnum()
+    {
+        // lerp to full size
+        StartCoroutine(ShowVisuals());
+        // speak a second later
+
+        yield return new WaitForSeconds(1f);
+
+        SpeakVisuals();
+
+        stopAnim = false;
+
+        StartCoroutine(IdleAnim());
+    }
+
+    public IEnumerator ShowVisuals()
+    {
+        curModel.SetActive(true);
+        float duration = .3f;
+        float elapsedTime = 0f;
+        Vector3 initScale = new Vector3(curModel.transform.localScale.x, 0f, curModel.transform.localScale.z);
+        Vector3 initRot = curModel.transform.rotation.eulerAngles;
+        Vector3 targetScale = curModel.transform.localScale;
+        Vector3 targetRot = curModel.transform.rotation.eulerAngles + new Vector3(0f, 3600f, 0f);
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+
+            curModel.transform.localScale = Vector3.Slerp(initScale, targetScale, elapsedTime / duration);
+            curModel.transform.eulerAngles = Vector3.Slerp(initRot, targetRot, elapsedTime / duration);
+
+            yield return null;
+        }
+        curModel.transform.localScale = targetScale;
+        curModel.transform.eulerAngles = targetRot;
+    }
+
+    private IEnumerator IdleAnim()
+    {
+        Vector3 realInitScale = curModel.transform.localScale;
+        Vector3 realInitRot = curModel.transform.eulerAngles;
+        while (!stopAnim)
+        {
+            float duration = 1f;
+            float elapsedTime = 0f;
+            Vector3 initScale = curModel.transform.localScale;
+            Vector3 initRot = curModel.transform.rotation.eulerAngles;
+            Vector3 targetScale = curModel.transform.localScale + new Vector3(0f, .1f, 0f);
+            Vector3 targetRot = curModel.transform.rotation.eulerAngles + new Vector3(0f, 5f, 0f);
+            while (elapsedTime < duration)
+            {
+                elapsedTime += Time.deltaTime;
+
+                curModel.transform.localScale = Vector3.Slerp(initScale, targetScale, elapsedTime / duration);
+                curModel.transform.eulerAngles = Vector3.Slerp(initRot, targetRot, elapsedTime / duration);
+
+                yield return null;
+            }
+
+            curModel.transform.localScale = targetScale;
+            curModel.transform.eulerAngles = targetRot;
+
+            elapsedTime = 0f;
+            initScale = curModel.transform.localScale;
+            initRot = curModel.transform.rotation.eulerAngles;
+            targetScale = realInitScale;
+            targetRot = realInitRot;
+
+            while (elapsedTime < duration)
+            {
+                elapsedTime += Time.deltaTime;
+
+                curModel.transform.localScale = Vector3.Slerp(initScale, targetScale, elapsedTime / duration);
+                curModel.transform.eulerAngles = Vector3.Slerp(initRot, targetRot, elapsedTime / duration);
+
+                yield return null;
+            }
+
+            curModel.transform.localScale = targetScale;
+            curModel.transform.eulerAngles = targetRot;
+        }
+
+        curModel.transform.localScale = realInitScale;
+        curModel.transform.eulerAngles = realInitRot;
+    }
+
+    /*
+     * Stops the audio and visual elements of the card.
+     */
+    public void Deactivate()
+    {
+        stopAnim = true;
+        StartCoroutine(DeactivateEnum());
+    }
+
+    private IEnumerator DeactivateEnum()
+    {
+        yield return new WaitForSeconds(.5f);
+        StartCoroutine(HideVisuals());
+    }
+
+    public IEnumerator HideVisuals()
+    {
+        float duration = .3f;
+        float elapsedTime = 0f;
+        Vector3 initScale = curModel.transform.localScale;
+        Vector3 initRot = curModel.transform.rotation.eulerAngles;
+        Vector3 targetScale = new Vector3(curModel.transform.localScale.x, 0f, curModel.transform.localScale.z);
+        Vector3 targetRot = curModel.transform.rotation.eulerAngles + new Vector3(0f, 3600f, 0f);
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+
+            curModel.transform.localScale = Vector3.Slerp(initScale, targetScale, elapsedTime / duration);
+            curModel.transform.eulerAngles = Vector3.Slerp(initRot, targetRot, elapsedTime / duration);
+
+            yield return null;
+        }
+        curModel.transform.localScale = targetScale;
+        curModel.transform.eulerAngles = targetRot;
+        yield return null;
+        curModel.SetActive(false);
+        curModel.transform.localScale = initScale;
     }
 }

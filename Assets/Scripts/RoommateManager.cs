@@ -13,6 +13,11 @@ public class RoommateManager : MonoBehaviour
     [SerializeField]
     private AudioClip[] speakSounds = null;
 
+    [SerializeField]
+    private GameObject model = null;
+
+    private bool stopAnim = false;
+
     public TMPro.TextMeshPro charDialogue;
 
     private AudioSource audioSource;
@@ -108,11 +113,14 @@ public class RoommateManager : MonoBehaviour
         if (!response.Equals(""))
         {
             audioSource.Play();
+
+            StartCoroutine(IdleAnim());
         }
-        charDialogue.text = response;
+        charDialogue.text = "Translating...";
         // delay
         yield return new WaitForSeconds(1f);
         // start translating, if there is a response
+        charDialogue.text = response;
         if (!response.Equals(""))
         {
             UnityWebGLSpeechSynthesis.TTSManager.instance.Say(response, 1);
@@ -124,8 +132,59 @@ public class RoommateManager : MonoBehaviour
             // delay
             yield return new WaitForSeconds(Random.Range(6, 10));
         }
+        charDialogue.text = "";
         // draw new card
-
+        stopAnim = true;
         DeckManager.instance.NextCard();
+    }
+
+    private IEnumerator IdleAnim()
+    {
+        stopAnim = false;
+        Vector3 realInitScale = model.transform.localScale;
+        Vector3 realInitRot = model.transform.eulerAngles;
+        while (!stopAnim)
+        {
+            float duration = 1f;
+            float elapsedTime = 0f;
+            Vector3 initScale = model.transform.localScale;
+            Vector3 initRot = model.transform.rotation.eulerAngles;
+            Vector3 targetScale = model.transform.localScale + new Vector3(0f, .01f, 0f);
+            Vector3 targetRot = model.transform.rotation.eulerAngles + new Vector3(0f, 5f, 0f);
+            while (elapsedTime < duration)
+            {
+                elapsedTime += Time.deltaTime;
+
+                model.transform.localScale = Vector3.Slerp(initScale, targetScale, elapsedTime / duration);
+                model.transform.eulerAngles = Vector3.Slerp(initRot, targetRot, elapsedTime / duration);
+
+                yield return null;
+            }
+
+            model.transform.localScale = targetScale;
+            model.transform.eulerAngles = targetRot;
+
+            elapsedTime = 0f;
+            initScale = model.transform.localScale;
+            initRot = model.transform.rotation.eulerAngles;
+            targetScale = realInitScale;
+            targetRot = realInitRot;
+
+            while (elapsedTime < duration)
+            {
+                elapsedTime += Time.deltaTime;
+
+                model.transform.localScale = Vector3.Slerp(initScale, targetScale, elapsedTime / duration);
+                model.transform.eulerAngles = Vector3.Slerp(initRot, targetRot, elapsedTime / duration);
+
+                yield return null;
+            }
+
+            model.transform.localScale = targetScale;
+            model.transform.eulerAngles = targetRot;
+        }
+
+        model.transform.localScale = realInitScale;
+        model.transform.eulerAngles = realInitRot;
     }
 }
