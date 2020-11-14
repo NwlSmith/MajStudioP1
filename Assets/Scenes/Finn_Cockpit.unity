@@ -9839,6 +9839,7 @@ MonoBehaviour:
   - '"At least you couldn''t run away this time."'
   speakSounds:
   - {fileID: 8300000, guid: 24b257a4ba16acb4fa57f0ec176334d9, type: 3}
+  charDialogue: {fileID: 426944575}
 --- !u!4 &138857322
 Transform:
   m_ObjectHideFlags: 0
@@ -9865,7 +9866,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -46476,7 +46477,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31850
+  m_Name: pb_Mesh23868
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
