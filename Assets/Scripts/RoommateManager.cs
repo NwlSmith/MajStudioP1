@@ -11,7 +11,7 @@ public class RoommateManager : MonoBehaviour
     private List<string> monologueQueue = null;
 
     [SerializeField]
-    private AudioClip[] speakSounds;
+    private AudioClip[] speakSounds = null;
 
     public TMPro.TextMeshPro charDialogue;
 
@@ -26,6 +26,11 @@ public class RoommateManager : MonoBehaviour
             Destroy(gameObject);
 
         audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
+        charDialogue.text = "";
     }
 
     // UNIMPLEMENTED
