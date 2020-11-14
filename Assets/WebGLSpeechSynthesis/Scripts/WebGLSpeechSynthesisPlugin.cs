@@ -261,7 +261,7 @@ namespace UnityWebGLSpeechSynthesis
 
         public void SetPitch(SpeechSynthesisUtterance utterance, float pitch)
         {
-            if (null == utterance)
+            if (utterance == null)
             {
                 Debug.LogError("Utterance not set!");
                 return;
@@ -272,7 +272,7 @@ namespace UnityWebGLSpeechSynthesis
         }
         public void SetRate(SpeechSynthesisUtterance utterance, float rate)
         {
-            if (null == utterance)
+            if (utterance == null)
             {
                 Debug.LogError("Utterance not set!");
                 return;
@@ -283,7 +283,7 @@ namespace UnityWebGLSpeechSynthesis
         }
         public void SetText(SpeechSynthesisUtterance utterance, string text)
         {
-            if (null == utterance)
+            if (utterance == null)
             {
                 Debug.LogError("Utterance not set!");
                 return;
@@ -294,12 +294,12 @@ namespace UnityWebGLSpeechSynthesis
         }
         public void SetVoice(SpeechSynthesisUtterance utterance, Voice voice)
         {
-            if (null == utterance)
+            if (utterance == null)
             {
                 Debug.LogError("Utterance not set!");
                 return;
             }
-            if (null == voice)
+            if (voice == null)
             {
                 Debug.LogError("Voice not set!");
                 return;
@@ -311,7 +311,7 @@ namespace UnityWebGLSpeechSynthesis
 
         public void SetVolume(SpeechSynthesisUtterance utterance, float volume)
         {
-            if (null == utterance)
+            if (utterance == null)
             {
                 Debug.LogError("Utterance not set!");
                 return;
