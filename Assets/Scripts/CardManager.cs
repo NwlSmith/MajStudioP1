@@ -135,7 +135,7 @@ public class CardManager : MonoBehaviour
     public void Deactivate()
     {
         NameText.text = "";
-        MainText.text = "";
+        MainText.text = "Please wait for new assignment...";
         D1Text.text = "";
         D2Text.text = "";
 
