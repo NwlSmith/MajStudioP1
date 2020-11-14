@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1257955747}
-  m_IndirectSpecularColor: {r: 0.0021287801, g: 0.0017857467, b: 0.0053300476, a: 1}
+  m_IndirectSpecularColor: {r: 0.002163332, g: 0.0017809643, b: 0.0054363282, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17067,7 +17067,8 @@ Transform:
   m_LocalRotation: {x: -0.49999854, y: 0.49999854, z: -0.5000015, w: 0.5000015}
   m_LocalPosition: {x: -0, y: -0.29, z: 0.19}
   m_LocalScale: {x: 1.1848605, y: 0.97638154, z: 1.3332913}
-  m_Children: []
+  m_Children:
+  - {fileID: 524210364}
   m_Father: {fileID: 863648983}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
@@ -21066,6 +21067,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0766a7cdc9194d4da23760b58d445d9, type: 3}
+--- !u!1001 &524210363
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 389236506}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.71
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.69
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.085
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.2602357
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.61787516
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.22770116
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70615864
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 40.46
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -82.371
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.54597
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.54597
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.54597
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+      propertyPath: m_Name
+      value: Goya_Carr
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+--- !u!4 &524210364 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 36b6b17dd19e442cfba1be4644a5d190, type: 3}
+  m_PrefabInstance: {fileID: 524210363}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &527554699 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4220779082302412525, guid: a0b264e2c89320646ae72ac5d484b727, type: 3}
@@ -22099,6 +22174,10 @@ MonoBehaviour:
   - {fileID: 2800000, guid: ff67fb3ae2b3044a4848b58b3fa4bb9a, type: 3}
   - {fileID: 2800000, guid: c11d8ce63b4f7492fbb39ddd25d43a8e, type: 3}
   - {fileID: 2800000, guid: 80e29b4722b214b4393728ae156bb83c, type: 3}
+  - {fileID: 2800000, guid: 167b19c98983c4688af57829bc29f9f4, type: 3}
+  - {fileID: 2800000, guid: ac6a56d2f6a384d49a049a68a9975cdd, type: 3}
+  - {fileID: 2800000, guid: 34718b571683940a6bef2d345e85a683, type: 3}
+  - {fileID: 2800000, guid: af2629e83f9c8499cb594155f7659438, type: 3}
   TVSprites1:
   - {fileID: 0}
   - {fileID: 0}
@@ -22115,6 +22194,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   TVSprites4:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  TVSprites5:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
