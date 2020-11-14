@@ -42,6 +42,8 @@ public class CardManager : MonoBehaviour
     public TMPro.TextMeshPro D2Text;
     public TextMesh NameText;
 
+    public bool canPressButtons = false;
+
     void Awake()
     {
         if (instance == null)
@@ -50,13 +52,36 @@ public class CardManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        NameText.text = "";
+        MainText.text = "";
+        D1Text.text = "";
+        D2Text.text = "";
+    }
+
     public void NewCard(Card newCard)
     {
         cardInfo = newCard;
+        cardVisuals.NewCard(newCard.alien);
 
-        MainText.text = cardInfo.infoText;
-        D1Text.text = cardInfo.decision1Text;
-        D2Text.text = cardInfo.decision2Text;
+        Activate();
+
+        // update text
+        // update decisions
+        // update model via switch statement
+    }
+
+    /*
+     * Starts the audio and visual elements of the card.
+     */
+    public void Activate()
+    {
+        StartCoroutine(ActivateEnum());
+    }
+
+    private IEnumerator ActivateEnum()
+    {
         string alienName = "";
         switch (cardInfo.alien)
         {
@@ -86,28 +111,36 @@ public class CardManager : MonoBehaviour
                 break;
         }
         NameText.text = alienName;
-        Activate();
+       
+        MainText.text = "Translating...";
 
-        // update text
-        // update decisions
-        // update model via switch statement
-        cardVisuals.NewCard(newCard.alien);
-    }
-
-    /*
-     * Starts the audio and visual elements of the card.
-     */
-    public void Activate()
-    {
-        StartCoroutine(ActivateEnum());
-    }
-
-    private IEnumerator ActivateEnum()
-    {
-        cardVisuals.SpeakVisuals();
+        cardVisuals.Activate();
         yield return new WaitForSeconds(1f);
         // Maybe change voice?
         UnityWebGLSpeechSynthesis.TTSManager.instance.Say(cardInfo.infoText, 1); // FIX THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        MainText.text = cardInfo.infoText;
+
+        D1Text.text = "Loading...";
+        D2Text.text = "Loading...";
+
+        yield return new WaitForSeconds(1f);
+        D1Text.text = cardInfo.decision1Text;
+        D2Text.text = cardInfo.decision2Text;
+        canPressButtons = true;
+    }
+
+    /*
+     * Stops the audio and visual elements of the card.
+     */
+    public void Deactivate()
+    {
+        NameText.text = "";
+        MainText.text = "";
+        D1Text.text = "";
+        D2Text.text = "";
+
+        cardVisuals.Deactivate();
+        canPressButtons = false;
     }
 
     /*
@@ -130,6 +163,8 @@ public class CardManager : MonoBehaviour
         {
             TVManager.instance.NewImage(cardInfo.image);
         }
+
+        Deactivate();
     }
 
     /*
@@ -152,5 +187,7 @@ public class CardManager : MonoBehaviour
         {
             TVManager.instance.NewImage(cardInfo.image);
         }
+
+        Deactivate();
     }
 }
