@@ -32,14 +32,15 @@ public class CardManager : MonoBehaviour
 
 
     //[SerializeField] private CardVisuals cardVisuals { get; set; }
-    [SerializeField] private CardVisuals cardVisuals;
+    [SerializeField] private CardVisuals cardVisuals = null;
 
     //[SerializeField] private Card cardInfo { get; set; }
-    [SerializeField] private Card cardInfo;
+    [SerializeField] private Card cardInfo = null;
 
     public TMPro.TextMeshPro MainText;
     public TMPro.TextMeshPro D1Text;
     public TMPro.TextMeshPro D2Text;
+    public TextMesh NameText;
 
     void Awake()
     {
@@ -56,6 +57,35 @@ public class CardManager : MonoBehaviour
         MainText.text = cardInfo.infoText;
         D1Text.text = cardInfo.decision1Text;
         D2Text.text = cardInfo.decision2Text;
+        string alienName = "";
+        switch (cardInfo.alien)
+        {
+            case AlienEnum.Scientist:
+                alienName = "Dr. Elglore Smankoff";
+                break;
+            case AlienEnum.Undercover:
+                alienName = "Torbar Contor";
+                break;
+            case AlienEnum.Assimilation:
+                alienName = "S'SSS SSSSS";
+                break;
+            case AlienEnum.Corporate:
+                alienName = "Smarglarff Sneet";
+                break;
+            case AlienEnum.Clown:
+                alienName = "Bloof Gloof";
+                break;
+            case AlienEnum.Vacation:
+                alienName = "Zem Lips";
+                break;
+            case AlienEnum.Artist:
+                alienName = "Goya Carr";
+                break;
+            case AlienEnum.Lonely:
+                alienName = "Mire Oodle";
+                break;
+        }
+        NameText.text = alienName;
         Activate();
 
         // update text
@@ -92,10 +122,9 @@ public class CardManager : MonoBehaviour
         StatManager.instance.ModAtmosphereTemp(cardInfo.d1AtmosphereTempModifier);
         StatManager.instance.ModDomSub(cardInfo.d1DomSubModifier);
 
-        RoommateManager.instance.AddResponse(cardInfo.d1RoommateResponse);
+        RoommateManager.instance.RoommateResponse(cardInfo, true);
 
         DeckManager.instance.AddCardsRandom(cardInfo.d1Cards);
-        DeckManager.instance.NextCard();
 
         if (cardInfo.imageAssociatedWithChoice1 && cardInfo.image != null)
         {
@@ -115,10 +144,9 @@ public class CardManager : MonoBehaviour
         StatManager.instance.ModAtmosphereTemp(cardInfo.d2AtmosphereTempModifier);
         StatManager.instance.ModDomSub(cardInfo.d2DomSubModifier);
 
-        RoommateManager.instance.AddResponse(cardInfo.d2RoommateResponse);
+        RoommateManager.instance.RoommateResponse(cardInfo, false);
 
         DeckManager.instance.AddCardsRandom(cardInfo.d2Cards);
-        DeckManager.instance.NextCard();
 
         if (!cardInfo.imageAssociatedWithChoice1 && cardInfo.image != null)
         {

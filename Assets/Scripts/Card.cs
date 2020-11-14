@@ -36,6 +36,8 @@ public class Card : ScriptableObject
     [TextArea(10, 100)]
     public string d1RoommateResponse;
 
+    public bool d1RoommateResponseSpoken = false;
+
     // Cards to be shuffled into deck for choosing d1
     public Card[] d1Cards;
 
@@ -52,6 +54,8 @@ public class Card : ScriptableObject
     // The response of your roommate
     [TextArea(10, 100)]
     public string d2RoommateResponse;
+
+    public bool d2RoommateResponseSpoken = false;
 
     // Cards to be shuffled into deck for choosing d2
     public Card[] d2Cards;

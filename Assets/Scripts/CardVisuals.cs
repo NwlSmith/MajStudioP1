@@ -16,17 +16,17 @@ public class CardVisuals : MonoBehaviour
     // fields for each model 
     private Animator animator;
     private AudioSource audioSource;
-    [SerializeField] private AudioClip[] characterSounds;
+    [SerializeField] private AudioClip[] characterSounds = null;
 
-    [SerializeField] private List<GameObject> characterModels;
-    [SerializeField] private GameObject scientistModel;
-    [SerializeField] private GameObject undercoverModel;
-    [SerializeField] private GameObject assimilationModel;
-    [SerializeField] private GameObject corporateModel;
-    [SerializeField] private GameObject clownModel;
-    [SerializeField] private GameObject vacationModel;
-    [SerializeField] private GameObject artistModel;
-    [SerializeField] private GameObject lonelyModel;
+    [SerializeField] private List<GameObject> characterModels = null;
+    [SerializeField] private GameObject scientistModel = null;
+    [SerializeField] private GameObject undercoverModel = null;
+    [SerializeField] private GameObject assimilationModel = null;
+    [SerializeField] private GameObject corporateModel = null;
+    [SerializeField] private GameObject clownModel = null;
+    [SerializeField] private GameObject vacationModel = null;
+    [SerializeField] private GameObject artistModel = null;
+    [SerializeField] private GameObject lonelyModel = null;
 
     private void Awake()
     {
@@ -62,41 +62,49 @@ public class CardVisuals : MonoBehaviour
                 // set model
                 scientistModel.SetActive(true);
                 // set sounds
+                audioSource.clip = characterSounds[0]; // NEEDS VOICE
                 break;
             case AlienEnum.Undercover:
                 // set model
                 undercoverModel.SetActive(true);
                 // set sounds
+                audioSource.clip = characterSounds[3];
                 break;
             case AlienEnum.Assimilation:
                 // set model
                 assimilationModel.SetActive(true);
                 // set sounds
+                audioSource.clip = characterSounds[4];
                 break;
             case AlienEnum.Corporate:
                 // set model
                 corporateModel.SetActive(true);
                 // set sounds
+                audioSource.clip = characterSounds[0]; // NEEDS VOICE
                 break;
             case AlienEnum.Clown:
                 // set model
                 clownModel.SetActive(true);
                 // set sounds
+                audioSource.clip = characterSounds[2];
                 break;
             case AlienEnum.Vacation:
                 // set model
                 vacationModel.SetActive(true);
                 // set sounds
+                audioSource.clip = characterSounds[1];
                 break;
             case AlienEnum.Artist:
                 // set model
                 artistModel.SetActive(true);
                 // set sounds
+                audioSource.clip = characterSounds[0]; // NEEDS VOICE
                 break;
             case AlienEnum.Lonely:
                 // set model
                 lonelyModel.SetActive(true);
                 // set sounds
+                audioSource.clip = characterSounds[0];
                 break;
         }
     }
