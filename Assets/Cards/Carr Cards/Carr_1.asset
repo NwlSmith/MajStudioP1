@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"Would you say this paper mache donkey depiciting a flatulating, gesticulating
     great ape properly represents the contemporary of the general human cognition?"'
-  alien: 0
+  alien: 6
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"We''re all donkeys in the womb."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 1
@@ -22,6 +24,7 @@ MonoBehaviour:
   d1DomSubModifier: 0
   d1RoommateResponse: '"I think you need to include a little bit more common greater
     good egalitarianism energy or something."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"I think you need to include a little bit more common greater good
     egalitarianism energy or something."'
@@ -31,4 +34,5 @@ MonoBehaviour:
   d2DomSubModifier: 0
   d2RoommateResponse: '"Are donkeys not viabley connected to the greater good???
     They''re just horse babies, dude!"'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

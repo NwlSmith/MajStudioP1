@@ -17,6 +17,8 @@ MonoBehaviour:
     be a cat, doing some aerobic escapade. I am afraid i will lose myself in the
     layers of pretend. Who am I?"'
   alien: 1
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"You are Torbar Contor, Glorf 31 citizen wearing a wig pretending
     to be a human. You can do this."'
   d1BiodiversityModifier: 0
@@ -24,6 +26,7 @@ MonoBehaviour:
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 0
   d1RoommateResponse: '"We''ve got a motivational speaker in the house woop woop!"'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"You''re a talentless sham."'
   d2BiodiversityModifier: 0
@@ -31,4 +34,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: -2
   d2RoommateResponse: '"Tell it to him straight! Or something."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

@@ -15,12 +15,15 @@ MonoBehaviour:
   infoText: '"There''s this virus I found that is highly contagious, if you give
     it to the humans they''ll all work from home and buckle even more under capitalism."'
   alien: 3
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Let''s mess em up."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 2
   d1DomSubModifier: -3
   d1RoommateResponse: '"I can hear the earthlings coughing from here."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"Dude... did WE invent capitalism?"'
   d2BiodiversityModifier: 0
@@ -28,4 +31,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 1
   d2DomSubModifier: 0
   d2RoommateResponse: '"I can hear the earthlings coughing from here."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

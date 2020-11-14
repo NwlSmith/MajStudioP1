@@ -16,12 +16,15 @@ MonoBehaviour:
     ago there was an era known as dis-co. We should bring it back. I believe in the
     imporatnce of thriving human night life."'
   alien: 1
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Sure, I don''t care."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 3
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 0
   d1RoommateResponse: '"Haha yes! Fuck it up!"'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"You are tasteless."'
   d2BiodiversityModifier: 0
@@ -29,4 +32,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: -2
   d2RoommateResponse: '"Eh bro don''t cramp disco. Maybe you''re just uncultured."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

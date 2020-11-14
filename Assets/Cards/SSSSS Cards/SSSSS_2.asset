@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"I have a plan to transform all rocks into type igneous."'
   alien: 2
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"I couldn''t see anything bad happening there."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -1
   d1AtmosphereTempModifier: 3
   d1DomSubModifier: -2
   d1RoommateResponse: '"That seemed like one of his more harmless requests... maybe?"'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"How about instead you teleport all rock matter to like, siberia."'
   d2BiodiversityModifier: 0
@@ -27,4 +30,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: -3
   d2DomSubModifier: -2
   d2RoommateResponse: '"You just completely messed up the earth!!!"'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

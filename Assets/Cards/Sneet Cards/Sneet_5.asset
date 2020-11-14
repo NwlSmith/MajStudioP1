@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"I would like to steal Ronald Reagan''s frozen body from the celebrity
     body compendium of the United States of America."'
-  alien: 0
+  alien: 3
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Pin him up on a cross on the Glorf battleground for me."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 3
   d1AtmosphereTempModifier: -1
   d1DomSubModifier: -2
   d1RoommateResponse: '"I bet the evangelicals will love this one."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"See if you can find a social equivalent in the ant species or
     something..."'
@@ -29,4 +32,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 2
   d2DomSubModifier: 2
   d2RoommateResponse: '"Trickle down fecal matter!"'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

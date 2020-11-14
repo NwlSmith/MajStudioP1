@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"I believe it is time to increase the supplies of oil within earth."'
   alien: 3
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"More is always better!"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
@@ -21,6 +23,7 @@ MonoBehaviour:
   d1DomSubModifier: 0
   d1RoommateResponse: '"What even is oil? I''d never heard of it until you started
     working this job."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"Seems dangerous. Can you increase like amount of wind or something
     isntead?"'
@@ -29,4 +32,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: -3
   d2DomSubModifier: 0
   d2RoommateResponse: '"Oh, like Venus! I''m sure the earthlings will love that!"'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

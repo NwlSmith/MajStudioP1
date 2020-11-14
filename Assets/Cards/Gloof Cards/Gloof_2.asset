@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"Mandatory clown noses for all crustaceons, yes?"'
   alien: 4
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Sure, why not?"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -2
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 2
   d1RoommateResponse: '"Haha! All those crabs look so silly now!"'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"Not today, Bloof Gloof. Not today."'
   d2BiodiversityModifier: 0
@@ -27,4 +30,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
   d2RoommateResponse: '"Not today, Bloof Gloof. Boo hoo."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []
