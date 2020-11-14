@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Carr_6
   m_EditorClassIdentifier: 
   infoText: '"I hate brutalism so much."'
-  alien: 0
+  alien: 6
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Let''s tear it all down."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -1
   d1AtmosphereTempModifier: 1
   d1DomSubModifier: 0
   d1RoommateResponse: '"TEAR IT DOWN!"'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"I''m sure brutalism hates you too."'
   d2BiodiversityModifier: 0
@@ -27,4 +30,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 1
   d2RoommateResponse: '"Who doesn''t brutalism hate?"'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

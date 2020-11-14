@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Gloof_5
   m_EditorClassIdentifier: 
   infoText: '"It is birthday time for the earth day. All will celebrate."'
-  alien: 0
+  alien: 4
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"All will celebrate."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: -1
   d1DomSubModifier: -2
   d1RoommateResponse: '"All will celebrate."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"Who is all?"'
   d2BiodiversityModifier: 0
@@ -27,4 +30,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 1
   d2DomSubModifier: 0
   d2RoommateResponse: '"I can''t believe you challenged Bloof Gloof..."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

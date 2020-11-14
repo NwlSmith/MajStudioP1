@@ -16,6 +16,8 @@ MonoBehaviour:
     include a social decree to make cannibalism not just acceptable but necessary
     in the earth culture."'
   alien: 2
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"If you really want to try, you have my blessing."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -3
@@ -23,6 +25,7 @@ MonoBehaviour:
   d1DomSubModifier: 0
   d1RoommateResponse: '"Wow bro they really all are just eating each other now...
     I think you just made a BAD CHOICE."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"Something doesn''t sit right with me there... sort of seems a
     little human centipede energy in the worst way... can you do something else?"'
@@ -32,4 +35,5 @@ MonoBehaviour:
   d2DomSubModifier: 0
   d2RoommateResponse: '"You just told S''SSS SSSSS to do something else... what did
     he even just do???"'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

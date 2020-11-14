@@ -16,12 +16,15 @@ MonoBehaviour:
     or something stupid and now i''m stuck in it. Can you send someone to come get
     me out?"'
   alien: 5
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Send Bloof Gloof to help."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -3
   d1AtmosphereTempModifier: -3
   d1DomSubModifier: 1
   d1RoommateResponse: '"Why do you always fall into the Bloof Gloof trap..."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"Teleport Zem Lips back to the ER on Glorf 31''s capitlal."'
   d2BiodiversityModifier: 0
@@ -30,4 +33,5 @@ MonoBehaviour:
   d2DomSubModifier: 0
   d2RoommateResponse: '"I forgot that you could just teleport things. Definitely
     the smarter choice."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

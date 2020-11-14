@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: SSSSS_6
   m_EditorClassIdentifier: 
   infoText: '"All creatures are only allowed to be awake at 2pm UTC."'
-  alien: 0
+  alien: 2
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"That makes sense to me!"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: -2
   d1DomSubModifier: 2
   d1RoommateResponse: '"Earth-wide rise-and-shine party!!!!"'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"How about, no more sleep at all?"'
   d2BiodiversityModifier: 0
@@ -27,4 +30,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: -2
   d2DomSubModifier: -3
   d2RoommateResponse: '"They''re all gonna die, dude."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

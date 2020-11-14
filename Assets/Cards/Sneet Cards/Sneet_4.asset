@@ -17,6 +17,8 @@ MonoBehaviour:
     floor, to the canadian dollar. This will cause inflation on an unprecedented
     scale and be extremely beneficial to Glorf 31 interplanetary investment prospects."'
   alien: 3
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"If it''s necessary for the economy... whatever that is... then
     yes of course."'
   d1BiodiversityModifier: 0
@@ -24,6 +26,7 @@ MonoBehaviour:
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 3
   d1RoommateResponse: '"Give the bees a break!"'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"Haha! Give the bees a break bro!"'
   d2BiodiversityModifier: 0
@@ -31,4 +34,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
   d2RoommateResponse: '"I GUESS thats a valid reason to say no..."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

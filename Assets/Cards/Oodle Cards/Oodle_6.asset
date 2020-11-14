@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Oodle_6
   m_EditorClassIdentifier: 
   infoText: '"I threw a party but none of the other aliens showed up...."'
-  alien: 0
+  alien: 7
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"I''ll teleport them all to you right now."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 1
@@ -21,6 +23,7 @@ MonoBehaviour:
   d1DomSubModifier: 0
   d1RoommateResponse: '"Wow I''m glad you did not just teleport me to that party.
     I would be so pissed."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"I bet they were busy. How about you go ask some earthlings to
     party with you instead?"'
@@ -29,4 +32,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: -1
   d2RoommateResponse: '"Look at those pigs dance with Mire Oodle!"'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

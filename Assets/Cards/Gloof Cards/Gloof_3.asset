@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"I would like to move the earth five centimeters to the left!"'
   alien: 4
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Hmm... okay here''s a rope. Get at it."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
@@ -21,6 +23,7 @@ MonoBehaviour:
   d1DomSubModifier: -3
   d1RoommateResponse: '"I wonder how he''s gonna manage that with just a rope...
     He''ll figure it out some way."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"I feel like I have to say no to this one... like I literally cannot
     say yes to this or something so bad will happen..."'
@@ -30,4 +33,5 @@ MonoBehaviour:
   d2DomSubModifier: 0
   d2RoommateResponse: '"That''s too bad, I was looking forward to what Bloof Gloof
     would''ve done..."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

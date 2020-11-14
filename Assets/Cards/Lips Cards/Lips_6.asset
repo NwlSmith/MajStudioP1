@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Lips_6
   m_EditorClassIdentifier: 
   infoText: '"Do you know any good deep sea travel spots? LIke marina''s trench?"'
-  alien: 0
+  alien: 5
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Yeah go there, to the trench."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 1
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 0
   d1RoommateResponse: '"TO THE TRENCH!"'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"I heard Atlantis is a thing."'
   d2BiodiversityModifier: 0
@@ -27,4 +30,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
   d2RoommateResponse: '"I hope Zem Lips gets to meet David Bowie down there."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

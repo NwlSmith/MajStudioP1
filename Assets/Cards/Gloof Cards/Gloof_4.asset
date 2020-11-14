@@ -15,12 +15,15 @@ MonoBehaviour:
   infoText: '"All human auditory ability only now able to parse sounds of clown horn
     honking?"'
   alien: 4
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Honk away, dude!"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -3
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 3
   d1RoommateResponse: '"That HAS to be a form of capital punishment..."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"That''s too fucky. When hell freezes over."'
   d2BiodiversityModifier: 0
@@ -29,4 +32,5 @@ MonoBehaviour:
   d2DomSubModifier: 0
   d2RoommateResponse: '"You DID say when hell freezes over... what else could you
     exepct from that guy?"'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

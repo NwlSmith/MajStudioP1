@@ -15,6 +15,8 @@ MonoBehaviour:
   infoText: '"I stayed out in the sun too long, I got burnt really bad. Can I turn
     the sun off until I''m feeling a little better?"'
   alien: 5
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Yeah, one second."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -3
@@ -22,6 +24,7 @@ MonoBehaviour:
   d1DomSubModifier: -3
   d1RoommateResponse: '"Something feels really off right now... I can''t put my finger
     on it."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"How about instead I send you over some aloe vera?"'
   d2BiodiversityModifier: 0
@@ -29,4 +32,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
   d2RoommateResponse: '"Did you just kill Zem Lips??? Dude!"'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

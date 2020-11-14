@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Carr_5
   m_EditorClassIdentifier: 
   infoText: '"I need paint."'
-  alien: 0
+  alien: 6
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Get pigment from the Grand Canyon."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 1
   d1AtmosphereTempModifier: 1
   d1DomSubModifier: 0
   d1RoommateResponse: '"Rock tones, major mood."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"I think the sea urchins have some."'
   d2BiodiversityModifier: 0
@@ -27,4 +30,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 1
   d2RoommateResponse: '"That paint won''t be vegan, dude."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []
