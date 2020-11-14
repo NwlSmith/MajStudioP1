@@ -6,7 +6,7 @@ public class MusicManager : MonoBehaviour
 {
     public static MusicManager instance = null;
 
-    private AudioSource audioSource;
+    private AudioSource audioSource = null;
 
     private void Awake()
     {
