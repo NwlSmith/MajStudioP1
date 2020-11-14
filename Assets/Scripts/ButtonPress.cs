@@ -16,10 +16,13 @@ public class ButtonPress : MonoBehaviour
 
     int timer;
     int timerLimit = 30;
+
+    AudioSource aS;
     // Start is called before the first frame update
     void Start()
     {
         ogPos = transform.position;
+        aS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -59,6 +62,9 @@ public class ButtonPress : MonoBehaviour
     public void Pressed()
     {
         pressed = true;
+
+        aS.pitch = Random.Range(0.9f, 1.1f);
+        aS.Play();
 
         if (button1)
             CardManager.instance.Chose1();

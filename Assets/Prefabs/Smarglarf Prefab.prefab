@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4914736289219793802
 Transform:
   m_ObjectHideFlags: 0
@@ -82,10 +82,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6892529394499438715, guid: d7f3a8ea73137409e95dbd7ed79cd004, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 626eebb91b57002479dd7fae1673b258, type: 2}
+    - target: {fileID: -6067185528594298527, guid: d7f3a8ea73137409e95dbd7ed79cd004, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 626eebb91b57002479dd7fae1673b258, type: 2}
+    - target: {fileID: -5634616959197459335, guid: d7f3a8ea73137409e95dbd7ed79cd004, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 626eebb91b57002479dd7fae1673b258, type: 2}
     - target: {fileID: 919132149155446097, guid: d7f3a8ea73137409e95dbd7ed79cd004, type: 3}
       propertyPath: m_Name
       value: Smarglarff_Sneet
       objectReference: {fileID: 0}
+    - target: {fileID: 1170970068873931921, guid: d7f3a8ea73137409e95dbd7ed79cd004, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 626eebb91b57002479dd7fae1673b258, type: 2}
+    - target: {fileID: 5901893356585517859, guid: d7f3a8ea73137409e95dbd7ed79cd004, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 626eebb91b57002479dd7fae1673b258, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f3a8ea73137409e95dbd7ed79cd004, type: 3}
 --- !u!4 &2501120224670309594 stripped
