@@ -13,9 +13,9 @@ public class StatManager : MonoBehaviour
     public int atmosphereTemp = 20;
     public int domSub = 20;
 
-    [SerializeField] private TextMesh horninessText;
-    [SerializeField] private TextMesh atmosphereTempText;
-    [SerializeField] private TextMesh domSubText;
+    [SerializeField] private TextMesh horninessText = null;
+    [SerializeField] private TextMesh atmosphereTempText = null;
+    [SerializeField] private TextMesh domSubText = null;
 
     void Awake()
     {
