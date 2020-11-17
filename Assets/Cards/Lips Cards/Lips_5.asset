@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"I missed my plane to hawaii, now all these humans are staring at me
     in the airport."'
-  alien: 0
+  alien: 5
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Try to blend in!"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 1
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: -1
   d1RoommateResponse: '"Zem can finally put that chameleon skin to good use."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"Kill them all!"'
   d2BiodiversityModifier: 0
@@ -28,4 +31,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 3
   d2RoommateResponse: '"That''s a way to deal with that."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

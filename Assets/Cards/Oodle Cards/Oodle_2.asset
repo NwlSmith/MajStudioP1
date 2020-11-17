@@ -15,13 +15,16 @@ MonoBehaviour:
   infoText: '"A small request... I would like to separate the earth from its sheep
     species, they are so soft, loving, sweet... I will make a new home for them on
     Glorf 31 with me alone as their shepherd."'
-  alien: 0
+  alien: 7
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Go ahead, Mire. Whatever you need."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: -1
   d1DomSubModifier: 1
   d1RoommateResponse: '"Hopefully this''ll cure Mire Oodle''s crippling lonilness."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"I think you need to see a therapist."'
   d2BiodiversityModifier: 0
@@ -29,4 +32,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
   d2RoommateResponse: '"Baaa humbug."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

@@ -16,6 +16,8 @@ MonoBehaviour:
     earth''s forests. This would engage for me a monopoly over all wood products,
     rendering me monetarily powerful over the species of the earth."'
   alien: 3
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Yes! Definitely! For the economy!"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
@@ -23,6 +25,7 @@ MonoBehaviour:
   d1DomSubModifier: -2
   d1RoommateResponse: '"Do we even have an economy? I thought that was an earth concept
     specifically."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"That seems a little gratuitous. Can you do this with like, peanutbutter
     instead?"'
@@ -31,4 +34,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 1
   d2RoommateResponse: '"Aw, no more nut."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

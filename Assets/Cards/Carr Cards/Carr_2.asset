@@ -15,7 +15,9 @@ MonoBehaviour:
   infoText: '"I would like to mine out some of the cave paintings found in Catalonia,
     bring them back to the eternal museum back on Glorf 31. It would contribute greatly
     to our collection of earth artifacts. Can I have your go ahead?"'
-  alien: 0
+  alien: 6
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Go ahead. Reference my name in the museum display, please."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -2
@@ -23,6 +25,7 @@ MonoBehaviour:
   d1DomSubModifier: 2
   d1RoommateResponse: '"It looks like you sort of pissed off the earthlings a bit
     there."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"What if instead you took photographs of them?"'
   d2BiodiversityModifier: 0
@@ -31,4 +34,5 @@ MonoBehaviour:
   d2DomSubModifier: 1
   d2RoommateResponse: '"The camera: a useful earthling invention. Bro we would''ve
     never come up with such a toy, with our eye cones being so different."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

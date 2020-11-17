@@ -14,6 +14,7 @@ public class FriendTVAnim : MonoBehaviour
     public Texture[] TVSprites2 = new Texture[4];
     public Texture[] TVSprites3 = new Texture[4];
     public Texture[] TVSprites4 = new Texture[4];
+    public Texture[] TVSprites5 = new Texture[4];
 
     private Texture[] activeGroup = new Texture[4];
     private float groupTimer;
@@ -49,7 +50,12 @@ public class FriendTVAnim : MonoBehaviour
         TVSprites4[2] = TVSprites[14];
         TVSprites4[3] = TVSprites[15];
 
-        PickSpriteGroup(Random.Range(0, 4));
+        TVSprites5[0] = TVSprites[16];
+        TVSprites5[1] = TVSprites[17];
+        TVSprites5[2] = TVSprites[18];
+        TVSprites5[3] = TVSprites[19];
+
+        PickSpriteGroup(Random.Range(0, 5));
 
     }
 
@@ -63,7 +69,7 @@ public class FriendTVAnim : MonoBehaviour
         {
             groupTimerMax = Random.Range(2, 5);
             groupTimer = 0;
-            PickSpriteGroup(Random.Range(0, 4));
+            PickSpriteGroup(Random.Range(0, 5));
         }
 
         if(spriteFlipTimer < .1)
@@ -117,6 +123,13 @@ public class FriendTVAnim : MonoBehaviour
             for (int i = 0; i < activeGroup.Length; i++)
             {
                 activeGroup[i] = TVSprites4[i];
+            }
+        }
+        else if (groupNum == 4)
+        {
+            for (int i = 0; i < activeGroup.Length; i++)
+            {
+                activeGroup[i] = TVSprites5[i];
             }
         }
     }

@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Oodle_4
   m_EditorClassIdentifier: 
   infoText: '"I''m getting bullied.... :("'
-  alien: 0
+  alien: 7
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Send S''SSS SSSSS over to rough up the meaners."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: -1
   d1RoommateResponse: '"Eh you probably the right move. Bloof Gloof can be a freak."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"Send Bloof Gloof over to do... something?"'
   d2BiodiversityModifier: 0
@@ -27,4 +30,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: -3
   d2DomSubModifier: -3
   d2RoommateResponse: '"HAHA HOLY SHIT!!! WHAT DID YOU JUST DO DUDE???"'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

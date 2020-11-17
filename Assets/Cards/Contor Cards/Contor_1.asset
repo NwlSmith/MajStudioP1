@@ -16,6 +16,8 @@ MonoBehaviour:
     the bar last night and no one talked to me and I was looking FANTASTIC. You''re
     gonna have to do something about it."'
   alien: 1
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Inrease planetary horniness."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 2
@@ -23,6 +25,7 @@ MonoBehaviour:
   d1DomSubModifier: 0
   d1RoommateResponse: '"Wow bro, time for a major earth fuckfest I guess. I bet Torbar
     still won''t get any, though."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"Ignore request."'
   d2BiodiversityModifier: 0
@@ -30,4 +33,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
   d2RoommateResponse: '"Haha what the fuck even was that."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

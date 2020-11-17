@@ -16,7 +16,9 @@ MonoBehaviour:
     invert the colors of every object with visually metallic property, ie. roadsigns,
     buildings, volcanic activity. This is important for my and the entirety of Glorf
     31''s artistic expression and species signature upon the universe."'
-  alien: 0
+  alien: 6
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Our species signature is paramount (also that sounds hilarious)."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -2
@@ -25,6 +27,7 @@ MonoBehaviour:
   d1RoommateResponse: '"I wonder if we''ll see all metal with inverted colors also...
     is Goya gonna change like the properties or something or the way organisms percieve
     things?"'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"Maybe that''s a little too fucky... can you figure out some other
     thing to suit your weird urge?"'
@@ -33,4 +36,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: -1
   d2RoommateResponse: '"Goya''s always got something up those many sleeves..."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"Would you recommend visiting Dubai or Chicago first?"'
   alien: 5
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Dubai."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 1
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 1
   d1RoommateResponse: '"Luxury lad. Tell ''em to bring us back a big cat."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"Chicago."'
   d2BiodiversityModifier: 0
@@ -27,4 +30,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
   d2RoommateResponse: '"Excited for Zem Lips to be bitchin'' in that deep dish."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

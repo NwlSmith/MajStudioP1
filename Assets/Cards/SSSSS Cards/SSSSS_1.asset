@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"It''s time for mosquitoes to go."'
   alien: 2
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Sure, why not?"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 1
   d1DomSubModifier: -1
   d1RoommateResponse: '"Dude, you just wiped out an entire species. Fuck."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"Aw, but they''re sort of cute..."'
   d2BiodiversityModifier: 0
@@ -27,4 +30,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 1
   d2DomSubModifier: 1
   d2RoommateResponse: '"Yeah, right? They sort of remind me of one of my aunts."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

@@ -13,15 +13,15 @@ public class DeckManager : MonoBehaviour
 
     // The current queue of cards.
     [SerializeField]
-    private List<Card> cardList;
+    private List<Card> cardList = null;
 
     // A list of miscelanious cards, not connected to any particular storyline.
     [SerializeField]
-    private List<Card> miscCardList;
+    private List<Card> miscCardList = null;
 
     // The cards the player should start with.
     [SerializeField]
-    private List<Card> startingCardList;
+    private List<Card> startingCardList = null;
 
     private void Awake()
     {

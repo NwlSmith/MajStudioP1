@@ -16,12 +16,15 @@ MonoBehaviour:
     would you be able to crank the heat up a little bit for me? It would make earth
     a better vacay spot suited to my needs."'
   alien: 5
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Oh totally, yeah I hope this helps."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: -2
   d1DomSubModifier: -2
   d1RoommateResponse: '"Haha bro I hope the earthlings can handle extra winter."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"The needs of many outweigh the needs of one."'
   d2BiodiversityModifier: 0
@@ -30,4 +33,5 @@ MonoBehaviour:
   d2DomSubModifier: 0
   d2RoommateResponse: '"Aw dude, but Zem Lips needs that heat! Haha i''m just messing
     with you I don''t care."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

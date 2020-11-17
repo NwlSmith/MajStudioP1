@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"An earth human asked my for my hand in marriage. Is it time to tie
     the knot? What if i get tied down?"'
-  alien: 0
+  alien: 1
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"Listen to your hearts."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -1
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: -1
   d1RoommateResponse: '"What about listening to your brains?"'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"This is a chance to partake in their customs on such an initimate
     level! Seize it!"'
@@ -29,4 +32,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 1
   d2RoommateResponse: '"We''ve got one married in! Hurrah for Glorf!"'
+  d2RoommateResponseSpoken: 0
   d2Cards: []
