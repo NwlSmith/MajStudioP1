@@ -17,7 +17,7 @@ MonoBehaviour:
     to our collection of earth artifacts. Can I have your go ahead?"'
   alien: 6
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"Go ahead. Reference my name in the museum display, please."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -2
@@ -25,7 +25,7 @@ MonoBehaviour:
   d1DomSubModifier: 2
   d1RoommateResponse: '"It looks like you sort of pissed off the earthlings a bit
     there."'
-  d1RoommateResponseSpoken: 0
+  d1RoommateResponseSpoken: 1
   d1Cards: []
   decision2Text: '"What if instead you took photographs of them?"'
   d2BiodiversityModifier: 0

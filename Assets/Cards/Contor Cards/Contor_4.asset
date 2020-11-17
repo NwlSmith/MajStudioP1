@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"NASA wants to send me to space. Can we meet up while I''m there?"'
   alien: 1
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"Yeah, here''s my address."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
@@ -30,5 +30,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
   d2RoommateResponse: '"Haha yeah! Tell him to his face!"'
-  d2RoommateResponseSpoken: 0
+  d2RoommateResponseSpoken: 1
   d2Cards: []

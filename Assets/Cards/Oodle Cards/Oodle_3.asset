@@ -18,14 +18,14 @@ MonoBehaviour:
     please..." '
   alien: 7
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"Cook em up."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: -1
   d1DomSubModifier: -2
   d1RoommateResponse: '"The earth burns according to Mire Oodle''s neuroticism."'
-  d1RoommateResponseSpoken: 0
+  d1RoommateResponseSpoken: 1
   d1Cards: []
   decision2Text: '"Freezer time."'
   d2BiodiversityModifier: 0

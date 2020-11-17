@@ -17,6 +17,8 @@ MonoBehaviour:
     this, I believe we could raise the temperature of the ocean to kill a good amount
     of them and easily harvest such organs. Do we have your go ahead?"'
   alien: 0
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 0
   decision1Text: '"Okay, as long as you don''t kill ALL of them..."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
@@ -24,6 +26,7 @@ MonoBehaviour:
   d1DomSubModifier: -2
   d1RoommateResponse: '"I guess that earth''s gonna embark upon some major bloodbath
     vibes... due to Glorf 31. We''re sort of messy."'
+  d1RoommateResponseSpoken: 1
   d1Cards: []
   decision2Text: '"You''ll kill the planet! No way!"'
   d2BiodiversityModifier: 0
@@ -32,4 +35,5 @@ MonoBehaviour:
   d2DomSubModifier: 0
   d2RoommateResponse: '"Aw that''s too bad, I was looking forward to the color implants
     that Glarbarf inc was gonna release with the new tech from that..."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

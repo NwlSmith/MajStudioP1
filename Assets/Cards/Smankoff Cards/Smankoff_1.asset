@@ -15,12 +15,15 @@ MonoBehaviour:
   infoText: "\u201CI would like to insert a new gene into the contemporary eastern
     squirrel species. It will make them all hunger for the blood of newborn mammals.\u201D"
   alien: 0
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 0
   decision1Text: '"Okay, sure. If it''s for science or whatever."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -2
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 2
   d1RoommateResponse: '"Wow look at those squirrels GO."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"You''ll fuck up the population so much, literally do something
     else."'
@@ -29,4 +32,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 2
   d2DomSubModifier: 0
   d2RoommateResponse: '"You gave him reign to do whatever wasn''t that, I guess..."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

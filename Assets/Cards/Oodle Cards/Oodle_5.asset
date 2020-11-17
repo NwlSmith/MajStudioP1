@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"What''s your zodiac sign?"'
   alien: 7
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"Uh... Jupiter?"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0

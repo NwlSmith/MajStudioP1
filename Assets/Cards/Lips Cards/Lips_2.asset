@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"Would you recommend visiting Dubai or Chicago first?"'
   alien: 5
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"Dubai."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 1

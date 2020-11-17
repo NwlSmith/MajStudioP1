@@ -17,7 +17,7 @@ MonoBehaviour:
     buildings, volcanic activity. This is important for my and the entirety of Glorf
     31''s artistic expression and species signature upon the universe."'
   alien: 6
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 2d783fb0d57a2e34c8ba3c94512f6881, type: 3}
   imageAssociatedWithChoice1: 1
   decision1Text: '"Our species signature is paramount (also that sounds hilarious)."'
   d1BiodiversityModifier: 0

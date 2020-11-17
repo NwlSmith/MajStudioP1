@@ -16,7 +16,7 @@ MonoBehaviour:
     or something stupid and now i''m stuck in it. Can you send someone to come get
     me out?"'
   alien: 5
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 63d5d9e4c8bf37c40bef8086c7449d54, type: 3}
   imageAssociatedWithChoice1: 1
   decision1Text: '"Send Bloof Gloof to help."'
   d1BiodiversityModifier: 0

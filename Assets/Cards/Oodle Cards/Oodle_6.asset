@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"I threw a party but none of the other aliens showed up...."'
   alien: 7
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"I''ll teleport them all to you right now."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 1

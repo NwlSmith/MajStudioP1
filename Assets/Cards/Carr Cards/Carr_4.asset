@@ -16,7 +16,7 @@ MonoBehaviour:
     have to one that includes not only aural sensory input but also patterned smell
     over time."'
   alien: 6
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 90adb82b7bde84b43b9381d7183f98b2, type: 3}
   imageAssociatedWithChoice1: 1
   decision1Text: '"I have no idea how you''d even do that but I''m excited to see
     you try."'
@@ -34,5 +34,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 1
   d2RoommateResponse: '"Beethoven, that dude rocks on."'
-  d2RoommateResponseSpoken: 0
+  d2RoommateResponseSpoken: 1
   d2Cards: []

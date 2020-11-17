@@ -16,7 +16,7 @@ MonoBehaviour:
     species, they are so soft, loving, sweet... I will make a new home for them on
     Glorf 31 with me alone as their shepherd."'
   alien: 7
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: b5cefc70d4500194fb76855abe626b77, type: 3}
   imageAssociatedWithChoice1: 1
   decision1Text: '"Go ahead, Mire. Whatever you need."'
   d1BiodiversityModifier: 0

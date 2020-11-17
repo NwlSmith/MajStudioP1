@@ -15,12 +15,15 @@ MonoBehaviour:
   infoText: '"It''s time to give the humans the olive oil to crude oil conversion
     secret of our peoples."'
   alien: 0
+  image: {fileID: 21300000, guid: 804d7fc4ab9d54b4ab1ef39a63bd3cb7, type: 3}
+  imageAssociatedWithChoice1: 1
   decision1Text: '"If you believe they''ll use it wisely..."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 2
   d1DomSubModifier: -1
   d1RoommateResponse: '"The ultimate secret? Gone."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"It''s too dangerous!"'
   d2BiodiversityModifier: 0
@@ -28,4 +31,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 2
   d2DomSubModifier: 0
   d2RoommateResponse: '"Def too dangerous. The right call right there."'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

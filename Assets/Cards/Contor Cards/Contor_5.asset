@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"Any tips on hiding flagellum?"'
   alien: 1
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"Hats are always useful."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -1

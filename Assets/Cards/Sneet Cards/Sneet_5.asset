@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"I would like to steal Ronald Reagan''s frozen body from the celebrity
     body compendium of the United States of America."'
   alien: 3
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 4550063be842a9342b9e437aa63ac049, type: 3}
   imageAssociatedWithChoice1: 1
   decision1Text: '"Pin him up on a cross on the Glorf battleground for me."'
   d1BiodiversityModifier: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"Do you know any good deep sea travel spots? LIke marina''s trench?"'
   alien: 5
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"Yeah go there, to the trench."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 1

@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"There''s this virus I found that is highly contagious, if you give
     it to the humans they''ll all work from home and buckle even more under capitalism."'
   alien: 3
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 76ace3d3eced7824ba505cd47e5a8baf, type: 3}
   imageAssociatedWithChoice1: 1
   decision1Text: '"Let''s mess em up."'
   d1BiodiversityModifier: 0

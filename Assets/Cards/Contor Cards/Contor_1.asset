@@ -17,7 +17,7 @@ MonoBehaviour:
     gonna have to do something about it."'
   alien: 1
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"Inrease planetary horniness."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 2

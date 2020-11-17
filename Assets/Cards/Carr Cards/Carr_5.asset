@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"I need paint."'
   alien: 6
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"Get pigment from the Grand Canyon."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 1
