@@ -22,19 +22,16 @@ public class SpriteCycle : MonoBehaviour
         if(timer < 3)
         {
             timer++;
-            Debug.Log("Timer Go Up");
         }
         else
         {
             timer = 0;
-            if(spriteCounter > sprites.Length)
+            if(spriteCounter + 2 > sprites.Length)
             {
-                Debug.Log("Counter to 0");
                 spriteCounter = 0;
             }
             else
             {
-                Debug.Log("Counter go up");
                 spriteCounter++;
             }
             
