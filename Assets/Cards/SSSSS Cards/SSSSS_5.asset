@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"All creatures now only have left feet."'
   alien: 2
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: b119c2edae7bb8543910ee31cab71f2e, type: 3}
   imageAssociatedWithChoice1: 1
   decision1Text: '"I am prepared to see them fall on one another."'
   d1BiodiversityModifier: 0

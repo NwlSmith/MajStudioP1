@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"It is birthday time for the earth day. All will celebrate."'
   alien: 4
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"All will celebrate."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0

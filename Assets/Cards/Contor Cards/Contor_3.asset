@@ -18,7 +18,7 @@ MonoBehaviour:
     layers of pretend. Who am I?"'
   alien: 1
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"You are Torbar Contor, Glorf 31 citizen wearing a wig pretending
     to be a human. You can do this."'
   d1BiodiversityModifier: 0

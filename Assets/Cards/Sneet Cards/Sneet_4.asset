@@ -18,7 +18,7 @@ MonoBehaviour:
     scale and be extremely beneficial to Glorf 31 interplanetary investment prospects."'
   alien: 3
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"If it''s necessary for the economy... whatever that is... then
     yes of course."'
   d1BiodiversityModifier: 0

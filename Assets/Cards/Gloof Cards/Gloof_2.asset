@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"Mandatory clown noses for all crustaceons, yes?"'
   alien: 4
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"Sure, why not?"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -2

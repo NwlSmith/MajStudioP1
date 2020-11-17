@@ -16,7 +16,7 @@ MonoBehaviour:
     I fill it out?"'
   alien: 7
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"Yeah, totally! Send me the quiz too when you''re done. We can
     compare."'
   d1BiodiversityModifier: 0

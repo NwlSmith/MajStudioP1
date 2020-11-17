@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"All human auditory ability only now able to parse sounds of clown horn
     honking?"'
   alien: 4
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 14bcaa496d38f1847a8638cdcb17a318, type: 3}
   imageAssociatedWithChoice1: 1
   decision1Text: '"Honk away, dude!"'
   d1BiodiversityModifier: 0

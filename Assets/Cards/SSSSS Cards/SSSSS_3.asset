@@ -16,7 +16,7 @@ MonoBehaviour:
     include a social decree to make cannibalism not just acceptable but necessary
     in the earth culture."'
   alien: 2
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: e337fae0d6e6aa64c86675c5cc5e1ecf, type: 3}
   imageAssociatedWithChoice1: 1
   decision1Text: '"If you really want to try, you have my blessing."'
   d1BiodiversityModifier: 0

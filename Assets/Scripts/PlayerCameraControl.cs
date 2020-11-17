@@ -31,7 +31,7 @@ public class PlayerCameraControl : MonoBehaviour
     {
         MouseInputs();
         MouseMovements();
-        if(shootRay)
+        if(shootRay && CardManager.instance.canPressButtons)
         {
             ButtonRay();
         }

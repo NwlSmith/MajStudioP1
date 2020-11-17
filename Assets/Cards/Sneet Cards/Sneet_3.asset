@@ -17,7 +17,7 @@ MonoBehaviour:
     rendering me monetarily powerful over the species of the earth."'
   alien: 3
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"Yes! Definitely! For the economy!"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0

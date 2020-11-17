@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"I stayed out in the sun too long, I got burnt really bad. Can I turn
     the sun off until I''m feeling a little better?"'
   alien: 5
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: a5f80d0ceb311b74fac242a335caf799, type: 3}
   imageAssociatedWithChoice1: 1
   decision1Text: '"Yeah, one second."'
   d1BiodiversityModifier: 0

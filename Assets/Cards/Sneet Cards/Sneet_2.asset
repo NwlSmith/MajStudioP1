@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"I believe it is time to increase the supplies of oil within earth."'
   alien: 3
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"More is always better!"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"I have a plan to transform all rocks into type igneous."'
   alien: 2
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"I couldn''t see anything bad happening there."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -1

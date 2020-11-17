@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"We are going to put space sac pheremones into the krill population."'
   alien: 0
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 0
   decision1Text: '"Excited to see what happens!"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 1
   d1DomSubModifier: 3
   d1RoommateResponse: '"Those krill have TEETH now, dude. The right decision."'
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"What if we put krill pheremones into the space sacs?"'
   d2BiodiversityModifier: 0
@@ -27,4 +30,5 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 1
   d2RoommateResponse: '"Ah! Krill in space!"'
+  d2RoommateResponseSpoken: 0
   d2Cards: []

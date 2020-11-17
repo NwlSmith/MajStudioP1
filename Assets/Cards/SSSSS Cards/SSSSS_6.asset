@@ -15,7 +15,7 @@ MonoBehaviour:
   infoText: '"All creatures are only allowed to be awake at 2pm UTC."'
   alien: 2
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
+  imageAssociatedWithChoice1: 0
   decision1Text: '"That makes sense to me!"'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
