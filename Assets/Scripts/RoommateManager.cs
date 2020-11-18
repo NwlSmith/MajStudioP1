@@ -149,7 +149,7 @@ public class RoommateManager : MonoBehaviour
             float elapsedTime = 0f;
             Vector3 initScale = model.transform.localScale;
             Vector3 initRot = model.transform.rotation.eulerAngles;
-            Vector3 targetScale = model.transform.localScale + new Vector3(0f, .01f, 0f);
+            Vector3 targetScale = model.transform.localScale + new Vector3(.003f, .003f, 0f);
             Vector3 targetRot = model.transform.rotation.eulerAngles + new Vector3(0f, 5f, 0f);
             while (elapsedTime < duration)
             {

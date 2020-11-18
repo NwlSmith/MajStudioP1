@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlantHolo
+  m_Shader: {fileID: -6465566751694194690, guid: d5e7b84823b1d5b4a84a43be7d749bd9, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_485A460D:
+        m_Texture: {fileID: 2800000, guid: e77b74f446b210041badad0c387969a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_40FFF4: 0.05
+    m_Colors:
+    - Color_3E83AD8C: {r: 0.3963321, g: 1.712931, b: 0.36359388, a: 0}
+    - Color_FEC67BD9: {r: 0.16981131, g: 0.15459237, b: 0.15459237, a: 0}
+    - Vector2_1A1CFB32: {r: 10, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
