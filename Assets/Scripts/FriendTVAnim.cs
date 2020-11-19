@@ -10,11 +10,11 @@ public class FriendTVAnim : MonoBehaviour
     [SerializeField]
     private Texture[] TVSprites;
 
-    public Texture[] TVSprites1 = new Texture[4];
-    public Texture[] TVSprites2 = new Texture[4];
-    public Texture[] TVSprites3 = new Texture[4];
-    public Texture[] TVSprites4 = new Texture[4];
-    public Texture[] TVSprites5 = new Texture[4];
+    private Texture[] TVSprites1 = new Texture[4];
+    private Texture[] TVSprites2 = new Texture[4];
+    private Texture[] TVSprites3 = new Texture[4];
+    private Texture[] TVSprites4 = new Texture[4];
+    private Texture[] TVSprites5 = new Texture[4];
 
     private Texture[] activeGroup = new Texture[4];
     private float groupTimer;
