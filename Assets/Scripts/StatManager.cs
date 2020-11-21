@@ -20,6 +20,7 @@ public class StatManager : MonoBehaviour
     // 30 = getting high, warning, text flashing
     // 35 = getting very high, text flashing
     // 40 = too high, game over
+
     [SerializeField]
     private int[] thresholds = { 0, 5, 10, 20, 30, 35, 40 };
 
@@ -32,7 +33,7 @@ public class StatManager : MonoBehaviour
     private bool flashDS = false;
 
     //Abby adding stuff here, will comment in where
-    [SerializeField] private GameObject horninessUp, horninessDown, domSubUp, domSubDown, tempUp, tempDown;
+    [SerializeField] private GameObject horninessUp = null, horninessDown = null, domSubUp = null, domSubDown = null, tempUp = null, tempDown = null;
 
     void Awake()
     {

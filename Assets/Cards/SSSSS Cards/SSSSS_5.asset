@@ -26,7 +26,7 @@ MonoBehaviour:
   d1Cards: []
   decision2Text: '"No, instead they all gain another foot."'
   d2BiodiversityModifier: 0
-  d2HorninessModifier: -2
+  d2HorninessModifier: 2
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: -2
   d2RoommateResponse: '"That''s sort of as messed up as them all having left feet,

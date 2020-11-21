@@ -20,7 +20,7 @@ MonoBehaviour:
   decision1Text: '"If you believe they''ll use it wisely..."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
-  d1AtmosphereTempModifier: 2
+  d1AtmosphereTempModifier: 3
   d1DomSubModifier: -1
   d1RoommateResponse: '"The ultimate secret? Gone."'
   d1RoommateResponseSpoken: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
   decision2Text: '"It''s too dangerous!"'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
-  d2AtmosphereTempModifier: 2
+  d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
   d2RoommateResponse: '"Def too dangerous. The right call right there."'
   d2RoommateResponseSpoken: 0

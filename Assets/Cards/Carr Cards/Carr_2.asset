@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Carr_2
   m_EditorClassIdentifier: 
   infoText: '"I would like to mine out some of the cave paintings found in Catalonia,
-    bring them back to the eternal museum back on Glorf 31. It would contribute greatly
-    to our collection of earth artifacts. Can I have your go ahead?"'
+    bring them back to the Eternal Museum back on Glorf 31. It would contribute greatly
+    to our collection of Earth artifacts. Can I have your go ahead?"'
   alien: 6
   image: {fileID: 0}
   imageAssociatedWithChoice1: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
   d1HorninessModifier: -2
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 2
-  d1RoommateResponse: '"It looks like you sort of pissed off the earthlings a bit
+  d1RoommateResponse: '"It looks like you sort of pissed off the Earthlings a bit
     there."'
   d1RoommateResponseSpoken: 1
   d1Cards: []

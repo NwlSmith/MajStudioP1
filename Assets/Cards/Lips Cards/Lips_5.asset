@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Lips_5
   m_EditorClassIdentifier: 
-  infoText: '"I missed my plane to hawaii, now all these humans are staring at me
+  infoText: '"I missed my plane to Hawaii, now all these humans are staring at me
     in the airport."'
   alien: 5
   image: {fileID: 0}

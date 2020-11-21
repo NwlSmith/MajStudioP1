@@ -18,9 +18,9 @@ MonoBehaviour:
   imageAssociatedWithChoice1: 0
   decision1Text: '"Let''s tear it all down."'
   d1BiodiversityModifier: 0
-  d1HorninessModifier: -1
+  d1HorninessModifier: 2
   d1AtmosphereTempModifier: 1
-  d1DomSubModifier: 0
+  d1DomSubModifier: -2
   d1RoommateResponse: '"TEAR IT DOWN!"'
   d1RoommateResponseSpoken: 0
   d1Cards: []

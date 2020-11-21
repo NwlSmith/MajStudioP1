@@ -42,8 +42,8 @@ public class CardManager : MonoBehaviour
     public TMPro.TextMeshPro D2Text;
     public TextMesh NameText;
 
-    [SerializeField] private GameObject d1HorninessUpArrow, d1HorninessDownArrow, d1DomSubUpArrow, d1DomSubDownArrow, d1TempUpArrow, d1TempDownArrow;
-    [SerializeField] private GameObject d2HorninessUpArrow, d2HorninessDownArrow, d2DomSubUpArrow, d2DomSubDownArrow, d2TempUpArrow, d2TempDownArrow;
+    [SerializeField] private GameObject d1HorninessUpArrow = null, d1HorninessDownArrow = null, d1DomSubUpArrow = null, d1DomSubDownArrow = null, d1TempUpArrow = null, d1TempDownArrow = null;
+    [SerializeField] private GameObject d2HorninessUpArrow = null, d2HorninessDownArrow = null, d2DomSubUpArrow = null, d2DomSubDownArrow = null, d2TempUpArrow = null, d2TempDownArrow = null;
 
     public bool canPressButtons = false;
 
@@ -139,17 +139,26 @@ public class CardManager : MonoBehaviour
     }
 
     private void SetUpStatChangeArrows()
-    {
+    { // MAKE SCALE CHANGE BASED ON MAGNITUDE!!!!!!!!!!!!!!!!!!!!!!
+
+        Vector3 scaleMod = new Vector3(.01f, .01f, .01f);
+
         // DS
         if (cardInfo.d1DomSubModifier > 0)
             d1DomSubUpArrow.SetActive(true);
         else if (cardInfo.d1DomSubModifier < 0)
             d1DomSubDownArrow.SetActive(true);
 
+
         if (cardInfo.d2DomSubModifier > 0)
             d2DomSubUpArrow.SetActive(true);
         else if (cardInfo.d2DomSubModifier < 0)
             d2DomSubDownArrow.SetActive(true);
+
+        d1DomSubUpArrow.transform.localScale = scaleMod * Mathf.Abs(cardInfo.d1DomSubModifier);
+        d1DomSubDownArrow.transform.localScale = scaleMod * Mathf.Abs(cardInfo.d1DomSubModifier);
+        d2DomSubUpArrow.transform.localScale = scaleMod * Mathf.Abs(cardInfo.d2DomSubModifier);
+        d2DomSubDownArrow.transform.localScale = scaleMod * Mathf.Abs(cardInfo.d2DomSubModifier);
 
         //Temp
         if (cardInfo.d1AtmosphereTempModifier > 0)
@@ -162,16 +171,27 @@ public class CardManager : MonoBehaviour
         else if (cardInfo.d2AtmosphereTempModifier < 0)
             d2TempDownArrow.SetActive(true);
 
+        d1TempUpArrow.transform.localScale = scaleMod * Mathf.Abs(cardInfo.d1AtmosphereTempModifier);
+        d1TempDownArrow.transform.localScale = scaleMod * Mathf.Abs(cardInfo.d1AtmosphereTempModifier);
+        d2TempUpArrow.transform.localScale = scaleMod * Mathf.Abs(cardInfo.d2AtmosphereTempModifier);
+        d2TempDownArrow.transform.localScale = scaleMod * Mathf.Abs(cardInfo.d2AtmosphereTempModifier);
+
+
         //Horniness
         if (cardInfo.d1HorninessModifier > 0)
             d1HorninessUpArrow.SetActive(true);
         else if (cardInfo.d1HorninessModifier < 0)
             d1HorninessDownArrow.SetActive(true);
 
-        if (cardInfo.d2AtmosphereTempModifier > 0)
+        if (cardInfo.d2HorninessModifier > 0)
             d2HorninessUpArrow.SetActive(true);
-        else if (cardInfo.d2AtmosphereTempModifier < 0)
+        else if (cardInfo.d2HorninessModifier < 0)
             d2HorninessDownArrow.SetActive(true);
+
+        d1HorninessUpArrow.transform.localScale = scaleMod * Mathf.Abs(cardInfo.d1HorninessModifier);
+        d1HorninessDownArrow.transform.localScale = scaleMod * Mathf.Abs(cardInfo.d1HorninessModifier);
+        d2HorninessUpArrow.transform.localScale = scaleMod * Mathf.Abs(cardInfo.d2HorninessModifier);
+        d2HorninessDownArrow.transform.localScale = scaleMod * Mathf.Abs(cardInfo.d2HorninessModifier);
     }
 
     private void RemoveStatChangeArrows()
