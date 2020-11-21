@@ -42,6 +42,9 @@ public class CardManager : MonoBehaviour
     public TMPro.TextMeshPro D2Text;
     public TextMesh NameText;
 
+    [SerializeField] private GameObject d1HorninessUpArrow, d1HorninessDownArrow, d1DomSubUpArrow, d1DomSubDownArrow, d1TempUpArrow, d1TempDownArrow;
+    [SerializeField] private GameObject d2HorninessUpArrow, d2HorninessDownArrow, d2DomSubUpArrow, d2DomSubDownArrow, d2TempUpArrow, d2TempDownArrow;
+
     public bool canPressButtons = false;
 
     void Awake()
@@ -111,7 +114,11 @@ public class CardManager : MonoBehaviour
                 break;
         }
         NameText.text = alienName;
-       
+
+        UnityWebGLSpeechSynthesis.TTSManager.instance.Say("Incoming transmission from: " + alienName, 1); // FIX THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        yield return new WaitForSeconds(1f);
+
         MainText.text = "Translating...";
 
         cardVisuals.Activate();
@@ -127,6 +134,68 @@ public class CardManager : MonoBehaviour
         D1Text.text = cardInfo.decision1Text;
         D2Text.text = cardInfo.decision2Text;
         canPressButtons = true;
+        SetUpStatChangeArrows();
+
+    }
+
+    private void SetUpStatChangeArrows()
+    {
+        // DS
+        if (cardInfo.d1DomSubModifier > 0)
+            d1DomSubUpArrow.SetActive(true);
+        else if (cardInfo.d1DomSubModifier < 0)
+            d1DomSubDownArrow.SetActive(true);
+
+        if (cardInfo.d2DomSubModifier > 0)
+            d2DomSubUpArrow.SetActive(true);
+        else if (cardInfo.d2DomSubModifier < 0)
+            d2DomSubDownArrow.SetActive(true);
+
+        //Temp
+        if (cardInfo.d1AtmosphereTempModifier > 0)
+            d1TempUpArrow.SetActive(true);
+        else if (cardInfo.d1AtmosphereTempModifier < 0)
+            d1TempDownArrow.SetActive(true);
+
+        if (cardInfo.d2AtmosphereTempModifier > 0)
+            d2TempUpArrow.SetActive(true);
+        else if (cardInfo.d2AtmosphereTempModifier < 0)
+            d2TempDownArrow.SetActive(true);
+
+        //Horniness
+        if (cardInfo.d1HorninessModifier > 0)
+            d1HorninessUpArrow.SetActive(true);
+        else if (cardInfo.d1HorninessModifier < 0)
+            d1HorninessDownArrow.SetActive(true);
+
+        if (cardInfo.d2AtmosphereTempModifier > 0)
+            d2HorninessUpArrow.SetActive(true);
+        else if (cardInfo.d2AtmosphereTempModifier < 0)
+            d2HorninessDownArrow.SetActive(true);
+    }
+
+    private void RemoveStatChangeArrows()
+    {
+        // DS
+        d1DomSubUpArrow.SetActive(false);
+        d1DomSubDownArrow.SetActive(false);
+
+        d2DomSubUpArrow.SetActive(false);
+        d2DomSubDownArrow.SetActive(false);
+
+        //Temp
+        d1TempUpArrow.SetActive(false);
+        d1TempDownArrow.SetActive(false);
+
+        d2TempUpArrow.SetActive(false);
+        d2TempDownArrow.SetActive(false);
+
+        //Horniness
+        d1HorninessUpArrow.SetActive(false);
+        d1HorninessDownArrow.SetActive(false);
+
+        d2HorninessUpArrow.SetActive(false);
+        d2HorninessDownArrow.SetActive(false);
     }
 
     /*
@@ -138,6 +207,8 @@ public class CardManager : MonoBehaviour
         MainText.text = "Please wait for new assignment...";
         D1Text.text = "";
         D2Text.text = "";
+
+        RemoveStatChangeArrows();
 
         cardVisuals.Deactivate();
         canPressButtons = false;

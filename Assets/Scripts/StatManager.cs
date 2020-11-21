@@ -67,6 +67,7 @@ public class StatManager : MonoBehaviour
         if (cur <= 0)
         {
             // game over
+            GameManager.instance.GameOverLose();
         }
         // went below 5
         else if (prev > 5 && cur <= 5)
@@ -102,6 +103,7 @@ public class StatManager : MonoBehaviour
         if (cur >= 40)
         {
             // game over
+            GameManager.instance.GameOverLose();
         }
         // went above 35
         else if (prev < 35 && cur >= 35)
@@ -126,6 +128,7 @@ public class StatManager : MonoBehaviour
         if (cur <= 0)
         {
             // game over
+            GameManager.instance.GameOverLose();
         }
         // went below 5
         else if (prev > 5 && cur <= 5)
@@ -161,6 +164,7 @@ public class StatManager : MonoBehaviour
         if (cur >= 40)
         {
             // game over
+            GameManager.instance.GameOverLose();
         }
         // went above 35
         else if (prev < 35 && cur >= 35)
@@ -185,6 +189,7 @@ public class StatManager : MonoBehaviour
         if (cur <= 0)
         {
             // game over
+            GameManager.instance.GameOverLose();
         }
         // went below 5
         else if (prev > 5 && cur <= 5)
@@ -220,6 +225,7 @@ public class StatManager : MonoBehaviour
         if (cur >= 40)
         {
             // game over
+            GameManager.instance.GameOverLose();
         }
         // went above 35
         else if (prev < 35 && cur >= 35)
@@ -301,131 +307,136 @@ public class StatManager : MonoBehaviour
 
     public void SignifyHorninessUp()
     {
-
+        StartCoroutine(FlashHornUp());
     }
+
     public void SignfiyHorninessDown()
     {
+        StartCoroutine(FlashHornDown());
 
     }
+
     public void SignifyDSUp()
     {
+        StartCoroutine(FlashDSUp());
 
     }
+
     public void SignifyDSDown()
     {
+        StartCoroutine(FlashDSDown());
+
+    }
+
+    public void SignifyTempUp()
+    {
+        StartCoroutine(FlashTempUp());
+
+    }
+
+    public void SignifyTempDown()
+    {
+        StartCoroutine(FlashTempDown());
 
     }
 
     private IEnumerator FlashHornUp()
     {
         WaitForSeconds wait = new WaitForSeconds(.25f);
-        bool on = true;
         while (true)
         {
-            if (flashDS && on)
+            if (flashDS && horninessUp.activeSelf)
             {
-                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 0);
-                on = false;
+                horninessUp.SetActive(false);
             }
-            else if (!on)
+            else if (!horninessUp.activeSelf)
             {
-                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 1);
-                on = true;
+                horninessUp.SetActive(true);
             }
             yield return wait;
         }
     }
+
     private IEnumerator FlashHornDown()
     {
         WaitForSeconds wait = new WaitForSeconds(.25f);
-        bool on = true;
         while (true)
         {
-            if (flashDS && on)
+            if (flashHorniness && horninessDown.activeSelf)
             {
-                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 0);
-                on = false;
+                horninessDown.SetActive(false);
             }
-            else if (!on)
+            else if (!horninessDown.activeSelf)
             {
-                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 1);
-                on = true;
+                horninessDown.SetActive(true);
             }
             yield return wait;
         }
     }
+
     private IEnumerator FlashDSUp()
     {
         WaitForSeconds wait = new WaitForSeconds(.25f);
-        bool on = true;
         while (true)
         {
-            if (flashDS && on)
+            if (flashDS && domSubUp.activeSelf)
             {
-                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 0);
-                on = false;
+                domSubUp.SetActive(false);
             }
-            else if (!on)
+            else if (!domSubUp.activeSelf)
             {
-                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 1);
-                on = true;
+                domSubUp.SetActive(true);
             }
             yield return wait;
         }
     }
+
     private IEnumerator FlashDSDown()
     {
         WaitForSeconds wait = new WaitForSeconds(.25f);
-        bool on = true;
         while (true)
         {
-            if (flashDS && on)
+            if (flashDS && domSubDown.activeSelf)
             {
-                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 0);
-                on = false;
+                domSubDown.SetActive(false);
             }
-            else if (!on)
+            else if (!domSubDown.activeSelf)
             {
-                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 1);
-                on = true;
+                domSubDown.SetActive(true);
             }
             yield return wait;
         }
     }
+
     private IEnumerator FlashTempUp()
     {
         WaitForSeconds wait = new WaitForSeconds(.25f);
-        bool on = true;
         while (true)
         {
-            if (flashDS && on)
+            if (flashAtmo && tempUp.activeSelf)
             {
-                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 0);
-                on = false;
+                tempUp.SetActive(false);
             }
-            else if (!on)
+            else if (!tempUp.activeSelf)
             {
-                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 1);
-                on = true;
+                tempUp.SetActive(true);
             }
             yield return wait;
         }
     }
+
     private IEnumerator FlashTempDown()
     {
         WaitForSeconds wait = new WaitForSeconds(.25f);
-        bool on = true;
         while (true)
         {
-            if (flashDS && on)
+            if (flashAtmo && tempDown.activeSelf)
             {
-                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 0);
-                on = false;
+                tempDown.SetActive(false);
             }
-            else if (!on)
+            else if (!tempDown.activeSelf)
             {
-                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 1);
-                on = true;
+                tempDown.SetActive(true);
             }
             yield return wait;
         }
