@@ -138,6 +138,13 @@ public class RoommateManager : MonoBehaviour
         charDialogue.text = "";
         // draw new card
         stopAnim = true;
+
+        if (monologueQueue.Count <= 0)
+        {
+            // player wins
+            GameManager.instance.GameOverWin();
+        }
+
         DeckManager.instance.NextCard();
     }
 
