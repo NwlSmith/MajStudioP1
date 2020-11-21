@@ -32,8 +32,13 @@ public class StatManager : MonoBehaviour
     private bool flashAtmo = false;
     private bool flashDS = false;
 
-    //Abby adding stuff here, will comment in where
-    [SerializeField] private GameObject horninessUp = null, horninessDown = null, domSubUp = null, domSubDown = null, tempUp = null, tempDown = null;
+    // things that change on the earth.
+    [SerializeField] private GameObject earthModel;
+    [SerializeField] private GameObject earthTintBlue;
+    [SerializeField] private GameObject earthTintRed;
+    [SerializeField] private GameObject earthParticleHeart;
+    [SerializeField] private GameObject earthParticleExplosion;
+    
 
     void Awake()
     {
@@ -298,146 +303,6 @@ public class StatManager : MonoBehaviour
             {
                 domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 1);
                 on = true;
-            }
-            yield return wait;
-        }
-    }
-
-
-    //Copying and changing Nate's shit... sorta confused tho ;-;
-
-    public void SignifyHorninessUp()
-    {
-        StartCoroutine(FlashHornUp());
-    }
-
-    public void SignfiyHorninessDown()
-    {
-        StartCoroutine(FlashHornDown());
-
-    }
-
-    public void SignifyDSUp()
-    {
-        StartCoroutine(FlashDSUp());
-
-    }
-
-    public void SignifyDSDown()
-    {
-        StartCoroutine(FlashDSDown());
-
-    }
-
-    public void SignifyTempUp()
-    {
-        StartCoroutine(FlashTempUp());
-
-    }
-
-    public void SignifyTempDown()
-    {
-        StartCoroutine(FlashTempDown());
-
-    }
-
-    private IEnumerator FlashHornUp()
-    {
-        WaitForSeconds wait = new WaitForSeconds(.25f);
-        while (true)
-        {
-            if (flashDS && horninessUp.activeSelf)
-            {
-                horninessUp.SetActive(false);
-            }
-            else if (!horninessUp.activeSelf)
-            {
-                horninessUp.SetActive(true);
-            }
-            yield return wait;
-        }
-    }
-
-    private IEnumerator FlashHornDown()
-    {
-        WaitForSeconds wait = new WaitForSeconds(.25f);
-        while (true)
-        {
-            if (flashHorniness && horninessDown.activeSelf)
-            {
-                horninessDown.SetActive(false);
-            }
-            else if (!horninessDown.activeSelf)
-            {
-                horninessDown.SetActive(true);
-            }
-            yield return wait;
-        }
-    }
-
-    private IEnumerator FlashDSUp()
-    {
-        WaitForSeconds wait = new WaitForSeconds(.25f);
-        while (true)
-        {
-            if (flashDS && domSubUp.activeSelf)
-            {
-                domSubUp.SetActive(false);
-            }
-            else if (!domSubUp.activeSelf)
-            {
-                domSubUp.SetActive(true);
-            }
-            yield return wait;
-        }
-    }
-
-    private IEnumerator FlashDSDown()
-    {
-        WaitForSeconds wait = new WaitForSeconds(.25f);
-        while (true)
-        {
-            if (flashDS && domSubDown.activeSelf)
-            {
-                domSubDown.SetActive(false);
-            }
-            else if (!domSubDown.activeSelf)
-            {
-                domSubDown.SetActive(true);
-            }
-            yield return wait;
-        }
-    }
-
-    private IEnumerator FlashTempUp()
-    {
-        WaitForSeconds wait = new WaitForSeconds(.25f);
-        while (true)
-        {
-            if (flashAtmo && tempUp.activeSelf)
-            {
-                tempUp.SetActive(false);
-            }
-            else if (!tempUp.activeSelf)
-            {
-                tempUp.SetActive(true);
-            }
-            yield return wait;
-        }
-    }
-
-    private IEnumerator FlashTempDown()
-    {
-        WaitForSeconds wait = new WaitForSeconds(.25f);
-        while (true)
-        {
-            if (flashAtmo && tempDown.activeSelf)
-            {
-                tempDown.SetActive(false);
-            }
-            else if (!tempDown.activeSelf)
-            {
-                tempDown.SetActive(true);
             }
             yield return wait;
         }

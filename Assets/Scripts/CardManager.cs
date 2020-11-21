@@ -142,7 +142,7 @@ public class CardManager : MonoBehaviour
     private void SetUpStatChangeArrows()
     { // MAKE SCALE CHANGE BASED ON MAGNITUDE!!!!!!!!!!!!!!!!!!!!!!
 
-        Vector3 scaleMod = new Vector3(.01f, .01f, .01f);
+        Vector3 scaleMod = new Vector3(.015f, .015f, .015f);
 
         // DS
         if (cardInfo.d1DomSubModifier > 0)
