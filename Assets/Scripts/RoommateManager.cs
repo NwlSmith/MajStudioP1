@@ -106,6 +106,9 @@ public class RoommateManager : MonoBehaviour
 
     private IEnumerator SpeakEnum(string response)
     {
+
+        yield return new WaitForSeconds(Random.Range(2, 4));
+
         Debug.Log("reponse = " + response);
         // make sound
         audioSource.clip = speakSounds[Random.Range(0, speakSounds.Length - 1)];
