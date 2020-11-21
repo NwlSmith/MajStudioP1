@@ -21,10 +21,14 @@ public class EndGameManager : MonoBehaviour
 
     public GameObject text;
 
+    AudioSource aS;
+    public AudioClip explosion;
+
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        aS = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -45,6 +49,8 @@ public class EndGameManager : MonoBehaviour
             exploding = true;
             earth.SetActive(false);
             timerLimit = timer + explodeLimit;
+            aS.clip = explosion;
+            aS.Play();
             ps.Play();
         }
 
