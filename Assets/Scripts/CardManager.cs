@@ -61,6 +61,7 @@ public class CardManager : MonoBehaviour
         MainText.text = "";
         D1Text.text = "";
         D2Text.text = "";
+        RemoveStatChangeArrows();
     }
 
     public void NewCard(Card newCard)
