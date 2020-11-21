@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: GameOverTempLow
+  m_EditorClassIdentifier: 
+  infoText: '"Dude this planet is fricking cold man! I hate it here! Yesterday I
+    saw a dogs peepee freeze in mid air! That was gross! I''m leaving a very negative
+    review of this planet on Space Yelp and talking to your manager. You''re done
+    for!"'
+  alien: 5
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 0
+  decision1Text: Game Over
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: 0
+  d1AtmosphereTempModifier: 0
+  d1DomSubModifier: 0
+  d1RoommateResponse: 
+  d1RoommateResponseSpoken: 0
+  d1Cards: []
+  decision2Text: Game Over
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: 0
+  d2AtmosphereTempModifier: 0
+  d2DomSubModifier: 0
+  d2RoommateResponse: 
+  d2RoommateResponseSpoken: 0
+  d2Cards: []
+  gameOverCard: 1
