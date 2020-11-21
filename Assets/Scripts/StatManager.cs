@@ -31,6 +31,9 @@ public class StatManager : MonoBehaviour
     private bool flashAtmo = false;
     private bool flashDS = false;
 
+    //Abby adding stuff here, will comment in where
+    [SerializeField] private GameObject horninessUp, horninessDown, domSubUp, domSubDown, tempUp, tempDown;
+
     void Awake()
     {
         if (instance == null)
@@ -274,6 +277,141 @@ public class StatManager : MonoBehaviour
     }
 
     private IEnumerator FlashDS()
+    {
+        WaitForSeconds wait = new WaitForSeconds(.25f);
+        bool on = true;
+        while (true)
+        {
+            if (flashDS && on)
+            {
+                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 0);
+                on = false;
+            }
+            else if (!on)
+            {
+                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 1);
+                on = true;
+            }
+            yield return wait;
+        }
+    }
+
+
+    //Copying and changing Nate's shit... sorta confused tho ;-;
+
+    public void SignifyHorninessUp()
+    {
+
+    }
+    public void SignfiyHorninessDown()
+    {
+
+    }
+    public void SignifyDSUp()
+    {
+
+    }
+    public void SignifyDSDown()
+    {
+
+    }
+
+    private IEnumerator FlashHornUp()
+    {
+        WaitForSeconds wait = new WaitForSeconds(.25f);
+        bool on = true;
+        while (true)
+        {
+            if (flashDS && on)
+            {
+                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 0);
+                on = false;
+            }
+            else if (!on)
+            {
+                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 1);
+                on = true;
+            }
+            yield return wait;
+        }
+    }
+    private IEnumerator FlashHornDown()
+    {
+        WaitForSeconds wait = new WaitForSeconds(.25f);
+        bool on = true;
+        while (true)
+        {
+            if (flashDS && on)
+            {
+                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 0);
+                on = false;
+            }
+            else if (!on)
+            {
+                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 1);
+                on = true;
+            }
+            yield return wait;
+        }
+    }
+    private IEnumerator FlashDSUp()
+    {
+        WaitForSeconds wait = new WaitForSeconds(.25f);
+        bool on = true;
+        while (true)
+        {
+            if (flashDS && on)
+            {
+                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 0);
+                on = false;
+            }
+            else if (!on)
+            {
+                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 1);
+                on = true;
+            }
+            yield return wait;
+        }
+    }
+    private IEnumerator FlashDSDown()
+    {
+        WaitForSeconds wait = new WaitForSeconds(.25f);
+        bool on = true;
+        while (true)
+        {
+            if (flashDS && on)
+            {
+                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 0);
+                on = false;
+            }
+            else if (!on)
+            {
+                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 1);
+                on = true;
+            }
+            yield return wait;
+        }
+    }
+    private IEnumerator FlashTempUp()
+    {
+        WaitForSeconds wait = new WaitForSeconds(.25f);
+        bool on = true;
+        while (true)
+        {
+            if (flashDS && on)
+            {
+                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 0);
+                on = false;
+            }
+            else if (!on)
+            {
+                domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 1);
+                on = true;
+            }
+            yield return wait;
+        }
+    }
+    private IEnumerator FlashTempDown()
     {
         WaitForSeconds wait = new WaitForSeconds(.25f);
         bool on = true;
