@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     public void GameOverLose()
     {
         // fade to black, have a TTS thing say oh god what have you done or something
+        StartCoroutine(GameOverLoseEnum());
     }
 
     private IEnumerator GameOverLoseEnum()
@@ -60,6 +61,7 @@ public class GameManager : MonoBehaviour
     public void GameOverWin()
     {
         // fade to white, have a TTS thing say you reached enlightenment
+        StartCoroutine(GameOverWinEnum());
     }
 
     private IEnumerator GameOverWinEnum()

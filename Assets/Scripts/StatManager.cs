@@ -33,15 +33,22 @@ public class StatManager : MonoBehaviour
     private bool flashDS = false;
 
     // things that change on the earth.
-    [SerializeField] private GameObject earthModel;
-    [SerializeField] private GameObject earthTintBlue1;
-    [SerializeField] private GameObject earthTintBlue2;
-    [SerializeField] private GameObject earthTintRed1;
-    [SerializeField] private GameObject earthTintRed2;
-    [SerializeField] private GameObject earthParticleHeart1;
-    [SerializeField] private GameObject earthParticleHeart2;
-    [SerializeField] private GameObject earthParticleExplosion1;
-    [SerializeField] private GameObject earthParticleExplosion2;
+    [SerializeField] private GameObject earthModel = null;
+    [SerializeField] private GameObject earthTintBlue1 = null;
+    [SerializeField] private GameObject earthTintBlue2 = null;
+    [SerializeField] private GameObject earthTintRed1 = null;
+    [SerializeField] private GameObject earthTintRed2 = null;
+    [SerializeField] private GameObject earthParticleHeart1 = null;
+    [SerializeField] private GameObject earthParticleHeart2 = null;
+    [SerializeField] private GameObject earthParticleExplosion1 = null;
+    [SerializeField] private GameObject earthParticleExplosion2 = null;
+
+    [SerializeField] private Card GameOverHornyHigh = null;
+    [SerializeField] private Card GameOverHornyLow = null;
+    [SerializeField] private Card GameOverTempHigh = null;
+    [SerializeField] private Card GameOverTempLow = null;
+    [SerializeField] private Card GameOverDSHigh = null;
+    [SerializeField] private Card GameOverDSLow = null;
     
 
     void Awake()
@@ -77,7 +84,7 @@ public class StatManager : MonoBehaviour
         if (cur <= 0)
         {
             // game over
-            GameManager.instance.GameOverLose();
+            DeckManager.instance.AddCardFront(GameOverHornyLow);
         }
         // went below 5
         else if (prev > 5 && cur <= 5)
@@ -119,7 +126,7 @@ public class StatManager : MonoBehaviour
         if (cur >= 40)
         {
             // game over
-            GameManager.instance.GameOverLose();
+            DeckManager.instance.AddCardFront(GameOverHornyHigh);
         }
         // went above 35
         else if (prev < 35 && cur >= 35)
@@ -146,7 +153,7 @@ public class StatManager : MonoBehaviour
         if (cur <= 0)
         {
             // game over
-            GameManager.instance.GameOverLose();
+            DeckManager.instance.AddCardFront(GameOverTempLow);
         }
         // went below 5
         else if (prev > 5 && cur <= 5)
@@ -194,7 +201,7 @@ public class StatManager : MonoBehaviour
         if (cur >= 40)
         {
             // game over
-            GameManager.instance.GameOverLose();
+            DeckManager.instance.AddCardFront(GameOverTempHigh);
         }
         // went above 35
         else if (prev < 35 && cur >= 35)
@@ -223,7 +230,7 @@ public class StatManager : MonoBehaviour
         if (cur <= 0)
         {
             // game over
-            GameManager.instance.GameOverLose();
+            DeckManager.instance.AddCardFront(GameOverDSLow);
         }
         // went below 5
         else if (prev > 5 && cur <= 5)
@@ -271,7 +278,7 @@ public class StatManager : MonoBehaviour
         if (cur >= 40)
         {
             // game over
-            GameManager.instance.GameOverLose();
+            DeckManager.instance.AddCardFront(GameOverDSHigh);
         }
         // went above 35
         else if (prev < 35 && cur >= 35)
