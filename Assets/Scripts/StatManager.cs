@@ -34,10 +34,14 @@ public class StatManager : MonoBehaviour
 
     // things that change on the earth.
     [SerializeField] private GameObject earthModel;
-    [SerializeField] private GameObject earthTintBlue;
-    [SerializeField] private GameObject earthTintRed;
-    [SerializeField] private GameObject earthParticleHeart;
-    [SerializeField] private GameObject earthParticleExplosion;
+    [SerializeField] private GameObject earthTintBlue1;
+    [SerializeField] private GameObject earthTintBlue2;
+    [SerializeField] private GameObject earthTintRed1;
+    [SerializeField] private GameObject earthTintRed2;
+    [SerializeField] private GameObject earthParticleHeart1;
+    [SerializeField] private GameObject earthParticleHeart2;
+    [SerializeField] private GameObject earthParticleExplosion1;
+    [SerializeField] private GameObject earthParticleExplosion2;
     
 
     void Awake()
@@ -79,11 +83,13 @@ public class StatManager : MonoBehaviour
         else if (prev > 5 && cur <= 5)
         {
             flashHorniness = true;
+            earthModel.GetComponent<Rotate>().rotPerFrame = new Vector3(0, 0.005f, 0);
         }
         // went back above 5
         else if (prev <= 5 && cur > 5)
         {
             flashHorniness = false;
+            earthModel.GetComponent<Rotate>().rotPerFrame = new Vector3(0, 0.0075f, 0);
         }
 
         // back in acceptable range
@@ -92,18 +98,22 @@ public class StatManager : MonoBehaviour
             flashHorniness = false;
             //change color to normal
             horninessText.color = Color.yellow;
+            earthModel.GetComponent<Rotate>().rotPerFrame = new Vector3(0, 0.01f, 0);
+            earthModel.GetComponent<Shake>().shakeModifier = 0;
         }
         // went below 10
         else if (prev > 10 && cur <= 10)
         {
             //change color
             horninessText.color = Color.red;
+            earthModel.GetComponent<Rotate>().rotPerFrame = new Vector3(0, 0.0075f, 0);
         }
         // went above 30
         else if (prev < 30 && cur >= 30)
         {
             //change color
             horninessText.color = Color.red;
+            earthModel.GetComponent<Shake>().shakeModifier = 1;
         }
 
         if (cur >= 40)
@@ -115,11 +125,13 @@ public class StatManager : MonoBehaviour
         else if (prev < 35 && cur >= 35)
         {
             flashHorniness = true;
+            earthModel.GetComponent<Shake>().shakeModifier = 2;
         }
         // went back below 35
         else if (prev >= 35 && cur < 35)
         {
             flashHorniness = false;
+            earthModel.GetComponent<Shake>().shakeModifier = 1;
         }
 
         // Update Stat text
@@ -140,11 +152,15 @@ public class StatManager : MonoBehaviour
         else if (prev > 5 && cur <= 5)
         {
             flashAtmo = true;
+            earthTintBlue1.SetActive(true);
+            earthTintBlue2.SetActive(true);
         }
         // went back above 5
         else if (prev <= 5 && cur > 5)
         {
             flashAtmo = false;
+            earthTintBlue1.SetActive(true);
+            earthTintBlue2.SetActive(false);
         }
 
         // back in acceptable range
@@ -153,18 +169,26 @@ public class StatManager : MonoBehaviour
             flashAtmo = false;
             //change color to normal
             atmosphereTempText.color = Color.yellow;
+            earthTintBlue1.SetActive(false);
+            earthTintBlue2.SetActive(false);
+            earthTintRed1.SetActive(false);
+            earthTintRed2.SetActive(false);
         }
         // went below 10
         else if (prev > 10 && cur <= 10)
         {
             //change color
             atmosphereTempText.color = Color.cyan;
+            earthTintBlue1.SetActive(true);
+            earthTintBlue2.SetActive(false);
         }
         // went above 30
         else if (prev < 30 && cur >= 30)
         {
             //change color
             atmosphereTempText.color = Color.red;
+            earthTintRed1.SetActive(true);
+            earthTintRed2.SetActive(false);
         }
 
         if (cur >= 40)
@@ -176,11 +200,15 @@ public class StatManager : MonoBehaviour
         else if (prev < 35 && cur >= 35)
         {
             flashAtmo = true;
+            earthTintRed1.SetActive(true);
+            earthTintRed2.SetActive(true);
         }
         // went back below 35
         else if (prev >= 35 && cur < 35)
         {
             flashAtmo = false;
+            earthTintRed1.SetActive(true);
+            earthTintRed2.SetActive(false);
         }
 
         // Update Stat text
@@ -201,11 +229,15 @@ public class StatManager : MonoBehaviour
         else if (prev > 5 && cur <= 5)
         {
             flashDS = true;
+            earthParticleHeart1.SetActive(true);
+            earthParticleHeart2.SetActive(true);
         }
         // went back above 5
         else if (prev <= 5 && cur > 5)
         {
             flashDS = false;
+            earthParticleHeart1.SetActive(true);
+            earthParticleHeart2.SetActive(false);
         }
 
         // back in acceptable range
@@ -214,18 +246,26 @@ public class StatManager : MonoBehaviour
             flashDS = false;
             //change color to normal
             domSubText.color = Color.yellow;
+            earthParticleHeart1.SetActive(false);
+            earthParticleHeart2.SetActive(false);
+            earthParticleExplosion1.SetActive(false);
+            earthParticleExplosion2.SetActive(false);
         }
         // went below 10
         else if (prev > 10 && cur <= 10)
         {
             //change color
             domSubText.color = Color.red;
+            earthParticleHeart1.SetActive(true);
+            earthParticleHeart2.SetActive(false);
         }
         // went above 30
         else if (prev < 30 && cur >= 30)
         {
             //change color
             domSubText.color = Color.red;
+            earthParticleExplosion1.SetActive(true);
+            earthParticleExplosion2.SetActive(false);
         }
 
         if (cur >= 40)
@@ -237,11 +277,15 @@ public class StatManager : MonoBehaviour
         else if (prev < 35 && cur >= 35)
         {
             flashDS = true;
+            earthParticleExplosion1.SetActive(true);
+            earthParticleExplosion2.SetActive(true);
         }
         // went back below 35
         else if (prev >= 35 && cur < 35)
         {
             flashDS = false;
+            earthParticleExplosion1.SetActive(true);
+            earthParticleExplosion2.SetActive(false);
         }
 
         // Update Stat text
