@@ -118,7 +118,7 @@ public class CardManager : MonoBehaviour
 
         UnityWebGLSpeechSynthesis.TTSManager.instance.Say("Incoming transmission from: " + alienName, 1); // FIX THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2.5f);
 
         MainText.text = "Translating...";
 
@@ -142,7 +142,7 @@ public class CardManager : MonoBehaviour
     private void SetUpStatChangeArrows()
     { // MAKE SCALE CHANGE BASED ON MAGNITUDE!!!!!!!!!!!!!!!!!!!!!!
 
-        Vector3 scaleMod = new Vector3(.01f, .01f, .01f);
+        Vector3 scaleMod = new Vector3(.015f, .015f, .015f);
 
         // DS
         if (cardInfo.d1DomSubModifier > 0)
@@ -224,6 +224,7 @@ public class CardManager : MonoBehaviour
      */
     public void Deactivate()
     {
+        UnityWebGLSpeechSynthesis.TTSManager.instance.StopSpeaking();
         NameText.text = "";
         MainText.text = "Please wait for new assignment...";
         D1Text.text = "";
@@ -240,23 +241,31 @@ public class CardManager : MonoBehaviour
      */
     public void Chose1()
     {
-        // Play leave animation 
+        // Play leave animation
 
-        StatManager.instance.ModBiodiversity(cardInfo.d1BiodiversityModifier);
-        StatManager.instance.ModHorniness(cardInfo.d1HorninessModifier);
-        StatManager.instance.ModAtmosphereTemp(cardInfo.d1AtmosphereTempModifier);
-        StatManager.instance.ModDomSub(cardInfo.d1DomSubModifier);
-
-        RoommateManager.instance.RoommateResponse(cardInfo, true);
-
-        DeckManager.instance.AddCardsRandom(cardInfo.d1Cards);
-
-        if (cardInfo.imageAssociatedWithChoice1 && cardInfo.image != null)
+        if (cardInfo.gameOverCard)
         {
-            TVManager.instance.NewImage(cardInfo.image);
+            GameManager.instance.GameOverLose();
         }
+        else
+        {
 
-        Deactivate();
+            StatManager.instance.ModBiodiversity(cardInfo.d1BiodiversityModifier);
+            StatManager.instance.ModHorniness(cardInfo.d1HorninessModifier);
+            StatManager.instance.ModAtmosphereTemp(cardInfo.d1AtmosphereTempModifier);
+            StatManager.instance.ModDomSub(cardInfo.d1DomSubModifier);
+
+            RoommateManager.instance.RoommateResponse(cardInfo, true);
+
+            DeckManager.instance.AddCardsRandom(cardInfo.d1Cards);
+
+            if (cardInfo.imageAssociatedWithChoice1 && cardInfo.image != null)
+            {
+                TVManager.instance.NewImage(cardInfo.image);
+            }
+
+            Deactivate();
+        }
     }
 
     /*
@@ -265,21 +274,27 @@ public class CardManager : MonoBehaviour
     public void Chose2()
     {
         // Play leave animation 
-
-        StatManager.instance.ModBiodiversity(cardInfo.d2BiodiversityModifier);
-        StatManager.instance.ModHorniness(cardInfo.d2HorninessModifier);
-        StatManager.instance.ModAtmosphereTemp(cardInfo.d2AtmosphereTempModifier);
-        StatManager.instance.ModDomSub(cardInfo.d2DomSubModifier);
-
-        RoommateManager.instance.RoommateResponse(cardInfo, false);
-
-        DeckManager.instance.AddCardsRandom(cardInfo.d2Cards);
-
-        if (!cardInfo.imageAssociatedWithChoice1 && cardInfo.image != null)
+        if (cardInfo.gameOverCard)
         {
-            TVManager.instance.NewImage(cardInfo.image);
+            GameManager.instance.GameOverLose();
         }
+        else
+        {
+            StatManager.instance.ModBiodiversity(cardInfo.d2BiodiversityModifier);
+            StatManager.instance.ModHorniness(cardInfo.d2HorninessModifier);
+            StatManager.instance.ModAtmosphereTemp(cardInfo.d2AtmosphereTempModifier);
+            StatManager.instance.ModDomSub(cardInfo.d2DomSubModifier);
 
-        Deactivate();
+            RoommateManager.instance.RoommateResponse(cardInfo, false);
+
+            DeckManager.instance.AddCardsRandom(cardInfo.d2Cards);
+
+            if (!cardInfo.imageAssociatedWithChoice1 && cardInfo.image != null)
+            {
+                TVManager.instance.NewImage(cardInfo.image);
+            }
+
+            Deactivate();
+        }
     }
 }

@@ -32,8 +32,24 @@ public class StatManager : MonoBehaviour
     private bool flashAtmo = false;
     private bool flashDS = false;
 
-    //Abby adding stuff here, will comment in where
-    [SerializeField] private GameObject horninessUp = null, horninessDown = null, domSubUp = null, domSubDown = null, tempUp = null, tempDown = null;
+    // things that change on the earth.
+    [SerializeField] private GameObject earthModel = null;
+    [SerializeField] private GameObject earthTintBlue1 = null;
+    [SerializeField] private GameObject earthTintBlue2 = null;
+    [SerializeField] private GameObject earthTintRed1 = null;
+    [SerializeField] private GameObject earthTintRed2 = null;
+    [SerializeField] private GameObject earthParticleHeart1 = null;
+    [SerializeField] private GameObject earthParticleHeart2 = null;
+    [SerializeField] private GameObject earthParticleExplosion1 = null;
+    [SerializeField] private GameObject earthParticleExplosion2 = null;
+
+    [SerializeField] private Card GameOverHornyHigh = null;
+    [SerializeField] private Card GameOverHornyLow = null;
+    [SerializeField] private Card GameOverTempHigh = null;
+    [SerializeField] private Card GameOverTempLow = null;
+    [SerializeField] private Card GameOverDSHigh = null;
+    [SerializeField] private Card GameOverDSLow = null;
+    
 
     void Awake()
     {
@@ -68,17 +84,19 @@ public class StatManager : MonoBehaviour
         if (cur <= 0)
         {
             // game over
-            GameManager.instance.GameOverLose();
+            DeckManager.instance.AddCardFront(GameOverHornyLow);
         }
         // went below 5
         else if (prev > 5 && cur <= 5)
         {
             flashHorniness = true;
+            earthModel.GetComponent<Rotate>().rotPerFrame = new Vector3(0, 0.005f, 0);
         }
         // went back above 5
         else if (prev <= 5 && cur > 5)
         {
             flashHorniness = false;
+            earthModel.GetComponent<Rotate>().rotPerFrame = new Vector3(0, 0.0075f, 0);
         }
 
         // back in acceptable range
@@ -87,34 +105,41 @@ public class StatManager : MonoBehaviour
             flashHorniness = false;
             //change color to normal
             horninessText.color = Color.yellow;
+            earthModel.GetComponent<Rotate>().rotPerFrame = new Vector3(0, 0.01f, 0);
+            earthModel.GetComponent<Shake>().shakeModifier = 0;
         }
         // went below 10
         else if (prev > 10 && cur <= 10)
         {
             //change color
             horninessText.color = Color.red;
+            earthModel.GetComponent<Rotate>().rotPerFrame = new Vector3(0, 0.0075f, 0);
         }
         // went above 30
         else if (prev < 30 && cur >= 30)
         {
             //change color
             horninessText.color = Color.red;
+            earthModel.GetComponent<Shake>().shakeModifier = 1;
         }
 
         if (cur >= 40)
         {
             // game over
-            GameManager.instance.GameOverLose();
+            DeckManager.instance.AddCardFront(GameOverHornyHigh);
         }
         // went above 35
         else if (prev < 35 && cur >= 35)
         {
             flashHorniness = true;
+            horninessText.color = Color.red;
+            earthModel.GetComponent<Shake>().shakeModifier = 2;
         }
         // went back below 35
         else if (prev >= 35 && cur < 35)
         {
             flashHorniness = false;
+            earthModel.GetComponent<Shake>().shakeModifier = 1;
         }
 
         // Update Stat text
@@ -129,17 +154,21 @@ public class StatManager : MonoBehaviour
         if (cur <= 0)
         {
             // game over
-            GameManager.instance.GameOverLose();
+            DeckManager.instance.AddCardFront(GameOverTempLow);
         }
         // went below 5
         else if (prev > 5 && cur <= 5)
         {
             flashAtmo = true;
+            earthTintBlue1.SetActive(true);
+            earthTintBlue2.SetActive(true);
         }
         // went back above 5
         else if (prev <= 5 && cur > 5)
         {
             flashAtmo = false;
+            earthTintBlue1.SetActive(true);
+            earthTintBlue2.SetActive(false);
         }
 
         // back in acceptable range
@@ -148,34 +177,46 @@ public class StatManager : MonoBehaviour
             flashAtmo = false;
             //change color to normal
             atmosphereTempText.color = Color.yellow;
+            earthTintBlue1.SetActive(false);
+            earthTintBlue2.SetActive(false);
+            earthTintRed1.SetActive(false);
+            earthTintRed2.SetActive(false);
         }
         // went below 10
         else if (prev > 10 && cur <= 10)
         {
             //change color
             atmosphereTempText.color = Color.cyan;
+            earthTintBlue1.SetActive(true);
+            earthTintBlue2.SetActive(false);
         }
         // went above 30
         else if (prev < 30 && cur >= 30)
         {
             //change color
             atmosphereTempText.color = Color.red;
+            earthTintRed1.SetActive(true);
+            earthTintRed2.SetActive(false);
         }
 
         if (cur >= 40)
         {
             // game over
-            GameManager.instance.GameOverLose();
+            DeckManager.instance.AddCardFront(GameOverTempHigh);
         }
         // went above 35
         else if (prev < 35 && cur >= 35)
         {
             flashAtmo = true;
+            earthTintRed1.SetActive(true);
+            earthTintRed2.SetActive(true);
         }
         // went back below 35
         else if (prev >= 35 && cur < 35)
         {
             flashAtmo = false;
+            earthTintRed1.SetActive(true);
+            earthTintRed2.SetActive(false);
         }
 
         // Update Stat text
@@ -190,17 +231,21 @@ public class StatManager : MonoBehaviour
         if (cur <= 0)
         {
             // game over
-            GameManager.instance.GameOverLose();
+            DeckManager.instance.AddCardFront(GameOverDSLow);
         }
         // went below 5
         else if (prev > 5 && cur <= 5)
         {
             flashDS = true;
+            earthParticleHeart1.GetComponent<ParticleSystem>().Play();
+            earthParticleHeart2.GetComponent<ParticleSystem>().Play();
         }
         // went back above 5
         else if (prev <= 5 && cur > 5)
         {
             flashDS = false;
+            earthParticleHeart1.GetComponent<ParticleSystem>().Play();
+            earthParticleHeart2.GetComponent<ParticleSystem>().Stop();
         }
 
         // back in acceptable range
@@ -209,34 +254,46 @@ public class StatManager : MonoBehaviour
             flashDS = false;
             //change color to normal
             domSubText.color = Color.yellow;
+            earthParticleHeart1.GetComponent<ParticleSystem>().Stop();
+            earthParticleHeart2.GetComponent<ParticleSystem>().Stop();
+            earthParticleExplosion1.GetComponent<ParticleSystem>().Stop();
+            earthParticleExplosion2.GetComponent<ParticleSystem>().Stop();
         }
         // went below 10
         else if (prev > 10 && cur <= 10)
         {
             //change color
             domSubText.color = Color.red;
+            earthParticleHeart1.GetComponent<ParticleSystem>().Stop();
+            earthParticleHeart2.GetComponent<ParticleSystem>().Stop();
         }
         // went above 30
         else if (prev < 30 && cur >= 30)
         {
             //change color
             domSubText.color = Color.red;
+            earthParticleExplosion1.GetComponent<ParticleSystem>().Play();
+            earthParticleExplosion2.GetComponent<ParticleSystem>().Stop();
         }
 
         if (cur >= 40)
         {
             // game over
-            GameManager.instance.GameOverLose();
+            DeckManager.instance.AddCardFront(GameOverDSHigh);
         }
         // went above 35
         else if (prev < 35 && cur >= 35)
         {
             flashDS = true;
+            earthParticleExplosion1.GetComponent<ParticleSystem>().Play();
+            earthParticleExplosion2.GetComponent<ParticleSystem>().Play();
         }
         // went back below 35
         else if (prev >= 35 && cur < 35)
         {
             flashDS = false;
+            earthParticleExplosion1.GetComponent<ParticleSystem>().Play();
+            earthParticleExplosion2.GetComponent<ParticleSystem>().Stop();
         }
 
         // Update Stat text
@@ -298,146 +355,6 @@ public class StatManager : MonoBehaviour
             {
                 domSubText.color = new Color(domSubText.color.r, domSubText.color.g, domSubText.color.b, 1);
                 on = true;
-            }
-            yield return wait;
-        }
-    }
-
-
-    //Copying and changing Nate's shit... sorta confused tho ;-;
-
-    public void SignifyHorninessUp()
-    {
-        StartCoroutine(FlashHornUp());
-    }
-
-    public void SignfiyHorninessDown()
-    {
-        StartCoroutine(FlashHornDown());
-
-    }
-
-    public void SignifyDSUp()
-    {
-        StartCoroutine(FlashDSUp());
-
-    }
-
-    public void SignifyDSDown()
-    {
-        StartCoroutine(FlashDSDown());
-
-    }
-
-    public void SignifyTempUp()
-    {
-        StartCoroutine(FlashTempUp());
-
-    }
-
-    public void SignifyTempDown()
-    {
-        StartCoroutine(FlashTempDown());
-
-    }
-
-    private IEnumerator FlashHornUp()
-    {
-        WaitForSeconds wait = new WaitForSeconds(.25f);
-        while (true)
-        {
-            if (flashDS && horninessUp.activeSelf)
-            {
-                horninessUp.SetActive(false);
-            }
-            else if (!horninessUp.activeSelf)
-            {
-                horninessUp.SetActive(true);
-            }
-            yield return wait;
-        }
-    }
-
-    private IEnumerator FlashHornDown()
-    {
-        WaitForSeconds wait = new WaitForSeconds(.25f);
-        while (true)
-        {
-            if (flashHorniness && horninessDown.activeSelf)
-            {
-                horninessDown.SetActive(false);
-            }
-            else if (!horninessDown.activeSelf)
-            {
-                horninessDown.SetActive(true);
-            }
-            yield return wait;
-        }
-    }
-
-    private IEnumerator FlashDSUp()
-    {
-        WaitForSeconds wait = new WaitForSeconds(.25f);
-        while (true)
-        {
-            if (flashDS && domSubUp.activeSelf)
-            {
-                domSubUp.SetActive(false);
-            }
-            else if (!domSubUp.activeSelf)
-            {
-                domSubUp.SetActive(true);
-            }
-            yield return wait;
-        }
-    }
-
-    private IEnumerator FlashDSDown()
-    {
-        WaitForSeconds wait = new WaitForSeconds(.25f);
-        while (true)
-        {
-            if (flashDS && domSubDown.activeSelf)
-            {
-                domSubDown.SetActive(false);
-            }
-            else if (!domSubDown.activeSelf)
-            {
-                domSubDown.SetActive(true);
-            }
-            yield return wait;
-        }
-    }
-
-    private IEnumerator FlashTempUp()
-    {
-        WaitForSeconds wait = new WaitForSeconds(.25f);
-        while (true)
-        {
-            if (flashAtmo && tempUp.activeSelf)
-            {
-                tempUp.SetActive(false);
-            }
-            else if (!tempUp.activeSelf)
-            {
-                tempUp.SetActive(true);
-            }
-            yield return wait;
-        }
-    }
-
-    private IEnumerator FlashTempDown()
-    {
-        WaitForSeconds wait = new WaitForSeconds(.25f);
-        while (true)
-        {
-            if (flashAtmo && tempDown.activeSelf)
-            {
-                tempDown.SetActive(false);
-            }
-            else if (!tempDown.activeSelf)
-            {
-                tempDown.SetActive(true);
             }
             yield return wait;
         }

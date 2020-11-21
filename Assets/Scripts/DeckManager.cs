@@ -23,6 +23,9 @@ public class DeckManager : MonoBehaviour
     [SerializeField]
     private List<Card> startingCardList = null;
 
+    [SerializeField]
+    private Card introCard = null;
+
     private void Awake()
     {
         if (instance == null)
@@ -34,7 +37,7 @@ public class DeckManager : MonoBehaviour
     private void Start()
     {
         AddCardsRandom(startingCardList.ToArray());
-        Invoke("NextCard", 1f); //  CHANGE THIS!!!!!!!!!!!!!!!!!!!!!!!!!
+        AddCardFront(introCard);
     }
 
     /*
