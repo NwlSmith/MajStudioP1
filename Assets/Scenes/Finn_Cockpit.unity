@@ -33661,6 +33661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ae5cec5cf35df4b83a025391ffd6e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeImg: {fileID: 0}
 --- !u!4 &886868063
 Transform:
   m_ObjectHideFlags: 0
