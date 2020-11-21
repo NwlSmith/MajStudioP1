@@ -102,6 +102,11 @@ namespace UnityWebGLSpeechSynthesis
             StartCoroutine(SayEnum(text, voiceNum));
         }
 
+        public void StopSpeaking()
+        {
+            _mSpeechSynthesisPlugin.Cancel();
+        }
+
         public IEnumerator SayEnum(string text, int voiceNum)
         {
             // Cancel if already speaking

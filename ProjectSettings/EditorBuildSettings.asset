@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Finn_Cockpit.unity
     guid: 2dccc5761fcbd8440964c0405bac4428
+  - enabled: 1
+    path: Assets/Scenes/GameLose.unity
+    guid: e754b47385eb33848b740f283ac8c7c0
+  - enabled: 1
+    path: Assets/Scenes/GameWin.unity
+    guid: e8ae3333c9493294bab1fc549c2229ed
   m_configObjects: {}
