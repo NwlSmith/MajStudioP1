@@ -1,5 +1,43 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8801695781917624570
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
+  m_Name: ColorAdjustments
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  postExposure:
+    m_OverrideState: 1
+    m_Value: 1.16
+  contrast:
+    m_OverrideState: 1
+    m_Value: 29
+    min: -100
+    max: 100
+  colorFilter:
+    m_OverrideState: 1
+    m_Value: {r: 0.8207547, g: 0.8168832, b: 0.8168832, a: 1}
+    hdr: 1
+    showAlpha: 0
+    showEyeDropper: 1
+  hueShift:
+    m_OverrideState: 0
+    m_Value: 0
+    min: -180
+    max: 180
+  saturation:
+    m_OverrideState: 1
+    m_Value: 16
+    min: -100
+    max: 100
 --- !u!114 &-7893295128165547882
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -16,11 +54,11 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.56
+    m_Value: 1.31
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 5.76
+    m_Value: 4.24
     min: 0
   scatter:
     m_OverrideState: 0
@@ -102,12 +140,12 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.251
+    m_Value: 0.239
     min: 0
     max: 1
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.43
+    m_Value: 0.419
     min: 0.01
     max: 1
   rounded:
@@ -132,6 +170,8 @@ MonoBehaviour:
   - {fileID: 7368541543011207287}
   - {fileID: -7821246487165741491}
   - {fileID: 4691521491980379573}
+  - {fileID: 2652083663641754049}
+  - {fileID: -8801695781917624570}
 --- !u!114 &849379129802519247
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -148,7 +188,30 @@ MonoBehaviour:
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 0
+--- !u!114 &2652083663641754049
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
+  m_Name: LiftGammaGain
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  lift:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 0.89466965, z: 0.9915307, w: -6.422914e-11}
+  gamma:
+    m_OverrideState: 1
+    m_Value: {x: 0.9642757, y: 0.85591066, z: 1, w: 0.3275862}
+  gain:
+    m_OverrideState: 1
+    m_Value: {x: 0.66425365, y: 0.8094868, z: 1, w: 0.4827586}
 --- !u!114 &4691521491980379573
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -165,12 +228,12 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.27
+    m_Value: 0.22
     min: -1
     max: 1
   xMultiplier:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.803
     min: 0
     max: 1
   yMultiplier:
@@ -202,6 +265,6 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 0.843
     min: 0
     max: 1
