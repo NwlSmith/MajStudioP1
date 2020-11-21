@@ -118,7 +118,7 @@ public class CardManager : MonoBehaviour
 
         UnityWebGLSpeechSynthesis.TTSManager.instance.Say("Incoming transmission from: " + alienName, 1); // FIX THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2.5f);
 
         MainText.text = "Translating...";
 
@@ -224,6 +224,7 @@ public class CardManager : MonoBehaviour
      */
     public void Deactivate()
     {
+        UnityWebGLSpeechSynthesis.TTSManager.instance.StopSpeaking();
         NameText.text = "";
         MainText.text = "Please wait for new assignment...";
         D1Text.text = "";

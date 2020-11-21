@@ -25,6 +25,31 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        StartCoroutine(StartEnum());
+    }
+
+    private IEnumerator StartEnum()
+    {
+        fadeImg.color = new Color(0f, 0f, 0f, 1f);
+        float duration = 3f;
+        float elapsedTime = 0f;
+        Color initColor = new Color(0f, 0f, 0f, 1f);
+        Color finalColor = new Color(0f, 0f, 0f, 0f);
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+
+            fadeImg.color = Color.Lerp(initColor, finalColor, elapsedTime / duration);
+
+            yield return null;
+        }
+        fadeImg.color = Color.Lerp(initColor, finalColor, elapsedTime / duration);
+
+        DeckManager.instance.NextCard();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
