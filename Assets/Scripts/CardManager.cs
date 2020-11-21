@@ -240,23 +240,31 @@ public class CardManager : MonoBehaviour
      */
     public void Chose1()
     {
-        // Play leave animation 
+        // Play leave animation
 
-        StatManager.instance.ModBiodiversity(cardInfo.d1BiodiversityModifier);
-        StatManager.instance.ModHorniness(cardInfo.d1HorninessModifier);
-        StatManager.instance.ModAtmosphereTemp(cardInfo.d1AtmosphereTempModifier);
-        StatManager.instance.ModDomSub(cardInfo.d1DomSubModifier);
-
-        RoommateManager.instance.RoommateResponse(cardInfo, true);
-
-        DeckManager.instance.AddCardsRandom(cardInfo.d1Cards);
-
-        if (cardInfo.imageAssociatedWithChoice1 && cardInfo.image != null)
+        if (cardInfo.gameOverCard)
         {
-            TVManager.instance.NewImage(cardInfo.image);
+            GameManager.instance.GameOverLose();
         }
+        else
+        {
 
-        Deactivate();
+            StatManager.instance.ModBiodiversity(cardInfo.d1BiodiversityModifier);
+            StatManager.instance.ModHorniness(cardInfo.d1HorninessModifier);
+            StatManager.instance.ModAtmosphereTemp(cardInfo.d1AtmosphereTempModifier);
+            StatManager.instance.ModDomSub(cardInfo.d1DomSubModifier);
+
+            RoommateManager.instance.RoommateResponse(cardInfo, true);
+
+            DeckManager.instance.AddCardsRandom(cardInfo.d1Cards);
+
+            if (cardInfo.imageAssociatedWithChoice1 && cardInfo.image != null)
+            {
+                TVManager.instance.NewImage(cardInfo.image);
+            }
+
+            Deactivate();
+        }
     }
 
     /*
@@ -265,21 +273,27 @@ public class CardManager : MonoBehaviour
     public void Chose2()
     {
         // Play leave animation 
-
-        StatManager.instance.ModBiodiversity(cardInfo.d2BiodiversityModifier);
-        StatManager.instance.ModHorniness(cardInfo.d2HorninessModifier);
-        StatManager.instance.ModAtmosphereTemp(cardInfo.d2AtmosphereTempModifier);
-        StatManager.instance.ModDomSub(cardInfo.d2DomSubModifier);
-
-        RoommateManager.instance.RoommateResponse(cardInfo, false);
-
-        DeckManager.instance.AddCardsRandom(cardInfo.d2Cards);
-
-        if (!cardInfo.imageAssociatedWithChoice1 && cardInfo.image != null)
+        if (cardInfo.gameOverCard)
         {
-            TVManager.instance.NewImage(cardInfo.image);
+            GameManager.instance.GameOverLose();
         }
+        else
+        {
+            StatManager.instance.ModBiodiversity(cardInfo.d2BiodiversityModifier);
+            StatManager.instance.ModHorniness(cardInfo.d2HorninessModifier);
+            StatManager.instance.ModAtmosphereTemp(cardInfo.d2AtmosphereTempModifier);
+            StatManager.instance.ModDomSub(cardInfo.d2DomSubModifier);
 
-        Deactivate();
+            RoommateManager.instance.RoommateResponse(cardInfo, false);
+
+            DeckManager.instance.AddCardsRandom(cardInfo.d2Cards);
+
+            if (!cardInfo.imageAssociatedWithChoice1 && cardInfo.image != null)
+            {
+                TVManager.instance.NewImage(cardInfo.image);
+            }
+
+            Deactivate();
+        }
     }
 }

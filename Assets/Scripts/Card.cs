@@ -59,4 +59,6 @@ public class Card : ScriptableObject
 
     // Cards to be shuffled into deck for choosing d2
     public Card[] d2Cards;
+
+    public bool gameOverCard = false;
 }

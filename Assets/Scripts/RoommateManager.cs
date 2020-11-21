@@ -144,8 +144,8 @@ public class RoommateManager : MonoBehaviour
             // player wins
             GameManager.instance.GameOverWin();
         }
-
-        DeckManager.instance.NextCard();
+        else
+            DeckManager.instance.NextCard();
     }
 
     private IEnumerator IdleAnim()
