@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Contor_3
   m_EditorClassIdentifier: 
-  infoText: '"I auditioned to be on this human communal preformance troup thing called
-    the Broadest Way. I got in, I am now going to be playing a human pretending to
-    be a cat, doing some aerobic escapade. I am afraid i will lose myself in the
+  infoText: '"I auditioned to be on this human communal performance troupe thing
+    called the Broadest Way. I got in, I am now going to be playing a human pretending
+    to be a cat, doing some aerobic escapade. I am afraid I will lose myself in the
     layers of pretend. Who am I?"'
   alien: 1
   image: {fileID: 0}
@@ -24,7 +24,7 @@ MonoBehaviour:
   d1BiodiversityModifier: 0
   d1HorninessModifier: 2
   d1AtmosphereTempModifier: 0
-  d1DomSubModifier: 0
+  d1DomSubModifier: 1
   d1RoommateResponse: '"We''ve got a motivational speaker in the house woop woop!"'
   d1RoommateResponseSpoken: 0
   d1Cards: []

@@ -20,7 +20,7 @@ MonoBehaviour:
   decision1Text: '"Yeah, totally! Send me the quiz too when you''re done. We can
     compare."'
   d1BiodiversityModifier: 0
-  d1HorninessModifier: 0
+  d1HorninessModifier: 2
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 0
   d1RoommateResponse: '"I wanna see it, I wanna fill it out too."'

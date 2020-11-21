@@ -31,7 +31,7 @@ MonoBehaviour:
   d2BiodiversityModifier: 0
   d2HorninessModifier: -1
   d2AtmosphereTempModifier: 1
-  d2DomSubModifier: 0
+  d2DomSubModifier: -1
   d2RoommateResponse: '"Are donkeys not viabley connected to the greater good???
     They''re just horse babies, dude!"'
   d2RoommateResponseSpoken: 0

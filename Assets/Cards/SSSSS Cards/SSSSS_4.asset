@@ -21,7 +21,7 @@ MonoBehaviour:
   d1BiodiversityModifier: 0
   d1HorninessModifier: -2
   d1AtmosphereTempModifier: -1
-  d1DomSubModifier: 3
+  d1DomSubModifier: 2
   d1RoommateResponse: '"Yeah sure, it''ll be easier to keep track of them that way...
     or something."'
   d1RoommateResponseSpoken: 0

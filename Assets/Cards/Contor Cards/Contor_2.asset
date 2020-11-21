@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"In my time undercover I have learned that maybe eighty human years
     ago there was an era known as dis-co. We should bring it back. I believe in the
-    imporatnce of thriving human night life."'
+    importance of thriving human night life."'
   alien: 1
   image: {fileID: 21300000, guid: 0c48626560a20744b8929bef53281bf3, type: 3}
   imageAssociatedWithChoice1: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Carr_4
   m_EditorClassIdentifier: 
-  infoText: '"I would like to change the fundamental concpet of music that humans
+  infoText: '"I would like to change the fundamental concept of music that humans
     have to one that includes not only aural sensory input but also patterned smell
     over time."'
   alien: 6
@@ -21,7 +21,7 @@ MonoBehaviour:
   decision1Text: '"I have no idea how you''d even do that but I''m excited to see
     you try."'
   d1BiodiversityModifier: 0
-  d1HorninessModifier: 1
+  d1HorninessModifier: 3
   d1AtmosphereTempModifier: -1
   d1DomSubModifier: 2
   d1RoommateResponse: '"This music smells like quaft."'

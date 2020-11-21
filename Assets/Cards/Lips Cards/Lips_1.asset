@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Lips_1
   m_EditorClassIdentifier: 
-  infoText: '"So because I''m cold blooded I tend to get exhausted in colder tempreatuers...
+  infoText: '"So because I''m cold blooded I tend to get exhausted in colder temperaters...
     would you be able to crank the heat up a little bit for me? It would make earth
     a better vacay spot suited to my needs."'
   alien: 5
@@ -21,8 +21,8 @@ MonoBehaviour:
   decision1Text: '"Oh totally, yeah I hope this helps."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
-  d1AtmosphereTempModifier: -2
-  d1DomSubModifier: -2
+  d1AtmosphereTempModifier: 3
+  d1DomSubModifier: -1
   d1RoommateResponse: '"Haha bro I hope the earthlings can handle extra winter."'
   d1RoommateResponseSpoken: 0
   d1Cards: []

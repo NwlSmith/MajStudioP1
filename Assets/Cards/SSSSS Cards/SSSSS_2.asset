@@ -24,7 +24,7 @@ MonoBehaviour:
   d1RoommateResponse: '"That seemed like one of his more harmless requests... maybe?"'
   d1RoommateResponseSpoken: 0
   d1Cards: []
-  decision2Text: '"How about instead you teleport all rock matter to like, siberia."'
+  decision2Text: '"How about instead you teleport all rock matter to like, Siberia."'
   d2BiodiversityModifier: 0
   d2HorninessModifier: -2
   d2AtmosphereTempModifier: -3

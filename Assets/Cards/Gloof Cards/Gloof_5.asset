@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Gloof_5
   m_EditorClassIdentifier: 
-  infoText: '"It is birthday time for the earth day. All will celebrate."'
+  infoText: '"It is birthday time for the Earth day. All will celebrate."'
   alien: 4
   image: {fileID: 0}
   imageAssociatedWithChoice1: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Oodle_2
   m_EditorClassIdentifier: 
-  infoText: '"A small request... I would like to separate the earth from its sheep
+  infoText: '"A small request... I would like to separate the Earth from its sheep
     species, they are so soft, loving, sweet... I will make a new home for them on
     Glorf 31 with me alone as their shepherd."'
   alien: 7

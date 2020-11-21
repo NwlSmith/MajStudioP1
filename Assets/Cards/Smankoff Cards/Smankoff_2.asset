@@ -19,7 +19,7 @@ MonoBehaviour:
   imageAssociatedWithChoice1: 1
   decision1Text: '"Swab away!"'
   d1BiodiversityModifier: 0
-  d1HorninessModifier: -2
+  d1HorninessModifier: 2
   d1AtmosphereTempModifier: -1
   d1DomSubModifier: -2
   d1RoommateResponse: '"Haha holy fuck dude all those earthlings are gonna be PISSED...

@@ -18,9 +18,9 @@ MonoBehaviour:
   alien: 1
   image: {fileID: 0}
   imageAssociatedWithChoice1: 0
-  decision1Text: '"Inrease planetary horniness."'
+  decision1Text: '"Increase planetary horniness."'
   d1BiodiversityModifier: 0
-  d1HorninessModifier: 2
+  d1HorninessModifier: 3
   d1AtmosphereTempModifier: 2
   d1DomSubModifier: 0
   d1RoommateResponse: '"Wow bro, time for a major earth fuckfest I guess. I bet Torbar
@@ -29,7 +29,7 @@ MonoBehaviour:
   d1Cards: []
   decision2Text: '"Ignore request."'
   d2BiodiversityModifier: 0
-  d2HorninessModifier: 0
+  d2HorninessModifier: -1
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
   d2RoommateResponse: '"Haha what the fuck even was that."'

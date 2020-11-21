@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 /*
  * Date created: 10/25/2020
  * Creator: Nate Smith
@@ -13,6 +14,8 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance = null;
+
+    public Image fadeImg;
 
     void Awake()
     {

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Oodle_3
   m_EditorClassIdentifier: 
-  infoText: '"I look at earth, it is a rock, everyone on it so sad... I want it gone,
+  infoText: '"I look at Earth, it is a rock, everyone on it so sad... I want it gone,
     I want to raise the temperature, them to all disintigrate, to lower the temperature...
     them to all freeze... something so they stop hurting one another so uncontrollably...
     please..." '
@@ -24,7 +24,7 @@ MonoBehaviour:
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: -1
   d1DomSubModifier: -2
-  d1RoommateResponse: '"The earth burns according to Mire Oodle''s neuroticism."'
+  d1RoommateResponse: '"The Earth burns according to Mire Oodle''s neuroticism."'
   d1RoommateResponseSpoken: 1
   d1Cards: []
   decision2Text: '"Freezer time."'

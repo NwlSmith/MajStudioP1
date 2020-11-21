@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Carr_3
   m_EditorClassIdentifier: 
-  infoText: '"I have an idea for an art installation to bring to earth. It is to
+  infoText: '"I have an idea for an art installation to bring to Earth. It is to
     invert the colors of every object with visually metallic property, ie. roadsigns,
     buildings, volcanic activity. This is important for my and the entirety of Glorf
     31''s artistic expression and species signature upon the universe."'

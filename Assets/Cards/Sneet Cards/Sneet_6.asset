@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Sneet_6
   m_EditorClassIdentifier: 
-  infoText: '"We need 20 snarkoffs for our hedge fund."'
+  infoText: '"We need 20 Snarkoffs for our hedge fund."'
   alien: 3
   image: {fileID: 0}
   imageAssociatedWithChoice1: 0
@@ -24,7 +24,7 @@ MonoBehaviour:
   d1RoommateResponse: '"20 Snarkoffs? Dude that''s like the entire government budget!"'
   d1RoommateResponseSpoken: 0
   d1Cards: []
-  decision2Text: '"What''s a snarkoff? We''re all about dollars these days."'
+  decision2Text: '"What''s a Snarkoff? We''re all about dollars these days."'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
