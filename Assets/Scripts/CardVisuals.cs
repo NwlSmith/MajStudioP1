@@ -111,8 +111,6 @@ public class CardVisuals : MonoBehaviour
                 audioSource.clip = characterSounds[0];
                 break;
         }
-
-        curModel.SetActive(true);
     }
 
     public void SpeakVisuals()
