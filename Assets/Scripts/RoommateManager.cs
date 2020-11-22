@@ -54,7 +54,7 @@ public class RoommateManager : MonoBehaviour
         if (!firstCardRead)
         {
             firstCardRead = true;
-            Speak("");
+            Speak("yo dude, I have some weird shit I'm gonna tell ya later.");
             return;
         }
         string words = "";
