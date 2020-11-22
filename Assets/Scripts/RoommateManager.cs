@@ -23,6 +23,8 @@ public class RoommateManager : MonoBehaviour
 
     private AudioSource audioSource;
 
+    private bool firstCardRead = false;
+
 
     private void Awake()
     {
@@ -48,7 +50,13 @@ public class RoommateManager : MonoBehaviour
 
     public void RoommateResponse(Card card, bool choice1)
     {
-        // IMPLEMENT
+        
+        if (!firstCardRead)
+        {
+            firstCardRead = true;
+            Speak("");
+            return;
+        }
         string words = "";
         int rand = Random.Range(1, 4);
         if (rand == 4)
