@@ -16,7 +16,7 @@ MonoBehaviour:
   alien: 0
   image: {fileID: 0}
   imageAssociatedWithChoice1: 1
-  decision1Text: 
+  decision1Text: Begin
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 0
@@ -24,7 +24,7 @@ MonoBehaviour:
   d1RoommateResponse: 
   d1RoommateResponseSpoken: 0
   d1Cards: []
-  decision2Text: 
+  decision2Text: Begin
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
