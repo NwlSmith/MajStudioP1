@@ -8,6 +8,7 @@ public class RoommateManager : MonoBehaviour
     public static RoommateManager instance = null;
 
     [SerializeField]
+    [TextArea(4, 50)]
     private List<string> monologueQueue = null;
 
     [SerializeField]
@@ -49,7 +50,12 @@ public class RoommateManager : MonoBehaviour
     {
         // IMPLEMENT
         string words = "";
-        int rand = Random.Range(1, 3);
+        int rand = Random.Range(1, 4);
+        if (rand == 4)
+        {
+            Debug.Log("You goofed");
+            rand = 3;
+        }
         // either say the response, the monologue, or nothing.
         switch (rand)
         {
@@ -60,12 +66,14 @@ public class RoommateManager : MonoBehaviour
                 {
                     words = card.d1RoommateResponse;
                     card.d1RoommateResponseSpoken = true;
+                    charDialogue.color = new Color(1f, 0f, 1f, 1f);
                 }
                 // if chose 2
                 else if (!choice1 && !card.d2RoommateResponse.Equals("") && !card.d2RoommateResponseSpoken)
                 {
                     words = card.d2RoommateResponse;
                     card.d2RoommateResponseSpoken = true;
+                    charDialogue.color = new Color(1f, 0f, 1f, 1f);
                 }
                 // if choice was said before
                 else
@@ -76,6 +84,10 @@ public class RoommateManager : MonoBehaviour
                         case 1:
                             words = Monologue();
                             break;
+                        case 2:
+                            words = "";
+                            break;
+
                     }
                 }
                 break;
@@ -84,6 +96,9 @@ public class RoommateManager : MonoBehaviour
                 words = Monologue();
                 break;
             // response
+            case 3:
+                words = "";
+                break;
         }
         Speak(words);
     }
@@ -96,6 +111,7 @@ public class RoommateManager : MonoBehaviour
             s = monologueQueue[0];
             monologueQueue.RemoveAt(0);
         }
+        charDialogue.color = Color.cyan;
         return s;
     }
 
@@ -106,24 +122,24 @@ public class RoommateManager : MonoBehaviour
 
     private IEnumerator SpeakEnum(string response)
     {
-
-        yield return new WaitForSeconds(Random.Range(2, 4));
-
-        Debug.Log("reponse = " + response);
-        // make sound
-        audioSource.clip = speakSounds[Random.Range(0, speakSounds.Length - 1)];
-        audioSource.pitch = Random.Range(.8f, 1.2f);
         if (!response.Equals(""))
         {
-            audioSource.Play();
+            yield return new WaitForSeconds(Random.Range(2, 4));
+            // make sound
+            audioSource.clip = speakSounds[Random.Range(0, speakSounds.Length - 1)];
+            audioSource.pitch = Random.Range(.8f, 1.2f);
+            if (!response.Equals(""))
+            {
+                audioSource.Play();
 
-            StartCoroutine(IdleAnim());
+                StartCoroutine(IdleAnim());
+            }
+            charDialogue.text = "Translating...";
+            // delay
+            yield return new WaitForSeconds(1f);
+            // start translating, if there is a response
+            charDialogue.text = response;
         }
-        charDialogue.text = "Translating...";
-        // delay
-        yield return new WaitForSeconds(1f);
-        // start translating, if there is a response
-        charDialogue.text = response;
         if (!response.Equals(""))
         {
             UnityWebGLSpeechSynthesis.TTSManager.instance.Say(response, 1);
