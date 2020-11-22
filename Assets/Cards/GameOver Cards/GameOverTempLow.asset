@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"Dude this planet is fricking cold man! I hate it here! Yesterday I
     saw a dogs peepee freeze in mid air! That was gross! I''m leaving a very negative
-    review of this planet on Space Yelp and talking to your manager. You''re done
-    for!"'
+    review of this planet on Glorf Yelp and telling your manager!"'
   alien: 5
   image: {fileID: 0}
   imageAssociatedWithChoice1: 0

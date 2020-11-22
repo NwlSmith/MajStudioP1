@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: IntroCard
   m_EditorClassIdentifier: 
-  infoText: 
+  infoText: Hello there. I am Dr. Elglore Smankoff, PHD. We at Glarblarf Inc have
+    assigned you to monitor Glorf-31 actiivity at this world here, "Earth." We will
+    be sending agents who want to, per say, "mess with the earth," over your way
+    to be approved or disapproved by you, Yinkel, Glorf-31 citizen and valued employee
+    of Glarblarf Inc. Press one of the buttons in front of you to start up your work
+    for the day.
   alien: 0
   image: {fileID: 0}
   imageAssociatedWithChoice1: 1
-  decision1Text: 
+  decision1Text: Let's get rolling!
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 0
@@ -24,7 +29,7 @@ MonoBehaviour:
   d1RoommateResponse: 
   d1RoommateResponseSpoken: 0
   d1Cards: []
-  decision2Text: 
+  decision2Text: Yinkel time!
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0

@@ -23,7 +23,7 @@ MonoBehaviour:
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: -1
   d1DomSubModifier: 1
-  d1RoommateResponse: '"Hopefully this''ll cure Mire Oodle''s crippling lonilness."'
+  d1RoommateResponse: '"Hopefully this''ll cure Mire Oodle''s crippling loneliness."'
   d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"I think you need to see a therapist."'
@@ -34,3 +34,4 @@ MonoBehaviour:
   d2RoommateResponse: '"Baaa humbug."'
   d2RoommateResponseSpoken: 0
   d2Cards: []
+  gameOverCard: 0

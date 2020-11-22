@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: GameOverHornyLow
   m_EditorClassIdentifier: 
-  infoText: '"idk man this planet sucks bigtime. No one is trying to give me kisses
-    and stuff. Totally lame. I''m quitting the Agency. Bye forever, dick."'
+  infoText: '"Idk man this planet sucks bigtime. No one is trying to give me kisses
+    and stuff or ride my grill. Totally lame. I bet it''s your fault, I''m reporting
+    you to Bloof Gloof."'
   alien: 1
   image: {fileID: 0}
   imageAssociatedWithChoice1: 0

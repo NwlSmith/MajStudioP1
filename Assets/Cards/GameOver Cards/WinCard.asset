@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"Congratulations. Through your discussions with your friend, you have
     achieved enlightenment and transcended reality."'
-  alien: 0
+  alien: 4
   image: {fileID: 0}
   imageAssociatedWithChoice1: 1
   decision1Text: 

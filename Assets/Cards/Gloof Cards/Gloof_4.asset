@@ -31,6 +31,7 @@ MonoBehaviour:
   d2AtmosphereTempModifier: -3
   d2DomSubModifier: 0
   d2RoommateResponse: '"You DID say when hell freezes over... what else could you
-    exepct from that guy?"'
+    expect from that guy?"'
   d2RoommateResponseSpoken: 0
   d2Cards: []
+  gameOverCard: 0
