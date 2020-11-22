@@ -50,14 +50,6 @@ public class GameManager : MonoBehaviour
         DeckManager.instance.NextCard();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
-    }
-
     public void GameOverLose()
     {
         // fade to black, have a TTS thing say oh god what have you done or something
