@@ -142,14 +142,14 @@ public class RoommateManager : MonoBehaviour
         }
         if (!response.Equals(""))
         {
-            UnityWebGLSpeechSynthesis.TTSManager.instance.Say(response, 1);
+            UnityWebGLSpeechSynthesis.TTSManager.instance.Say(response, 0);
             // delay
             yield return new WaitForSeconds(10f);
         }
         else
         {
             // delay
-            yield return new WaitForSeconds(Random.Range(6, 10));
+            yield return new WaitForSeconds(Random.Range(2, 4));
         }
         charDialogue.text = "";
         // draw new card
