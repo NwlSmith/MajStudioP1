@@ -59,6 +59,6 @@ public class IntroManager : MonoBehaviour
         }
         fadeImg.color = Color.Lerp(initColor, finalColor, elapsedTime / duration);
 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
