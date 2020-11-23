@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/URPExampleAssets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
+    path: Assets/Scenes/IntroScene.unity
+    guid: a1e906b0c285e3548a9f90cdb9b23a17
+  - enabled: 1
     path: Assets/Scenes/Finn_Cockpit.unity
     guid: 2dccc5761fcbd8440964c0405bac4428
   - enabled: 1

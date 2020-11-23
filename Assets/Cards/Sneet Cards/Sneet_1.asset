@@ -25,11 +25,12 @@ MonoBehaviour:
   d1RoommateResponse: '"I can hear the earthlings coughing from here."'
   d1RoommateResponseSpoken: 0
   d1Cards: []
-  decision2Text: '"Dude... did WE invent capitalism?"'
+  decision2Text: '"That''s... insanely cruel. I couldn''t say yes to this."'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 1
   d2DomSubModifier: 0
-  d2RoommateResponse: '"I can hear the earthlings coughing from here."'
-  d2RoommateResponseSpoken: 0
+  d2RoommateResponse: '"Dude... did WE invent capitalism?"'
+  d2RoommateResponseSpoken: 1
   d2Cards: []
+  gameOverCard: 0

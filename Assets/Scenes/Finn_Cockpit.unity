@@ -3251,7 +3251,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24448
+  m_Name: pb_Mesh21738
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9743,7 +9743,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24800
+  m_Name: pb_Mesh22092
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10156,7 +10156,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23732
+  m_Name: pb_Mesh21018
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10345,162 +10345,159 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monologueQueue:
-  - '"Every night I have the same dream."
+  - 'Every night I have the same dream.
 
-    "I''m chasing a cat down the street,
-    and just as I''m about to catch up to it...."
+    I''m chasing a cat down the street,
+    and just as I''m about to catch up to it....'
+  - 'Just as I''m about to catch up to it, the cat turns. It has your face.
 
-    "Just as I''m about to catch
-    up to it, the cat turns. It has your face."'
-  - '"It has your face, and you.... or the you-cat... gives out a loud loud hiss."
+    It
+    has your face, and you.... or the you-cat... gives out a loud loud hiss.'
+  - 'I crouch down, trying to approach the cat, gently. Calm.
 
-    "I
-    crouch down, trying to approach the cat, gently. Calm."'
-  - '"And you''re still hissing while I crouch and approach but you don''t scratch
-    me or move away."
+    And you''re still
+    hissing while I crouch and approach but you don''t scratch me or move away.'
+  - 'The cat turns into MY MOTHER.
 
-    "The cat turns into MY MOTHER."
+    And then I wake up and I''ve wet the bed.'
+  - 'This happens every night.
 
-    "And then I wake
-    up and I''ve wet the bed."'
-  - '"This happens every night."
+    My sheets are so fucked up.'
+  - 'We''ve known each other for so long that this shouldn''t bother you.
 
-    "My sheets are so fucked up."
+    Yeah
+    dude. You''re the cat and then you turn into my mom.'
+  - 'What does it all mean?
 
-    "We''ve
-    known each other for so long that this shouldn''t bother you."'
-  - '"Yeah dude. You''re the cat and then you turn into my mom."
+    I''ll tell you what I think it means.'
+  - 'Sometimes I think about being a kid.
 
-    "What does
-    it all mean?"'
-  - '"I''ll tell you what I think it means."
+    Our mom''s would gossip together about
+    Glorf whateverthefuck news while we''d play outside of the hyperscope.'
+  - 'Ding ding! My mom would ring the blinner bell for us to come back inside.
 
-    "Sometimes I think about being
-    a kid."
+    And
+    we''d start to head inside and you''d get in and she''d stop me before I could
+    go inside with you and look at me.'
+  - 'And my mom she''d look at me.
 
-    "Our mom''s would gossip together about Glorf whateverthefuck news
-    while we''d play outside of the hyperscope."'
-  - '"Ding ding! My mom would ring the blinner bell for us to come back inside."
+    And she''d look at me and say,'
+  - 'she''d say, "Yinkel would''ve sniffed it better."
 
-    "And
-    we''d start to head inside and you''d get in and she''d stop me beofre I could
-    and look at me."
+    Every fucking day. My
+    mom said this fucking thing to me.'
+  - 'What does "Yinkel would''ve sniffed it better" even mean dude?
 
-    "And she''d look at me."'
-  - '"And she''d look at me and say,"
+    I don''t
+    know. I''m sure you don''t know either.'
+  - 'But yeah back to my dream.
+
+    So I''m chasing you, the cat.'
+  - 'Am I chasing you to get inside the house? Before my mom can complain to me about...
+
+    About
+    Yinkel?'
+  - 'I don''t think that''s what the dream really has to do with my mom, though.
+
+    Who
+    the fuck even was Yinkel. God.'
+  - 'Yeah but I think the dream is about... about the corn maze dude.
+
+    Hah. Yeah.
+    I got ya with the Yinkel hooker, you''re stuck deep in your job now, and ya can''t
+    run outta the room.'
+  - 'It''s fuckin'' time! Can''t run away from your problems.
+
+    CAN''T RUN AWAY
+    FROM OUR PROBLEMS.'
+  - 'WHAT THE FUCK BRO!!!!!!!!??????? WHY''D YA DO IT?
+
+    ...Why? The cornmaze...
+    :('
+  - 'Your clumsly little legs you''re always tripping all over them... trippin''
+    in the cornmaze...
+
+    You had to fall on your face with your legs tied up in
+    a knot like that...'
+  - 'Oh yeah! I''ll just help ''em up! No problemo! It''s me friend! We''re in a
+    cornmaze!
+
+    The cornmaze is haunted! We want to leave! Let me help my friend
+    up because my friend fell on the ground because of my friend having 8 octopus
+    legs.'
+  - 'Yeah you had to fall with your stupid octopus legs on your face in the scariest
+    corn maze of Glorf 31!
+
+    And then when I want to help my friend up my friend''s
+    like,'
+  - 'And you my friend are like, "oh, thank you Guambo."
+
+    AND THEN YOU PULL ME
+    IN.'
+  - 'AND YOU PULL ME IN AND YOU GIVE ME A KISS
+
+    ON MY LIPS. IN THE CORNMAZE.
+
+    AFTER
+    I UNTIED YOUR LEGS.'
+  - 'Why did you kiss my lips?
+
+    With your lips?
+
+    In the cornmaze?'
+  - 'We were in a haunted corn maze! There was a man with a chainsaw running after
+    us!
+
+    Your eight legs were tied in a knot and the kiss made untying them Super
+    Weird.'
+  - 'Guambo, yes me myself, I Guambo had to untie them!
+
+    And you know what dude?'
+  - 'That wasn''t even the worst part!
+
+    I''ve specifically avoided mentioning
+    the cornmaze kiss always!'
+  - 'But when other people bring up kissing in front of us, you grimace, roll your
+    eyes at me, and then RUN OUT OF THE ROOM.
+
+    WITH YOUR EIGHT FUCKING LEGS.
+
+    YOU
+    ARE THE CAT RUNNING AWAY FROM ME.'
+  - 'IT''S NOT EVEN A METAPHOR.
+
+    YOU are LITERALLY RUNNING AWAY FROM ME WHENEVER
+    KISSING IS MENTIONED.'
+  - 'No, that''s not the worst part.
+
+    Somehow, you running out of any room whenever
+    kissing is brought up isn''t the worst part.
+
+    Somehow.'
+  - 'The worst part is that night after night I''m BLASTING my sheets with NO RELIEF
+    in sight!
+
+    Ugh! Like you make it so weird dude!'
+  - 'We could''ve just Never Mentioned It.
 
     "Yinkel would''ve sniffed it better."
 
-    "Every
-    fucking day. She said this fucking thing to me."'
-  - '"Every fucking day. She said this fucking thing to me."
+    Ugh!'
+  - 'Sniffed what?
 
-    "What does it even
-    mean dude?"
+    What does that even mean?'
+  - 'Who''s Yinkel?
 
-    "I don''t know. I''m sure you don''t know either."'
-  - '"But yeah back to my dream."
+    God dude, I''m so blazed right now.'
+  - 'Fuck you.
 
-    "So I''m chasing you, the cat."
+    Fuck my mom.'
+  - 'I''m gonna blast this couch.
 
-    "Am I
-    chasing you to get inside the house? Before my mom can complain to me about..."'
-  - '"About Yinkel?"
+    Right now. When you can''t run away. I''ve
+    got ya now, dude.
 
-    "I don''t think that''s what the dream means."
-
-    "Who
-    the fuck even was Yinkel. God."'
-  - '"Yeah but I think the dream is about... about the corn maze dude."
-
-    "Hah.
-    Yeah. I got ya with the hooker, you''re stuck deep in your job now, and ya can''t
-    run outta the room."
-
-    "Can''t run away from your problems."'
-  - '"CAN''T RUN AWAY FROM OUR PROBLEMS."
-
-    "WHAT THE FUCK BRO?????????????"
-
-    "Why?"'
-  - '"Your clumsly little legs you''re always tripping all over them..."
-
-    "You
-    had to fall on your face with your legs tied up in a knot like that..."
-
-    "Oh
-    yeah! I''ll just help ''em up! No problemo! It''s me friend! We''re in a cornmaze!''"'
-  - '"The cornmaze is haunted! We want to leave! Let me help my friend up because
-    my friend fell on the ground because of my friend having 8 octopus legs."
-
-    "Yeah
-    you had to fall with your stupid octopus legs on your face in the scariest corn
-    maze of Glorf 31!"'
-  - '"And then when I want to help my friend up my friend''s like,"
-
-    " ''oh,
-    thank you Guambo.''"
-
-    "AND THEN YOU PULL ME IN."'
-  - '"AND YOU PULL ME IN AND YOU GIVE ME A KISS"
-
-    "ON MY LIPS."
-
-    "Why did
-    you kiss my lips?"
-
-    "With your lips?"'
-  - '"We were in a haunted corn maze! There was a man with a chainsaw running after
-    us!"
-
-    "Your eight legs were tied in a knot and the kiss made untying them
-    Super Weird."'
-  - '"Guambo, yes me myself, I Guambo had to untie them!"
-
-    "And you know what
-    dude?"'
-  - '"That wasn''t even the worst part!"
-
-    "I''ve specifically avoided mentioning
-    it always!"
-
-    "But when other people bring up kissing in front of us, you
-    grimace, roll your eyes at me, and then RUN OUT OF THE ROOM."'
-  - '"YOU ARE THE CAT RUNNING AWAY FROM ME."
-
-    "IT''S NOT EVEN A METAPHOR."
-
-    "YOU
-    are LITERALLY RUNNING AWAY FROM ME WHENEVER KISSING IS MENTIONED."'
-  - '"It it''s not even necessarily about us."
-
-    "No, that''s not the worst part."
-
-    "The
-    worst part is that night after night I''m BLASTING my sheets with NO RELIEF in
-    sight!"'
-  - '"Like you make it so weird dude!"
-
-    "We could just Not Mention It."
-
-    "Yinkel
-    would''ve sniffed it better."'
-  - '"Sniffed what?"
-
-    "What does that even mean?"
-
-    "Who''s Yinkel?"
-
-    "God
-    dude, I''m so blazed right now."'
-  - '"Fuck you."
-
-    "Fuck my mom."
-
-    "I''m gonna blast this couch."
-
-    "At
-    least you couldn''t run away this time."'
+    Hah.'
   speakSounds:
   - {fileID: 8300000, guid: cde603817ddc5a848a8aaeab08a02c5a, type: 3}
   - {fileID: 8300000, guid: fd2a1cc533c84f7438857f4e84b35c5d, type: 3}
@@ -11138,7 +11135,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24388
+  m_Name: pb_Mesh21678
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11617,7 +11614,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24958
+  m_Name: pb_Mesh22250
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12209,7 +12206,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25208
+  m_Name: pb_Mesh22496
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12746,7 +12743,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24674
+  m_Name: pb_Mesh21966
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12910,7 +12907,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24776
+  m_Name: pb_Mesh22068
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13524,7 +13521,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24938
+  m_Name: pb_Mesh22230
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19005,7 +19002,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24838
+  m_Name: pb_Mesh22130
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19899,7 +19896,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24970
+  m_Name: pb_Mesh22262
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22246,7 +22243,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23894
+  m_Name: pb_Mesh21184
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26170,7 +26167,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25282
+  m_Name: pb_Mesh22570
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26496,7 +26493,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23694
+  m_Name: pb_Mesh20980
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26725,7 +26722,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24434
+  m_Name: pb_Mesh21724
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32802,7 +32799,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24078
+  m_Name: pb_Mesh21368
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33048,7 +33045,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23668
+  m_Name: pb_Mesh20954
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33992,7 +33989,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24026
+  m_Name: pb_Mesh21316
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -35706,7 +35703,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24104
+  m_Name: pb_Mesh21394
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38426,7 +38423,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23942
+  m_Name: pb_Mesh21232
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -39653,7 +39650,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24896
+  m_Name: pb_Mesh22188
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -39909,7 +39906,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24870
+  m_Name: pb_Mesh22162
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -42034,7 +42031,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23716
+  m_Name: pb_Mesh21002
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -42276,7 +42273,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24402
+  m_Name: pb_Mesh21692
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -42551,7 +42548,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23654
+  m_Name: pb_Mesh20940
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -43586,7 +43583,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23974
+  m_Name: pb_Mesh21264
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -43750,7 +43747,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24594
+  m_Name: pb_Mesh21884
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45983,7 +45980,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25016
+  m_Name: pb_Mesh22304
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -51104,7 +51101,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23784
+  m_Name: pb_Mesh21072
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -54094,7 +54091,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25156
+  m_Name: pb_Mesh22444
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -57910,7 +57907,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24160
+  m_Name: pb_Mesh21452
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -59961,7 +59958,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25352
+  m_Name: pb_Mesh22638
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -61371,7 +61368,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24210
+  m_Name: pb_Mesh21502
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -61535,7 +61532,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25052
+  m_Name: pb_Mesh22340
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -67723,7 +67720,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24908
+  m_Name: pb_Mesh22200
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -68210,7 +68207,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24230
+  m_Name: pb_Mesh21522
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
