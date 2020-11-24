@@ -264,7 +264,7 @@ public class StatManager : MonoBehaviour
         {
             //change color
             domSubText.color = Color.red;
-            earthParticleHeart1.GetComponent<ParticleSystem>().Stop();
+            earthParticleHeart1.GetComponent<ParticleSystem>().Play();
             earthParticleHeart2.GetComponent<ParticleSystem>().Stop();
         }
         // went above 30
