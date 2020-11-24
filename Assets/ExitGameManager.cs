@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ExitGameManager : MonoBehaviour
 {
@@ -48,7 +49,7 @@ public class ExitGameManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(endingGame)
+        if (endingGame)
         {
             timer++;
         }
@@ -59,10 +60,9 @@ public class ExitGameManager : MonoBehaviour
 
         srs[2].color = new Color(1, 1, 1, ((Mathf.Clamp(timer, 100f, 150f) - 100f) / 50f));
 
-        if(timer > 175)
+        if (timer > 175)
         {
-            Application.Quit();
+            SceneManager.LoadScene("IntroScene");
         }
-
     }
 }
