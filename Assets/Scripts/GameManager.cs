@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
             yield return null;
         }
-        fadeImg.color = Color.Lerp(initColor, finalColor, elapsedTime / duration);
+        fadeImg.color = finalColor;
 
         DeckManager.instance.NextCard();
     }
