@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
+
 /*
  * Date created: 10/25/2020
  * Creator: Nate Smith
@@ -15,6 +17,10 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance = null;
 
+    [SerializeField] private bool _inVR;
+
+    public bool InVR => _inVR;
+
     public Image fadeImg;
 
     void Awake()
@@ -23,6 +29,18 @@ public class GameManager : MonoBehaviour
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
+        
+        // DETERMINE IF IN VR
+        if (_inVR)
+        {
+            // remove Mouse and Keyboard controller
+            FindObjectOfType<PlayerMouseCameraControl>().gameObject.SetActive(false);
+        }
+        else
+        {
+            // remove VR stuff
+            FindObjectOfType<XRRig>().gameObject.SetActive(false);
+        }
     }
 
     private void Start()

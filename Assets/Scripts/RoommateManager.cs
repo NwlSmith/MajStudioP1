@@ -10,6 +10,9 @@ public class RoommateManager : MonoBehaviour
     [SerializeField]
     [TextArea(4, 50)]
     private List<string> monologueQueue = null;
+    
+    [SerializeField]
+    private List<AudioClip> monologueAudioQueue = null;
 
     [SerializeField]
     private AudioClip[] speakSounds = null;
@@ -150,9 +153,9 @@ public class RoommateManager : MonoBehaviour
         }
         if (!response.Equals(""))
         {
-            UnityWebGLSpeechSynthesis.TTSManager.instance.Say(response, 0);
+            float delay = TTSManager.instance.Say(response);
             // delay
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(delay);
         }
         else
         {
