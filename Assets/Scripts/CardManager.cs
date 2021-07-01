@@ -116,16 +116,16 @@ public class CardManager : MonoBehaviour
         }
         NameText.text = alienName;
 
-        UnityWebGLSpeechSynthesis.TTSManager.instance.Say("Incoming transmission from: " + alienName, 1); // FIX THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        float delay = TTSManager.instance.Say("Incoming transmission from: " + alienName);
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(delay);
 
         MainText.text = "Translating...";
 
         cardVisuals.Activate();
         yield return new WaitForSeconds(1f);
         // Maybe change voice?
-        UnityWebGLSpeechSynthesis.TTSManager.instance.Say(cardInfo.infoText, 1); // FIX THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        TTSManager.instance.Say(cardInfo.infoText);
         MainText.text = cardInfo.infoText;
 
         D1Text.text = "Loading...";
@@ -140,7 +140,7 @@ public class CardManager : MonoBehaviour
     }
 
     private void SetUpStatChangeArrows()
-    { // MAKE SCALE CHANGE BASED ON MAGNITUDE!!!!!!!!!!!!!!!!!!!!!!
+    { 
 
         Vector3 scaleMod = new Vector3(.015f, .015f, .015f);
 
@@ -224,7 +224,7 @@ public class CardManager : MonoBehaviour
      */
     public void Deactivate()
     {
-        UnityWebGLSpeechSynthesis.TTSManager.instance.StopSpeaking();
+        TTSManager.instance.StopSpeaking();
         NameText.text = "";
         MainText.text = "Please wait for new assignment...";
         D1Text.text = "";

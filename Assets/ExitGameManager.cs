@@ -19,7 +19,7 @@ public class ExitGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Escape))
+        if(UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             endingGame = true;
 
@@ -32,7 +32,7 @@ public class ExitGameManager : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyUp(KeyCode.Escape))
+        if(UnityEngine.InputSystem.Keyboard.current.escapeKey.wasReleasedThisFrame)
         {
             endingGame = false;
             timer = 0;
