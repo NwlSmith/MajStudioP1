@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class EndGameManager : MonoBehaviour
 {
@@ -24,18 +25,33 @@ public class EndGameManager : MonoBehaviour
     AudioSource aS;
     public AudioClip explosion;
 
+    [SerializeField] private bool inVR = true;
+    [SerializeField] private Camera mainCam;
+
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         aS = GetComponent<AudioSource>();
+
+        if (!inVR)
+        {
+            XRRig rig = FindObjectOfType<XRRig>();
+            rig.gameObject.SetActive(false);
+            
+        }
+        else
+        {
+            //FindObjectOfType<Canvas>().gameObject.SetActive(false);
+            mainCam.gameObject.SetActive(false);
+        }
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R))
+        if(UnityEngine.InputSystem.Keyboard.current.rKey.wasPressedThisFrame)
         {
-            SceneManager.LoadScene("Finn_Cockpit");
+            ButtonPressed();
         }
     }
 
@@ -78,5 +94,10 @@ public class EndGameManager : MonoBehaviour
         {
             text.SetActive(true);
         }
+    }
+
+    public void ButtonPressed()
+    {
+        SceneManager.LoadScene("Finn_Cockpit");
     }
 }

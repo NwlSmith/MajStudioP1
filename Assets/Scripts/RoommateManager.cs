@@ -10,9 +10,6 @@ public class RoommateManager : MonoBehaviour
     [SerializeField]
     [TextArea(4, 50)]
     private List<string> monologueQueue = null;
-    
-    [SerializeField]
-    private List<AudioClip> monologueAudioQueue = null;
 
     [SerializeField]
     private AudioClip[] speakSounds = null;

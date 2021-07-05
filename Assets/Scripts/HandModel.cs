@@ -7,10 +7,10 @@ using Random = UnityEngine.Random;
 public class HandModel : MonoBehaviour
 {
 
-    [SerializeField] private Transform target;
-    [SerializeField] private Transform mover;
+    [SerializeField] private Transform target = null;
+    [SerializeField] private Transform mover = null;
     [SerializeField] private float smoothing;
-    [SerializeField] private AudioClip impactSoundClip;
+    [SerializeField] private AudioClip impactSoundClip = null;
     private AudioSource _impactSoundAS;
 
     private void Awake()
@@ -21,7 +21,7 @@ public class HandModel : MonoBehaviour
     private void Update()
     {
         mover.position = target.position;//smooth
-        //mover.rotation = target.rotation;
+        mover.rotation = target.rotation;
     }
     private void Impact()
     {

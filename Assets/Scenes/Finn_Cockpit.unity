@@ -11016,7 +11016,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monologueQueue: []
-  monologueAudioQueue: []
   speakSounds:
   - {fileID: 8300000, guid: cde603817ddc5a848a8aaeab08a02c5a, type: 3}
   - {fileID: 8300000, guid: fd2a1cc533c84f7438857f4e84b35c5d, type: 3}
@@ -34161,7 +34160,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chair: {fileID: 863648982}
-  cam: {fileID: 0}
 --- !u!1 &800838675
 GameObject:
   m_ObjectHideFlags: 0
@@ -40166,7 +40164,7 @@ MonoBehaviour:
   - {fileID: 1134062695}
   - {fileID: 1688504399}
   - {fileID: 1943031261}
-  - {fileID: 0}
+  - {fileID: 111909415}
   - {fileID: 111909415}
   - {fileID: 497952381}
   - {fileID: 983945902}

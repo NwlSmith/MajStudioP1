@@ -62,7 +62,12 @@ public class ExitGameManager : MonoBehaviour
 
         if (timer > 175)
         {
-            SceneManager.LoadScene("IntroScene");
+            Pressed();
         }
+    }
+
+    public void Pressed()
+    {
+        SceneManager.LoadScene("IntroScene");
     }
 }

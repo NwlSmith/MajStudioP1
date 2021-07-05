@@ -3,20 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class IntroManager : MonoBehaviour
 {
     public Image fadeImg;
+
+    public bool inVR = false;
+
+    [SerializeField] private Camera mainCam = null;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(InitEnum());
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (!inVR)
+        {
+            XRRig rig = FindObjectOfType<XRRig>();
+            rig.gameObject.SetActive(false);
+            
+        }
+        else
+        {
+            FindObjectOfType<Canvas>().gameObject.SetActive(false);
+            mainCam.gameObject.SetActive(false);
+        }
     }
 
     private IEnumerator InitEnum()

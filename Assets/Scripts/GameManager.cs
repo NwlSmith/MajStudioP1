@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance = null;
 
-    [SerializeField] private bool _inVR;
+    [SerializeField] private bool _inVR = false;
 
     public bool InVR => _inVR;
 

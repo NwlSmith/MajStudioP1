@@ -6,7 +6,13 @@ public class VRChairRotator : MonoBehaviour
 {
     
     public GameObject chair;
-    public Camera cam;
+    private Camera cam;
+    private float lerpValue = .02f;
+    private float lerpValueMax = .05f;
+    private float lerpValueMin = .02f;
+    private float lerpValueTarget;
+    private float lerpValueSmoothing = .05f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +23,17 @@ public class VRChairRotator : MonoBehaviour
     void Update()
     {
         Quaternion targetRot = Quaternion.Euler(0, cam.transform.eulerAngles.y, 0);
-        chair.transform.rotation = Quaternion.Lerp(chair.transform.rotation, targetRot, 0.2f);
+        Quaternion currentRot = chair.transform.rotation;
+        if (Quaternion.Angle(targetRot, currentRot) > 30f)
+        {
+            lerpValueTarget = lerpValueMax;
+        }
+        else
+        {
+            lerpValueTarget = lerpValueMin;
+        }
+
+        lerpValue = Mathf.Lerp(lerpValue, lerpValueTarget, lerpValueSmoothing);
+        chair.transform.rotation = Quaternion.Lerp(chair.transform.rotation, targetRot, lerpValue);
     }
 }

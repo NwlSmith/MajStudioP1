@@ -24,8 +24,8 @@ public class ButtonPresser : MonoBehaviour
     private readonly List<InputDevice> _devicesR = new List<InputDevice>();
     private InputDevice _deviceL;
     private InputDevice _deviceR;
-    [SerializeField] private Transform deviceLTransform;
-    [SerializeField] private Transform deviceRTransform;
+    [SerializeField] private Transform deviceLTransform = null;
+    [SerializeField] private Transform deviceRTransform = null;
     
     // Start is called before the first frame update
     void Start()
@@ -103,10 +103,28 @@ public class ButtonPresser : MonoBehaviour
             Debug.Log(hit.collider.gameObject);
             if(hit.collider.tag == "Button")
             {
-                hit.collider.gameObject.GetComponent<AlienButton>().Pressed();
+                
+                PressedButton(hit.collider.gameObject);
             }
         }
 
         _shootRay = false;
+    }
+
+    void PressedButton(GameObject button)
+    {
+        AlienButton mainSceneButton = button.GetComponent<AlienButton>();
+        if (mainSceneButton != null)
+        {
+            mainSceneButton.Pressed();
+        }
+        else
+        {
+            VRSceneButton otherSceneButton = button.GetComponent<VRSceneButton>();
+            if (otherSceneButton != null)
+            {
+                otherSceneButton.Pressed();
+            }
+        }
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class WinGameManager : MonoBehaviour
 {
@@ -11,16 +12,29 @@ public class WinGameManager : MonoBehaviour
 
     public int timer;
 
+    [SerializeField] private bool inVR = true;
+    [SerializeField] private Camera mainCam;
+    
     void Start()
     {
-        
+        if (!inVR)
+        {
+            XRRig rig = FindObjectOfType<XRRig>();
+            rig.gameObject.SetActive(false);
+            
+        }
+        else
+        {
+            //FindObjectOfType<Canvas>().gameObject.SetActive(false);
+            mainCam.gameObject.SetActive(false);
+        }
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (UnityEngine.InputSystem.Keyboard.current.rKey.wasPressedThisFrame)
         {
-            SceneManager.LoadScene("Finn_Cockpit");
+            ButtonPressed();
         }
     }
 
@@ -33,5 +47,10 @@ public class WinGameManager : MonoBehaviour
         {
             Volume.weight = timer / 400f;
         }
+    }
+    
+    public void ButtonPressed()
+    {
+        SceneManager.LoadScene("Finn_Cockpit");
     }
 }

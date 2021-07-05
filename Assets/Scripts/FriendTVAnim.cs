@@ -8,7 +8,7 @@ public class FriendTVAnim : MonoBehaviour
     private Material TVScreenMat;
 
     [SerializeField]
-    private Texture[] TVSprites;
+    private Texture[] TVSprites = null;
 
     private Texture[] TVSprites1 = new Texture[4];
     private Texture[] TVSprites2 = new Texture[4];

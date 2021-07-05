@@ -13,11 +13,11 @@ public class StrToAudioClipDictionary : MonoBehaviour
         [SerializeField] public string str;
         [SerializeField] public AudioClip ac;
     }
-    [SerializeField] private StrToAc[] monologuesToACs;
+    [SerializeField] private StrToAc[] monologuesToACs = null;
 
     private Dictionary<string, AudioClip> _dictionary = new Dictionary<string, AudioClip>();
 
-    [SerializeField] private AudioClip defaultClip;
+    [SerializeField] private AudioClip defaultClip = null;
 
     void Awake()
     {
