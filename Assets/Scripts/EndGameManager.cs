@@ -26,7 +26,7 @@ public class EndGameManager : MonoBehaviour
     public AudioClip explosion;
 
     [SerializeField] private bool inVR = true;
-    [SerializeField] private Camera mainCam;
+    [SerializeField] private Camera mainCam = null;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +38,11 @@ public class EndGameManager : MonoBehaviour
         {
             XRRig rig = FindObjectOfType<XRRig>();
             rig.gameObject.SetActive(false);
-            
+            VRSceneButton[] buttons = FindObjectsOfType<VRSceneButton>();
+            foreach (VRSceneButton button in buttons)
+            {
+                button.gameObject.SetActive(false);
+            }
         }
         else
         {

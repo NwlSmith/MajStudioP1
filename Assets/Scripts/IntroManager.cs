@@ -21,7 +21,11 @@ public class IntroManager : MonoBehaviour
         {
             XRRig rig = FindObjectOfType<XRRig>();
             rig.gameObject.SetActive(false);
-            
+            VRSceneButton[] buttons = FindObjectsOfType<VRSceneButton>();
+            foreach (VRSceneButton button in buttons)
+            {
+                button.gameObject.SetActive(false);
+            }
         }
         else
         {

@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
         {
             // remove VR stuff
             FindObjectOfType<XRRig>().gameObject.SetActive(false);
+            FindObjectOfType<VRChairRotator>().enabled = false;
         }
     }
 

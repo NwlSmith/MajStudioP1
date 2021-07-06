@@ -13,7 +13,7 @@ public class WinGameManager : MonoBehaviour
     public int timer;
 
     [SerializeField] private bool inVR = true;
-    [SerializeField] private Camera mainCam;
+    [SerializeField] private Camera mainCam = null;
     
     void Start()
     {
@@ -21,7 +21,11 @@ public class WinGameManager : MonoBehaviour
         {
             XRRig rig = FindObjectOfType<XRRig>();
             rig.gameObject.SetActive(false);
-            
+            VRSceneButton[] buttons = FindObjectsOfType<VRSceneButton>();
+            foreach (VRSceneButton button in buttons)
+            {
+                button.gameObject.SetActive(false);
+            }
         }
         else
         {
