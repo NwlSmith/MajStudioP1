@@ -40,7 +40,7 @@ public class CardManager : MonoBehaviour
     public TMPro.TextMeshPro MainText;
     public TMPro.TextMeshPro D1Text;
     public TMPro.TextMeshPro D2Text;
-    public TextMesh NameText;
+    public TMPro.TextMeshPro NameText;
 
     [SerializeField] private GameObject d1HorninessUpArrow = null, d1HorninessDownArrow = null, d1DomSubUpArrow = null, d1DomSubDownArrow = null, d1TempUpArrow = null, d1TempDownArrow = null;
     [SerializeField] private GameObject d2HorninessUpArrow = null, d2HorninessDownArrow = null, d2DomSubUpArrow = null, d2DomSubDownArrow = null, d2TempUpArrow = null, d2TempDownArrow = null;
