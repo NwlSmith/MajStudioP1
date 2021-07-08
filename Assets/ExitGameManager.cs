@@ -68,6 +68,9 @@ public class ExitGameManager : MonoBehaviour
 
     public void Pressed()
     {
-        SceneManager.LoadScene("IntroScene");
+        if (SceneManager.GetActiveScene().name.Equals("IntroScene"))
+            Application.Quit();
+        else
+            SceneManager.LoadScene("IntroScene");
     }
 }
