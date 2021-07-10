@@ -6,16 +6,20 @@ using UnityEngine;
 public class VRHandPhysicsFollow : MonoBehaviour
 {
     [SerializeField] private Transform hand = null;
-    private Rigidbody rb;
+    private Rigidbody _rb;
+    private float _smoothing = .2f;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
         Debug.Log($"{name} starting");
     }
 
     private void FixedUpdate()
     {
-        rb.MovePosition(hand.position);
+        Vector3 newPos = Vector3.Lerp(_rb.position, hand.position, _smoothing);
+        _rb.MovePosition(newPos);
+        Quaternion newRot = Quaternion.Slerp(_rb.rotation, hand.rotation, _smoothing);
+        _rb.MoveRotation(newRot);
     }
 }
