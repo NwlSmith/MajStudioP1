@@ -3,7 +3,17 @@ guid: db60078f885f94a5c829003652bcb778
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TentacleTopside
+    second: {fileID: 2100000, guid: 78fa05e3e791e44a8a1c16cfd464e6ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UndersideTentacle
+    second: {fileID: 2100000, guid: 9cde6074193d248cb9d6a0ba801ff07b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
