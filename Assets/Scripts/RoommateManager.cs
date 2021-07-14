@@ -20,6 +20,8 @@ public class RoommateManager : MonoBehaviour
     private bool stopAnim = false;
 
     public TMPro.TextMeshPro charDialogue;
+    public TMPro.TextMeshPro oldDialogue1;
+    public TMPro.TextMeshPro oldDialogue2;
 
     private AudioSource audioSource;
 
@@ -39,6 +41,8 @@ public class RoommateManager : MonoBehaviour
     private void Start()
     {
         charDialogue.text = "";
+        oldDialogue1.text = "";
+        oldDialogue2.text = "";
     }
 
     // UNIMPLEMENTED
@@ -111,16 +115,30 @@ public class RoommateManager : MonoBehaviour
         Speak(words);
     }
 
+    private string monologueBack1;
+    private string monologueBack2;
     private string Monologue()
     {
         string s = "";
         if (monologueQueue.Count > 0)
         {
             s = monologueQueue[0];
+            if(monologueBack1 != null)
+            {
+                monologueBack2 = monologueBack1;                
+            }
+            monologueBack1 = monologueQueue[0];
+            ChangeBacklog();
             monologueQueue.RemoveAt(0);
         }
         charDialogue.color = Color.cyan;
         return s;
+    }
+
+    private void ChangeBacklog()
+    {
+        oldDialogue1.text = monologueBack1;
+        oldDialogue2.text = monologueBack2;
     }
 
     public void Speak(string response)
