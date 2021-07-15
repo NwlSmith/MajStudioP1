@@ -24,11 +24,11 @@ public class VRChairRotator : MonoBehaviour
     {
         Quaternion targetRot = Quaternion.Euler(0, cam.transform.eulerAngles.y, 0);
         Quaternion currentRot = chair.transform.rotation;
-        if (Quaternion.Angle(targetRot, currentRot) > 30f)
+        if (Quaternion.Angle(targetRot, currentRot) > 120f)
         {
             lerpValueTarget = lerpValueMax;
         }
-        else
+        else if (Quaternion.Angle(targetRot, currentRot) > 90f)
         {
             lerpValueTarget = lerpValueMin;
         }

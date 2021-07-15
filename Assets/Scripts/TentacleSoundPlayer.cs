@@ -31,4 +31,9 @@ public class TentacleSoundPlayer : MonoBehaviour
 
         curAS = (curAS + 1) % numAS;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        PlaySound();
+    }
 }
