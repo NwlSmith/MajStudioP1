@@ -123,22 +123,21 @@ public class RoommateManager : MonoBehaviour
         if (monologueQueue.Count > 0)
         {
             s = monologueQueue[0];
-            if(monologueBack1 != null)
+            if(monologueBack1 != "")
             {
                 monologueBack2 = monologueBack1;                
             }
             monologueBack1 = monologueQueue[0];
-            ChangeBacklog();
             monologueQueue.RemoveAt(0);
         }
         charDialogue.color = Color.cyan;
         return s;
     }
 
-    private void ChangeBacklog()
+    private void ChangeBacklog(string response)
     {
-        oldDialogue1.text = monologueBack1;
-        oldDialogue2.text = monologueBack2;
+        oldDialogue2.text = oldDialogue1.text;
+        oldDialogue1.text = response;
     }
 
     public void Speak(string response)
@@ -178,6 +177,7 @@ public class RoommateManager : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(2, 4));
         }
         charDialogue.text = "";
+        ChangeBacklog(response);
         // draw new card
         stopAnim = true;
 
