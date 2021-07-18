@@ -601,7 +601,18 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    1: AMPLIFY_SHADER_EDITOR
+    1: AMPLIFY_SHADER_EDITOR;CT_RTV
+    4: CT_RTV
+    7: CT_RTV
+    13: CT_RTV
+    14: CT_RTV
+    19: CT_RTV
+    21: CT_RTV
+    25: CT_RTV
+    27: CT_RTV
+    28: CT_RTV
+    29: CT_RTV
+    30: CT_RTV
   platformArchitecture: {}
   scriptingBackend:
     Standalone: 0

@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
         }
         fadeImg.color = Color.Lerp(initColor, finalColor, elapsedTime / duration);
 
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     public void GameOverWin()
@@ -116,6 +116,6 @@ public class GameManager : MonoBehaviour
         }
         fadeImg.color = Color.Lerp(initColor, finalColor, elapsedTime / duration);
 
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 }
