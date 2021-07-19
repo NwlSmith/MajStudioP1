@@ -19,7 +19,7 @@ public class SpriteCycle : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(timer < 3)
+        if(timer < 9)
         {
             timer++;
         }

@@ -67,7 +67,7 @@ public class FriendTVAnim : MonoBehaviour
         }
         else
         {
-            groupTimerMax = Random.Range(2, 5);
+            groupTimerMax = Random.Range(6, 10);
             groupTimer = 0;
             PickSpriteGroup(Random.Range(0, 5));
         }
