@@ -116,7 +116,7 @@ public class CardManager : MonoBehaviour
         }
         NameText.text = alienName;
 
-        float delay = TTSManager.instance.Say("Incoming transmission from: " + alienName);
+        float delay = TTSManager.instance.Say("Incoming transmission from: " + alienName, 1);
 
         yield return new WaitForSeconds(delay);
 
@@ -125,7 +125,7 @@ public class CardManager : MonoBehaviour
         cardVisuals.Activate();
         yield return new WaitForSeconds(1f);
         // Maybe change voice?
-        TTSManager.instance.Say(cardInfo.infoText);
+        TTSManager.instance.Say(cardInfo.infoText, 0);
         MainText.text = cardInfo.infoText;
 
         D1Text.text = "Loading...";

@@ -61,7 +61,7 @@ public class IntroManager : MonoBehaviour
     private IEnumerator StartGameEnum()
     {
         float duration = 3f;
-        float elapsedTime = 0f;
+        float elapsedTime = 0f; 
         Color initColor = new Color(0f, 0f, 0f, 0f);
         Color finalColor = new Color(0f, 0f, 0f, 1f);
         while (elapsedTime < duration)
@@ -74,6 +74,12 @@ public class IntroManager : MonoBehaviour
         }
         fadeImg.color = Color.Lerp(initColor, finalColor, elapsedTime / duration);
 
-        SceneManager.LoadScene(1);
+        NextScene();
+    }
+
+    public void NextScene()
+    {
+        Debug.Log("Transitioning to Finn_Cockpit");
+        SceneManager.LoadScene("Finn_Cockpit");
     }
 }
