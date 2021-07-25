@@ -7512,7 +7512,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.8509804, g: 0.5989739, b: 0.12549017, a: 1}
-  m_Intensity: 42.8
+  m_Intensity: 37.8
   m_Range: 51
   m_SpotAngle: 116.64134
   m_InnerSpotAngle: 66.29421
@@ -13251,7 +13251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b2c65ebf0e1224687ec9786b484cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotPerFrame: {x: 0, y: 0.02, z: 0}
+  rotPerFrame: {x: 0, y: 0.005, z: 0}
 --- !u!23 &1030020124
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14134,7 +14134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1253777957
 Transform:
   m_ObjectHideFlags: 0
@@ -14161,7 +14161,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.8207547, g: 0.6929957, b: 0.80633026, a: 1}
-  m_Intensity: 56.1
+  m_Intensity: 2.8
   m_Range: 80.8
   m_SpotAngle: 131.3631
   m_InnerSpotAngle: 87.16175
@@ -14339,7 +14339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b2c65ebf0e1224687ec9786b484cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotPerFrame: {x: 0, y: 0.01, z: 0}
+  rotPerFrame: {x: 0, y: 0.005, z: 0}
 --- !u!23 &1261786247
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15547,7 +15547,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.3964934, g: 0.7207196, b: 0.8490566, a: 1}
-  m_Intensity: 63.1
+  m_Intensity: 13.6
   m_Range: 13.9
   m_SpotAngle: 119.446014
   m_InnerSpotAngle: 81.538345
@@ -15840,6 +15840,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.020442998
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dc12dd45d9116492c9be2b857fe3001d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e0d7692752bc8453595ab99881762371, type: 2}
     - target: {fileID: 919132149155446097, guid: dc12dd45d9116492c9be2b857fe3001d, type: 3}
       propertyPath: m_Name
       value: Friend_Textured

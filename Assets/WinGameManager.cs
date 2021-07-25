@@ -47,7 +47,7 @@ public class WinGameManager : MonoBehaviour
     {
         timer++;
 
-        if(timer < 400)
+        if(timer < 2000)
         {
             Volume.weight = timer / 400f;
         }
