@@ -14,18 +14,16 @@ public class LogoSequenceScript : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private IEnumerator Sequence()
     {
         
         
         
         yield return null;
+    }
+
+    public void NextScene()
+    {
         SceneManager.LoadScene("IntroScene");
     }
 }
