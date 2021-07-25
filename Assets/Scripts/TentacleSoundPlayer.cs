@@ -6,7 +6,7 @@ public class TentacleSoundPlayer : MonoBehaviour
     [SerializeField] private List<AudioClip> _clips = new List<AudioClip>();
     private List<AudioSource> _audioSources = new List<AudioSource>();
     private int curAS = 0;
-    private int numAS = 4;
+    private int numAS = 1;
 
     private void Awake()
     {
@@ -16,6 +16,7 @@ public class TentacleSoundPlayer : MonoBehaviour
             audioSource.playOnAwake = false;
             audioSource.spatialBlend = 1f;
             audioSource.maxDistance = 10f;
+            audioSource.volume = 0.3f;
             _audioSources.Add(audioSource);
         }
     }
