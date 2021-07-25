@@ -167,7 +167,7 @@ public class RoommateManager : MonoBehaviour
         }
         if (!response.Equals(""))
         {
-            float delay = TTSManager.instance.Say(response);
+            float delay = TTSManager.instance.Say(response, 2);
             // delay
             yield return new WaitForSeconds(delay);
         }
