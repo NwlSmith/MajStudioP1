@@ -23,7 +23,8 @@ MonoBehaviour:
   d1DomSubModifier: -2
   d1RoommateResponse: '"TEAR IT DOWN!"'
   d1RoommateResponseSpoken: 0
-  d1Cards: []
+  d1Cards:
+  - {fileID: 11400000, guid: b9a5b1621cb0c4d68a71f5f5b8ebe5c0, type: 2}
   decision2Text: '"I''m sure brutalism hates you too."'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
@@ -31,4 +32,6 @@ MonoBehaviour:
   d2DomSubModifier: 1
   d2RoommateResponse: '"Who doesn''t brutalism hate?"'
   d2RoommateResponseSpoken: 0
-  d2Cards: []
+  d2Cards:
+  - {fileID: 11400000, guid: b9a5b1621cb0c4d68a71f5f5b8ebe5c0, type: 2}
+  gameOverCard: 0

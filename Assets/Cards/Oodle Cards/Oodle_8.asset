@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: Oodle_8
+  m_EditorClassIdentifier: 
+  infoText: '"So continuing... down my astrological journey... I made this social
+    media page to give the humans daily updates on how to commune with the planets..."'
+  alien: 7
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
+  decision1Text: '"Please do not post about planetary rotisserie modem."'
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: -1
+  d1AtmosphereTempModifier: -1
+  d1DomSubModifier: 1
+  d1RoommateResponse: '"Yeah dude, we can''t have the humans knowing about our intergalactic
+    BBQ''s."'
+  d1RoommateResponseSpoken: 0
+  d1Cards:
+  - {fileID: 11400000, guid: 648e840a2fc82409abf1864f44594cf1, type: 2}
+  decision2Text: '"You should follow me on it."'
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: 1
+  d2AtmosphereTempModifier: 0
+  d2DomSubModifier: 1
+  d2RoommateResponse: '"Hey, you should follow me back also, dude, you ass."'
+  d2RoommateResponseSpoken: 0
+  d2Cards:
+  - {fileID: 11400000, guid: 648e840a2fc82409abf1864f44594cf1, type: 2}
+  gameOverCard: 0

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: Oodle_7
+  m_EditorClassIdentifier: 
+  infoText: '"I''ve heard more about this... uh... astrology. From a human friend
+    (which I have definitely). .... ...so yeah... where were you exerted from your
+    maternal unit?"'
+  alien: 7
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
+  decision1Text: '"I was born here, in this office. I will live here, I will die
+    here."'
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: -1
+  d1AtmosphereTempModifier: -1
+  d1DomSubModifier: 1
+  d1RoommateResponse: '"As was I, dude."'
+  d1RoommateResponseSpoken: 0
+  d1Cards:
+  - {fileID: 11400000, guid: a5143020998f2411e8d37e168e542cce, type: 2}
+  decision2Text: '"I was born on Exeldressel Zoopapapoo, like most of my species."'
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: 0
+  d2AtmosphereTempModifier: 0
+  d2DomSubModifier: -1
+  d2RoommateResponse: '"I''m guessing Goya was born there too?"'
+  d2RoommateResponseSpoken: 0
+  d2Cards:
+  - {fileID: 11400000, guid: a5143020998f2411e8d37e168e542cce, type: 2}
+  gameOverCard: 0

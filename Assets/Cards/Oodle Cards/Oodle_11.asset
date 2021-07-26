@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
-  m_Name: Oodle_5
+  m_Name: Oodle_11
   m_EditorClassIdentifier: 
-  infoText: '"What''s your zodiac sign?"'
+  infoText: '"I have posted the face pic. The rotisierrie has not been mentioned.
+    I am now being hunted by the humans that once loved me. This has helped nothing.
+    I am more lonely than ever."'
   alien: 7
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 0
-  decision1Text: '"Uh... Jupiter?"'
+  imageAssociatedWithChoice1: 1
+  decision1Text: 
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 0
   d1DomSubModifier: 0
-  d1RoommateResponse: '"Mine''s Uranus."'
+  d1RoommateResponse: 
   d1RoommateResponseSpoken: 0
-  d1Cards:
-  - {fileID: 11400000, guid: 00f34c1c78807466c961532d171627f7, type: 2}
-  decision2Text: '"The same as yours."'
+  d1Cards: []
+  decision2Text: 
   d2BiodiversityModifier: 0
-  d2HorninessModifier: -1
+  d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
-  d2RoommateResponse: '"I have the same sign also!"'
+  d2RoommateResponse: 
   d2RoommateResponseSpoken: 0
-  d2Cards:
-  - {fileID: 11400000, guid: 00f34c1c78807466c961532d171627f7, type: 2}
+  d2Cards: []
   gameOverCard: 0

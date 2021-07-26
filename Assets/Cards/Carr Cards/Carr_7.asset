@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
-  m_Name: Oodle_5
+  m_Name: Carr_7
   m_EditorClassIdentifier: 
-  infoText: '"What''s your zodiac sign?"'
-  alien: 7
+  infoText: '"I''ve found something worse than Brutalism in terms of aesthetic movements...
+    its name is Frank Lloyd Wright."'
+  alien: 6
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 0
-  decision1Text: '"Uh... Jupiter?"'
+  imageAssociatedWithChoice1: 1
+  decision1Text: Yes, and?
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 0
-  d1DomSubModifier: 0
-  d1RoommateResponse: '"Mine''s Uranus."'
+  d1DomSubModifier: 1
+  d1RoommateResponse: '"Bro I think that he may just keep coming back with these
+    grievences and such..."'
   d1RoommateResponseSpoken: 0
-  d1Cards:
-  - {fileID: 11400000, guid: 00f34c1c78807466c961532d171627f7, type: 2}
-  decision2Text: '"The same as yours."'
+  d1Cards: []
+  decision2Text: Is he the one who did Spaceship on Falling Water?
   d2BiodiversityModifier: 0
-  d2HorninessModifier: -1
+  d2HorninessModifier: 1
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
-  d2RoommateResponse: '"I have the same sign also!"'
+  d2RoommateResponse: '"Your Spaceship can fall on MY water. ;)"'
   d2RoommateResponseSpoken: 0
-  d2Cards:
-  - {fileID: 11400000, guid: 00f34c1c78807466c961532d171627f7, type: 2}
+  d2Cards: []
   gameOverCard: 0
