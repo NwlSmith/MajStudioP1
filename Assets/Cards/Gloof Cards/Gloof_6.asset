@@ -16,7 +16,7 @@ MonoBehaviour:
   alien: 4
   image: {fileID: 0}
   imageAssociatedWithChoice1: 0
-  decision1Text: '"Initiate clown death fight."'
+  decision1Text: '"As long as YOU cover the logistics."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: -2
   d1AtmosphereTempModifier: 0
@@ -32,3 +32,4 @@ MonoBehaviour:
   d2RoommateResponse: '"Clown orgy on you, dude."'
   d2RoommateResponseSpoken: 0
   d2Cards: []
+  gameOverCard: 0
