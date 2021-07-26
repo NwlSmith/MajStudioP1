@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: Carr_8
+  m_EditorClassIdentifier: 
+  infoText: '"Oh no. I''ve found the worst one. How could the humans do this to their
+    eye cones? One word phrase: Rococo."'
+  alien: 6
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
+  decision1Text: '"Sometimes I wonder if it''s possible to block specific aliens
+    from appearing here."'
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: 0
+  d1AtmosphereTempModifier: 0
+  d1DomSubModifier: 0
+  d1RoommateResponse: '"Isn''t the reason they pay you for this because no one else
+    wants to deal with these dudes?"'
+  d1RoommateResponseSpoken: 0
+  d1Cards:
+  - {fileID: 11400000, guid: 17a80740275d44f82a1ba556a51a80b4, type: 2}
+  decision2Text: '"I actually sort of like this style myself."'
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: -1
+  d2AtmosphereTempModifier: 0
+  d2DomSubModifier: 1
+  d2RoommateResponse: '"You and all alien counterpart poodles, dude."'
+  d2RoommateResponseSpoken: 0
+  d2Cards:
+  - {fileID: 11400000, guid: 17a80740275d44f82a1ba556a51a80b4, type: 2}
+  gameOverCard: 0

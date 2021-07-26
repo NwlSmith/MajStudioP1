@@ -10,26 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
-  m_Name: Carr_5
+  m_Name: Carr_10
   m_EditorClassIdentifier: 
-  infoText: '"I need paint."'
+  infoText: '"I have thought about your comment... that I am becoming similar to
+    our colleage, SS''SSS... I have realized this is not what Art is about. It is
+    about freedom, self expression, communication. I got too wrapped up in my own
+    tastes. Thank you, Lixel Zeoop. Thank you."'
   alien: 6
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 0
-  decision1Text: '"Get pigment from the Grand Canyon."'
+  imageAssociatedWithChoice1: 1
+  decision1Text: '"You are welcome."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 1
   d1AtmosphereTempModifier: 1
-  d1DomSubModifier: 0
-  d1RoommateResponse: '"Rock tones, major mood."'
+  d1DomSubModifier: -1
+  d1RoommateResponse: '"What an epiphany. Seems we aren''t the only ones who can''t
+    stand SS''SSSS."'
   d1RoommateResponseSpoken: 0
   d1Cards: []
-  decision2Text: '"I think the sea urchins have some."'
+  decision2Text: '"(Thumbs up emoji)"'
   d2BiodiversityModifier: 0
-  d2HorninessModifier: 0
+  d2HorninessModifier: -1
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 1
-  d2RoommateResponse: '"That paint won''t be vegan, dude."'
+  d2RoommateResponse: '"(Thumbs up emoji)"'
   d2RoommateResponseSpoken: 0
   d2Cards: []
   gameOverCard: 0

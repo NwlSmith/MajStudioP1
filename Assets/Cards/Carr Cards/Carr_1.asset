@@ -36,3 +36,4 @@ MonoBehaviour:
     They''re just horse babies, dude!"'
   d2RoommateResponseSpoken: 0
   d2Cards: []
+  gameOverCard: 0

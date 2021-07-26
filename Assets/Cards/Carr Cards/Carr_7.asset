@@ -25,13 +25,15 @@ MonoBehaviour:
   d1RoommateResponse: '"Bro I think that he may just keep coming back with these
     grievences and such..."'
   d1RoommateResponseSpoken: 0
-  d1Cards: []
+  d1Cards:
+  - {fileID: 11400000, guid: 767e5bc52f7d34a7da36fd0effd88ff6, type: 2}
   decision2Text: Is he the one who did Spaceship on Falling Water?
   d2BiodiversityModifier: 0
   d2HorninessModifier: 1
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
-  d2RoommateResponse: '"Your Spaceship can fall on MY water. ;)"'
+  d2RoommateResponse: '"YOUR Spaceship can fall on MY water. ;)"'
   d2RoommateResponseSpoken: 0
-  d2Cards: []
+  d2Cards:
+  - {fileID: 11400000, guid: 767e5bc52f7d34a7da36fd0effd88ff6, type: 2}
   gameOverCard: 0
