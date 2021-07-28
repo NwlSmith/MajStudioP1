@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Smankoff_4
   m_EditorClassIdentifier: 
-  infoText: '"Everything on Earth is born and dies too quickly. In order to slow
+  infoText: '"Everything on earth is born and dies too quickly. In order to slow
     down this process of decay, I propose we decrease the global temperature in order
-    to lets say... refrigerate the specimens in order to enact Sciencentific upon
+    to lets say... refrigerate  the specimens to enact scientific activities upon
     them more effectively."'
   alien: 0
   image: {fileID: 0}
@@ -38,3 +38,4 @@ MonoBehaviour:
     earthlings like that."'
   d2RoommateResponseSpoken: 0
   d2Cards: []
+  gameOverCard: 0

@@ -38,3 +38,4 @@ MonoBehaviour:
   d2RoommateResponse: '"Goya''s always got something up those many sleeves..."'
   d2RoommateResponseSpoken: 0
   d2Cards: []
+  gameOverCard: 0

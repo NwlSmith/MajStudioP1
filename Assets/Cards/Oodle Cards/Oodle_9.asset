@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: Oodle_9
+  m_EditorClassIdentifier: 
+  infoText: '"I''ve gained... five billion followers on my astrology account... ....the
+    humans are asking for a face reveal... is it time?"'
+  alien: 7
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
+  decision1Text: '"Will this cure your lonliness?"'
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: 1
+  d1AtmosphereTempModifier: 0
+  d1DomSubModifier: -1
+  d1RoommateResponse: '"Woah... deep. Seems like he might need some space on that
+    thought. Haha, get it? Space?"'
+  d1RoommateResponseSpoken: 0
+  d1Cards:
+  - {fileID: 11400000, guid: 9bc854e0aac244fffa3948e73d62e731, type: 2}
+  decision2Text: '"I don''t care, as long as do not mention the rotisserie."'
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: -1
+  d2AtmosphereTempModifier: 0
+  d2DomSubModifier: 1
+  d2RoommateResponse: '"Reverent advice, my guy." '
+  d2RoommateResponseSpoken: 0
+  d2Cards:
+  - {fileID: 11400000, guid: 5988a8888787e4a08a50ae2474903e3f, type: 2}
+  gameOverCard: 0

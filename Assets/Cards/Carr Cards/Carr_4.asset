@@ -36,3 +36,4 @@ MonoBehaviour:
   d2RoommateResponse: '"Beethoven, that dude rocks on."'
   d2RoommateResponseSpoken: 1
   d2Cards: []
+  gameOverCard: 0

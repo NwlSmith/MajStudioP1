@@ -10,26 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
-  m_Name: Gloof_6
+  m_Name: Oodle_11
   m_EditorClassIdentifier: 
-  infoText: '"Make all other clowns fight to the death."'
-  alien: 4
+  infoText: '"I have posted the face pic. The rotisierrie has not been mentioned.
+    I am now being hunted by the humans that once loved me. This has helped nothing.
+    I am more lonely than ever."'
+  alien: 7
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 0
-  decision1Text: '"As long as YOU cover the logistics."'
+  imageAssociatedWithChoice1: 1
+  decision1Text: 
   d1BiodiversityModifier: 0
-  d1HorninessModifier: -2
+  d1HorninessModifier: 0
   d1AtmosphereTempModifier: 0
-  d1DomSubModifier: 3
-  d1RoommateResponse: '"Battle-ring clown style. My next TV program."'
+  d1DomSubModifier: 0
+  d1RoommateResponse: 
   d1RoommateResponseSpoken: 0
   d1Cards: []
-  decision2Text: '"No! Instead they''ll love each other."'
+  decision2Text: 
   d2BiodiversityModifier: 0
-  d2HorninessModifier: 3
+  d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
-  d2RoommateResponse: '"Clown orgy on you, dude."'
+  d2RoommateResponse: 
   d2RoommateResponseSpoken: 0
   d2Cards: []
   gameOverCard: 0

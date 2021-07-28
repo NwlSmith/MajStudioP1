@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Contor_3
   m_EditorClassIdentifier: 
-  infoText: '"I auditioned to be on this human communal performance troupe thing
+  infoText: '"I auditioned to be on this human communal preformance troupe thing
     called the Broadest Way. I got in, I am now going to be playing a human pretending
-    to be a cat, doing some aerobic escapade. I am afraid I will lose myself in the
+    to be a cat, doing some aerobic escapade. I am afraid i will lose myself in the
     layers of pretend. Who am I?"'
   alien: 1
   image: {fileID: 0}
@@ -36,3 +36,4 @@ MonoBehaviour:
   d2RoommateResponse: '"Tell it to him straight! Or something."'
   d2RoommateResponseSpoken: 0
   d2Cards: []
+  gameOverCard: 0
