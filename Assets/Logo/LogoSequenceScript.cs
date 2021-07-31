@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LogoSequenceScript : MonoBehaviour
@@ -8,18 +6,14 @@ public class LogoSequenceScript : MonoBehaviour
 
     [SerializeField] private GameObject _tentacle = null;
     [SerializeField] private Light _spotlight1 = null;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
-    private IEnumerator Sequence()
+    private void Update()
     {
-        
-        
-        
-        yield return null;
+        if(UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene("IntroScene");
+        }
     }
 
     public void NextScene()

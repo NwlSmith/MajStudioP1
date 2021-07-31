@@ -54,11 +54,12 @@ public class RoommateManager : MonoBehaviour
 
     public void RoommateResponse(Card card, bool choice1)
     {
-        
+        bool isMonologue = false;
         if (!firstCardRead)
         {
             firstCardRead = true;
-            Speak("yo dude, I have some weird shit I'm gonna tell ya later.");
+            isMonologue = true;
+            Speak("yo dude, I have some weird shit I'm gonna tell ya later.", isMonologue);
             return;
         }
         string words = "";
@@ -94,6 +95,7 @@ public class RoommateManager : MonoBehaviour
                     switch (rand)
                     {
                         case 1:
+                            isMonologue = true;
                             words = Monologue();
                             break;
                         case 2:
@@ -106,13 +108,14 @@ public class RoommateManager : MonoBehaviour
             // monologue
             case 2:
                 words = Monologue();
+                isMonologue = true;
                 break;
             // response
             case 3:
                 words = "";
                 break;
         }
-        Speak(words);
+        Speak(words, isMonologue);
     }
 
     private string monologueBack1;
@@ -140,12 +143,12 @@ public class RoommateManager : MonoBehaviour
         oldDialogue1.text = response;
     }
 
-    public void Speak(string response)
+    public void Speak(string response, bool isMonologue)
     {
-        StartCoroutine(SpeakEnum(response));
+        StartCoroutine(SpeakEnum(response, isMonologue));
     }
 
-    private IEnumerator SpeakEnum(string response)
+    private IEnumerator SpeakEnum(string response, bool isMonologue)
     {
         if (!response.Equals(""))
         {
@@ -177,7 +180,8 @@ public class RoommateManager : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(2, 4));
         }
         charDialogue.text = "";
-        ChangeBacklog(response);
+        if (isMonologue)
+            ChangeBacklog(response);
         // draw new card
         stopAnim = true;
 

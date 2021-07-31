@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -41,6 +41,18 @@ public class GameManager : MonoBehaviour
             // remove VR stuff
             FindObjectOfType<XRRig>().gameObject.SetActive(false);
             FindObjectOfType<VRChairRotator>().enabled = false;
+        }
+
+        TextMesh[] textMeshes = FindObjectsOfType<TextMesh>();
+        foreach (TextMesh textMesh in textMeshes)
+        {
+            textMesh.GetComponent<MeshRenderer>().material.SetInt("unity_GUIZTestMode", (int)UnityEngine.Rendering.CompareFunction.LessEqual);
+        }
+        
+        TextMeshPro[] textMeshPros = FindObjectsOfType<TextMeshPro>();
+        foreach (TextMeshPro textMeshPro in textMeshPros)
+        {
+            textMeshPro.GetComponent<MeshRenderer>().material.SetInt("unity_GUIZTestMode", (int)UnityEngine.Rendering.CompareFunction.LessEqual);
         }
     }
 

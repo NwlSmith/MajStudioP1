@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class StatManager : MonoBehaviour
@@ -24,9 +24,9 @@ public class StatManager : MonoBehaviour
     [SerializeField]
     private int[] thresholds = { 0, 5, 10, 20, 30, 35, 40 };
 
-    [SerializeField] private TextMesh horninessText = null;
-    [SerializeField] private TextMesh atmosphereTempText = null;
-    [SerializeField] private TextMesh domSubText = null;
+    [SerializeField] private TextMeshPro horninessText = null;
+    [SerializeField] private TextMeshPro atmosphereTempText = null;
+    [SerializeField] private TextMeshPro domSubText = null;
 
     private bool flashHorniness = false;
     private bool flashAtmo = false;
@@ -49,7 +49,13 @@ public class StatManager : MonoBehaviour
     [SerializeField] private Card GameOverTempLow = null;
     [SerializeField] private Card GameOverDSHigh = null;
     [SerializeField] private Card GameOverDSLow = null;
-    
+    private Rotate _earthRotate;
+    private Shake _earthShake;
+    private ParticleSystem _earthHeartParticleSystem1;
+    private ParticleSystem _earthHeartParticleSystem2;
+    private ParticleSystem _earthExplosionParticleSystem1;
+    private ParticleSystem _earthExplosionParticleSystem2;
+
 
     void Awake()
     {
@@ -61,6 +67,12 @@ public class StatManager : MonoBehaviour
 
     private void Start()
     {
+        _earthExplosionParticleSystem2 = earthParticleExplosion2.GetComponent<ParticleSystem>();
+        _earthExplosionParticleSystem1 = earthParticleExplosion1.GetComponent<ParticleSystem>();
+        _earthHeartParticleSystem2 = earthParticleHeart2.GetComponent<ParticleSystem>();
+        _earthHeartParticleSystem1 = earthParticleHeart1.GetComponent<ParticleSystem>();
+        _earthShake = earthModel.GetComponent<Shake>();
+        _earthRotate = earthModel.GetComponent<Rotate>();
         horninessText.text = horniness.ToString();
         atmosphereTempText.text = atmosphereTemp.ToString();
         domSubText.text = domSub.ToString();
@@ -90,13 +102,13 @@ public class StatManager : MonoBehaviour
         else if (prev > 5 && cur <= 5)
         {
             flashHorniness = true;
-            earthModel.GetComponent<Rotate>().rotPerFrame = new Vector3(0, 0.005f, 0);
+            _earthRotate.rotPerFrame = new Vector3(0, 0.005f, 0);
         }
         // went back above 5
         else if (prev <= 5 && cur > 5)
         {
             flashHorniness = false;
-            earthModel.GetComponent<Rotate>().rotPerFrame = new Vector3(0, 0.0075f, 0);
+            _earthRotate.rotPerFrame = new Vector3(0, 0.0075f, 0);
         }
 
         // back in acceptable range
@@ -105,22 +117,22 @@ public class StatManager : MonoBehaviour
             flashHorniness = false;
             //change color to normal
             horninessText.color = Color.yellow;
-            earthModel.GetComponent<Rotate>().rotPerFrame = new Vector3(0, 0.01f, 0);
-            earthModel.GetComponent<Shake>().shakeModifier = 0;
+            _earthRotate.rotPerFrame = new Vector3(0, 0.01f, 0);
+            _earthShake.shakeModifier = 0;
         }
         // went below 10
         else if (prev > 10 && cur <= 10)
         {
             //change color
             horninessText.color = Color.red;
-            earthModel.GetComponent<Rotate>().rotPerFrame = new Vector3(0, 0.0075f, 0);
+            _earthRotate.rotPerFrame = new Vector3(0, 0.0075f, 0);
         }
         // went above 30
         else if (prev < 30 && cur >= 30)
         {
             //change color
             horninessText.color = Color.red;
-            earthModel.GetComponent<Shake>().shakeModifier = 1;
+            _earthShake.shakeModifier = 1;
         }
 
         if (cur >= 40)
@@ -133,13 +145,13 @@ public class StatManager : MonoBehaviour
         {
             flashHorniness = true;
             horninessText.color = Color.red;
-            earthModel.GetComponent<Shake>().shakeModifier = 2;
+            _earthShake.shakeModifier = 2;
         }
         // went back below 35
         else if (prev >= 35 && cur < 35)
         {
             flashHorniness = false;
-            earthModel.GetComponent<Shake>().shakeModifier = 1;
+            _earthShake.shakeModifier = 1;
         }
 
         // Update Stat text
@@ -237,15 +249,15 @@ public class StatManager : MonoBehaviour
         else if (prev > 5 && cur <= 5)
         {
             flashDS = true;
-            earthParticleHeart1.GetComponent<ParticleSystem>().Play();
-            earthParticleHeart2.GetComponent<ParticleSystem>().Play();
+            _earthHeartParticleSystem1.Play();
+            _earthHeartParticleSystem2.Play();
         }
         // went back above 5
         else if (prev <= 5 && cur > 5)
         {
             flashDS = false;
-            earthParticleHeart1.GetComponent<ParticleSystem>().Play();
-            earthParticleHeart2.GetComponent<ParticleSystem>().Stop();
+            _earthHeartParticleSystem1.Play();
+            _earthHeartParticleSystem2.Stop();
         }
 
         // back in acceptable range
@@ -254,26 +266,26 @@ public class StatManager : MonoBehaviour
             flashDS = false;
             //change color to normal
             domSubText.color = Color.yellow;
-            earthParticleHeart1.GetComponent<ParticleSystem>().Stop();
-            earthParticleHeart2.GetComponent<ParticleSystem>().Stop();
-            earthParticleExplosion1.GetComponent<ParticleSystem>().Stop();
-            earthParticleExplosion2.GetComponent<ParticleSystem>().Stop();
+            _earthHeartParticleSystem1.Stop();
+            _earthHeartParticleSystem2.Stop();
+            _earthExplosionParticleSystem1.Stop();
+            _earthExplosionParticleSystem2.Stop();
         }
         // went below 10
         else if (prev > 10 && cur <= 10)
         {
             //change color
             domSubText.color = Color.red;
-            earthParticleHeart1.GetComponent<ParticleSystem>().Play();
-            earthParticleHeart2.GetComponent<ParticleSystem>().Stop();
+            _earthHeartParticleSystem1.Play();
+            _earthHeartParticleSystem2.Stop();
         }
         // went above 30
         else if (prev < 30 && cur >= 30)
         {
             //change color
             domSubText.color = Color.red;
-            earthParticleExplosion1.GetComponent<ParticleSystem>().Play();
-            earthParticleExplosion2.GetComponent<ParticleSystem>().Stop();
+            _earthExplosionParticleSystem1.Play();
+            _earthExplosionParticleSystem2.Stop();
         }
 
         if (cur >= 40)
@@ -285,15 +297,15 @@ public class StatManager : MonoBehaviour
         else if (prev < 35 && cur >= 35)
         {
             flashDS = true;
-            earthParticleExplosion1.GetComponent<ParticleSystem>().Play();
-            earthParticleExplosion2.GetComponent<ParticleSystem>().Play();
+            _earthExplosionParticleSystem1.Play();
+            _earthExplosionParticleSystem2.Play();
         }
         // went back below 35
         else if (prev >= 35 && cur < 35)
         {
             flashDS = false;
-            earthParticleExplosion1.GetComponent<ParticleSystem>().Play();
-            earthParticleExplosion2.GetComponent<ParticleSystem>().Stop();
+            _earthExplosionParticleSystem1.Play();
+            _earthExplosionParticleSystem2.Stop();
         }
 
         // Update Stat text

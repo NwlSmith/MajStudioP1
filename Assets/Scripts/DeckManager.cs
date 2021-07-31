@@ -17,11 +17,11 @@ public class DeckManager : MonoBehaviour
 
     // A list of miscelanious cards, not connected to any particular storyline.
     [SerializeField]
-    private List<Card> miscCardList = null;
+    private List<Card> nonQuestlineCardList = null;
 
     // The cards the player should start with.
     [SerializeField]
-    private List<Card> startingCardList = null;
+    private List<Card> questlineStartCardList = null;
 
     [SerializeField]
     private Card introCard = null;
@@ -36,7 +36,8 @@ public class DeckManager : MonoBehaviour
 
     private void Start()
     {
-        AddCardsRandom(startingCardList.ToArray());
+        AddCardsRandom(questlineStartCardList.ToArray());
+        AddCardsRandom(nonQuestlineCardList.ToArray());
         AddCardFront(introCard);
     }
 
@@ -129,8 +130,7 @@ public class DeckManager : MonoBehaviour
     {
         if (cardList.Count <= 0)
         {
-            AddCardsRandom(miscCardList.ToArray());
-            AddCardsRandom(startingCardList.ToArray());
+            AddCardsRandom(nonQuestlineCardList.ToArray());
         }
 
         curCard = cardList[0];

@@ -9,33 +9,15 @@ public class IntroManager : MonoBehaviour
 {
     public Image fadeImg;
 
-    public bool inVR = false;
-
-    [SerializeField] private Camera mainCam = null;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(InitEnum());
-
-        if (!inVR)
-        {
-            XRRig rig = FindObjectOfType<XRRig>();
-            rig.gameObject.SetActive(false);
-            VRSceneButton[] buttons = FindObjectsOfType<VRSceneButton>();
-            foreach (VRSceneButton button in buttons)
-            {
-                button.gameObject.SetActive(false);
-            }
-        }
-        else
-        {
-            FindObjectOfType<Canvas>().gameObject.SetActive(false);
-            mainCam.gameObject.SetActive(false);
-        }
     }
 
     private IEnumerator InitEnum()
     {
+        yield return new WaitForSeconds(2f);
         fadeImg.color = new Color(0f, 0f, 0f, 1f);
         float duration = 3f;
         float elapsedTime = 0f;
