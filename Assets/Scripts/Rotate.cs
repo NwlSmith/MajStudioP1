@@ -15,6 +15,6 @@ public class Rotate : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        tf.Rotate(rotPerFrame);
+        tf.Rotate(rotPerFrame * Time.fixedDeltaTime);
     }
 }

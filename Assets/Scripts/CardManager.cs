@@ -115,6 +115,14 @@ public class CardManager : MonoBehaviour
         }
         NameText.text = alienName;
 
+        if (alienName == "Torbar Contor")
+        {
+            alienName = "Torbar Contour";
+        }
+        else if (alienName == "S'SSS SSSSS")
+        {
+            alienName = "ziss'sisis sis'sisis";
+        }
         float delay = TTSManager.instance.Say("Incoming transmission from: " + alienName, 1);
 
         yield return new WaitForSeconds(delay);

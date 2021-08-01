@@ -5798,7 +5798,7 @@ MonoBehaviour:
   explodeLimit: 1
   earth: {fileID: 986953488}
   ps: {fileID: 309682744}
-  text: {fileID: 0}
+  text: {fileID: 198337997}
   explosion: {fileID: 8300000, guid: 95b1cd62e5a567e42a207bf3cc9da64c, type: 3}
 --- !u!212 &1390285572
 SpriteRenderer:

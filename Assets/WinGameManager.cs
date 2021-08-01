@@ -11,27 +11,9 @@ public class WinGameManager : MonoBehaviour
     public Volume Volume;
 
     public int timer;
-
-    [SerializeField] private bool inVR = true;
-    [SerializeField] private Camera mainCam = null;
     
     void Start()
     {
-        if (!inVR)
-        {
-            XRRig rig = FindObjectOfType<XRRig>();
-            rig.gameObject.SetActive(false);
-            VRSceneButton[] buttons = FindObjectsOfType<VRSceneButton>();
-            foreach (VRSceneButton button in buttons)
-            {
-                button.gameObject.SetActive(false);
-            }
-        }
-        else
-        {
-            //FindObjectOfType<Canvas>().gameObject.SetActive(false);
-            mainCam.gameObject.SetActive(false);
-        }
     }
 
     void Update()
