@@ -17,7 +17,7 @@ MonoBehaviour:
     we can turn all their buildings into the human-sacrum like structures of our
     home planet, my dearest Lixel Zeoop!"'
   alien: 6
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: e0c247f1d591745beac879d1ba7c9cb1, type: 3}
   imageAssociatedWithChoice1: 1
   decision1Text: '"Go ahead, Goya."'
   d1BiodiversityModifier: 0

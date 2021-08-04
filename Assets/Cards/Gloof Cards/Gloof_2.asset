@@ -32,3 +32,4 @@ MonoBehaviour:
   d2RoommateResponse: '"Not today, Bloof Gloof. Boo hoo."'
   d2RoommateResponseSpoken: 0
   d2Cards: []
+  gameOverCard: 0

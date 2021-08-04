@@ -35,3 +35,4 @@ MonoBehaviour:
     would''ve done..."'
   d2RoommateResponseSpoken: 1
   d2Cards: []
+  gameOverCard: 0

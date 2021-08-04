@@ -32,3 +32,4 @@ MonoBehaviour:
   d2RoommateResponse: '"I can''t believe you challenged Bloof Gloof..."'
   d2RoommateResponseSpoken: 0
   d2Cards: []
+  gameOverCard: 0

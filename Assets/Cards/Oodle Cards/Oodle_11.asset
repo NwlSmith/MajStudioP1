@@ -16,22 +16,22 @@ MonoBehaviour:
     I am now being hunted by the humans that once loved me. This has helped nothing.
     I am more lonely than ever."'
   alien: 7
-  image: {fileID: 0}
-  imageAssociatedWithChoice1: 1
-  decision1Text: 
+  image: {fileID: 21300000, guid: 15f18ef9a268e4a34a36e34f884e655b, type: 3}
+  imageAssociatedWithChoice1: 0
+  decision1Text: '"Well, go ask SS''SSS to give you a hug."'
   d1BiodiversityModifier: 0
-  d1HorninessModifier: 0
+  d1HorninessModifier: 2
   d1AtmosphereTempModifier: 0
-  d1DomSubModifier: 0
-  d1RoommateResponse: 
+  d1DomSubModifier: 2
+  d1RoommateResponse: '"Let''s reverse the hunt!"'
   d1RoommateResponseSpoken: 0
   d1Cards: []
-  decision2Text: 
+  decision2Text: '"Huggin SS''SSS would be the morphological query of the centry."'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
   d2AtmosphereTempModifier: 0
-  d2DomSubModifier: 0
-  d2RoommateResponse: 
+  d2DomSubModifier: -3
+  d2RoommateResponse: '"It''s game day, mate!"'
   d2RoommateResponseSpoken: 0
   d2Cards: []
   gameOverCard: 0

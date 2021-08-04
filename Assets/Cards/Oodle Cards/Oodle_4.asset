@@ -23,7 +23,8 @@ MonoBehaviour:
   d1DomSubModifier: -1
   d1RoommateResponse: '"Eh you probably the right move. Bloof Gloof can be a freak."'
   d1RoommateResponseSpoken: 0
-  d1Cards: []
+  d1Cards:
+  - {fileID: 11400000, guid: 55c338b724a74440a863162c3c2653e5, type: 2}
   decision2Text: '"Send Bloof Gloof over to do... something?"'
   d2BiodiversityModifier: 0
   d2HorninessModifier: -3
@@ -31,4 +32,6 @@ MonoBehaviour:
   d2DomSubModifier: -3
   d2RoommateResponse: '"HAHA HOLY SHIT!!! WHAT DID YOU JUST DO DUDE???"'
   d2RoommateResponseSpoken: 0
-  d2Cards: []
+  d2Cards:
+  - {fileID: 11400000, guid: bc5be602805b6496094e1d7537f85087, type: 2}
+  gameOverCard: 0

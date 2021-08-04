@@ -10,27 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
-  m_Name: Gloof_1
+  m_Name: Gloof_11
   m_EditorClassIdentifier: 
-  infoText: '"Let''s make this salamander I found floating in space president of
-    Russia!"'
+  infoText: '"MY GLOOF HAS BEEN BLOOFED UPON THE BULLIES OF MIRE OODLE."'
   alien: 4
   image: {fileID: 0}
-  imageAssociatedWithChoice1: 0
-  decision1Text: '"Okay!!!"'
+  imageAssociatedWithChoice1: 1
+  decision1Text: '"I''ll let Mire know."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
   d1AtmosphereTempModifier: 0
-  d1DomSubModifier: -2
-  d1RoommateResponse: '"Oh! I love him so much! What a great leader!"'
+  d1DomSubModifier: 0
+  d1RoommateResponse: '"Mire really has a social sway at Glarblarff, it seems."'
   d1RoommateResponseSpoken: 0
-  d1Cards: []
-  decision2Text: '"We could make him the president of Antarctica instead!"'
+  d1Cards:
+  - {fileID: 11400000, guid: 9e97d20e165114209825aa9c06f73dd2, type: 2}
+  decision2Text: '"So who were the bullies anyway?"'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
-  d2AtmosphereTempModifier: 1
+  d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
-  d2RoommateResponse: '"The little guy seems to be vibing down there at the pole."'
+  d2RoommateResponse: '"The bullies are anyone who breathes without caressing Mire
+    Oodle."'
   d2RoommateResponseSpoken: 0
-  d2Cards: []
+  d2Cards:
+  - {fileID: 11400000, guid: 9e97d20e165114209825aa9c06f73dd2, type: 2}
   gameOverCard: 0
