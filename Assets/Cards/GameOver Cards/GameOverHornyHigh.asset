@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: GameOverHornyHigh
   m_EditorClassIdentifier: 
-  infoText: '"Oh god- oh god- they''re all- they''re all so horny- I need immediate
-    transportation off of the planet! You''re fired!"'
+  infoText: '"Oh god. Oh god. They''re all. They''re all so horny- I can''t get any
+    humans to partake in my experiments because they keep... Mating! I''ve never
+    seen mating before. It makes me uncomfortable. I need immediate transportation
+    off of the planet! How could you let this happen? You are fired!"'
   alien: 0
   image: {fileID: 0}
   imageAssociatedWithChoice1: 0

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"Idk man this planet sucks bigtime. No one is trying to give me kisses
     and stuff or ride my grill. Totally lame. I bet it''s your fault, I''m reporting
-    you to Bloof Gloof."'
+    you to Bloof Gloof. BTW, birth rates have plummeted and humanity is dying out,
+    so good job, I guess."'
   alien: 1
   image: {fileID: 0}
   imageAssociatedWithChoice1: 0

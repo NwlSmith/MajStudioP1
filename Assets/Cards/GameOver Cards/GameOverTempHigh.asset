@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: GameOverTempHigh
   m_EditorClassIdentifier: 
-  infoText: '"Hey I''m sweating too much... My AC is broken... :("'
+  infoText: '"Hey I''m sweating too much... My AC is broken... :( I think I saw the
+    humans burning alive from the extreme heat. Now I''ll never make friends :("'
   alien: 7
   image: {fileID: 0}
   imageAssociatedWithChoice1: 0

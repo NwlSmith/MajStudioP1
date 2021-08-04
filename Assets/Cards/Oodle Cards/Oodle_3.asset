@@ -22,16 +22,17 @@ MonoBehaviour:
   decision1Text: '"Cook em up."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
-  d1AtmosphereTempModifier: -1
+  d1AtmosphereTempModifier: 3
   d1DomSubModifier: -2
   d1RoommateResponse: '"The Earth burns according to Mire Oodle''s neuroticism."'
-  d1RoommateResponseSpoken: 1
+  d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: '"Freezer time."'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
-  d2AtmosphereTempModifier: 1
+  d2AtmosphereTempModifier: -3
   d2DomSubModifier: 2
   d2RoommateResponse: '"Ice Age 5 of many to come: The Mire Oodle freezing."'
   d2RoommateResponseSpoken: 0
   d2Cards: []
+  gameOverCard: 0

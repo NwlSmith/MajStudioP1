@@ -22,7 +22,7 @@ MonoBehaviour:
   decision1Text: '"Okay, as long as you don''t kill ALL of them..."'
   d1BiodiversityModifier: 0
   d1HorninessModifier: 0
-  d1AtmosphereTempModifier: 2
+  d1AtmosphereTempModifier: 3
   d1DomSubModifier: -2
   d1RoommateResponse: '"I guess that earth''s gonna embark upon some major bloodbath
     vibes... due to Glorf 31. We''re sort of messy."'
@@ -37,3 +37,4 @@ MonoBehaviour:
     that Glarbarf inc was gonna release with the new tech from that..."'
   d2RoommateResponseSpoken: 0
   d2Cards: []
+  gameOverCard: 0
