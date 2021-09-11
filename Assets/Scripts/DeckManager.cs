@@ -89,6 +89,14 @@ public class DeckManager : MonoBehaviour
         else
             cardList.Insert(offset, newCard);
     }
+    
+    public void AddCardsAt(int offset, Card[] newCards, int randomRange = 0)
+    {
+        foreach (Card newCard in newCards)
+        {
+            AddCardAt(offset, newCard, randomRange);
+        }
+    }
 
     /*
      * Add an array of cards to the front of the list.

@@ -264,7 +264,7 @@ public class CardManager : MonoBehaviour
 
             RoommateManager.instance.RoommateResponse(cardInfo, true);
 
-            DeckManager.instance.AddCardsRandom(cardInfo.d1Cards);
+            DeckManager.instance.AddCardsAt(3, cardInfo.d1Cards, 2);
 
             if (cardInfo.imageAssociatedWithChoice1 && cardInfo.image != null)
             {
@@ -294,7 +294,7 @@ public class CardManager : MonoBehaviour
 
             RoommateManager.instance.RoommateResponse(cardInfo, false);
 
-            DeckManager.instance.AddCardsRandom(cardInfo.d2Cards);
+            DeckManager.instance.AddCardsAt(3, cardInfo.d2Cards, 2);
 
             if (!cardInfo.imageAssociatedWithChoice1 && cardInfo.image != null)
             {

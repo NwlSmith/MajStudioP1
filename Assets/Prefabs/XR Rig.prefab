@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 5755210943619424654}
   - component: {fileID: 6998148000505663226}
   - component: {fileID: 9174863033555820464}
+  - component: {fileID: 7105432716442209848}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Hand
@@ -325,6 +326,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &7105432716442209848
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225980258214775574}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 0.4
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!1 &1225980258659058295
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,10 +512,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1225980259593678182}
   - component: {fileID: 1225980259593678178}
-  - component: {fileID: 9037724010151568358}
   - component: {fileID: 6579811119351430862}
   - component: {fileID: 776941749420632116}
   - component: {fileID: 1372340961184156160}
+  - component: {fileID: 3275841520826145256}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Hand
@@ -633,19 +648,6 @@ MonoBehaviour:
       m_SingletonActionBindings: []
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
---- !u!135 &9037724010151568358
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225980259593678181}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6579811119351430862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -747,6 +749,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &3275841520826145256
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225980259593678181}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 0.4
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!1 &1225980259613006405
 GameObject:
   m_ObjectHideFlags: 0

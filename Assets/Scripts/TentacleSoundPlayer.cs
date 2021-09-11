@@ -16,7 +16,7 @@ public class TentacleSoundPlayer : MonoBehaviour
             audioSource.playOnAwake = false;
             audioSource.spatialBlend = 1f;
             audioSource.maxDistance = 10f;
-            audioSource.volume = 0.3f;
+            audioSource.volume = 0.15f;
             _audioSources.Add(audioSource);
         }
     }

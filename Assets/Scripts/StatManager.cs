@@ -49,6 +49,10 @@ public class StatManager : MonoBehaviour
     [SerializeField] private Card GameOverTempLow = null;
     [SerializeField] private Card GameOverDSHigh = null;
     [SerializeField] private Card GameOverDSLow = null;
+    private int _lowLowThreshold = 5;
+    private int _lowThreshold = 10;
+    private int _highThreshold = 20;
+    private int _highHighThreshold = 25;
     private Rotate _earthRotate;
     private Shake _earthShake;
     private ParticleSystem _earthHeartParticleSystem1;
@@ -99,20 +103,20 @@ public class StatManager : MonoBehaviour
             DeckManager.instance.AddCardFront(GameOverHornyLow);
         }
         // went below 5
-        else if (prev > 5 && cur <= 5)
+        else if (prev > _lowLowThreshold && cur <= _lowLowThreshold)
         {
             flashHorniness = true;
             _earthRotate.rotPerFrame = new Vector3(0, 0.005f, 0);
         }
         // went back above 5
-        else if (prev <= 5 && cur > 5)
+        else if (prev <= _lowLowThreshold && cur > _lowLowThreshold)
         {
             flashHorniness = false;
             _earthRotate.rotPerFrame = new Vector3(0, 0.0075f, 0);
         }
 
         // back in acceptable range
-        if ((prev <= 10 && cur > 10) || (prev >= 30 && cur < 30))
+        if ((prev <= _lowThreshold && cur > _lowThreshold) || (prev >= _highThreshold && cur < _highThreshold))
         {
             flashHorniness = false;
             //change color to normal
@@ -121,14 +125,14 @@ public class StatManager : MonoBehaviour
             _earthShake.shakeModifier = 0;
         }
         // went below 10
-        else if (prev > 10 && cur <= 10)
+        else if (prev > _lowThreshold && cur <= _lowThreshold)
         {
             //change color
             horninessText.color = Color.red;
             _earthRotate.rotPerFrame = new Vector3(0, 0.0075f, 0);
         }
         // went above 30
-        else if (prev < 30 && cur >= 30)
+        else if (prev < _highThreshold && cur >= _highThreshold)
         {
             //change color
             horninessText.color = Color.red;
@@ -141,14 +145,14 @@ public class StatManager : MonoBehaviour
             DeckManager.instance.AddCardFront(GameOverHornyHigh);
         }
         // went above 35
-        else if (prev < 35 && cur >= 35)
+        else if (prev < _highHighThreshold && cur >= _highHighThreshold)
         {
             flashHorniness = true;
             horninessText.color = Color.red;
             _earthShake.shakeModifier = 2;
         }
         // went back below 35
-        else if (prev >= 35 && cur < 35)
+        else if (prev >= _highHighThreshold && cur < _highHighThreshold)
         {
             flashHorniness = false;
             _earthShake.shakeModifier = 1;
@@ -169,14 +173,14 @@ public class StatManager : MonoBehaviour
             DeckManager.instance.AddCardFront(GameOverTempLow);
         }
         // went below 5
-        else if (prev > 5 && cur <= 5)
+        else if (prev > _lowLowThreshold && cur <= _lowLowThreshold)
         {
             flashAtmo = true;
             earthTintBlue1.SetActive(true);
             earthTintBlue2.SetActive(true);
         }
         // went back above 5
-        else if (prev <= 5 && cur > 5)
+        else if (prev <= _lowLowThreshold && cur > _lowLowThreshold)
         {
             flashAtmo = false;
             earthTintBlue1.SetActive(true);
@@ -184,7 +188,7 @@ public class StatManager : MonoBehaviour
         }
 
         // back in acceptable range
-        if ((prev <= 10 && cur > 10) || (prev >= 30 && cur < 30))
+        if ((prev <= _lowThreshold && cur > _lowThreshold) || (prev >= _highThreshold && cur < _highThreshold))
         {
             flashAtmo = false;
             //change color to normal
@@ -195,7 +199,7 @@ public class StatManager : MonoBehaviour
             earthTintRed2.SetActive(false);
         }
         // went below 10
-        else if (prev > 10 && cur <= 10)
+        else if (prev > _lowThreshold && cur <= _lowThreshold)
         {
             //change color
             atmosphereTempText.color = Color.cyan;
@@ -203,7 +207,7 @@ public class StatManager : MonoBehaviour
             earthTintBlue2.SetActive(false);
         }
         // went above 30
-        else if (prev < 30 && cur >= 30)
+        else if (prev < _highThreshold && cur >= _highThreshold)
         {
             //change color
             atmosphereTempText.color = Color.red;
@@ -217,14 +221,14 @@ public class StatManager : MonoBehaviour
             DeckManager.instance.AddCardFront(GameOverTempHigh);
         }
         // went above 35
-        else if (prev < 35 && cur >= 35)
+        else if (prev < _highHighThreshold && cur >= _highHighThreshold)
         {
             flashAtmo = true;
             earthTintRed1.SetActive(true);
             earthTintRed2.SetActive(true);
         }
         // went back below 35
-        else if (prev >= 35 && cur < 35)
+        else if (prev >= _highHighThreshold && cur < _highHighThreshold)
         {
             flashAtmo = false;
             earthTintRed1.SetActive(true);
@@ -246,14 +250,14 @@ public class StatManager : MonoBehaviour
             DeckManager.instance.AddCardFront(GameOverDSLow);
         }
         // went below 5
-        else if (prev > 5 && cur <= 5)
+        else if (prev > _lowLowThreshold && cur <= _lowLowThreshold)
         {
             flashDS = true;
             _earthHeartParticleSystem1.Play();
             _earthHeartParticleSystem2.Play();
         }
         // went back above 5
-        else if (prev <= 5 && cur > 5)
+        else if (prev <= _lowLowThreshold && cur > _lowLowThreshold)
         {
             flashDS = false;
             _earthHeartParticleSystem1.Play();
@@ -261,7 +265,7 @@ public class StatManager : MonoBehaviour
         }
 
         // back in acceptable range
-        if ((prev <= 10 && cur > 10) || (prev >= 30 && cur < 30))
+        if ((prev <= _lowThreshold && cur > _lowThreshold) || (prev >= _highThreshold && cur < _highThreshold))
         {
             flashDS = false;
             //change color to normal
@@ -272,7 +276,7 @@ public class StatManager : MonoBehaviour
             _earthExplosionParticleSystem2.Stop();
         }
         // went below 10
-        else if (prev > 10 && cur <= 10)
+        else if (prev > _lowThreshold && cur <= _lowThreshold)
         {
             //change color
             domSubText.color = Color.red;
@@ -280,7 +284,7 @@ public class StatManager : MonoBehaviour
             _earthHeartParticleSystem2.Stop();
         }
         // went above 30
-        else if (prev < 30 && cur >= 30)
+        else if (prev < _highThreshold && cur >= _highThreshold)
         {
             //change color
             domSubText.color = Color.red;
@@ -294,14 +298,14 @@ public class StatManager : MonoBehaviour
             DeckManager.instance.AddCardFront(GameOverDSHigh);
         }
         // went above 35
-        else if (prev < 35 && cur >= 35)
+        else if (prev < _highHighThreshold && cur >= _highHighThreshold)
         {
             flashDS = true;
             _earthExplosionParticleSystem1.Play();
             _earthExplosionParticleSystem2.Play();
         }
         // went back below 35
-        else if (prev >= 35 && cur < 35)
+        else if (prev >= _highHighThreshold && cur < _highHighThreshold)
         {
             flashDS = false;
             _earthExplosionParticleSystem1.Play();
