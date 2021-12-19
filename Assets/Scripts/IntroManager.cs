@@ -9,14 +9,21 @@ public class IntroManager : MonoBehaviour
 {
     public Image fadeImg;
 
-    // Start is called before the first frame update
+    private PushableButton[] _buttons;
+
     void Start()
     {
+        _buttons = FindObjectsOfType<PushableButton>();
         StartCoroutine(InitEnum());
     }
 
     private IEnumerator InitEnum()
     {
+        foreach (var button in _buttons)
+        {
+            button.SetButtonEnabled(false);
+        }
+        
         yield return new WaitForSeconds(2f);
         fadeImg.color = new Color(0f, 0f, 0f, 1f);
         float duration = 3f;
@@ -32,6 +39,11 @@ public class IntroManager : MonoBehaviour
             yield return null;
         }
         fadeImg.color = Color.Lerp(initColor, finalColor, elapsedTime / duration);
+        
+        foreach (var button in _buttons)
+        {
+            button.SetButtonEnabled(true);
+        }
     }
 
     public void PressStart()
@@ -42,6 +54,11 @@ public class IntroManager : MonoBehaviour
 
     private IEnumerator StartGameEnum()
     {
+        foreach (var button in _buttons)
+        {
+            button.SetButtonEnabled(false);
+        }
+        
         float duration = 3f;
         float elapsedTime = 0f; 
         Color initColor = new Color(0f, 0f, 0f, 0f);

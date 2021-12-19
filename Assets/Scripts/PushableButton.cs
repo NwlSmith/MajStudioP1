@@ -6,102 +6,124 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class PushableButton : XRBaseInteractable
 {
+    
     public bool pushable = true;
     
-    private bool _pressed = false;
+    private bool _Pressed = false;
 
-    private float _yMin = 0.0f;
-    private float _yMax = 0.0f;
+    private float _YMin = 0.0f;
+    private float _YMax = 0.0f;
 
-    private float _previousHandHeight = 0.0f;
-    private XRBaseInteractor _hoverInteractor = null;
-    private bool _previousPress = false;
+    private XRDirectInteractor _HoverInteractor = null;
+    private bool _PreviousPress = false;
+
+    private Coroutine _ReturnToNormalPosCO = null;
+    private bool _ReturnToNormalPosCOActive = false;
+
+    private float _InitCollisionLocalYPosition = 0f;
 
     private AudioSource _audioSource;
 
     protected override void Awake()
     {
         base.Awake();
-        onHoverEntered.AddListener(StartedPressing);
-        onHoverExited.AddListener(StoppedPressing);
         _audioSource = GetComponent<AudioSource>();
     }
 
-    protected override void OnDestroy()
-    {
-        base.OnDestroy();
-        onHoverEntered.RemoveListener(StartedPressing);
-        onHoverEntered.RemoveListener(StoppedPressing);
-    }
-
-    private void Start()
+    protected virtual void Start()
     {
         SetMinMax();
+        
+        SetButtonEnabled(true);
     }
 
     private void SetMinMax()
     {
         Collider collider = GetComponent<Collider>();
-        _yMin = transform.localPosition.y - (collider.bounds.size.y * 0.5f);
-        _yMax = transform.localPosition.y;
+        _YMin = transform.localPosition.y - (collider.bounds.size.y * 0.5f);
+        _YMax = transform.localPosition.y;
+    }
+
+    protected override void OnHoverEntered(XRBaseInteractor interactor)
+    {
+        Debug.Log($"{interactor.name} started pressing button");
+        if (pushable)
+        {
+            base.OnHoverEntered(interactor);
+            StartedPressing(interactor);
+        }
+    }
+    
+    protected override void OnHoverExited(XRBaseInteractor interactor)
+    {
+        if (pushable)
+        {
+            base.OnHoverExited(interactor);
+            StoppedPressing();
+        }
     }
 
     private void StartedPressing(XRBaseInteractor interactor)
     {
-        Debug.Log("Started Pressing");
-        _hoverInteractor = interactor;
-        _previousHandHeight = GetLocalYPosition(interactor.transform.position);
+        Debug.Log($"{interactor.name} started pressing {name}");
+        if (interactor is XRDirectInteractor hand)
+        {
+            if (_HoverInteractor != hand)
+            {
+                _HoverInteractor = hand;
+                _InitCollisionLocalYPosition =
+                    transform.parent.InverseTransformPoint(_HoverInteractor.transform.position).y;
+            }
+            TryCancelReturnButtonToNormal();
+        }
     }
 
-    private void StoppedPressing(XRBaseInteractor interactor)
+    private void StoppedPressing()
     {
-        Debug.Log("Stopped Pressing");
-        _hoverInteractor = null;
-        _previousHandHeight = 0.0f;
+        //Debug.Log("Stopped Pressing");
+        _HoverInteractor = null;
 
-        _previousPress = false;
-        SetYPosition(_yMax);
+        _PreviousPress = false;
+        TryReturnButtonToNormal();
+        //SetYPosition(_YMax);
     }
 
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
     {
         base.ProcessInteractable(updatePhase);
+        if (updatePhase != XRInteractionUpdateOrder.UpdatePhase.Fixed) return;
 
-        if (_hoverInteractor)
+        ProcessButtonPress();
+    }
+
+    private void ProcessButtonPress()
+    {
+        if (_HoverInteractor)
         {
             if (!CheckCanPressButtons())
             {
-                StoppedPressing(_hoverInteractor);
+                StoppedPressing();
                 return;
             }
-            
-            float newHandHeight = GetLocalYPosition(_hoverInteractor.transform.position);
-            float handDifference = _previousHandHeight - newHandHeight;
-            _previousHandHeight = newHandHeight;
 
-            float newPosition = transform.localPosition.y - handDifference;
-            
-            SetYPosition(newPosition);
+            float collisionLocalYPosition = transform.parent.InverseTransformPoint(_HoverInteractor.transform.position).y;
+            float difference = _InitCollisionLocalYPosition - collisionLocalYPosition;
+            //Debug.Log($"_InitCollisionLocalYPosition = {_InitCollisionLocalYPosition}, collisionLocalYPosition = {collisionLocalYPosition}, dif = {difference}, ymax = {_YMax}, ymin = {_YMin}, setting position to {_YMax - difference}");
+            SetYPosition(_YMax - difference);
             
             CheckPress();
         }
     }
-    
+
     protected virtual bool CheckCanPressButtons()
     {
-        return true;
-    }
-
-    private float GetLocalYPosition(Vector3 position)
-    {
-        Vector3 localPosition = transform.root.InverseTransformPoint(position);
-        return localPosition.y;
+        return pushable;
     }
 
     private void SetYPosition(float position)
     {
         Vector3 newPosition = transform.localPosition;
-        newPosition.y = Mathf.Clamp(position, _yMin, _yMax);
+        newPosition.y = Mathf.Clamp(position, _YMin, _YMax);
         transform.localPosition = newPosition;
     }
 
@@ -109,37 +131,95 @@ public class PushableButton : XRBaseInteractable
     {
         bool inPosition = InPosition();
         
-        if(!_pressed && inPosition && inPosition != _previousPress)
-            Pressed();
+        if(!_Pressed && inPosition && inPosition != _PreviousPress)
+            ButtonFullyPressed();
 
-        _previousPress = inPosition;
+        _PreviousPress = inPosition;
     }
 
     private bool InPosition()
     {
-        float inRange = Mathf.Clamp(transform.localPosition.y, _yMin, _yMin + 0.01f);
+        float inRange = Mathf.Clamp(transform.localPosition.y, _YMin, _YMin + 0.01f);
         
         return transform.localPosition.y == inRange;
     }
 
-    public virtual void Pressed()
+    public virtual void ButtonFullyPressed()
+    {
+        OnButtonPressed();
+        _HoverInteractor.SendHapticImpulse(.25f, .05f);
+        //StartCoroutine(ReturnButtonToNormalEnum());
+    }
+
+    protected virtual void OnButtonPressed()
     {
         _audioSource.Play();
-        StartCoroutine(ReturnButtonToNormalEnum());
+        Debug.Log("Pressed Button");
+    }
+
+    private void TryReturnButtonToNormal()
+    {
+        if (_ReturnToNormalPosCOActive)
+            return;
+
+        _ReturnToNormalPosCO = StartCoroutine(ReturnButtonToNormalEnum());
+    }
+    
+    private void TryCancelReturnButtonToNormal()
+    {
+        if (!_ReturnToNormalPosCOActive)
+            return;
+
+        StopCoroutine(_ReturnToNormalPosCO);
+        _ReturnToNormalPosCOActive = false;
     }
 
     private IEnumerator ReturnButtonToNormalEnum()
     {
-        _pressed = true;
+        _ReturnToNormalPosCOActive = true;
+        
+        _Pressed = true;
         float elapsedTime = 0;
-        float duration = .5f;
+        float duration = .25f;
+        float initPos = transform.localPosition.y;
         while (elapsedTime < duration)
         {
             elapsedTime += Time.deltaTime;
-            SetYPosition(Mathf.Lerp(_yMin, _yMax, elapsedTime / duration));
+            SetYPosition(Mathf.Lerp(initPos, _YMax, elapsedTime / duration));
             yield return null;
         }
-        SetYPosition(_yMax);
-        _pressed = false;
+        SetYPosition(_YMax);
+        _Pressed = false;
+        
+        _ReturnToNormalPosCOActive = false;
+    }
+
+    private IEnumerator SetToDeactivatedPositionEnum()
+    {
+        _Pressed = false;
+        float elapsedTime = 0;
+        float duration = .25f;
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            SetYPosition(Mathf.Lerp(transform.localPosition.y, _YMin, elapsedTime / duration));
+            yield return null;
+        }
+        SetYPosition(_YMin);
+    }
+
+    public void SetButtonEnabled(bool newEnabled)
+    {
+        pushable = newEnabled;
+
+        if (newEnabled)
+        {
+            TryReturnButtonToNormal();
+        }
+        else
+        {
+            StartCoroutine(SetToDeactivatedPositionEnum());
+            _HoverInteractor = null;
+        }
     }
 }

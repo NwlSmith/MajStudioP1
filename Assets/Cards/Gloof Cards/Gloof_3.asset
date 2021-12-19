@@ -33,6 +33,6 @@ MonoBehaviour:
   d2DomSubModifier: 0
   d2RoommateResponse: '"That''s too bad, I was looking forward to what Bloof Gloof
     would''ve done..."'
-  d2RoommateResponseSpoken: 1
+  d2RoommateResponseSpoken: 0
   d2Cards: []
   gameOverCard: 0

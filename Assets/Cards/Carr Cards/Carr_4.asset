@@ -34,6 +34,6 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 1
   d2RoommateResponse: '"Beethoven, that dude rocks on."'
-  d2RoommateResponseSpoken: 1
+  d2RoommateResponseSpoken: 0
   d2Cards: []
   gameOverCard: 0

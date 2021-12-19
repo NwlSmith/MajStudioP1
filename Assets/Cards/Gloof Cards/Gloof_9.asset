@@ -26,7 +26,7 @@ MonoBehaviour:
   d1RoommateResponse: '"You''ll never learn. None of us will learn."'
   d1RoommateResponseSpoken: 0
   d1Cards:
-  - {fileID: 11400000, guid: 4de1cfd893079403b916777fa9d2f2ae, type: 2}
+  - {fileID: 11400000, guid: f24174866760d49718ab146e0c57df14, type: 2}
   decision2Text: '"Sure."'
   d2BiodiversityModifier: 0
   d2HorninessModifier: 0
@@ -35,5 +35,5 @@ MonoBehaviour:
   d2RoommateResponse: '"I always have to close my eyes when Bloof Gloof does this."'
   d2RoommateResponseSpoken: 0
   d2Cards:
-  - {fileID: 11400000, guid: 4de1cfd893079403b916777fa9d2f2ae, type: 2}
+  - {fileID: 11400000, guid: f24174866760d49718ab146e0c57df14, type: 2}
   gameOverCard: 0

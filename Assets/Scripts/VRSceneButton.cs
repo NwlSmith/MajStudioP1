@@ -8,9 +8,9 @@ public class VRSceneButton : PushableButton
 
     [SerializeField] private ButtonPurposeEnum buttonPurpose = ButtonPurposeEnum.StartGame;
 
-    public override void Pressed()
+    public override void ButtonFullyPressed()
     {
-        base.Pressed();
+        base.ButtonFullyPressed();
         switch (buttonPurpose)
         {
             case ButtonPurposeEnum.StartGame:
@@ -30,5 +30,7 @@ public class VRSceneButton : PushableButton
                 exitGameManager.Pressed();
                 break;
         }
+
+        pushable = false;
     }
 }

@@ -6246,7 +6246,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh57816
+  m_Name: pb_Mesh157400
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6707,7 +6707,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh57972
+  m_Name: pb_Mesh157532
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7050,7 +7050,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-53206
+  m_Name: pb_Mesh-105460
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7331,8 +7331,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImg: {fileID: 448474068}
-  inVR: 1
-  mainCam: {fileID: 1262749746}
 --- !u!4 &386784408
 Transform:
   m_ObjectHideFlags: 0
@@ -8427,7 +8425,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh57800
+  m_Name: pb_Mesh157384
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14652,7 +14650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7627865542738002299, guid: b39a20c7e846cb9478f24fdea94b233b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7911501
+      value: -1.791
       objectReference: {fileID: 0}
     - target: {fileID: 7627865542738002299, guid: b39a20c7e846cb9478f24fdea94b233b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14660,7 +14658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7627865542738002299, guid: b39a20c7e846cb9478f24fdea94b233b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.7486285
+      value: 0.325
       objectReference: {fileID: 0}
     - target: {fileID: 7627865542738002299, guid: b39a20c7e846cb9478f24fdea94b233b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -14986,7 +14984,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-53152
+  m_Name: pb_Mesh-105442
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16204,7 +16202,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh58020
+  m_Name: pb_Mesh157550
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

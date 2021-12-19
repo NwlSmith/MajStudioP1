@@ -13,10 +13,9 @@ public class MainGameButton : PushableButton
     {
         return CardManager.instance.canPressButtons;
     }
-    
-    public override void Pressed()
+    public override void ButtonFullyPressed()
     {
-        base.Pressed();
+        base.ButtonFullyPressed();
         switch (buttonPurpose)
         {
             case MainGameButtonPurposeEnum.Cloose1:

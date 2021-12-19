@@ -30,5 +30,6 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 0
   d2DomSubModifier: 0
   d2RoommateResponse: '"Haha yeah! Tell him to his face!"'
-  d2RoommateResponseSpoken: 1
+  d2RoommateResponseSpoken: 0
   d2Cards: []
+  gameOverCard: 0

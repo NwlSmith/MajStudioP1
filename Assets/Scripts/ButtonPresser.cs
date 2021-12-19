@@ -123,7 +123,7 @@ public class ButtonPresser : MonoBehaviour
             VRSceneButton otherSceneButton = button.GetComponent<VRSceneButton>();
             if (otherSceneButton != null)
             {
-                otherSceneButton.Pressed();
+                otherSceneButton.ButtonFullyPressed();
             }
         }
     }

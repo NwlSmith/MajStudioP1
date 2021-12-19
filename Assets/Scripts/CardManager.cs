@@ -46,6 +46,8 @@ public class CardManager : MonoBehaviour
 
     public bool canPressButtons = false;
 
+    private PushableButton[] _pushableButtons;
+
     void Awake()
     {
         if (instance == null)
@@ -61,6 +63,8 @@ public class CardManager : MonoBehaviour
         D1Text.text = "";
         D2Text.text = "";
         RemoveStatChangeArrows();
+
+        _pushableButtons = FindObjectsOfType<PushableButton>();
     }
 
     public void NewCard(Card newCard)
@@ -142,6 +146,12 @@ public class CardManager : MonoBehaviour
         D1Text.text = cardInfo.decision1Text;
         D2Text.text = cardInfo.decision2Text;
         canPressButtons = true;
+
+        foreach (var button in _pushableButtons)
+        {
+            button.SetButtonEnabled(true);
+        }
+        
         SetUpStatChangeArrows();
 
     }
@@ -241,6 +251,10 @@ public class CardManager : MonoBehaviour
 
         cardVisuals.Deactivate();
         canPressButtons = false;
+        foreach (var button in _pushableButtons)
+        {
+            button.SetButtonEnabled(false);
+        }
     }
 
     /*

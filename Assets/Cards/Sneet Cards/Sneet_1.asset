@@ -31,6 +31,6 @@ MonoBehaviour:
   d2AtmosphereTempModifier: 1
   d2DomSubModifier: 0
   d2RoommateResponse: '"Dude... did WE invent capitalism?"'
-  d2RoommateResponseSpoken: 1
+  d2RoommateResponseSpoken: 0
   d2Cards: []
   gameOverCard: 0

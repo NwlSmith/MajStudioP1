@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Oodle_10
   m_EditorClassIdentifier: 
   infoText: '"I''ve taken some time to think about it... the Face Reveal... if I
-    post it, it may cure my lonliness, as you said... I can connect to the collective
+    post it, it may cure my loneliness, as you said... I can connect to the collective
     unconcious of an entire species... But then... I am Mire Oodle, the Lonely Alien.
-    Who am I without my lonliness?"'
+    Who am I without my loneliness?"'
   alien: 7
   image: {fileID: 21300000, guid: 5528efb305d204af4b3aa2edd4544e50, type: 3}
   imageAssociatedWithChoice1: 1
@@ -26,7 +26,8 @@ MonoBehaviour:
   d1DomSubModifier: 3
   d1RoommateResponse: '"On the Earth Shift, we make gods."'
   d1RoommateResponseSpoken: 0
-  d1Cards: []
+  d1Cards:
+  - {fileID: 11400000, guid: 5988a8888787e4a08a50ae2474903e3f, type: 2}
   decision2Text: '"Just post it!!!! Live a little!"'
   d2BiodiversityModifier: 0
   d2HorninessModifier: -2
@@ -35,5 +36,6 @@ MonoBehaviour:
   d2RoommateResponse: '"Omg. Mire really lived a little... I hope to Smog these aren''t
     their gonads."'
   d2RoommateResponseSpoken: 0
-  d2Cards: []
+  d2Cards:
+  - {fileID: 11400000, guid: 5988a8888787e4a08a50ae2474903e3f, type: 2}
   gameOverCard: 0
