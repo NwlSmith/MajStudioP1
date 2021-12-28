@@ -59,7 +59,7 @@ public class FriendTVAnim : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(groupTimer < groupTimerMax)
         {
@@ -80,7 +80,7 @@ public class FriendTVAnim : MonoBehaviour
         {
             spriteFlipTimer = 0;
             this.GetComponent<Renderer>().material.SetTexture("_BaseMap", activeGroup[spriteNum]);
-            //print("spriteFlipTimer = " + spriteFlipTimer);
+            
             if (spriteNum < 3)
             {
                 spriteNum++;
