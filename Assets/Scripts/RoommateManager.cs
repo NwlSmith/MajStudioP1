@@ -167,9 +167,6 @@ public class RoommateManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
             // start translating, if there is a response
             charDialogue.text = response;
-        }
-        if (!response.Equals(""))
-        {
             float delay = TTSManager.instance.Say(response, 2);
             // delay
             yield return new WaitForSeconds(delay);
