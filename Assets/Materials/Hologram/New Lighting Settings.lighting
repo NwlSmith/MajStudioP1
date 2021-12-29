@@ -7,22 +7,22 @@ LightingSettings:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: New Lighting Settings
-  serializedVersion: 2
+  serializedVersion: 3
   m_GIWorkflowMode: 1
   m_EnableBakedLightmaps: 1
   m_EnableRealtimeLightmaps: 0
   m_RealtimeEnvironmentLighting: 1
   m_BounceScale: 1
-  m_AlbedoBoost: 2.88
-  m_IndirectOutputScale: 1.72
+  m_AlbedoBoost: 1
+  m_IndirectOutputScale: 1
   m_UsingShadowmask: 0
   m_BakeBackend: 1
   m_LightmapMaxSize: 2048
   m_BakeResolution: 40
   m_Padding: 4
-  m_TextureCompression: 1
+  m_TextureCompression: 0
   m_AO: 1
-  m_AOMaxDistance: 13.4
+  m_AOMaxDistance: 8
   m_CompAOExponent: 1.59
   m_CompAOExponentDirect: 3.18
   m_ExtractAO: 0
@@ -45,8 +45,8 @@ LightingSettings:
   m_PVREnvironmentSampleCount: 128
   m_PVREnvironmentReferencePointCount: 2048
   m_LightProbeSampleCountMultiplier: 8
-  m_PVRBounces: 2
-  m_PVRRussianRouletteStartBounce: 2
+  m_PVRBounces: 42
+  m_PVRMinBounces: 1
   m_PVREnvironmentMIS: 0
   m_PVRFilteringMode: 1
   m_PVRDenoiserTypeDirect: 1
