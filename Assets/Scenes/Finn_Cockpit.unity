@@ -38457,6 +38457,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 2129073369797657413, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
+      propertyPath: altPos
+      value: 
+      objectReference: {fileID: 1080232710}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
 --- !u!20 &696191745 stripped
@@ -42335,25 +42339,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 638e24e5f0c8940feb5e03a84003709d, type: 3}
   m_PrefabInstance: {fileID: 891649942}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &891993240 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1225980258076636015, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
-  m_PrefabInstance: {fileID: 696191744}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &891993241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891993240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 164b61dd39bb91b42a2ad88aef0dd999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  altPos: {fileID: 1080232710}
-  xrNodeR: 5
 --- !u!1 &900153149 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dc12dd45d9116492c9be2b857fe3001d, type: 3}
