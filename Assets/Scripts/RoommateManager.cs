@@ -168,13 +168,20 @@ public class RoommateManager : MonoBehaviour
             // start translating, if there is a response
             charDialogue.text = response;
             float delay = TTSManager.instance.Say(response, 2);
+            if (MiscInput.instance.primaryButtonClicked)
+            {
+                delay /= 5f;
+            }
             // delay
             yield return new WaitForSeconds(delay);
         }
         else
         {
             // delay
-            yield return new WaitForSeconds(Random.Range(2, 4));
+            if (!MiscInput.instance.primaryButtonClicked)
+            {
+                yield return new WaitForSeconds(Random.Range(2, 4));
+            }
         }
         charDialogue.text = "";
         if (isMonologue)

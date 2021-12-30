@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2818586514013439710}
   - component: {fileID: 2598957120656577947}
   - component: {fileID: 2129073369797657413}
+  - component: {fileID: 4063019379064027985}
   m_Layer: 0
   m_Name: XR Rig
   m_TagString: Untagged
@@ -134,7 +135,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   altPos: {fileID: 0}
-  xrNodeR: 5
+--- !u!114 &4063019379064027985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225980258076636015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a6851b3d384594b8675dba5f84448b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1225980258214775574
 GameObject:
   m_ObjectHideFlags: 0

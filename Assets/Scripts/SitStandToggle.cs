@@ -17,37 +17,30 @@ public class SitStandToggle : MonoBehaviour
 
     private float cooldown = .2f;
     private float currentCooldownTime = 0f;
-    
-    private XRNode xrNodeR = XRNode.RightHand;
-    private readonly List<InputDevice> _devicesR = new List<InputDevice>();
-    private InputDevice _deviceR;
 
     private void Start()
     {
         xrRig = GetComponent<XRRig>();
         initPos = xrRig.transform.position;
-        
-        GetDevices();
+
+        if (altPos == null)
+        {
+            var altPosGO = new GameObject();
+            altPosGO.name = "SitStandAltPos";
+            altPosGO.transform.parent = xrRig.transform.parent;
+            altPosGO.transform.position =
+                new Vector3(xrRig.transform.position.x, xrRig.transform.position.y - 1, xrRig.transform.position.z);
+            altPos = altPosGO.transform;
+        }
     }
     
-    void GetDevices()
-    {
-        InputDevices.GetDevicesAtXRNode(xrNodeR, _devicesR);
-        _deviceR = _devicesR.FirstOrDefault();
-    }
+    
 
     private void Update()
     {
         currentCooldownTime -= Time.deltaTime;
-        
-        if (!_deviceR.isValid)
-        {
-            GetDevices();
-        }
 
-        _deviceR.TryGetFeatureValue(CommonUsages.primary2DAxisClick, out bool clicked);
-
-        if (clicked && currentCooldownTime <= 0f)
+        if (MiscInput.instance.thumbstickClicked && currentCooldownTime <= 0f)
         {
             currentCooldownTime = cooldown;
             ToggleSitStand();

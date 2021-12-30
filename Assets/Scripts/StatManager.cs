@@ -49,10 +49,12 @@ public class StatManager : MonoBehaviour
     [SerializeField] private Card GameOverTempLow = null;
     [SerializeField] private Card GameOverDSHigh = null;
     [SerializeField] private Card GameOverDSLow = null;
+    private int _minThreshold = 0;
     private int _lowLowThreshold = 5;
     private int _lowThreshold = 10;
     private int _highThreshold = 20;
     private int _highHighThreshold = 25;
+    private int _maxThreshold = 30;
     private Rotate _earthRotate;
     private Shake _earthShake;
     private ParticleSystem _earthHeartParticleSystem1;
@@ -97,7 +99,7 @@ public class StatManager : MonoBehaviour
         int prev = horniness;
         horniness += modifier;
         int cur = horniness;
-        if (cur <= 0)
+        if (cur <= _minThreshold)
         {
             // game over
             DeckManager.instance.AddCardFront(GameOverHornyLow);
@@ -139,19 +141,19 @@ public class StatManager : MonoBehaviour
             _earthShake.shakeModifier = 1;
         }
 
-        if (cur >= 40)
+        if (cur >= _maxThreshold)
         {
             // game over
             DeckManager.instance.AddCardFront(GameOverHornyHigh);
         }
-        // went above 35
+        // went above 25
         else if (prev < _highHighThreshold && cur >= _highHighThreshold)
         {
             flashHorniness = true;
             horninessText.color = Color.red;
             _earthShake.shakeModifier = 2;
         }
-        // went back below 35
+        // went back below 25
         else if (prev >= _highHighThreshold && cur < _highHighThreshold)
         {
             flashHorniness = false;
@@ -167,7 +169,7 @@ public class StatManager : MonoBehaviour
         int prev = atmosphereTemp;
         atmosphereTemp += modifier;
         int cur = atmosphereTemp;
-        if (cur <= 0)
+        if (cur <= _minThreshold)
         {
             // game over
             DeckManager.instance.AddCardFront(GameOverTempLow);
@@ -206,7 +208,7 @@ public class StatManager : MonoBehaviour
             earthTintBlue1.SetActive(true);
             earthTintBlue2.SetActive(false);
         }
-        // went above 30
+        // went above 20
         else if (prev < _highThreshold && cur >= _highThreshold)
         {
             //change color
@@ -215,19 +217,19 @@ public class StatManager : MonoBehaviour
             earthTintRed2.SetActive(false);
         }
 
-        if (cur >= 40)
+        if (cur >= _maxThreshold)
         {
             // game over
             DeckManager.instance.AddCardFront(GameOverTempHigh);
         }
-        // went above 35
+        // went above 25
         else if (prev < _highHighThreshold && cur >= _highHighThreshold)
         {
             flashAtmo = true;
             earthTintRed1.SetActive(true);
             earthTintRed2.SetActive(true);
         }
-        // went back below 35
+        // went back below 25
         else if (prev >= _highHighThreshold && cur < _highHighThreshold)
         {
             flashAtmo = false;
@@ -244,7 +246,7 @@ public class StatManager : MonoBehaviour
         int prev = domSub;
         domSub += modifier;
         int cur = domSub;
-        if (cur <= 0)
+        if (cur <= _minThreshold)
         {
             // game over
             DeckManager.instance.AddCardFront(GameOverDSLow);
@@ -283,7 +285,7 @@ public class StatManager : MonoBehaviour
             _earthHeartParticleSystem1.Play();
             _earthHeartParticleSystem2.Stop();
         }
-        // went above 30
+        // went above 20
         else if (prev < _highThreshold && cur >= _highThreshold)
         {
             //change color
@@ -292,19 +294,19 @@ public class StatManager : MonoBehaviour
             _earthExplosionParticleSystem2.Stop();
         }
 
-        if (cur >= 40)
+        if (cur >= _maxThreshold)
         {
             // game over
             DeckManager.instance.AddCardFront(GameOverDSHigh);
         }
-        // went above 35
+        // went above 25
         else if (prev < _highHighThreshold && cur >= _highHighThreshold)
         {
             flashDS = true;
             _earthExplosionParticleSystem1.Play();
             _earthExplosionParticleSystem2.Play();
         }
-        // went back below 35
+        // went back below 25
         else if (prev >= _highHighThreshold && cur < _highHighThreshold)
         {
             flashDS = false;
