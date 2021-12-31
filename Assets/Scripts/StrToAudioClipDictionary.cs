@@ -13,16 +13,16 @@ public class StrToAudioClipDictionary : MonoBehaviour
         [SerializeField] public string str;
         [SerializeField] public AudioClip ac;
     }
-    [SerializeField] private StrToAc[] monologuesToACs = null;
+    [SerializeField] private List<StrToAc> strToACs = new List<StrToAc>();
 
-    private Dictionary<string, AudioClip> _dictionary = new Dictionary<string, AudioClip>();
+    [SerializeField] private Dictionary<string, AudioClip> _dictionary = new Dictionary<string, AudioClip>();
 
     [SerializeField] private AudioClip defaultClip = null;
 
     void Awake()
     {
 
-        foreach (StrToAc pair in monologuesToACs)
+        foreach (StrToAc pair in strToACs)
         {
             _dictionary.Add(pair.str, pair.ac);
         }
@@ -38,5 +38,20 @@ public class StrToAudioClipDictionary : MonoBehaviour
         }
         Debug.Log("Didn't find clip");
         return defaultClip;
+    }
+
+    public void AddEntry(string key, AudioClip value)
+    {
+        if (_dictionary.ContainsKey(key))
+        {
+            Debug.Log($"Dictionary already contains clip {key}");
+            return;
+        }
+
+        StrToAc strToAc = new StrToAc();
+        strToAc.str = key;
+        strToAc.ac = value;
+        strToACs.Add(strToAc);
+        _dictionary.Add(key, value);
     }
 }

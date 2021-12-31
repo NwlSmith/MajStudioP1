@@ -1,10 +1,5 @@
 ﻿
 using UnityEngine;
-using System.IO;
-using System.Collections.Generic;
-using System;
-using System.Collections;
-using Crosstales.RTVoice;
 
 public class TTSManager : MonoBehaviour
 {
@@ -35,18 +30,21 @@ public class TTSManager : MonoBehaviour
 
     private VoiceStats[] voices = new VoiceStats[3];
 
-    void Awake()
+
+    private void Awake()
     {
         if (instance == null)
             instance = this;
-        else if (instance != this) Destroy(gameObject);
-
-        _audioSource = GetComponent<AudioSource>();
-        _dictionary = GetComponent<StrToAudioClipDictionary>();
-
+        else if (instance != this)
+            Destroy(gameObject);
+        
         voices[0] = new VoiceStats("Microsoft David Desktop", 1, 1); // Translations
         voices[1] = new VoiceStats("Microsoft Zira Desktop", 1.15f, 1.5f); // Virtual assistant
         voices[2] = new VoiceStats("Microsoft Zira Desktop", .75f, 0f); // Roommate
+
+        _audioSource = GetComponent<AudioSource>();
+        _dictionary = FindObjectOfType<StrToAudioClipDictionary>();
+        
     }
 
     private float Say(AudioClip clip)
@@ -58,9 +56,15 @@ public class TTSManager : MonoBehaviour
 
     public float Say(string str, int voiceNum = 0)
     {
-        VoiceStats voice = voices[voiceNum];
-        Speaker.Instance.Speak(str, _audioSource, Speaker.Instance.VoiceForName(voice.name), true, voice.rate, voice.pitch);
-        return EstimatedSpeechLength(str, voice.rate);
+        //VoiceStats voice = voices[voiceNum];
+        //Speaker.Instance.Speak(str, _audioSource, Speaker.Instance.VoiceForName(voice.name), true, voice.rate, voice.pitch);
+
+        AudioClip clip = _dictionary.GetAc(str);
+
+        _audioSource.clip = clip;
+        _audioSource.Play();
+
+        return EstimatedSpeechLength(str, 1f);
     }
 
     private float EstimatedSpeechLength(string str, float rate)
@@ -68,5 +72,9 @@ public class TTSManager : MonoBehaviour
         return str.Length / (_speechLengthScaler * rate);
     }
 
-    public void StopSpeaking() => _audioSource.Stop();
+    public void StopSpeaking()
+    {
+        if (_audioSource != null)
+            _audioSource.Stop();
+    }
 }

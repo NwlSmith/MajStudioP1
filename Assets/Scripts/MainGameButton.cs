@@ -11,7 +11,7 @@ public class MainGameButton : PushableButton
 
     protected override bool CheckCanPressButtons()
     {
-        return CardManager.instance.canPressButtons;
+        return base.CheckCanPressButtons() && CardManager.instance.canPressButtons;
     }
     public override void ButtonFullyPressed()
     {

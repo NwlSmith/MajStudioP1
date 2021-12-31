@@ -84,6 +84,7 @@ public class PushableButton : XRBaseInteractable
         _HoverInteractor = null;
 
         _PreviousPress = false;
+        _Pressed = false;
         TryReturnButtonToNormal();
         //SetYPosition(_YMax);
     }
@@ -132,7 +133,13 @@ public class PushableButton : XRBaseInteractable
         bool inPosition = InPosition();
         
         if(!_Pressed && inPosition && inPosition != _PreviousPress)
+        {
             ButtonFullyPressed();
+        }
+        else
+        {
+            _Pressed = false;
+        }
 
         _PreviousPress = inPosition;
     }
@@ -146,6 +153,7 @@ public class PushableButton : XRBaseInteractable
 
     public virtual void ButtonFullyPressed()
     {
+        _Pressed = true;
         OnButtonPressed();
         _HoverInteractor.SendHapticImpulse(.25f, .05f);
         //StartCoroutine(ReturnButtonToNormalEnum());

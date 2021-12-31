@@ -45,6 +45,11 @@ public class RoommateManager : MonoBehaviour
         oldDialogue2.text = "";
     }
 
+    public List<string> GetMonologueQueue()
+    {
+        return monologueQueue;
+    }
+
     // UNIMPLEMENTED
     // Make the roommate  the given response to the Roommates 
     public void AddResponse(string response)
@@ -59,7 +64,7 @@ public class RoommateManager : MonoBehaviour
         {
             firstCardRead = true;
             isMonologue = true;
-            Speak("yo dude, I have some weird shit I'm gonna tell ya later.", isMonologue);
+            Speak("\"yo dude, I have some weird shit I'm gonna tell ya later.\"", isMonologue);
             return;
         }
         string words = "";
