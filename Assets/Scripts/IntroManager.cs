@@ -72,8 +72,22 @@ public class IntroManager : MonoBehaviour
             yield return null;
         }
         fadeImg.color = Color.Lerp(initColor, finalColor, elapsedTime / duration);
+        
+        AsyncOperation loading = SceneManager.LoadSceneAsync("Finn_Cockpit");
 
-        NextScene();
+        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(fadeImg.GetComponentInParent<Canvas>().gameObject);
+
+        while (!loading.isDone)
+        {
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(.1f);
+
+        fadeImg.enabled = false;
+        Destroy(fadeImg.GetComponentInParent<Canvas>().gameObject);
+        Destroy(gameObject);
     }
 
     public void NextScene()
