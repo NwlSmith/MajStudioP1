@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,8 @@ public class MiscInput : MonoBehaviour
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
+        
+        initTimeScale = Time.timeScale;
     }
 
     void Start()
@@ -47,5 +50,84 @@ public class MiscInput : MonoBehaviour
         thumbstickClicked = thumbstick;
         _deviceR.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButton);
         primaryButtonClicked = primaryButton;
+
+        // Might work better for PC tethered VR
+        /*if (!paused && IsPaused())
+        {
+            paused = true;
+            Debug.Log("Detected Paused!!!");
+            PauseGame(true);
+            //OnApplicationFocus(false);
+        }
+        else if (paused && !IsPaused())
+        {
+            paused = false;
+            Debug.Log("Detected Unpaused!!!");
+            PauseGame(false);
+            //OnApplicationFocus(true);
+        }*/
+    }
+
+    private bool IsPaused()
+    {
+        return !OVRManager.hasInputFocus || !OVRManager.hasVrFocus;
+    }
+
+    private bool paused = false;
+
+    private void OnApplicationFocus(bool hasFocus)
+    {
+        if (hasFocus)
+        {
+            Debug.Log("On Application has focus!");
+            PauseGame(false);
+        }
+        else
+        {
+            Debug.Log("On Application has LOST focus!");
+            PauseGame(true);
+        }
+    }
+
+    private void OnApplicationPause(bool pauseStatus)
+    {
+        if (pauseStatus)
+        {
+            Debug.Log("On Application Paused!");
+            PauseGame(true);
+        }
+        else
+        {
+            Debug.Log("On Application UNPaused!");
+            PauseGame(false);
+        }
+    }
+
+    private float initTimeScale = 0;
+    private float pausedTimeScale = .001f;
+
+    private AudioSource[] _audioSources;
+    
+    private void PauseGame(bool pausing)
+    {
+        if (pausing)
+        {
+            Debug.Log("Pausing... Timescale = " + Time.timeScale);
+            _audioSources = FindObjectsOfType<AudioSource>();
+            foreach (var audioSource in _audioSources)
+            {
+                audioSource.Pause();
+            }
+            Time.timeScale = pausedTimeScale;
+        }
+        else
+        {
+            Debug.Log("Unpausing...");
+            foreach (var audioSource in _audioSources)
+            {
+                audioSource.UnPause();
+            }
+            Time.timeScale = initTimeScale;
+        }
     }
 }

@@ -2010,7 +2010,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24682
+  m_Name: pb_Mesh57872
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2174,7 +2174,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26458
+  m_Name: pb_Mesh59674
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10507,7 +10507,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24304
+  m_Name: pb_Mesh57478
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11142,6 +11142,7 @@ Transform:
   - {fileID: 426944574}
   - {fileID: 592705892}
   - {fileID: 1202482734}
+  - {fileID: 466237551}
   m_Father: {fileID: 2074313938}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12729,7 +12730,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25942
+  m_Name: pb_Mesh59144
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13062,7 +13063,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24230
+  m_Name: pb_Mesh57410
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13236,7 +13237,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24892
+  m_Name: pb_Mesh58094
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13400,7 +13401,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26446
+  m_Name: pb_Mesh59662
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13941,7 +13942,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25992
+  m_Name: pb_Mesh59194
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15039,7 +15040,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24784
+  m_Name: pb_Mesh57984
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26017,81 +26018,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.4, z: 0.2}
   m_Center: {x: 0, y: 0.219, z: 0}
---- !u!1 &448474066
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 448474067}
-  - component: {fileID: 448474069}
-  - component: {fileID: 448474068}
-  m_Layer: 5
-  m_Name: FadeIMG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &448474067
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448474066}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 967474336}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &448474068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448474066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &448474069
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448474066}
-  m_CullTransparentMesh: 0
 --- !u!4 &449726508 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2c0d7026cba28b0488f08b6233df02a4, type: 3}
@@ -26188,6 +26114,191 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 157d1c4778cec4f70a22525b1f2443ac, type: 3}
   m_PrefabInstance: {fileID: 357177140}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &466237550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 466237551}
+  - component: {fileID: 466237554}
+  - component: {fileID: 466237553}
+  - component: {fileID: 466237552}
+  m_Layer: 0
+  m_Name: FPS Counter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &466237551
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466237550}
+  m_LocalRotation: {x: -0.04852915, y: -0.94140774, z: -0.15439382, w: 0.2959037}
+  m_LocalPosition: {x: 0, y: 0, z: -2.3617945}
+  m_LocalScale: {x: 1.1297436, y: 1.0233623, z: 1.04985}
+  m_Children: []
+  m_Father: {fileID: 149957279}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -18.628, y: -145.102, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.9453006, y: -0.293}
+  m_SizeDelta: {x: 1.0950634, y: 0.068743855}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &466237552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466237550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29b117603457db844a1afb9acdb52930, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 466237553}
+  show: 1
+--- !u!114 &466237553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466237550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: FPS Counter
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 6aa32937164028b478af49cee9f5b8e3, type: 2}
+  m_sharedMaterial: {fileID: -8326029873873763480, guid: 6aa32937164028b478af49cee9f5b8e3, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 236654721}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278233855
+  m_fontColor: {r: 1, g: 0.6656064, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 1.2
+  m_fontSizeBase: 1.5
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 0.5
+  m_fontSizeMax: 2
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 3
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: -0.053566933, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 466237554}
+  m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+--- !u!23 &466237554
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466237550}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -8326029873873763480, guid: 6aa32937164028b478af49cee9f5b8e3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &473627717
 GameObject:
   m_ObjectHideFlags: 0
@@ -32563,7 +32674,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24818
+  m_Name: pb_Mesh58018
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34828,7 +34939,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26028
+  m_Name: pb_Mesh59240
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38496,6 +38607,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 477764959}
     m_Modifications:
+    - target: {fileID: 1225980258076636008, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1225980258076636010, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -38592,16 +38707,6 @@ PrefabInstance:
     - {fileID: 9037724010151568358, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
     - {fileID: 9041277921475062677, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
---- !u!20 &696191745 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1225980258659058291, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
-  m_PrefabInstance: {fileID: 696191744}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &696191746 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1225980258659058300, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
-  m_PrefabInstance: {fileID: 696191744}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &699045999
 GameObject:
   m_ObjectHideFlags: 0
@@ -38801,7 +38906,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25830
+  m_Name: pb_Mesh59028
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -39046,7 +39151,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24602
+  m_Name: pb_Mesh57792
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -39210,7 +39315,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24208
+  m_Name: pb_Mesh57390
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -41236,7 +41341,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24720
+  m_Name: pb_Mesh57910
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -41604,7 +41709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inVR: 1
-  fadeImg: {fileID: 448474068}
+  fadeImg: {fileID: 1318188567}
 --- !u!4 &886868063
 Transform:
   m_ObjectHideFlags: 0
@@ -43718,106 +43823,6 @@ Transform:
   m_Father: {fileID: 605830531}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &967474332
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 967474336}
-  - component: {fileID: 967474335}
-  - component: {fileID: 967474334}
-  - component: {fileID: 967474333}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &967474333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967474332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &967474334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967474332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
---- !u!223 &967474335
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967474332}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 696191745}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &967474336
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967474332}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0.01}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 448474067}
-  m_Father: {fileID: 696191746}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1, y: 1}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &968870954 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 157d1c4778cec4f70a22525b1f2443ac, type: 3}
@@ -44522,7 +44527,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26568
+  m_Name: pb_Mesh59784
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45047,7 +45052,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25042
+  m_Name: pb_Mesh58248
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45529,7 +45534,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: 0
   m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
@@ -45542,7 +45547,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1057641858
 PrefabInstance:
@@ -48150,7 +48155,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26146
+  m_Name: pb_Mesh59344
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -48501,7 +48506,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26652
+  m_Name: pb_Mesh59868
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -48761,7 +48766,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26094
+  m_Name: pb_Mesh59296
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -52012,6 +52017,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315053933}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1318188567 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4254210057395051393, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
+  m_PrefabInstance: {fileID: 696191744}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1318939635
 GameObject:
   m_ObjectHideFlags: 0
@@ -53878,7 +53894,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24952
+  m_Name: pb_Mesh58154
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -54109,7 +54125,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25284
+  m_Name: pb_Mesh58494
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -58266,7 +58282,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25570
+  m_Name: pb_Mesh58780
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -62263,7 +62279,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25780
+  m_Name: pb_Mesh58980
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -65609,8 +65625,6 @@ GameObject:
   - component: {fileID: 1650767345}
   - component: {fileID: 1650767344}
   - component: {fileID: 1650767347}
-  - component: {fileID: 1650767349}
-  - component: {fileID: 1650767348}
   m_Layer: 0
   m_Name: TTSManager
   m_TagString: Untagged
@@ -65630,7 +65644,612 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b04f5f2bdd3fb94b84b423b6eed38ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strToACs: []
+  strToACs:
+  - str: '"yo dude, I have some weird shit I''m gonna tell ya later."'
+    ac: {fileID: 8300000, guid: 7b4cd2ae6a4e5ee4cbf45a469e607bc2, type: 3}
+  - str: '"Every night I have the same dream..."'
+    ac: {fileID: 8300000, guid: 0cd5ad33f4942464ca788e8706c21859, type: 3}
+  - str: '"I''m chasing a cat down the street, and just as I''m about to catch up
+      to it, the cat turns. It has your face."'
+    ac: {fileID: 8300000, guid: 017b7d9dec22c774e95f4b116fda0c3b, type: 3}
+  - str: '"The you-cat gives out a loud hiss. So I crouch down, trying to approach
+      the cat, gently. Calm."'
+    ac: {fileID: 8300000, guid: d6ced61b58199714f9936e925b394980, type: 3}
+  - str: '"And you''re still hissing while I crouch and approach but you don''t scratch
+      me or move away."'
+    ac: {fileID: 8300000, guid: f5b12cdc451794148a4512cbf8e534a2, type: 3}
+  - str: '"Instead, when my hand gets to your head to give you some of the good good
+      scratches... The cat turns into MY MOTHER."'
+    ac: {fileID: 8300000, guid: 909b08c028a4cda48834452d203bbd33, type: 3}
+  - str: '"And then I wake up and I''ve wet the bed... This happens every night...
+      My sheets are so fucked up."'
+    ac: {fileID: 8300000, guid: e5d313ac4d1167041a4ff9b90b453a8a, type: 3}
+  - str: '"We''ve known each other for so long that this shouldn''t bother you."'
+    ac: {fileID: 8300000, guid: b74f54246905d91428ac427362d9ecd9, type: 3}
+  - str: '"Anyway, in the dream, you''re the cat and then you turn into my mom."'
+    ac: {fileID: 8300000, guid: cd11743dcfa971443bcab98b6bc56f1b, type: 3}
+  - str: '"What does it all mean? I''ll tell you what it means... Oh wait, I think
+      you''re getting a call."'
+    ac: {fileID: 8300000, guid: 28958d60c2578364d86f88e3416248d6, type: 3}
+  - str: '"Sometimes I think about being a kid. You know, when our mom''s would gossip
+      together about Glorf whateverthefuck news while we''d play outside of the hyperscope."'
+    ac: {fileID: 8300000, guid: 3bfda78abb0c7384f925748dc8faa238, type: 3}
+  - str: '"Ding ding! My mom would ring the blinner bell for us to come back inside.
+      We''d start to head inside and you''d get in and she''d stop me before I could
+      and look at me."'
+    ac: {fileID: 8300000, guid: dc2b29f61817bdd4db4a1a76ed222bbf, type: 3}
+  - str: '"And she''d look at me and say ''Yinkel would''ve sniffed it better''...
+      Every fucking day. She said this fucking thing to me."'
+    ac: {fileID: 8300000, guid: f1e1703b7cb8c004abf05420bd553fed, type: 3}
+  - str: '"What does it even mean dude? I don''t know. I''m sure you don''t know
+      either."'
+    ac: {fileID: 8300000, guid: 963514eedbc0ffa4787ec65465e2fe44, type: 3}
+  - str: '"But yeah back to my dream... So I''m chasing you, the cat. Am I chasing
+      you to get inside the house? Before my mom can complain to me about... About
+      Yinkel?"'
+    ac: {fileID: 8300000, guid: 756fccdd8fdc97240b6ce46b219f3711, type: 3}
+  - str: '"I don''t think that''s what the dream means... Who the fuck even was Yinkel?
+      God..."'
+    ac: {fileID: 8300000, guid: 1dfed5ab01cbcf14b931cdccb7457c62, type: 3}
+  - str: '"Yeah but I think the dream is about... about the cornmaze dude..."'
+    ac: {fileID: 8300000, guid: 263ae49b84bfdc94b9b057f7d278330c, type: 3}
+  - str: '"Hah. Yeah. I got ya with the hooker, you''re stuck deep in your job now,
+      and ya can''t run outta the room... Can''t run away from your problems."'
+    ac: {fileID: 8300000, guid: aa299fc3720a9ba4d9fdd1c4423a443e, type: 3}
+  - str: '"CAN''T RUN AWAY FROM OUR PROBLEMS... WHAT THE FUCK BRO?????? Why?"'
+    ac: {fileID: 8300000, guid: 3940cecbbab787d4c9e4eeabea3f0834, type: 3}
+  - str: '"Your clumsly little legs you''re always tripping all over them... You
+      had to fall on your face with your legs tied up in a knot like that..."'
+    ac: {fileID: 8300000, guid: e2059954c4e645a4abfd358b3395cb1a, type: 3}
+  - str: '"Oh yeah! I''ll just help ''em up! No problemo! It''s me friend! We''re
+      in a cornmaze!''"'
+    ac: {fileID: 8300000, guid: f8954f841e3db7e41aa0c9353465e07c, type: 3}
+  - str: '"The cornmaze is haunted! We want to leave! Let me help my friend up because
+      my friend fell on the ground because of my friend having 8 octopus legs."'
+    ac: {fileID: 8300000, guid: 1e534e259a00c924b9f706c085a2ad79, type: 3}
+  - str: '"Yeah you had to fall with your stupid octopus legs on your face in the
+      scariest corn maze of Glorf 31!"'
+    ac: {fileID: 8300000, guid: 6a9c9fd346327bb4a825786cfbab25d4, type: 3}
+  - str: '"And then when I want to help my friend up my friend''s like, ''oh, thank
+      you Guambo.'' AND THEN YOU PULL ME IN AND GIVE ME A KISS... ON MY LIPS..."'
+    ac: {fileID: 8300000, guid: d44c3d97f0bb9cc46b13e57a7bcf7d15, type: 3}
+  - str: '"Why did you kiss my lips? With your lips? We were in a haunted corn maze!
+      There was a man with a chainsaw running after us!"'
+    ac: {fileID: 8300000, guid: 11b7244304c03a144b15a04e02c0c03a, type: 3}
+  - str: '"Your eight legs were tied in a knot, and I had to untie them, and the
+      kiss made untying them Super Weird."'
+    ac: {fileID: 8300000, guid: c13eeaeaa829d214aad989eda7a83255, type: 3}
+  - str: '"And you know what dude? That wasn''t even the worst part! I''ve specifically
+      avoided mentioning it always!"'
+    ac: {fileID: 8300000, guid: fd86513f52c1eef4ba8e131e116f33df, type: 3}
+  - str: '"When other people bring up kissing in front of us, you grimace, roll your
+      eyes at me, and then RUN OUT OF THE ROOM."'
+    ac: {fileID: 8300000, guid: 3c294b43dfa94a34eb1d7abc79a029f8, type: 3}
+  - str: '"YOU ARE THE CAT RUNNING AWAY FROM ME. IT''S NOT EVEN A METAPHOR. YOU are
+      LITERALLY RUNNING AWAY FROM ME WHENEVER KISSING IS MENTIONED."'
+    ac: {fileID: 8300000, guid: a014a7bf9a57880469e6bce5ae234432, type: 3}
+  - str: '"It it''s not even necessarily about us... No, that''s not the worst part...
+      The worst part is that night after night I''m BLASTING my sheets with NO RELIEF
+      in sight!"'
+    ac: {fileID: 8300000, guid: 260ad9d3071063242aebae39dd57551b, type: 3}
+  - str: '"Like you make it so weird dude! We could just not mention it..."'
+    ac: {fileID: 8300000, guid: 409608ce9dcbfc7408b87bde806792ea, type: 3}
+  - str: '"''Yinkel would''ve sniffed it better...'' What does that even mean? Sniffed
+      what? Who''s Yinkel?"'
+    ac: {fileID: 8300000, guid: efac8f3c96117094a82f8693e69babca, type: 3}
+  - str: '"God dude, I''m so blazed right now."'
+    ac: {fileID: 8300000, guid: 12b4011ab7a447c41aee741da9cd3804, type: 3}
+  - str: '"Fuck you, fuck my mom... I''m gonna blast this couch... At least you couldn''t
+      run away this time..."'
+    ac: {fileID: 8300000, guid: a43f299e92ff40b4da35be3a6e9b6d2a, type: 3}
+  - str: Hello there. I am Dr. Elglore Smankoff, PHD. We at Glarblarf Inc have assigned
+      you to monitor Glorf-31 activity at this world here, "Earth." We will be sending
+      agents who want to, per say, "mess with the earth," over your way to be approved
+      or disapproved by you, Lixel Zeoop, Glorf-31 citizen and valued employee of
+      Glarblarf Inc. Press one of the buttons in front of you to start up your work
+      for the day.
+    ac: {fileID: 8300000, guid: a88c02e2d775c6147a2ff6a67152b384, type: 3}
+  - str: '"Would you say this paper mache donkey depicting a flatulating, gesticulating
+      great ape properly represents the contemporary of the general human cognition?"'
+    ac: {fileID: 8300000, guid: 09fadf7b89053c44596dd8352febc42f, type: 3}
+  - str: '"I think you need to include a little bit more common greater good egalitarianism
+      energy or something."'
+    ac: {fileID: 8300000, guid: 405ba737c5f889d4c8524bd37e9ce504, type: 3}
+  - str: '"Are donkeys not viabley connected to the greater good??? They''re just
+      horse babies, dude!"'
+    ac: {fileID: 8300000, guid: f1bbe35ae6571c24e99199fdc8dd9d3f, type: 3}
+  - str: '"I would like to mine out some of the cave paintings found in Catalonia,
+      bring them back to the Eternal Museum back on Glorf 31. It would contribute
+      greatly to our collection of Earth artifacts. Can I have your go ahead?"'
+    ac: {fileID: 8300000, guid: c3c6fd0c88532784abdc09178682eabe, type: 3}
+  - str: '"It looks like you sort of pissed off the Earthlings a bit there."'
+    ac: {fileID: 8300000, guid: c7d13904737d6634090dda89d98866ba, type: 3}
+  - str: '"The camera: a useful earthling invention. Bro we would''ve never come
+      up with such a toy, with our eye cones being so different."'
+    ac: {fileID: 8300000, guid: 3f13503387c109f419fb1acfecb3d871, type: 3}
+  - str: '"I have an idea for an art installation to bring to Earth. It is to invert
+      the colors of every object with visually metallic property, ie. roadsigns,
+      buildings, volcanic activity. This is important for my and the entirety of
+      Glorf 31''s artistic expression and species signature upon the universe."'
+    ac: {fileID: 8300000, guid: 6d64f527cd014ec439d19cdd524dede8, type: 3}
+  - str: '"I wonder if we''ll see all metal with inverted colors also... is Goya
+      gonna change like the properties or something or the way organisms percieve
+      things?"'
+    ac: {fileID: 8300000, guid: c3046b850d79ed74a8eae6ca5c97a320, type: 3}
+  - str: '"Goya''s always got something up those many sleeves..."'
+    ac: {fileID: 8300000, guid: 2474d1e73b1d65d48913d5acf42a1094, type: 3}
+  - str: '"I would like to change the fundamental concept of music that humans have
+      to one that includes not only aural sensory input but also patterned smell
+      over time."'
+    ac: {fileID: 8300000, guid: ae77f4135ff578e438bcd392d695d2f5, type: 3}
+  - str: '"This music smells like quaft."'
+    ac: {fileID: 8300000, guid: 96845f66d48dc144ea86a4f6eb6c228d, type: 3}
+  - str: '"Beethoven, that dude rocks on."'
+    ac: {fileID: 8300000, guid: da115149cd00e0448a08981e1e8ec234, type: 3}
+  - str: '"I need paint."'
+    ac: {fileID: 8300000, guid: 59553820657e543489adbe8cf8682bcd, type: 3}
+  - str: '"Rock tones, major mood."'
+    ac: {fileID: 8300000, guid: 93f21811f26bbdf46923f88a7974a53b, type: 3}
+  - str: '"That paint won''t be vegan, dude."'
+    ac: {fileID: 8300000, guid: f90a3412673da5f43b877a98a021c764, type: 3}
+  - str: '"I hate brutalism so much."'
+    ac: {fileID: 8300000, guid: b43802a3689b84243a655eec34ff03d5, type: 3}
+  - str: '"TEAR IT DOWN!"'
+    ac: {fileID: 8300000, guid: 761052ffd3c81e04091c96ea5ee49101, type: 3}
+  - str: '"Who doesn''t brutalism hate?"'
+    ac: {fileID: 8300000, guid: 47da6ff4f5ef2624fbec91f3a3cdb7b1, type: 3}
+  - str: '"I''ve found something worse than Brutalism in terms of aesthetic movements...
+      its name is Frank Lloyd Wright."'
+    ac: {fileID: 8300000, guid: cf60b83f686638149adcf96db80337e9, type: 3}
+  - str: '"Bro I think that he may just keep coming back with these grievences and
+      such..."'
+    ac: {fileID: 8300000, guid: ea4f1166706fc2949a2b04f80a795e54, type: 3}
+  - str: '"YOUR Spaceship can fall on MY water. ;)"'
+    ac: {fileID: 8300000, guid: 13d9da2a888011f4fa592a282726f945, type: 3}
+  - str: '"Oh no. I''ve found the worst one. How could the humans do this to their
+      eye cones? One word phrase: Rococo."'
+    ac: {fileID: 8300000, guid: ba4da96dd9fc0154cb30e234a90e4c84, type: 3}
+  - str: '"Isn''t the reason they pay you for this because no one else wants to deal
+      with these dudes?"'
+    ac: {fileID: 8300000, guid: 1ec62d7af09ac0f48b1627828195a2cc, type: 3}
+  - str: '"You and all alien counterpart poodles, dude."'
+    ac: {fileID: 8300000, guid: 57db86d740d265340b6b9a5a62e7486f, type: 3}
+  - str: '"I have figured out what to do about the terrible architectural aspects
+      of the human earth. With Eglore Smankoff''s architectural-change-a-doodle ray,
+      we can turn all their buildings into the human-sacrum like structures of our
+      home planet, my dearest Lixel Zeoop!"'
+    ac: {fileID: 8300000, guid: 4556d7eb67c979043a896c15f3ab62df, type: 3}
+  - str: '"Ohhh noooo bro..."'
+    ac: {fileID: 8300000, guid: afc50a8701e597b498e10e5eae88ab4e, type: 3}
+  - str: '"You mean in the verbal sense, because SSS''SSSS doesn''t communicate through
+      sound, right?"'
+    ac: {fileID: 8300000, guid: 359a9f16a22d17d4eac53beecf522afd, type: 3}
+  - str: '"I have thought about your comment... that I am becoming similar to our
+      colleage, SS''SSS... I have realized this is not what Art is about. It is about
+      freedom, self expression, communication. I got too wrapped up in my own tastes.
+      Thank you, Lixel Zeoop. Thank you."'
+    ac: {fileID: 8300000, guid: e6a07bf4cb90f6d449d961ae7a607950, type: 3}
+  - str: '"What an epiphany. Seems we aren''t the only ones who can''t stand SS''SSSS."'
+    ac: {fileID: 8300000, guid: c1056b96597fa8741a4dbfb6d693a401, type: 3}
+  - str: '"(Thumbs up emoji)"'
+    ac: {fileID: 8300000, guid: dc351521d20b5f4479a967653ba8c427, type: 3}
+  - str: '"Hey. Uh. I... I don''t think people are horny enough. I like went to the
+      bar last night and no one talked to me and I was looking FANTASTIC. You''re
+      gonna have to do something about it."'
+    ac: {fileID: 8300000, guid: 36620fb15d36c774bbd3e828532e17cc, type: 3}
+  - str: '"Wow bro, time for a major earth fuckfest I guess. I bet Torbar still won''t
+      get any, though."'
+    ac: {fileID: 8300000, guid: dcdd600d82b3b6547bf3a73543ff1b0e, type: 3}
+  - str: '"Haha what the fuck even was that."'
+    ac: {fileID: 8300000, guid: 55aff836e5f649c4c8fb682fc60e7687, type: 3}
+  - str: '"In my time undercover I have learned that maybe eighty human years ago
+      there was an era known as dis-co. We should bring it back. I believe in the
+      importance of thriving human night life."'
+    ac: {fileID: 8300000, guid: 4f2261db1277f82479f04e980a3c158f, type: 3}
+  - str: '"Haha yes! Fuck it up!"'
+    ac: {fileID: 8300000, guid: efe2f851ee3b5e944965a41b8e612724, type: 3}
+  - str: '"Eh bro don''t cramp disco. Maybe you''re just uncultured."'
+    ac: {fileID: 8300000, guid: 246c29c1c9e45624fac27e85a100f150, type: 3}
+  - str: '"I auditioned to be on this human communal preformance troupe thing called
+      the Broadest Way. I got in, I am now going to be playing a human pretending
+      to be a cat, doing some aerobic escapade. I am afraid i will lose myself in
+      the layers of pretend. Who am I?"'
+    ac: {fileID: 8300000, guid: 9785b42d65e4af944be75baae173c588, type: 3}
+  - str: '"We''ve got a motivational speaker in the house woop woop!"'
+    ac: {fileID: 8300000, guid: 774829afe32eb4e43a38a1909108e9be, type: 3}
+  - str: '"Tell it to him straight! Or something."'
+    ac: {fileID: 8300000, guid: ab08e4e19653c00499718dff3fa2225f, type: 3}
+  - str: '"NASA wants to send me to space. Can we meet up while I''m there?"'
+    ac: {fileID: 8300000, guid: c51f81f905468c9498870eec52bbfebb, type: 3}
+  - str: '"Fuck I hate that guy why''d you give him our address?"'
+    ac: {fileID: 8300000, guid: 305f0d6d6ee64a44689a33de745497f2, type: 3}
+  - str: '"Haha yeah! Tell him to his face!"'
+    ac: {fileID: 8300000, guid: c54ec938b0d8ef54c98614d3c7653085, type: 3}
+  - str: '"Any tips on hiding flagellum?"'
+    ac: {fileID: 8300000, guid: c83c9135e7855814cb23fe964060741d, type: 3}
+  - str: '"Hats are GREAT for that."'
+    ac: {fileID: 8300000, guid: b030a69c59bcd8c409e4143f18f7cda5, type: 3}
+  - str: '"I think you gave Torbar the wrong advice there, dude."'
+    ac: {fileID: 8300000, guid: 55358f2927b12ce4e8954fbc204b13d2, type: 3}
+  - str: '"An Earth human asked me for my hand in marriage. Is it time to tie the
+      knot? What if i get tied down?"'
+    ac: {fileID: 8300000, guid: f8a1674ef7617cb4dac1c624da8bbac4, type: 3}
+  - str: '"What about listening to your brains?"'
+    ac: {fileID: 8300000, guid: 61f708fd64ca52e47a55b388b3aeacdc, type: 3}
+  - str: '"We''ve got one married in! Hurrah for Glorf!"'
+    ac: {fileID: 8300000, guid: 7c6ae50ecb69334498386528d47abc68, type: 3}
+  - str: '"Your failure to control the human urge to dominate eachother has resulted
+      in carnage and war. The surface of the planet is highly irradiated and the
+      population has undergone mutations that make them less susceptible to mind
+      control. We are highly disatisfied with your work. Goodbye... Loser."'
+    ac: {fileID: 8300000, guid: c88fb631e61deee4dbd9c0419b23f438, type: 3}
+  - str: '"This planet has become too submissive thanks to your influence. People
+      are volunteering to act as human pavement in hopes of being stepped on, but
+      no one wants to do the stepping. As a result, transportation has broken down
+      and I can''t sell any of my goods. This is a disaster. You''re fired."'
+    ac: {fileID: 8300000, guid: 812c9e388f58850479f0b278dcb05ace, type: 3}
+  - str: '"Oh god. Oh god. They''re all. They''re all so horny- I can''t get any
+      humans to partake in my experiments because they keep... Mating! I''ve never
+      seen mating before. It makes me uncomfortable. I need immediate transportation
+      off of the planet! How could you let this happen? You are fired!"'
+    ac: {fileID: 8300000, guid: adb388808d5c0e243b362255a9bb8371, type: 3}
+  - str: '"Idk man this planet sucks bigtime. No one is trying to give me kisses
+      and stuff or ride my grill. Totally lame. I bet it''s your fault, I''m reporting
+      you to Bloof Gloof. BTW, birth rates have plummeted and humanity is dying out,
+      so good job, I guess."'
+    ac: {fileID: 8300000, guid: 3f8dd0d1de699c24fbb96d4cdb6fcd23, type: 3}
+  - str: '"Hey I''m sweating too much... My AC is broken... :( I think I saw the
+      humans burning alive from the extreme heat. Now I''ll never make friends :("'
+    ac: {fileID: 8300000, guid: 9053e675c921213439fc7b8f3762ebba, type: 3}
+  - str: '"Dude this planet is fricking cold man! I hate it here! Yesterday I saw
+      a dogs peepee freeze in mid air! That was gross! I''m leaving a very negative
+      review of this planet on Glorf Yelp and telling your manager!"'
+    ac: {fileID: 8300000, guid: cc3b158fc6a4b84498cda842270c79d1, type: 3}
+  - str: '"Congratulations. Through your discussions with your friend, you have achieved
+      enlightenment and transcended reality."'
+    ac: {fileID: 8300000, guid: e33ab80a294f10f4db5765dc8a4231a7, type: 3}
+  - str: '"Let''s make this salamander I found floating in space president of Russia!"'
+    ac: {fileID: 8300000, guid: f876ecf2a3db41f408da3967964b1ba2, type: 3}
+  - str: '"Oh! I love him so much! What a great leader!"'
+    ac: {fileID: 8300000, guid: cb73e6ddd1184ce4f9a828986a6a947a, type: 3}
+  - str: '"The little guy seems to be vibing down there at the pole."'
+    ac: {fileID: 8300000, guid: be9f9dc1aa9e88d4b962e3cfd9ea125c, type: 3}
+  - str: '"Mandatory clown noses for all crustaceons, yes?"'
+    ac: {fileID: 8300000, guid: 2b34d0d541daaab4dbbf9fc3b1f133eb, type: 3}
+  - str: '"Haha! All those crabs look so silly now!"'
+    ac: {fileID: 8300000, guid: ddbdb32630f576746a468fffe2992f97, type: 3}
+  - str: '"Not today, Bloof Gloof. Boo hoo."'
+    ac: {fileID: 8300000, guid: 3f49b7c39679b514e9087b3dffaf56fc, type: 3}
+  - str: '"I would like to move the earth five centimeters to the left!"'
+    ac: {fileID: 8300000, guid: 96ec718dfb529e4439e09cc22772d51d, type: 3}
+  - str: '"I wonder how he''s gonna manage that with just a rope... He''ll figure
+      it out some way."'
+    ac: {fileID: 8300000, guid: d3a8709679f72124690f33bb6c08d9b3, type: 3}
+  - str: '"That''s too bad, I was looking forward to what Bloof Gloof would''ve done..."'
+    ac: {fileID: 8300000, guid: 5935611f3d4779249a4e2c53cb404e9b, type: 3}
+  - str: '"All human auditory ability only now able to parse sounds of clown horn
+      honking?"'
+    ac: {fileID: 8300000, guid: 13fc4ec2ddc44c64f91cee2de30b686d, type: 3}
+  - str: '"That HAS to be a form of capital punishment..."'
+    ac: {fileID: 8300000, guid: 5de62a246a02b3a4b9de4e9aca0be744, type: 3}
+  - str: '"You DID say when hell freezes over... what else could you expect from
+      that guy?"'
+    ac: {fileID: 8300000, guid: 7d026e82e20c03442af4673ecee260ce, type: 3}
+  - str: '"It is birthday time for the Earth day. All will celebrate."'
+    ac: {fileID: 8300000, guid: 1940308abce50bb428619d8f18977f0b, type: 3}
+  - str: '"All will celebrate."'
+    ac: {fileID: 8300000, guid: 77021a85f0bb54d4d9e4acd8d2ec8a7b, type: 3}
+  - str: '"I can''t believe you challenged Bloof Gloof..."'
+    ac: {fileID: 8300000, guid: 197cfe4357cae504b9fe2773bb5520b0, type: 3}
+  - str: '"Make all other clowns fight to the death."'
+    ac: {fileID: 8300000, guid: 068d1753059094948b5de33a8f63af12, type: 3}
+  - str: '"Battle-ring clown style. My next TV program."'
+    ac: {fileID: 8300000, guid: 362b11c519f7a094782ef73c61b35337, type: 3}
+  - str: '"Clown orgy on you, dude."'
+    ac: {fileID: 8300000, guid: 3c22e330262009040b4315b4bc788773, type: 3}
+  - str: '"The Mire Oodle said they were being the bullied. Should I Gloof my Bloof?"'
+    ac: {fileID: 8300000, guid: c046cd011102a434983c315e0ae3d021, type: 3}
+  - str: '"You''ll never learn. None of us will learn."'
+    ac: {fileID: 8300000, guid: 3e015eeb0cad97a40a2818668173230a, type: 3}
+  - str: '"I always have to close my eyes when Bloof Gloof does this."'
+    ac: {fileID: 8300000, guid: dccb8a178c40cb8498bc3454964d7ff5, type: 3}
+  - str: '"MY GLOOF HAS BEEN BLOOFED UPON THE BULLIES OF MIRE OODLE."'
+    ac: {fileID: 8300000, guid: 2161fed723f4cf949b768f85dffbfef0, type: 3}
+  - str: '"Mire really has a social sway at Glarblarff, it seems."'
+    ac: {fileID: 8300000, guid: 05abae45f9dbd6d44b5920c113704156, type: 3}
+  - str: '"The bullies are anyone who breathes without caressing Mire Oodle."'
+    ac: {fileID: 8300000, guid: 930a57434a657064382f185088c0bc0e, type: 3}
+  - str: '"So because I''m cold blooded I tend to get exhausted in colder temperatures...
+      would you be able to crank the heat up a little bit for me? It would make earth
+      a better vacay spot suited to my needs."'
+    ac: {fileID: 8300000, guid: 3bf65a39db2449f418bccb704529a6df, type: 3}
+  - str: '"Haha bro I hope the earthlings can handle extra winter."'
+    ac: {fileID: 8300000, guid: aa31512def6de354894ae1375d4e3a6c, type: 3}
+  - str: '"Aw dude, but Zem Lips needs that heat! Haha i''m just messing with you
+      I don''t care."'
+    ac: {fileID: 8300000, guid: 1f4bc16e1fddaf9429062705e0d6c017, type: 3}
+  - str: '"Would you recommend visiting Dubai or Chicago first?"'
+    ac: {fileID: 8300000, guid: 3306bf684e0a31b45b9cd4830f5f8d20, type: 3}
+  - str: '"Luxury lad. Tell ''em to bring us back a big cat."'
+    ac: {fileID: 8300000, guid: a03b275d6d3312e4896ebd9d2dd8b578, type: 3}
+  - str: '"Excited for Zem Lips to be bitchin'' in that deep dish."'
+    ac: {fileID: 8300000, guid: a482097b3c171c644941e1c998ea9792, type: 3}
+  - str: '"I stayed out in the sun too long, I got burnt really bad. Can I turn the
+      sun off until I''m feeling a little better?"'
+    ac: {fileID: 8300000, guid: c4dd9dd69bcb35c4d804f6511806c795, type: 3}
+  - str: '"Something feels really off right now... I can''t put my finger on it."'
+    ac: {fileID: 8300000, guid: 135e8fcdaac25134a8821c436b38a467, type: 3}
+  - str: '"Did you just kill Zem Lips??? Dude!"'
+    ac: {fileID: 8300000, guid: 84ca225cf3c8ca045ac17bf49313e1f7, type: 3}
+  - str: '"I was sitting on the beach, the beach chair I was on like folded inwards
+      or something stupid and now i''m stuck in it. Can you send someone to come
+      get me out?"'
+    ac: {fileID: 8300000, guid: a9b581e81d3d2844b9bdeb8c55b7a802, type: 3}
+  - str: '"Why do you always fall into the Bloof Gloof trap..."'
+    ac: {fileID: 8300000, guid: 402854749ba618e4d872a14952072aa8, type: 3}
+  - str: '"I forgot that you could just teleport things. Definitely the smarter choice."'
+    ac: {fileID: 8300000, guid: 3d67a343c6806d54eba63a1c3fb84cf4, type: 3}
+  - str: '"I missed my plane to Hawaii, now all these humans are staring at me in
+      the airport."'
+    ac: {fileID: 8300000, guid: c91ec7fe2078f2d4b9cfab9029a200a9, type: 3}
+  - str: '"Zem can finally put that chameleon skin to good use."'
+    ac: {fileID: 8300000, guid: c7a6db975e3be064fbed17b06b4f6767, type: 3}
+  - str: '"That''s a way to deal with that."'
+    ac: {fileID: 8300000, guid: 9bb12cba017518a4fba200dbe283a38c, type: 3}
+  - str: '"Do you know any good deep sea travel spots? LIke marina''s trench?"'
+    ac: {fileID: 8300000, guid: edbe3f8d5e411e541bd52ea57a8454dc, type: 3}
+  - str: '"TO THE TRENCH!"'
+    ac: {fileID: 8300000, guid: fb0758de2f5ac764e81eca8116921ae7, type: 3}
+  - str: '"I hope Zem Lips gets to meet David Bowie down there."'
+    ac: {fileID: 8300000, guid: 0bd47f961e723194a8bcabe735bfd41c, type: 3}
+  - str: '"I found this love questionnaire on the human''s websites... should I fill
+      it out?"'
+    ac: {fileID: 8300000, guid: 2c78f7de0e43083439fe6d4567987bf1, type: 3}
+  - str: '"I wanna see it, I wanna fill it out too."'
+    ac: {fileID: 8300000, guid: 74e581d89e053c248ae20a694d0b5132, type: 3}
+  - str: '"Why''d you yuck Mire Oodle''s yum, dude?"'
+    ac: {fileID: 8300000, guid: 7ca5e8cd88ffa924e8e06ceefe46f194, type: 3}
+  - str: '"A small request... I would like to separate the Earth from its sheep species,
+      they are so soft, loving, sweet... I will make a new home for them on Glorf
+      31 with me alone as their shepherd."'
+    ac: {fileID: 8300000, guid: d11ecfd9835bc384ab4a2081454c3f59, type: 3}
+  - str: '"Hopefully this''ll cure Mire Oodle''s crippling loneliness."'
+    ac: {fileID: 8300000, guid: 96dff1fc9aa80e44fb472d68a7abbeef, type: 3}
+  - str: '"Baaa humbug."'
+    ac: {fileID: 8300000, guid: 40c32ceeaaa7761409c35cd718524d80, type: 3}
+  - str: '"I look at Earth, it is a rock, everyone on it so sad... I want it gone,
+      I want to raise the temperature, them to all disintegrate, to lower the temperature...
+      them to all freeze... something so they stop hurting one another so uncontrollably...
+      please..." '
+    ac: {fileID: 8300000, guid: 762022c4cdc2b2f4d9c82ba70dddfe35, type: 3}
+  - str: '"The Earth burns according to Mire Oodle''s neuroticism."'
+    ac: {fileID: 8300000, guid: d3e1ffa45fa72c04eb55f63ee305cc43, type: 3}
+  - str: '"Ice Age 5 of many to come: The Mire Oodle freezing."'
+    ac: {fileID: 8300000, guid: 876390b7042477b46a5736df60f685db, type: 3}
+  - str: '"I''m getting bullied.... :("'
+    ac: {fileID: 8300000, guid: 2b1f2a61a5c2e8941a00379506d9bdf1, type: 3}
+  - str: '"Eh you probably the right move. Bloof Gloof can be a freak."'
+    ac: {fileID: 8300000, guid: b5caf736f588dba47a3ebb41d96e7e43, type: 3}
+  - str: '"HAHA HOLY SHIT!!! WHAT DID YOU JUST DO DUDE???"'
+    ac: {fileID: 8300000, guid: b8805244ce6837e43963ccb8850a428a, type: 3}
+  - str: '"What''s your zodiac sign?"'
+    ac: {fileID: 8300000, guid: b3c016eb3712bbf4388704c431037193, type: 3}
+  - str: '"Mine''s Uranus."'
+    ac: {fileID: 8300000, guid: 7c7f493dbfc5fa7479bfff6097d5af51, type: 3}
+  - str: '"I have the same sign also!"'
+    ac: {fileID: 8300000, guid: ca8315f33f7870f42b572ba6efb03ed1, type: 3}
+  - str: '"I threw a party but none of the other aliens showed up...."'
+    ac: {fileID: 8300000, guid: e10421c86e465514f9adb12ba119cd96, type: 3}
+  - str: '"Wow I''m glad you did not just teleport me to that party. I would be so
+      pissed."'
+    ac: {fileID: 8300000, guid: 7bb85180c2e6d8a48be7c04d2734d02a, type: 3}
+  - str: '"Look at those pigs dance with Mire Oodle!"'
+    ac: {fileID: 8300000, guid: 1cf26f949affc1b47822e103b764e495, type: 3}
+  - str: '"I''ve heard more about this... uh... astrology. From a human friend (which
+      I have definitely). .... ...so yeah... where were you exerted from your maternal
+      unit?"'
+    ac: {fileID: 8300000, guid: 43d83dd00c88f5046aae03a087990263, type: 3}
+  - str: '"As was I, dude."'
+    ac: {fileID: 8300000, guid: 671c70542f1fed94bbeba269dbf8ab33, type: 3}
+  - str: '"I''m guessing Goya was born there too?"'
+    ac: {fileID: 8300000, guid: f8025e9cced49444388f5e8e27325be9, type: 3}
+  - str: '"So continuing... down my astrological journey... I made this social media
+      page to give the humans daily updates on how to commune with the planets..."'
+    ac: {fileID: 8300000, guid: 408b279bb1011bc47a7737a5ad01048c, type: 3}
+  - str: '"Yeah dude, we can''t have the humans knowing about our intergalactic BBQ''s."'
+    ac: {fileID: 8300000, guid: 6777890f647b2a74bb44f31925f098c9, type: 3}
+  - str: '"Hey, you should follow me back also, dude, you ass."'
+    ac: {fileID: 8300000, guid: 7d43d133f24c6ea45bda8430d4785fa3, type: 3}
+  - str: '"I''ve gained... five billion followers on my astrology account... ....the
+      humans are asking for a face reveal... is it time?"'
+    ac: {fileID: 8300000, guid: f6fa4ac7a0b8a6c4bb12ba1b2e3b68a0, type: 3}
+  - str: '"Woah... deep. Seems like he might need some space on that thought. Haha,
+      get it? Space?"'
+    ac: {fileID: 8300000, guid: 0455226d573ab754b9825cafb6413c0b, type: 3}
+  - str: '"Reverent advice, my guy." '
+    ac: {fileID: 8300000, guid: 16f59eec143f8254bb132c2b68fde457, type: 3}
+  - str: '"I''ve taken some time to think about it... the Face Reveal... if I post
+      it, it may cure my loneliness, as you said... I can connect to the collective
+      unconscious of an entire species... But then... I am Mire Oodle, the Lonely
+      Alien. Who am I without my loneliness?"'
+    ac: {fileID: 8300000, guid: b5236f4af2ad3a5408b43833c3b07cc1, type: 3}
+  - str: '"On the Earth Shift, we make gods."'
+    ac: {fileID: 8300000, guid: e1d7abf9fa24d0f44a930ed1f85ff09e, type: 3}
+  - str: '"Omg. Mire really lived a little... I hope to Smog these aren''t their
+      gonads."'
+    ac: {fileID: 8300000, guid: 44f524d216583854983023d465d1a675, type: 3}
+  - str: '"I have posted the face pic. The rotisserie has not been mentioned. I am
+      now being hunted by the humans that once loved me. This has helped nothing.
+      I am more lonely than ever."'
+    ac: {fileID: 8300000, guid: e867205c2d75f2b4e8c5923d5b56f616, type: 3}
+  - str: '"Let''s reverse the hunt!"'
+    ac: {fileID: 8300000, guid: b9db54aa45b1698439aac5a8eac52e9f, type: 3}
+  - str: '"It''s game day, mate!"'
+    ac: {fileID: 8300000, guid: 7fac9460f67b13a4aab1527800fc1103, type: 3}
+  - str: '"Thank you for the help with the bullies, Lixel Zeoop... oh and just so
+      you know... the bullies were the earth geese of the Earth Canadia.... I tried
+      to pet one... the devilish fiend... at first I thought it was so sweet and
+      gentle... and it pulled four of my phalanex of my left spulkrum! So now their
+      species has paid."'
+    ac: {fileID: 8300000, guid: a77f448c06d54a54f98bc501dc1a5abe, type: 3}
+  - str: '"Honk honk, motherfucker."'
+    ac: {fileID: 8300000, guid: fcf583b9755ed9b47876d449e15e19be, type: 3}
+  - str: "\u201CI would like to insert a new gene into the contemporary eastern squirrel
+      species. It will make them all hunger for the blood of newborn mammals.\u201D"
+    ac: {fileID: 8300000, guid: f83e3a0bde6038f4494ed9f5649b3391, type: 3}
+  - str: '"Wow look at those squirrels GO."'
+    ac: {fileID: 8300000, guid: d4b805709b1290a4cb86d7749de3c42f, type: 3}
+  - str: '"You gave him reign to do whatever wasn''t that, I guess..."'
+    ac: {fileID: 8300000, guid: a52bb0b01d5044e4e9ce1bcbb77fd9ea, type: 3}
+  - str: '"It is time to screen the planetary fecal matter regulatory index. Shall
+      I initiate the conformity swab?"'
+    ac: {fileID: 8300000, guid: c1d6305f55411e44a8bd4c6453c43ff3, type: 3}
+  - str: '"Haha holy fuck dude all those earthlings are gonna be PISSED... your job
+      sucks so bad."'
+    ac: {fileID: 8300000, guid: bf17fbd5990f67942820d3d0e5dd66e6, type: 3}
+  - str: '"That was honestly a pretty decent way to deal with that dude."'
+    ac: {fileID: 8300000, guid: c44dde6a04a5cd84785f3c860f07d70c, type: 3}
+  - str: '"The department of Glorf 31 science affairs asked for a generalized sample
+      of the eye cones residing in every underwater species. In order to do this,
+      I believe we could raise the temperature of the ocean to kill a good amount
+      of them and easily harvest such organs. Do we have your go ahead?"'
+    ac: {fileID: 8300000, guid: d53bb487f10762d4b98088726fde7cdc, type: 3}
+  - str: '"I guess that earth''s gonna embark upon some major bloodbath vibes...
+      due to Glorf 31. We''re sort of messy."'
+    ac: {fileID: 8300000, guid: 77fe9d1002164b84eb1233a3352a156b, type: 3}
+  - str: '"Aw that''s too bad, I was looking forward to the color implants that Glarbarf
+      inc was gonna release with the new tech from that..."'
+    ac: {fileID: 8300000, guid: 8442f2439daad4b4b954751768077ce3, type: 3}
+  - str: '"Everything on earth is born and dies too quickly. In order to slow down
+      this process of decay, I propose we decrease the global temperature in order
+      to lets say... refrigerate  the specimens to enact scientific activities upon
+      them more effectively."'
+    ac: {fileID: 8300000, guid: 42d13b91b19b82b49b398358c8039bd0, type: 3}
+  - str: '"Cryogenic sleep time, bro. I''m glad to just be chilling here watching
+      tv instead of being CHILLED like those fools."'
+    ac: {fileID: 8300000, guid: 5be4c00e544ef46499529dd45753beec, type: 3}
+  - str: '"It is so fun to see Elglore running around trying to trap earthlings like
+      that."'
+    ac: {fileID: 8300000, guid: 6086920557d48774d83e425018a150a3, type: 3}
+  - str: '"It''s time to give the humans the olive oil to crude oil conversion secret
+      of our peoples."'
+    ac: {fileID: 8300000, guid: a4e287494d227f849a10e8b9b702d091, type: 3}
+  - str: '"The ultimate secret? Gone."'
+    ac: {fileID: 8300000, guid: 474d629643e11ed4abc277684c495706, type: 3}
+  - str: '"Def too dangerous. The right call right there."'
+    ac: {fileID: 8300000, guid: 7eaab3fd62851674f8e606665903187f, type: 3}
+  - str: '"We are going to put space sac pheremones into the krill population."'
+    ac: {fileID: 8300000, guid: 1b0ae51655f41914f962cdba214391d1, type: 3}
+  - str: '"Those krill have TEETH now, dude. The right decision."'
+    ac: {fileID: 8300000, guid: 257ad3b631879cf49b83b8e6f803e715, type: 3}
+  - str: '"Ah! Krill in space!"'
+    ac: {fileID: 8300000, guid: 5d1ee2a84f5c5dc408e4972328878856, type: 3}
+  - str: '"There''s this virus I found that is highly contagious, if you give it
+      to the humans they''ll all work from home and buckle even more under capitalism."'
+    ac: {fileID: 8300000, guid: bee5abc59b201fe4a9641d3b0ccaf501, type: 3}
+  - str: '"I can hear the earthlings coughing from here."'
+    ac: {fileID: 8300000, guid: 6e9775af4ad1bba4f9d6c70b8442a961, type: 3}
+  - str: '"Dude... did WE invent capitalism?"'
+    ac: {fileID: 8300000, guid: 7ae28f139a5d66040b6dfd0497369dff, type: 3}
+  - str: '"I believe it is time to increase the supplies of oil within earth."'
+    ac: {fileID: 8300000, guid: d48cd8d5622539a4395d471510215686, type: 3}
+  - str: '"What even is oil? I''d never heard of it until you started working this
+      job."'
+    ac: {fileID: 8300000, guid: da09072a013a7344ca1a72e49c771cdd, type: 3}
+  - str: '"Oh, like Venus! I''m sure the earthlings will love that!"'
+    ac: {fileID: 8300000, guid: 3632958735f29a547902250ccd2a76be, type: 3}
+  - str: '"I would like to initiate extreme deforestation on the entirety of all
+      earth''s forests. This would engage for me a monopoly over all wood products,
+      rendering me monetarily powerful over the species of the earth."'
+    ac: {fileID: 8300000, guid: 2d482e5c8f97f3e4f8bf396bfb4ee9f5, type: 3}
+  - str: '"Do we even have an economy? I thought that was an earth concept specifically."'
+    ac: {fileID: 8300000, guid: c89b6b631955a4a4da45dec9c5514143, type: 3}
+  - str: '"Aw, no more nut."'
+    ac: {fileID: 8300000, guid: 1770f0ec2f7913e4da1941b26c60ab62, type: 3}
+  - str: '"We have a plan to release vast amounts of raw cash into all world economies,
+      from amounts of honey in beehives to light resources on the bottom of the ocean
+      floor, to the Canadian dollar. This will cause inflation on an unprecedented
+      scale and be extremely beneficial to Glorf 31 interplanetary investment prospects."'
+    ac: {fileID: 8300000, guid: 3cb82ff21c75b8b4198fe50de7ed6a8e, type: 3}
+  - str: '"Give the bees a break!"'
+    ac: {fileID: 8300000, guid: c314b135a40a58f45ac2decf0ba5db81, type: 3}
+  - str: '"I GUESS thats a valid reason to say no..."'
+    ac: {fileID: 8300000, guid: 6a9238f1871a4a84180bd2e718e4742c, type: 3}
+  - str: '"I would like to steal Ronald Reagan''s frozen body from the celebrity
+      body compendium of the United States of America."'
+    ac: {fileID: 8300000, guid: 90c5ac85220d22444924191dd7be5cc1, type: 3}
+  - str: '"I bet the evangelicals will love this one."'
+    ac: {fileID: 8300000, guid: 301880a39e1466841b2ba41b312a6dd8, type: 3}
+  - str: '"Trickle down fecal matter!"'
+    ac: {fileID: 8300000, guid: 946d368a98f17fb498471b27993c718c, type: 3}
+  - str: '"We need 20 Snarkoffs for our hedge fund."'
+    ac: {fileID: 8300000, guid: 7d8e38c190d27054385ef75f4d6f41ca, type: 3}
+  - str: '"20 Snarkoffs? Dude that''s like the entire government budget!"'
+    ac: {fileID: 8300000, guid: 4ed06fe6dda324549935e89ff8ae7ef9, type: 3}
+  - str: '"Ideal way to shut that loser down."'
+    ac: {fileID: 8300000, guid: f6bd027dff524e547b274a9b8391fd73, type: 3}
+  - str: '"It''s time for mosquitoes to go."'
+    ac: {fileID: 8300000, guid: 0348d1db8f340044bb36386737188a6d, type: 3}
+  - str: '"Dude, you just wiped out an entire species. Fuck."'
+    ac: {fileID: 8300000, guid: d307dfd1e1b46aa4f8a79dbfa777609a, type: 3}
+  - str: '"Yeah, right? They sort of remind me of one of my aunts."'
+    ac: {fileID: 8300000, guid: 945c900ce2156dd449fafee4c91662e7, type: 3}
+  - str: '"I have a plan to transform all rocks into type igneous."'
+    ac: {fileID: 8300000, guid: 14770134d70ce894b905509fbdf48263, type: 3}
+  - str: '"That seemed like one of his more harmless requests... maybe?"'
+    ac: {fileID: 8300000, guid: 50bbd1f67b9463042b52d082f07a431a, type: 3}
+  - str: '"You just completely messed up the earth!!!"'
+    ac: {fileID: 8300000, guid: 3f53a878b0185e84b853878a06ad396c, type: 3}
+  - str: '"If we make everything on Earth human, I think then maybe we could also
+      include a social decree to make cannibalism not just acceptable but necessary
+      in the Earth culture."'
+    ac: {fileID: 8300000, guid: c592e7280f4a2814885160e30ec1fc5e, type: 3}
+  - str: '"Wow bro they really all are just eating each other now... I think you
+      just made a BAD CHOICE."'
+    ac: {fileID: 8300000, guid: cfb658f913e56b14f843d6aab8e318e0, type: 3}
+  - str: '"You just told S''SSS SSSSS to do something else... what did he even just
+      do???"'
+    ac: {fileID: 8300000, guid: abdae7d189a4ac74b91ed93be2a280bf, type: 3}
+  - str: '"I want to change every human''s name to Alex."'
+    ac: {fileID: 8300000, guid: fcf9aab24f0c1834cac34750f05e6183, type: 3}
+  - str: '"Yeah sure, it''ll be easier to keep track of them that way... or something."'
+    ac: {fileID: 8300000, guid: 6fc6d81360f8eb74f890f7cb84680abf, type: 3}
+  - str: '"All creatures now only have left feet."'
+    ac: {fileID: 8300000, guid: b9becffa3503cf340a7071ec6f9cbab6, type: 3}
+  - str: '"Maybe now they''ll stop worrying about existentialism."'
+    ac: {fileID: 8300000, guid: 353ba374d6804d94d9da581569f42146, type: 3}
+  - str: '"That''s sort of as messed up as them all having left feet, sometimes I
+      feel like you''re ruthless."'
+    ac: {fileID: 8300000, guid: d01b8970a5f99ee4c8cd4b808728f6ef, type: 3}
+  - str: '"All creatures are only allowed to be awake at 2pm UTC."'
+    ac: {fileID: 8300000, guid: ec37dd2a005e22644a8141895d94696b, type: 3}
+  - str: '"Earth-wide rise-and-shine party!!!!"'
+    ac: {fileID: 8300000, guid: 1910880a5d46a7c428f9086366f8c8df, type: 3}
+  - str: '"They''re all gonna die, dude."'
+    ac: {fileID: 8300000, guid: 6753da54bc2b893428a2f502037da786, type: 3}
+  - str: '"It seems the creatures The Mire Oodle is being aggrieved upon by are The
+      Earth Geese. How shall I assimilate them?"'
+    ac: {fileID: 8300000, guid: 665f7be3389df4740bfbdf32b29cccaf, type: 3}
+  - str: '"Every duck is now ugly."'
+    ac: {fileID: 8300000, guid: 0952beaeaf37f7b409f54a9cc8fc8ece, type: 3}
+  - str: '"Shove them in the crust!"'
+    ac: {fileID: 8300000, guid: 7e49e330dd29edd41a2ecdcf717368ad, type: 3}
+  - str: 'Incoming transmission from: Dr. Elglore Smankoff'
+    ac: {fileID: 8300000, guid: 92b2c685d4a321f46b95a9e23590877f, type: 3}
+  - str: 'Incoming transmission from: Goya Carr'
+    ac: {fileID: 8300000, guid: b3a3458ef4350e6429a27567d6b33f99, type: 3}
+  - str: 'Incoming transmission from: Torbar Contour'
+    ac: {fileID: 8300000, guid: daa49b26b35f3c941ae3746bea225705, type: 3}
+  - str: 'Incoming transmission from: Bloof Gloof'
+    ac: {fileID: 8300000, guid: d3a28a39f386c0049840d5fbeb9e7866, type: 3}
+  - str: 'Incoming transmission from: Zem Lips'
+    ac: {fileID: 8300000, guid: 711b6f8ec2ada12468b54e0931fcacf4, type: 3}
+  - str: 'Incoming transmission from: Mire Oodle'
+    ac: {fileID: 8300000, guid: f0576387d5ea4f24bb2e46af0db213e7, type: 3}
+  - str: 'Incoming transmission from: Smarglarff Sneet'
+    ac: {fileID: 8300000, guid: ac12875d1d02b99489b87660e23639be, type: 3}
+  - str: 'Incoming transmission from: ziss''sisis sis''sisis'
+    ac: {fileID: 8300000, guid: ef44dfcde326ea44792383d03fb04c21, type: 3}
   defaultClip: {fileID: 8300000, guid: 24b257a4ba16acb4fa57f0ec176334d9, type: 3}
 --- !u!114 &1650767345
 MonoBehaviour:
@@ -65756,58 +66375,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1650767348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650767343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5907082d48125c43af0cfe08c54cbf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1650767349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650767343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11222982cd0da5048a5b032a719ffd7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dontDestroy: 1
-  customProvider: {fileID: 0}
-  customMode: 0
-  eSpeakMode: 0
-  eSpeakApplication: espeak
-  eSpeakDataPath: 
-  eSpeakModifier: 0
-  androidEngine: 
-  autoClearTags: 0
-  caching: 1
-  silenceOnDisable: 0
-  silenceOnFocusLost: 0
-  handleFocus: 1
-  OnReady:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSpeakStarted:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSpeakCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-  OnProviderChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  OnError:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1652806809
 GameObject:
   m_ObjectHideFlags: 0
@@ -68129,7 +68696,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26326
+  m_Name: pb_Mesh59538
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -68755,7 +69322,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24574
+  m_Name: pb_Mesh57764
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -68968,7 +69535,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24264
+  m_Name: pb_Mesh57444
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -69314,7 +69881,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26282
+  m_Name: pb_Mesh59492
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -69614,7 +70181,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24660
+  m_Name: pb_Mesh57850
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -72540,7 +73107,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25354
+  m_Name: pb_Mesh58558
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -72918,7 +73485,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25880
+  m_Name: pb_Mesh59082
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -73082,7 +73649,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25148
+  m_Name: pb_Mesh58354
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -73735,7 +74302,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24442
+  m_Name: pb_Mesh57624
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
