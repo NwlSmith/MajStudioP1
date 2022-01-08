@@ -123,9 +123,13 @@ public class MiscInput : MonoBehaviour
         else
         {
             Debug.Log("Unpausing...");
-            foreach (var audioSource in _audioSources)
+            if (_audioSources != null)
             {
-                audioSource.UnPause();
+                foreach (var audioSource in _audioSources)
+                {
+                    if (audioSource)
+                        audioSource.UnPause();
+                }
             }
             Time.timeScale = initTimeScale;
         }

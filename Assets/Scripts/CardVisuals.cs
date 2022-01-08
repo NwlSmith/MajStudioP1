@@ -149,7 +149,7 @@ public class CardVisuals : MonoBehaviour
         StartCoroutine(IdleAnim());
     }
 
-    public IEnumerator ShowVisuals()
+    private IEnumerator ShowVisuals()
     {
         curModel.SetActive(true);
         float duration = .3f;
@@ -162,8 +162,10 @@ public class CardVisuals : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
 
-            curModel.transform.localScale = Vector3.Slerp(initScale, targetScale, elapsedTime / duration);
-            curModel.transform.eulerAngles = Vector3.Slerp(initRot, targetRot, elapsedTime / duration);
+            float fraction = elapsedTime / duration;
+
+            curModel.transform.localScale = Vector3.Slerp(initScale, targetScale, fraction);
+            curModel.transform.eulerAngles = Vector3.Slerp(initRot, targetRot, fraction);
 
             yield return null;
         }

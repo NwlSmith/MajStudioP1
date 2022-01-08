@@ -4,7 +4,7 @@ using UnityEngine;
 public class TentacleSoundPlayer : MonoBehaviour
 {
     [SerializeField] private List<AudioClip> _clips = new List<AudioClip>();
-    private List<AudioSource> _audioSources = new List<AudioSource>();
+    private readonly List<AudioSource> _audioSources = new List<AudioSource>();
     private int curAS = 0;
     private int numAS = 1;
 
@@ -25,9 +25,9 @@ public class TentacleSoundPlayer : MonoBehaviour
     {
         if (!_audioSources[curAS].isPlaying)
         {
-            _audioSources[curAS].pitch = UnityEngine.Random.Range(.9f, 1.1f);
+            _audioSources[curAS].pitch = Random.Range(.9f, 1.1f);
         
-            _audioSources[curAS].PlayOneShot(_clips[UnityEngine.Random.Range(0, _clips.Count)]);
+            _audioSources[curAS].PlayOneShot(_clips[Random.Range(0, _clips.Count)]);
         }
 
         curAS = (curAS + 1) % numAS;
