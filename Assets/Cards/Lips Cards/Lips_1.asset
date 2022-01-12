@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Lips_1
   m_EditorClassIdentifier: 
-  infoText: '"So because I''m cold blooded I tend to get exhausted in colder temperaters...
+  infoText: '"So because I''m cold blooded I tend to get exhausted in colder temperatures...
     would you be able to crank the heat up a little bit for me? It would make earth
     a better vacay spot suited to my needs."'
   alien: 5
@@ -35,3 +35,4 @@ MonoBehaviour:
     with you I don''t care."'
   d2RoommateResponseSpoken: 0
   d2Cards: []
+  gameOverCard: 0

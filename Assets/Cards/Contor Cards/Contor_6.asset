@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Contor_6
   m_EditorClassIdentifier: 
-  infoText: '"An Earth human asked my for my hand in marriage. Is it time to tie
+  infoText: '"An Earth human asked me for my hand in marriage. Is it time to tie
     the knot? What if i get tied down?"'
   alien: 1
   image: {fileID: 0}
@@ -34,3 +34,4 @@ MonoBehaviour:
   d2RoommateResponse: '"We''ve got one married in! Hurrah for Glorf!"'
   d2RoommateResponseSpoken: 0
   d2Cards: []
+  gameOverCard: 0

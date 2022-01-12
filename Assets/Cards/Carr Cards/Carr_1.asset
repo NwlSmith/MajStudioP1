@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Carr_1
   m_EditorClassIdentifier: 
-  infoText: '"Would you say this paper mache donkey depiciting a flatulating, gesticulating
+  infoText: '"Would you say this paper mache donkey depicting a flatulating, gesticulating
     great ape properly represents the contemporary of the general human cognition?"'
   alien: 6
   image: {fileID: 0}

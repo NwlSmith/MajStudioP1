@@ -134,15 +134,28 @@ public class CardManager : MonoBehaviour
         MainText.text = "Translating...";
 
         cardVisuals.Activate();
-        yield return new WaitForSeconds(1f);
+        if (!MiscInput.instance.primaryButtonClicked)
+        {
+            yield return new WaitForSeconds(1f);
+        }
+        else
+        {
+            yield return new WaitForSeconds(.2f);
+        }
         // Maybe change voice?
         TTSManager.instance.Say(cardInfo.infoText, 0);
         MainText.text = cardInfo.infoText;
 
         D1Text.text = "Loading...";
         D2Text.text = "Loading...";
-
-        yield return new WaitForSeconds(1f);
+        if (!MiscInput.instance.primaryButtonClicked)
+        {
+            yield return new WaitForSeconds(1f);
+        }
+        else
+        {
+            yield return new WaitForSeconds(.2f);
+        }
         D1Text.text = cardInfo.decision1Text;
         D2Text.text = cardInfo.decision2Text;
         canPressButtons = true;

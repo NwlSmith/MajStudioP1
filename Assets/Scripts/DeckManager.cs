@@ -77,10 +77,8 @@ public class DeckManager : MonoBehaviour
      */
     public void AddCardAt(int offset, Card newCard, int randomRange = 0)
     {
-        if (randomRange != 0)
-        {
-            AddCardAt(offset + Random.Range(-randomRange, randomRange), newCard, 0);
-        }
+
+        offset += Random.Range(-randomRange, randomRange);
 
         if (offset > cardList.Count)
             AddCardBack(newCard);
