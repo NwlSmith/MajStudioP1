@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: SSSSS_10
+  m_EditorClassIdentifier: 
+  infoText: '"We would like all the aliens of Glarblarff Inc to be minted as, as
+    we have heard from the earth social medias, ''Non Fungible Tokens.'' Please have
+    our order relayed to them through your station."'
+  alien: 2
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
+  decision1Text: '"Oh god, okay."'
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: -1
+  d1AtmosphereTempModifier: 0
+  d1DomSubModifier: 0
+  d1RoommateResponse: '"I wonder how this plotline will land in ten years."'
+  d1RoommateResponseSpoken: 0
+  d1Cards:
+  - {fileID: 11400000, guid: 47dde877409374981a120a3dfcefc507, type: 2}
+  - {fileID: 11400000, guid: 5568b3ec2a1ca447f9c6cefc2088d4e6, type: 2}
+  - {fileID: 11400000, guid: 261601983300d4030902ae1be748aa2a, type: 2}
+  - {fileID: 11400000, guid: a7b8fc432c29e44d5b2bade9ca0b9609, type: 2}
+  - {fileID: 11400000, guid: 08af094d82d7d48118c5e7165b9b27af, type: 2}
+  - {fileID: 11400000, guid: d044e478b30af40819b4b3923a66876e, type: 2}
+  decision2Text: '"I''m ready to go full hog on this one."'
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: 1
+  d2AtmosphereTempModifier: 0
+  d2DomSubModifier: 0
+  d2RoommateResponse: '"FULL HOG! FULL HOG!"'
+  d2RoommateResponseSpoken: 0
+  d2Cards:
+  - {fileID: 11400000, guid: 47dde877409374981a120a3dfcefc507, type: 2}
+  - {fileID: 11400000, guid: 5568b3ec2a1ca447f9c6cefc2088d4e6, type: 2}
+  - {fileID: 11400000, guid: 261601983300d4030902ae1be748aa2a, type: 2}
+  - {fileID: 11400000, guid: a7b8fc432c29e44d5b2bade9ca0b9609, type: 2}
+  - {fileID: 11400000, guid: 08af094d82d7d48118c5e7165b9b27af, type: 2}
+  - {fileID: 11400000, guid: d044e478b30af40819b4b3923a66876e, type: 2}
+  gameOverCard: 0

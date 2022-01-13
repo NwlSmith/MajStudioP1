@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: Smankoff_9
+  m_EditorClassIdentifier: 
+  infoText: '"I heard er-a-from S''SSS SSSSS that we are to be, according to the
+    human botanical term, ''minted'' into an etheral concept of Tokens that are not
+    Fungible? I believe I know what a token is, I am still unfamiliar with what it
+    means to Funge."'
+  alien: 0
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
+  decision1Text: I don't know. It probably relates with being turned into some kind
+    of Earth mushroom.
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: 1
+  d1AtmosphereTempModifier: 1
+  d1DomSubModifier: 1
+  d1RoommateResponse: '"Sounds right to me!"'
+  d1RoommateResponseSpoken: 0
+  d1Cards: []
+  decision2Text: To funge is to bathe in the Earth chocolate. The term has cypriot
+    origins.
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: 2
+  d2AtmosphereTempModifier: 0
+  d2DomSubModifier: -1
+  d2RoommateResponse: '"Dude, you just made that up."'
+  d2RoommateResponseSpoken: 0
+  d2Cards: []
+  gameOverCard: 0
