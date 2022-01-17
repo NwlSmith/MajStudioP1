@@ -20,8 +20,8 @@ MonoBehaviour:
   imageAssociatedWithChoice1: 1
   decision1Text: '"Oh god, okay."'
   d1BiodiversityModifier: 0
-  d1HorninessModifier: -1
-  d1AtmosphereTempModifier: 0
+  d1HorninessModifier: -3
+  d1AtmosphereTempModifier: 3
   d1DomSubModifier: 0
   d1RoommateResponse: '"I wonder how this plotline will land in ten years."'
   d1RoommateResponseSpoken: 0
@@ -34,8 +34,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d044e478b30af40819b4b3923a66876e, type: 2}
   decision2Text: '"I''m ready to go full hog on this one."'
   d2BiodiversityModifier: 0
-  d2HorninessModifier: 1
-  d2AtmosphereTempModifier: 0
+  d2HorninessModifier: -3
+  d2AtmosphereTempModifier: 3
   d2DomSubModifier: 0
   d2RoommateResponse: '"FULL HOG! FULL HOG!"'
   d2RoommateResponseSpoken: 0

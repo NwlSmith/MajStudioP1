@@ -28,7 +28,7 @@ MonoBehaviour:
   d1RoommateResponseSpoken: 0
   d1Cards: []
   decision2Text: Yeah well, auto-cannibalism is inevitable anyway for such a volatile
-    ecosystem. As the Earth French say, C'est la vie!.
+    ecosystem. As the Earth French say, C'est la vie!
   d2BiodiversityModifier: 0
   d2HorninessModifier: 1
   d2AtmosphereTempModifier: 1
