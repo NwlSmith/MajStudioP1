@@ -44195,6 +44195,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f243966e8f12c43c684790a3b659e64a, type: 2}
   - {fileID: 11400000, guid: 14b43a34689144df28a83d3f63ca0b90, type: 2}
   - {fileID: 11400000, guid: 5a437728ad6914eb888dfe34f0c3420c, type: 2}
+  - {fileID: 11400000, guid: a2d1b6369f5e541abb2c1fb9789eb3b8, type: 2}
   introCard: {fileID: 11400000, guid: a69ed93207f3687459813414701be0df, type: 2}
 --- !u!4 &1100348154
 Transform:
