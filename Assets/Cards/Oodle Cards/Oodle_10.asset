@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoText: '"I''ve taken some time to think about it... the Face Reveal... if I
     post it, it may cure my loneliness, as you said... I can connect to the collective
-    unconcious of an entire species... But then... I am Mire Oodle, the Lonely Alien.
+    unconscious of an entire species... But then... I am Mire Oodle, the Lonely Alien.
     Who am I without my loneliness?"'
   alien: 7
   image: {fileID: 21300000, guid: 5528efb305d204af4b3aa2edd4544e50, type: 3}

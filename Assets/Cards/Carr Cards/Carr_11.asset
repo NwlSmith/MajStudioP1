@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
+  m_Name: Carr_11
+  m_EditorClassIdentifier: 
+  infoText: '"I don''t know if you''ve ever looked directly at a Fungible Non-Token,
+    but god they are tasteless. Our vertices will be decimated at the Earth artist''s
+    hand! I cannot stand for this!"'
+  alien: 6
+  image: {fileID: 0}
+  imageAssociatedWithChoice1: 1
+  decision1Text: I think you just don't appreciate the auto-cannibalism hyper-stimuli
+    overdrive smell of the Earth religion.
+  d1BiodiversityModifier: 0
+  d1HorninessModifier: 0
+  d1AtmosphereTempModifier: 2
+  d1DomSubModifier: 1
+  d1RoommateResponse: '"You''ve gotten really good at bull-shitting, ya know?"'
+  d1RoommateResponseSpoken: 0
+  d1Cards: []
+  decision2Text: Sucks to suck.
+  d2BiodiversityModifier: 0
+  d2HorninessModifier: 0
+  d2AtmosphereTempModifier: -1
+  d2DomSubModifier: 2
+  d2RoommateResponse: '"Heh! The perfect response to that pretentious snood!"'
+  d2RoommateResponseSpoken: 0
+  d2Cards: []
+  gameOverCard: 0

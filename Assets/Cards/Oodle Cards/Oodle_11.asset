@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Oodle_11
   m_EditorClassIdentifier: 
-  infoText: '"I have posted the face pic. The rotisierrie has not been mentioned.
+  infoText: '"I have posted the face pic. The rotisserie has not been mentioned.
     I am now being hunted by the humans that once loved me. This has helped nothing.
     I am more lonely than ever."'
   alien: 7

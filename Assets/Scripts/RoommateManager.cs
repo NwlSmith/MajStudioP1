@@ -45,6 +45,11 @@ public class RoommateManager : MonoBehaviour
         oldDialogue2.text = "";
     }
 
+    public List<string> GetMonologueQueue()
+    {
+        return monologueQueue;
+    }
+
     // UNIMPLEMENTED
     // Make the roommate  the given response to the Roommates 
     public void AddResponse(string response)
@@ -167,17 +172,21 @@ public class RoommateManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
             // start translating, if there is a response
             charDialogue.text = response;
-        }
-        if (!response.Equals(""))
-        {
             float delay = TTSManager.instance.Say(response, 2);
+            if (MiscInput.instance.primaryButtonClicked)
+            {
+                delay /= 5f;
+            }
             // delay
             yield return new WaitForSeconds(delay);
         }
         else
         {
             // delay
-            yield return new WaitForSeconds(Random.Range(2, 4));
+            if (!MiscInput.instance.primaryButtonClicked)
+            {
+                yield return new WaitForSeconds(Random.Range(2, 4));
+            }
         }
         charDialogue.text = "";
         if (isMonologue)

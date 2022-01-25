@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34a20825c7969d4f8ad22b4e0bcb3fa, type: 3}
   m_Name: Oodle_1
   m_EditorClassIdentifier: 
-  infoText: '"I found this love questionairre on the human''s websites... should
+  infoText: '"I found this love questionnaire on the human''s websites... should
     I fill it out?"'
   alien: 7
   image: {fileID: 0}
@@ -34,3 +34,4 @@ MonoBehaviour:
   d2RoommateResponse: '"Why''d you yuck Mire Oodle''s yum, dude?"'
   d2RoommateResponseSpoken: 0
   d2Cards: []
+  gameOverCard: 0
