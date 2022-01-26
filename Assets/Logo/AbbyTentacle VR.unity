@@ -688,10 +688,7 @@ MonoBehaviour:
   - {fileID: 1670237701}
   - {fileID: 1227461151}
   - {fileID: 1439911259}
-  srs:
-  - {fileID: 1670237703}
-  - {fileID: 1227461153}
-  - {fileID: 1439911261}
+  images: []
 --- !u!1 &426608071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,13 +1086,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 1225980258659058288, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
+      propertyPath: m_Cameras.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225980258659058288, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
+      propertyPath: m_Cameras.Array.data[0]
+      value: 
+      objectReference: {fileID: 2073423237}
     - target: {fileID: 1372340961184156160, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1915283345413927183, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486222464795781178, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086252770511335801, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366882460697972120, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5050093887455902292, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5269845796333724033, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
       propertyPath: m_Color.a
@@ -1112,6 +1133,18 @@ PrefabInstance:
     - target: {fileID: 5269845796333724033, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754076017455175613, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699771374097714314, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427505515442563889, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
+      propertyPath: m_CameraType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9174863033555820464, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
       propertyPath: m_Enabled
@@ -3230,3 +3263,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!20 &2073423237 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6370020834863311171, guid: 9bb6a059c9f2d2b439b1bdc8314ff64d, type: 3}
+  m_PrefabInstance: {fileID: 640351706}
+  m_PrefabAsset: {fileID: 0}

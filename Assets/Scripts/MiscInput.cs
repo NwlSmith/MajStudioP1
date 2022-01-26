@@ -10,7 +10,7 @@ public class MiscInput : MonoBehaviour
 
     public static MiscInput instance = null;
     
-    private XRNode xrNodeL = XRNode.RightHand;
+    private XRNode xrNodeL = XRNode.LeftHand;
     private XRNode xrNodeR = XRNode.RightHand;
     private readonly List<InputDevice> _devicesL = new List<InputDevice>();
     private readonly List<InputDevice> _devicesR = new List<InputDevice>();

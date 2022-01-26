@@ -58,14 +58,17 @@ public class ExitGameManager : MonoBehaviour
         {
             timer ++;//= Time.fixedDeltaTime;
         }
+//        Debug.Log(images[0].color);
+        if (images[0])
+            images[0].color = new Color(1, 1, 1, (Mathf.Clamp(timer, 0f, 50f) / 50f));
 
-        images[0].color = new Color(1, 1, 1, (Mathf.Clamp(timer, 0f, 50f) / 50f));
+        if (images[1])
+            images[1].color = new Color(1, 1, 1, ((Mathf.Clamp(timer, 50f, 100f) - 50f) / 50f));
 
-        images[1].color = new Color(1, 1, 1, ((Mathf.Clamp(timer, 50f, 100f) - 50f) / 50f));
+        if (images[2])
+            images[2].color = new Color(1, 1, 1, ((Mathf.Clamp(timer, 100f, 150f) - 100f) / 50f));
 
-        images[2].color = new Color(1, 1, 1, ((Mathf.Clamp(timer, 100f, 150f) - 100f) / 50f));
-
-        if (timer > 4)
+        if (timer > 175)
         {
             Pressed();
         }
@@ -73,9 +76,6 @@ public class ExitGameManager : MonoBehaviour
 
     public void Pressed()
     {
-        if (SceneManager.GetActiveScene().name.Equals("IntroScene"))
-            Application.Quit();
-        else
-            SceneManager.LoadScene("IntroScene");
+        Application.Quit();
     }
 }
