@@ -2,47 +2,52 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ExitGameManager : MonoBehaviour
 {
     public GameObject[] gObjs;
-    public SpriteRenderer[] srs;
+    public Image[] images;
 
     bool endingGame;
-    int timer;
+    float timer;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if(UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
+        if(UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame || MiscInput.instance.menuButtonClickedThisFrame)
         {
-            endingGame = true;
-
-            if(gObjs[0].activeSelf == false)
-            {
-                for (int i = 0; i < gObjs.Length; i++)
-                {
-                    gObjs[i].SetActive(true);
-                }
-            }
+            StartEndGame();
         }
 
-        if(UnityEngine.InputSystem.Keyboard.current.escapeKey.wasReleasedThisFrame)
+        if(UnityEngine.InputSystem.Keyboard.current.escapeKey.wasReleasedThisFrame || MiscInput.instance.menuButtonReleasedThisFrame)
         {
-            endingGame = false;
-            timer = 0;
+            EndEndGame();
+        }
+    }
 
-            if (gObjs[0].activeSelf == true)
+    public void StartEndGame()
+    {
+        endingGame = true;
+
+        if(gObjs[0].activeSelf == false)
+        {
+            for (int i = 0; i < gObjs.Length; i++)
             {
-                for (int i = 0; i < gObjs.Length; i++)
-                {
-                    gObjs[i].SetActive(false);
-                }
+                gObjs[i].SetActive(true);
+            }
+        }
+    }
+
+    public void EndEndGame()
+    {
+        endingGame = false;
+        timer = 0;
+
+        if (gObjs[0].activeSelf == true)
+        {
+            for (int i = 0; i < gObjs.Length; i++)
+            {
+                gObjs[i].SetActive(false);
             }
         }
     }
@@ -51,16 +56,16 @@ public class ExitGameManager : MonoBehaviour
     {
         if (endingGame)
         {
-            timer++;
+            timer ++;//= Time.fixedDeltaTime;
         }
 
-        srs[0].color = new Color(1, 1, 1, (Mathf.Clamp(timer, 0f, 50f) / 50f));
+        images[0].color = new Color(1, 1, 1, (Mathf.Clamp(timer, 0f, 50f) / 50f));
 
-        srs[1].color = new Color(1, 1, 1, ((Mathf.Clamp(timer, 50f, 100f) - 50f) / 50f));
+        images[1].color = new Color(1, 1, 1, ((Mathf.Clamp(timer, 50f, 100f) - 50f) / 50f));
 
-        srs[2].color = new Color(1, 1, 1, ((Mathf.Clamp(timer, 100f, 150f) - 100f) / 50f));
+        images[2].color = new Color(1, 1, 1, ((Mathf.Clamp(timer, 100f, 150f) - 100f) / 50f));
 
-        if (timer > 175)
+        if (timer > 4)
         {
             Pressed();
         }

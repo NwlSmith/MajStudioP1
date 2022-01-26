@@ -10,12 +10,18 @@ public class MiscInput : MonoBehaviour
 
     public static MiscInput instance = null;
     
+    private XRNode xrNodeL = XRNode.RightHand;
     private XRNode xrNodeR = XRNode.RightHand;
+    private readonly List<InputDevice> _devicesL = new List<InputDevice>();
     private readonly List<InputDevice> _devicesR = new List<InputDevice>();
+    private InputDevice _deviceL;
     private InputDevice _deviceR;
     
     public bool thumbstickClicked { get; private set; }
     public bool primaryButtonClicked { get; private set; }
+    public bool menuButtonClickedThisFrame { get; private set; }
+    public bool menuButtonReleasedThisFrame { get; private set; }
+    private bool _menuButtonClicked;
     
 
     void Awake()
@@ -37,6 +43,8 @@ public class MiscInput : MonoBehaviour
     {
         InputDevices.GetDevicesAtXRNode(xrNodeR, _devicesR);
         _deviceR = _devicesR.FirstOrDefault();
+        InputDevices.GetDevicesAtXRNode(xrNodeL, _devicesL);
+        _deviceL = _devicesL.FirstOrDefault();
     }
 
     void Update()
@@ -50,6 +58,26 @@ public class MiscInput : MonoBehaviour
         thumbstickClicked = thumbstick;
         _deviceR.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButton);
         primaryButtonClicked = primaryButton;
+        _deviceL.TryGetFeatureValue(CommonUsages.menuButton, out bool menuButton);
+
+        if (menuButton && !menuButtonClickedThisFrame && !_menuButtonClicked)
+        {
+            menuButtonClickedThisFrame = true;
+            _menuButtonClicked = true;
+        }
+        else if (menuButton && menuButtonClickedThisFrame && _menuButtonClicked)
+        {
+            menuButtonClickedThisFrame = false;
+        }
+        else if (!menuButton && !menuButtonReleasedThisFrame && _menuButtonClicked)
+        {
+            menuButtonReleasedThisFrame = true;
+            _menuButtonClicked = false;
+        }
+        else if (!menuButton && menuButtonReleasedThisFrame && !_menuButtonClicked)
+        {
+            menuButtonReleasedThisFrame = false;
+        }
 
         // Might work better for PC tethered VR
         /*if (!paused && IsPaused())
