@@ -18,7 +18,7 @@ public class MusicManager : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void StartMusic()
@@ -28,6 +28,7 @@ public class MusicManager : MonoBehaviour
 
     public void StopMusic()
     {
-        audioSource.Stop();
+        if (audioSource)
+            audioSource.Stop();
     }
 }

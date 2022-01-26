@@ -24,7 +24,7 @@ public class VRHandPhysicsFollow : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
-        Debug.Log($"{name} starting");
+        //Debug.Log($"{name} starting");
 
         _joints = GetComponentsInChildren<HingeJoint>();
         

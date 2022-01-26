@@ -12,7 +12,7 @@ public class ExitGameManager : MonoBehaviour
     bool endingGame;
     float timer;
 
-    void Update()
+    private void Update()
     {
         if(UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame || MiscInput.instance.menuButtonClickedThisFrame)
         {
@@ -25,7 +25,7 @@ public class ExitGameManager : MonoBehaviour
         }
     }
 
-    public void StartEndGame()
+    private void StartEndGame()
     {
         endingGame = true;
 
@@ -38,7 +38,7 @@ public class ExitGameManager : MonoBehaviour
         }
     }
 
-    public void EndEndGame()
+    private void EndEndGame()
     {
         endingGame = false;
         timer = 0;
@@ -52,7 +52,7 @@ public class ExitGameManager : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (endingGame)
         {
@@ -76,6 +76,14 @@ public class ExitGameManager : MonoBehaviour
 
     public void Pressed()
     {
-        Application.Quit();
+        if (GameManager.instance)
+        {
+            GameManager.instance.DestroyAllManagers();
+        }
+        
+        if (SceneManager.GetActiveScene().name.Equals("IntroScene"))
+            Application.Quit();
+        else
+            SceneManager.LoadScene("IntroScene");
     }
 }

@@ -130,4 +130,45 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene(4);
     }
+
+    public void DestroyAllManagers()
+    {
+        if (TTSManager.instance)
+        {
+            TTSManager.instance.StopSpeaking();
+            Destroy(TTSManager.instance.gameObject);
+        }
+
+        if (DeckManager.instance)
+        {
+            DeckManager.instance.StopAllCoroutines();
+            Destroy(DeckManager.instance.gameObject);
+        }
+
+        if (StatManager.instance)
+        {
+            StatManager.instance.StopAllCoroutines();
+            Destroy(StatManager.instance.gameObject);
+        }
+
+        if (CardManager.instance)
+        {
+            CardManager.instance.StopAllCoroutines();
+            Destroy(CardManager.instance.gameObject);
+        }
+
+        if (MusicManager.instance)
+        {
+            MusicManager.instance.StopMusic();
+            Destroy(MusicManager.instance.gameObject);
+        }
+
+        if (RoommateManager.instance)
+        {
+            RoommateManager.instance.StopAllCoroutines();
+            Destroy(RoommateManager.instance.gameObject);
+        }
+        
+        Destroy(gameObject);
+    }
 }
